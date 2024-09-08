@@ -1,0 +1,26 @@
+.imgs{
+    border-radius: 10px;
+}
+.imgss{
+    border-radius: 10px;
+}  
+ 
+@media only screen and (max-width: 768px){
+       .imgss{
+        width: 300px;
+        align-items: center;
+    }
+  
+}
+.link{
+    text-decoration: none;
+    color:#eeeeee;
+}
+.linevertical{
+    width:0.5%; height:200px; background: #E0AA3E; 
+
+   
+}
+.linehorizental{
+    width:90%; height:3px; background: #E0AA3E; 
+}

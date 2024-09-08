@@ -1,0 +1,47 @@
+
+@media only screen and (max-width: 768px){
+    .imgs{
+    display: none;
+ }
+
+}
+
+@media only screen and (min-width: 768px){
+    .imgs{
+    display: flex;
+ }
+
+}
+.boximage{
+    width: 500px;
+    height: 80vh;
+   flex-wrap:nowrap;
+   overflow:auto;
+   
+  
+}
+.imagehide{
+    opacity: 0.3;
+    text-overflow: '...';
+}
+.boximage{
+    margin: 1px;
+    background-image: linear-gradient(to right bottom, rgba(46, 48, 49, 0.8),rgba(202, 213, 223, 0.8)),url('https://www.elephantlaser.com/wp-content/uploads/2023/07/fiber-laser-cutting-machine-application-3.webp');
+    background-size: cover;
+    width: 85px;
+    height: 85px;
+    
+    
+}
+.slid{
+    margin:10px;
+    border: 2px solid  rgb(122, 123, 139)  ;
+    align-items:center;
+   
+}
+@media only screen and (min-width: 768px){
+    .slid{
+    display: none;
+ }
+
+}

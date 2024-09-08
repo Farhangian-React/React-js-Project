@@ -1,0 +1,79 @@
+.hover{
+    color: #fff;
+    text-decoration: none;
+}
+.hover:hover{
+   
+    border-bottom: 3px solid #674e06; 
+    
+}
+.navlinkcoll{
+    color:#515151;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s;  
+}
+.navlink{
+    color:#1F212A;
+    text-decoration: none;
+    font-size: medium;
+    transition: all 0.2s;
+}
+
+.navlink:hover{
+    color:#E0AA3E ; 
+}
+.navlinkactiv{
+    color:#1F212A;
+    text-decoration: none;
+    font-size: medium;
+    transition: all 0.2s;
+}
+.navlinkactiv:hover{
+color:#fff;
+}
+
+
+
+.boxnav{
+    background-color:#F4A950;
+}
+.boxnav:hover{
+   background-color: #E0AA3E;
+}
+.navlinks{
+     color:#E0AA3E;
+    text-decoration: none;
+   font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-right: 3px;
+    padding-left: 3px;
+    border-radius: 3px;
+   
+}
+.button:hover{
+color: #fff;
+background-color: #fff;
+}
+.navlinkin{
+    color:rgb(11, 10, 10);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.2s;  
+}
+.navlinkin:hover{
+    color:#3a3229;
+
+   
+}
+.hovers:hover{
+    border:2px solid #F4A950;
+}
+.lists:hover{
+  border: none;
+}
+.linksearch{
+    text-decoration: none;
+    color: #1F212A;
+}

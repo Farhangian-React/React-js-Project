@@ -1,0 +1,28 @@
+
+    .slidlg{
+        margin:10px;
+        border: 2px solid  rgb(122, 123, 139)  ;
+        align-items:center;
+       
+    }
+    @media only screen and (max-width: 768px){
+        .slidlg{
+        display: none;
+     }
+    
+    }
+    .slidsm{
+        margin:10px;
+        border: 2px solid rgb(122, 123, 139) ;
+        align-items:center;
+    
+    }
+    @media only screen and (min-width: 768px){
+        .slidsm{
+        display: none;
+     }
+    
+    }
+    .linkss{
+    text-decoration: none;
+    }

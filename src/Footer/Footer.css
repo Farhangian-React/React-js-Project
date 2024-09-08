@@ -1,0 +1,22 @@
+
+.navicon:hover{
+    border-radius: 10px;
+    background-color:#98a0ac;
+    transform: translateY(5px);
+}
+
+.navlinkfooter{
+    color:#bfbfbf;
+    font-size: 22px;
+    text-decoration: none; 
+    }
+    .navlinkfooter:hover{
+        color:  #E0AA3E;
+    }
+    .navlinkwhite{
+        color: #8a8a8a;
+        text-decoration: none; 
+    }
+    .navlinkwhite:hover{
+        color:  #E0AA3E;
+    }

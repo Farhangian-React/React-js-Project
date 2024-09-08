@@ -1,0 +1,57 @@
+.fullgrid{
+   text-decoration: none;
+}
+.grid{
+   text-decoration: none;
+}
+ .grid:hover{
+    text-decoration: none;
+    opacity:0.7;
+    scale: 1.07;
+  .type1{
+  display: none;
+  }
+.type2{
+   display: flex;
+}
+    
+ }
+
+ .type2{
+   display: none;
+ }
+ .head {
+    position: relative;
+    
+ }
+ .text {
+   color: black;
+   position: absolute;
+   right: 20%;
+   left: 16%;
+   bottom: 15%;
+  
+
+ }
+ .head:hover{
+    
+    opacity:0.5;
+    scale: 1.07;
+    
+ }
+.ul{
+  list-style-type: none;
+  
+}
+.ul li::before{
+   content:"*";
+   padding-left:15px;
+   color:rgb(44, 77, 240);
+}
+
+.hide{
+   display: none;
+}
+.disply{
+   display: flex;
+}

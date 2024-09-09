@@ -208,7 +208,7 @@ direction:"rtl"
       </Grid>
        
        <Grid  xs={12} sm={8} lg={6} sx={{mt:{xs:5,md:1}, mx:1,display:'flex',flexDirection:{xs:"column",md:"row"},justifyContent:'center',direction:'rtl'}} >
-       <Grid  xs={4} md={4} lg={4}  sx={{mx:{xs:0,md:0},mt:{xs:2,md:4},display:'flex',alignItems:'center',justifyContent:'center'}} >
+       <Grid  xs={4} md={4} lg={4}  sx={{mx:{xs:0,md:2},mt:{xs:2,md:4},display:'flex',alignItems:'center',justifyContent:'center'}} >
              {cartItems.map(i=> 
         <img  src={image}  width={'100%'} height={'100%'} /> 
         )}

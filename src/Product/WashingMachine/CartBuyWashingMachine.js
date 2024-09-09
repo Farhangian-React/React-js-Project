@@ -80,7 +80,7 @@ const [index, setIndex] = React.useState(null);
   <Grid container  xs={12}  lg={6}  sx={{mt:{xs:8,md:1}}} >
          {cartItems.map(i=> 
          <Grid  xs={12} md={12} sx={{display:'flex', flexDirection:'column',justifyContent:'start',bgcolor:'#f1f1f1'}} > 
-          <Box sx={{px:5,mt:8,mb:3,width:'15%',height:'20px'}}>
+          <Box sx={{px:5,mt:8,mb:8,width:'15%',height:'20px'}}>
           <img src={i.berand} width={'100%'}/>
           </Box>
            <Typography variant="h6" sx={{px:5,mb:3,mt:0,textAlign:'right'}}  >

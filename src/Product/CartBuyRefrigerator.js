@@ -85,14 +85,14 @@ const [index, setIndex] = React.useState(null);
          </Typography>
          <Box sx={{display:'flex',flexDirection:'row',justifyContent:'start'}}>
           <Typography variant='h6' sx={{px:5,mt:2,textAlign:'right'}}>قیمت :</Typography>
-           <Typography variant="h5" sx={{color:'gray',px:5,mt:2,textAlign:'right'}}  >
+           <Typography variant="h5" sx={{color:'#674e06',px:5,mt:2,textAlign:'right'}}  >
           {  i.price}
            </Typography>
            </Box>
          <Button size='medium'  color='secondary'  onClick={()=>
           addToCart(i)
         }
-        sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:8, my:1,py:0,px:8}}
+        sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:8, my:3,py:0,px:8}}
         > 
          افزودن به سبد خرید  </Button>
          <Drawer

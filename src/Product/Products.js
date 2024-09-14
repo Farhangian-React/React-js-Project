@@ -20,7 +20,7 @@ function Products() {
       <Banner/>
     </Box>
     
-    <div class='logos' >
+    <Box className='logos' >
 
 <div  class='logos-slide' >
 
@@ -46,7 +46,7 @@ function Products() {
 <img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png"       alt='' />
 <img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
 </div>
-</div>
+</Box>
 <Box sx={{width:'100%' }}>
       <SheetOne/>
     </Box>

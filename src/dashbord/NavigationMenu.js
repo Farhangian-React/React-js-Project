@@ -155,7 +155,7 @@ const Refrigerators  = React.forwardRef(({ focusNext, focusPrevious, ...props },
             sx={{
               borderRight:'1px solid black',
               mt:-2.7,
-              mr:7,
+              mr:4.6,
               p:1,
               boxShadow: 'md',
               borderRadius: 'sm',
@@ -286,7 +286,7 @@ const Cooking  = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
             sx={{
               borderRight:'1px solid black',
               mb:-12,
-              mr:10.1,
+              mr:8.1,
               px:2,
               pb:2,
               pt:3,

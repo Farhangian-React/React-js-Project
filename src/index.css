@@ -1,17 +1,17 @@
 @font-face{
-  font-family: 'IRAN Sans';
-  src:local('IRAN Sans'), url('./Fonts/IRAN Sans.ttf') format('truetype');
+  font-family: 'IRANSansWeb';
+  src:local('IRANSansWeb'), url('./Fonts/a83daff6a3fcaf7cf89f771c940e401f.ttf') format('truetype');
 }
 body {
 
   margin: 0;
-  font-family:'IRAN Sans';
+  font-family:'IRANSansWeb';
 
    
 }
 
 *{
-  font-family:'IRAN Sans';
+  font-family:'IRANSansWeb';
    
 }
 

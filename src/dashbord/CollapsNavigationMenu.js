@@ -283,7 +283,7 @@ export default function CollapsNavigationMenu() {
         sx={{fontSize:"18px",color:"#515151",width:"130px"}}
         >
             <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton 
+              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"16px"}}
                onClick={handleClick1}
                >
                محصولات
@@ -324,7 +324,7 @@ export default function CollapsNavigationMenu() {
       </Menu>
             </ListItem>
             <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton 
+              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"16px"}}
                onClick={handleClick2}
                >
                جشنواره ها
@@ -365,7 +365,7 @@ export default function CollapsNavigationMenu() {
       </Menu>
             </ListItem>
             <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton 
+              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"16px"}}
                onClick={handleClick3}
                >
                خدمات
@@ -419,8 +419,8 @@ export default function CollapsNavigationMenu() {
 
             <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
-            <ListItemButton >
-              <NavLink className='navlinkcoll' to={'/shop-dishwasher'}>
+            <ListItemButton  >
+              <NavLink className='navlinkcoll' sx={{fontSize:"16px"}} to={'/shop-dishwasher'}>
               فروشگاه ها
            </NavLink> </ListItemButton>
            </Grid>
@@ -440,8 +440,7 @@ export default function CollapsNavigationMenu() {
            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton >
-              <NavLink className='navlinkcoll' to={"/life-style"} sx={{fontSize:"18px",color:"#515151"}}>
-             سبک زندگی
+              <NavLink className='navlinkcoll' to={"/about-snova"}>سبک زندگی
            </NavLink> </ListItemButton>
            </Grid>
            <Grid sx={{width:"100%"}}>

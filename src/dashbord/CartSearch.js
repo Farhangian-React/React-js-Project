@@ -77,7 +77,7 @@ export default function CartSearch() {
     <Grid container  xs={12}  md={6}  sx={{mt:{xs:8,md:1}}} >
            {cartItems.map(i=> 
            <Grid  xs={12} md={12} sx={{display:'flex', flexDirection:'column',justifyContent:'center',bgcolor:'#f1f1f1'}} > 
-            <Box sx={{px:5,mt:1,mb:3,width:'15%',height:'20px'}}>
+            <Box sx={{px:5,mt:1,mb:8,width:'15%',height:'20px'}}>
             <img src={i.berand} width={'90%'}/>
             </Box>
              <Typography variant="h6" sx={{px:5,mb:3,mt:0,textAlign:'right'}}  >
@@ -91,7 +91,7 @@ export default function CartSearch() {
            </Typography>
            <Box sx={{display:'flex',flexDirection:'row',justifyContent:'start'}}>
             <Typography variant='h6' sx={{px:5,mt:2,textAlign:'right'}}>قیمت :</Typography>
-             <Typography variant="h5" sx={{color:'gray',px:5,mt:2,textAlign:'right'}}  >
+             <Typography variant="h5" sx={{color:'#674e06',px:5,mt:2,textAlign:'right'}}  >
               
             {  i.price}
              </Typography>
@@ -100,7 +100,7 @@ export default function CartSearch() {
            <Button size='medium'  color='secondary'  onClick={()=>
             addToCart(i)
           }
-          sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:8, my:1,py:0,px:8}}
+          sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:8, my:3,py:0,px:8}}
           > 
            افزودن به سبد خرید  </Button>
            <Drawer

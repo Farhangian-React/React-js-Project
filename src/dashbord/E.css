@@ -10,13 +10,13 @@
 .navlinkcoll{
     color:#515151;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     transition: all 0.2s;  
 }
 .navlink{
-    color:#1F212A;
+    color:#4c4e58;
     text-decoration: none;
-    font-size: medium;
+    font-size: 14px;
     transition: all 0.2s;
 }
 

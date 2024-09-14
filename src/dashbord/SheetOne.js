@@ -2,9 +2,9 @@ import * as React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Box, Button, Typography } from '@mui/material';
 import './Sheet.css';
-import { NavLink } from 'react-router-dom';
+import { Slide } from 'react-slideshow-image';
 
-
+const message= [ "jhgjdtga","jhfyjmhdytsxdg","kguyfdyuds"];
 
 export default function SheetOne() {
   return (
@@ -36,40 +36,56 @@ export default function SheetOne() {
      }} >
   
 </Grid>
-<Grid sx={{display:"flex",justifyContent:"center",flexDirection:{xs:"column",md:"row"},mx:10,my:5}}>
-            <Box  sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3}}> 
-            <Typography variant='h5' sx={{mt:0,textAlign:"center"}}>
-            </Typography>
-                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>   در زمان نصب محصول  </Typography>
-                <Typography sx={{mx:7,textAlign:"center",color:"gray"}}>پس از درخواست نصب محصول و مشاهده فاکتور خرید، تاریخ خرید توسط نماینده مجاز خدمات پس از خرید ثبت می گردد.</Typography>
-                <Box sx={{mx:5,p:0,mt:1,width:"90%",alignSelf:"center",display:"flex",justifyContent:"center",border:"1px solid #65512a"}}>
-                <Box  sx={{width:"100%",px:15,py:0,my:0.5,color:"black",bgcolor:"white",border:'1px solid #E0AA3E'}}> 
-                <Typography sx={{fontSize:{xs:'14px',sm:'16px',md:'18px'}}}>
-                اطلاعات بیشتر </Typography></Box>
+<Grid xs={12} container    sx={{display:"flex",justifyContent:"center",flexDirection:{xs:"column",md:"row"},my:5}}>
+            <Grid xs={12} md={3}  sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3,mx:2}}> 
+          <Box sx={{height:"130px",mx:6}}>
+                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>   با سهیل... </Typography>
+                <Typography sx={{my:2,textAlign:"center",color:"gray"}}>نمایشگاه های زیبا و با موقعیت مناسب خبره ترین کارشناسان لوازم خانگی ما آنچه را که شما می خواهید قیمت مورد نظر شما را داریم</Typography>
+                </Box>
+                <Box sx={{mx:5,p:0,mt:{xs:3,sm:8,md:3},width:"90%",alignSelf:"center",display:"flex",justifyContent:"center",border:{xs:"none",md:"1px solid #65512a"}}}>
+                <Button size='large' sx={{':hover':{backgroundImage:{xs:"linear-gradient(to right ,#eeeeee,#282828)",md:"linear-gradient(to right ,#E0AA3E,#282828)"},color:'white'},px:{xs:5,lg:15},py:0,my:0.5,color:{xs:"white",md:"black"},
+                border:{xs:'none',md:'1px solid #E0AA3E'},backgroundImage:{xs:"linear-gradient(to right ,#E0AA3E,#282828)",md:'none'},fontSize:{xs:'14px',sm:'16px',md:'18px'}}}> اطلاعات بیشتر</Button>
             </Box>
-            </Box>
+            </Grid>
+       
             <Box className='linevertical' sx={{display:{xs:"none",md:"flex"},alignSelf:"center"}}> </Box>
             <Box className='linehorizental' sx={{display:{xs:"flex",md:"none"},alignSelf:"center"}}> </Box>
-            <Box  sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3}}>
-            <Typography variant='h5' sx={{mt:0,textAlign:"center"}}>
-            </Typography>
-                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>  دریافت کد شش حرفی جشنواره  </Typography>
-                <Typography sx={{mx:7,textAlign:"center",color:"gray"}}>به ازای هر محصول درج شده در جدول فوق، یک کد شش حرفی به شماره پذیرش مصرف کننده اختصاص داده می شود</Typography>
-                <Box sx={{mx:5,p:0,mt:1,width:"80%",alignSelf:"center",display:"flex",justifyContent:"center",border:{xs:"none",md:"1px solid #65512a"}}}>
-                <Button size='large' sx={{px:{xs:5,lg:15},py:0,my:0.5,color:"black",bgcolor:"white",border:{xs:'1px solid #65512a',md:'1px solid #E0AA3E'},fontSize:{xs:'14px',sm:'16px',md:'18px'}}}> اطلاعات بیشتر</Button>
+            <Grid xs={12} md={3}   sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3,mx:2}}>
+       <Box sx={{height:"130px",mx:6}}>
+                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>خرید شما </Typography>
+                <Typography sx={{my:2,textAlign:"center",color:"gray"}}>بسیاری از آشپزخانه‌های خیره‌کننده الهام‌بخش طراحی هستند.
+لوازم خانگی متصل شده به صورت زنده دستگاه های جدید خود را در فروشگاه آزمایش کنید</Typography>
+               </Box>
+                <Box sx={{mx:5,p:0,mt:{xs:3,sm:8,md:3},width:"90%",alignSelf:"center",display:"flex",justifyContent:"center",border:{xs:"none",md:"1px solid #65512a"}}}>
+                <Button size='large' sx={{':hover':{backgroundImage:{xs:"linear-gradient(to right ,#eeeeee,#282828)",md:"linear-gradient(to right ,#E0AA3E,#282828)"},color:'white'},px:{xs:5,lg:15},py:0,my:0.5,color:{xs:"white",md:"black"},
+                border:{xs:'none',md:'1px solid #E0AA3E'},backgroundImage:{xs:"linear-gradient(to right ,#E0AA3E,#282828)",md:'none'},fontSize:{xs:'14px',sm:'16px',md:'18px'}}}> اطلاعات بیشتر</Button>
             </Box>
-            </Box>
+            </Grid>
+        
             <Box className='linevertical' sx={{display:{xs:"none",md:"flex"},alignSelf:"center"}}> </Box>
             <Box className='linehorizental' sx={{display:{xs:"flex",md:"none"},alignSelf:"center"}}> </Box>
-            <Box sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3}}>
-            <Typography variant='h5' sx={{mt:0,textAlign:"center"}}>
-            </Typography>
-                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}> دریافت لینک فعالسازی </Typography>
-                <Typography sx={{mx:7,textAlign:"center",color:"gray"}}>لینک فعالسازی از طریق پیامک برای مصرف کننده ارسال خواهد شد که با کلیک بر روی این گزینه فعالسازی صورت می‌گیرد.</Typography>
-                <Box sx={{mx:5,p:0,mt:1,width:"80%",alignSelf:"center",display:"flex",justifyContent:"center",border:{xs:"none",md:"1px solid #65512a"}}}>
-                <Button size='large' sx={{px:{xs:5,lg:15},py:0,my:0.5,color:"black",bgcolor:"white",border:{xs:'1px solid #65512a',md:'1px solid #E0AA3E'},fontSize:{xs:'14px',sm:'16px',md:'18px'}}}> اطلاعات بیشتر</Button>
+            <Grid xs={12} md={3}   sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3,mx:2}}>
+           <Box sx={{height:"130px",mx:6}}>
+                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>تحویل متخصص</Typography>
+                <Typography sx={{my:2,textAlign:"center",color:"gray"}}>   این شرکت متخصصانی را آموزش داده و با دانش ترین خدمه لوازم خانگی سهیل به کار گرفته است</Typography>
+              </Box>
+                <Box sx={{mx:5,p:0,mt:{xs:3,sm:8,md:3},width:"90%",alignSelf:"center",display:"flex",justifyContent:"center",border:{xs:"none",md:"1px solid #65512a"}}}>
+                <Button size='large' sx={{':hover':{backgroundImage:{xs:"linear-gradient(to right ,#eeeeee,#282828)",md:"linear-gradient(to right ,#E0AA3E,#282828)"},color:'white'},px:{xs:5,lg:15},py:0,my:0.5,color:{xs:"white",md:"black"},
+                border:{xs:'none',md:'1px solid #E0AA3E'},backgroundImage:{xs:"linear-gradient(to right ,#E0AA3E,#282828)",md:'none'},fontSize:{xs:'14px',sm:'16px',md:'18px'}}}> اطلاعات بیشتر</Button>
             </Box>
-            </Box>
+            </Grid>
+           
+        </Grid>
+        <Grid>
+        <Slide slidesToScroll={1} slidesToShow={4} indicators={true} sx={{ display: { xs: 'none', md: 'flex' } }}  >
+{message.map(i=>
+<Box>
+  <Typography>
+    
+  </Typography>
+</Box>
+)}
+        </Slide>
         </Grid>
     
     

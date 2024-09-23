@@ -31,6 +31,11 @@ import CartBuyDishwasher from './Product/Dishwasher/CartBuyDishwasher';
 import CartBuyWashingMachine from './Product/WashingMachine/CartBuyWashingMachine';
 import CartBuyGas from "./Product/CartBuyGas";
 import CartSearch from "./dashbord/CartSearch";
+import AllProducts from './AllProducts/AllProducts';
+import SamsungBrands from './AllProducts/SamsungBrands';
+import LgBrands from './AllProducts/LgBrands';
+import WhirlpoolBrands from './AllProducts/WhirlpoolBrands';
+import BushBrands from "./AllProducts/BushBrands";
 
 
 function App() {
@@ -70,6 +75,11 @@ function App() {
              <Route path='/jashnehtabestane' exact element={<TabestaneJashnvareh/>} />
              <Route path='/water-temperature' exact element={<WaterTemperature/>} />
              <Route path='/cartsearch' exact element={<CartSearch/>} />
+             <Route path='/allproducts' exact element={<AllProducts/>} />
+             <Route path='/samsungbrand' exact element={<SamsungBrands/>} />
+             <Route path='/lgbrand' exact element={<LgBrands/>} />
+             <Route path='/whirlpoolbrand' exact element={<WhirlpoolBrands/>} />
+             <Route path='/bushbrands' exact element={<BushBrands/>} />
 
              <Route path="*" element={<PageNotFount/>} />
             </Routes>

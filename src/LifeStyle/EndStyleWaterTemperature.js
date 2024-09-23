@@ -25,10 +25,10 @@ export default function EndStyleWaterTemperature() {
        backgroundSize:"cover",
        height:'300px',
        }} >
-    <Typography className='type1'  fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+    <Typography className='type1'  fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'14px'}}}>
     نور نمایشگرهای دیجیتال و اثرات مخرب آن
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'16px',lg:"22px"}}}>
    بیشتر بخوانید...
   </Typography>
   </Grid>
@@ -45,10 +45,10 @@ export default function EndStyleWaterTemperature() {
    height:'300px',
    m:2,
    }} >
-    <Typography className='type1' fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+    <Typography className='type1' fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'14px'}}}>
     چیدمان مرتب کابینت آشپزخانه با چند ترفند ساده
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'18px',sm:"20px",md:'22px',lg:"24px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'16px',sm:"18px",md:'20px',lg:"22px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>
@@ -65,10 +65,10 @@ export default function EndStyleWaterTemperature() {
        height:'300px',
        m:2,
        }}>
-    <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+    <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'14px'}}}>
  از بین بردن پرز لباس با چند ترفند ساده
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'18px',sm:"20px",md:'22px',lg:"24px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'16px',sm:"18px",md:'20px',lg:"22px"}}}>
    بیشتر بخوانید...
   </Typography>
   </Grid>
@@ -87,10 +87,10 @@ export default function EndStyleWaterTemperature() {
      height:'300px',
      m:2,
      }} >
-   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'14px'}}}>
 راهکار های موثر در تمیز کردن لکه های فرش
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'18px',sm:"20px",md:'22px',lg:"24px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'16px',sm:"18px",md:'20px',lg:"22px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>
@@ -107,10 +107,10 @@ xs={6} md={4} sx={{
  height:'300px',
  m:2,
  }} >
-   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'14px'}}}>
     دلایل خرابی یخساز یخچال و نحوه ی تعمیر آن
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'16px',sm:"18px",md:'20px',lg:"22px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>
@@ -125,10 +125,10 @@ xs={6} md={4} sx={{
      height:'300px',
      m:2,
      }}>
-   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'14px'}}}>
     جوش شیرین و شش کاربرد آن در خانه داری
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'18px',sm:"20px",md:'22px',lg:"24px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'16px',sm:"18px",md:'20px',lg:"22px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>

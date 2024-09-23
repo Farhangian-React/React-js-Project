@@ -98,11 +98,13 @@ export default function CardWashingMachine({ itemsPerPage }) {
   const [datashow,setDatashow]=useContext(CardDataShow);
 
  const getData=()=>{
-  fetch('http://localhost:3000/WashingMachine')
+  fetch('http://localhost:3000/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
-    setData(result);
-setDatashow(result);
+  setData(result.filter(i=>i.product === "Wash"));
+   setDatashow(result.filter(i=>i.product === "Wash"));
+  
+  
   },
   (error) => {
     alert('error');

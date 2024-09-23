@@ -93,11 +93,13 @@ import FilterCookTop from "./FilterCookTop";
     const [data,setData]=useContext(CardData);
     const [datashow,setDatashow]=useContext(CardDataShow);
     const getData=()=>{
-      fetch('http://localhost:3000/CookTop')
+      fetch('http://localhost:3000/Allproducts' )
       .then(res => res.json())
       .then((result)=> {
-        setData(result);
-        setDatashow(result);
+      setData(result.filter(i=>i.product === "Gas" && i.type === "cooktop"));
+       setDatashow(result.filter(i=>i.product === "Gas" && i.type === "cooktop" ));
+      
+      
       },
       (error) => {
         alert('error');

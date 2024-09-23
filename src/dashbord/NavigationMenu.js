@@ -72,19 +72,6 @@ const useRovingIndex = (options) => {
     focusPrevious,
   };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Refrigerators  = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { targets, setActiveIndex, getTargetProps } = useRovingIndex({

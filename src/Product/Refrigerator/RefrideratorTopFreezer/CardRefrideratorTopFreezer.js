@@ -98,11 +98,13 @@ export default function CardRefrideratorTopFreezer({ itemsPerPage }) {
   const [datashow,setDatashow]=useContext(CardDataShow);
 
  const getData=()=>{
-  fetch('http://localhost:3000/RefrideratorTopFreezer')
+  fetch('http://localhost:3000/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
-    setData(result);
-setDatashow(result);
+  setData(result.filter(i=>i.product === "Ref" && i.type === "TopFreezer"));
+   setDatashow(result.filter(i=>i.product === "Ref" && i.type === "TopFreezer" ));
+  
+  
   },
   (error) => {
     alert('error');

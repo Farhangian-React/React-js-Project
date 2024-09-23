@@ -44,7 +44,7 @@ function Tems({ currentItems }) {
 
 </Typography>
 </Box>
- <Box  sx={{borderTop:'1px solid black',borderBottom:'1px solid black', display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:5,pb:3}}>
+ <Box  sx={{borderTop:'1px solid black',borderBottom:'1px solid black', display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:3,pb:3}}>
   {currentItems &&
     currentItems.map((item) => ( 
       <NavLink to={'/cartbuyrefrigerator'}  className={"linkss"}>  
@@ -94,11 +94,13 @@ export default function CardRefrideratorSideBySide({ itemsPerPage }) {
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
  const getData=()=>{
-  fetch('http://localhost:3000/RefrideratorSideBySide')
+  fetch('http://localhost:3000/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
-    setData(result);
-    setDatashow(result);
+  setData(result.filter(i=>i.product === "Ref" && i.type === "SideBySide"));
+   setDatashow(result.filter(i=>i.product === "Ref" && i.type === "SideBySide" ));
+  
+  
   },
   (error) => {
     alert('error');

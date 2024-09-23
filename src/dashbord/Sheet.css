@@ -24,3 +24,37 @@
 .linehorizental{
     width:90%; height:3px; background: #E0AA3E; 
 }
+.each-slide-effect > div {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+    margin-top: 18px;
+  }
+  
+  .each-slide-effect span {
+    padding: 20px;
+    font-size: 20px;
+    background: #151414;
+    opacity: 0.8;
+    text-align: center;
+    color: #eeeeee;
+  }
+  .slide{
+    max-width: auto;
+   
+  }
+  .animate{
+    animation-name:free;
+  }
+  @keyframes free {
+    from{
+transform: translateX(0);
+    }
+   to{
+    transform: translateX(-100%);
+
+   } 
+}

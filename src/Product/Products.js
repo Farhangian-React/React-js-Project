@@ -10,6 +10,7 @@ import Footer from '../Footer/Footer';
 import TopNav from '../dashbord/TopNav';
 import { PageTitle } from '../Title/PageTitle';
 import './Products.css';
+import { NavLink } from 'react-router-dom';
 
 function Products() {
   return (
@@ -22,30 +23,33 @@ function Products() {
     
     <Box className='logos' >
 
-<div  class='logos-slide' >
+<Box  className='logos-slide' >
 
-<img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-<img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' />
-<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png"       alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-</div>
-<div  class='logos-slide' >
+<NavLink to={"/samsungbrand" }> <img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+<NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' /></NavLink>
+<NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+</Box>
+<Box  className='logos-slide' >
 
-<img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-<img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' />
-<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png"       alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-</div>
-<div  class='logos-slide' >
+<NavLink to={"/samsungbrand" }><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+<NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' /></NavLink>
+<NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
+</NavLink>
+</Box>
+<Box  className='logos-slide' >
 
-<img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-<img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' />
-<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png"       alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-</div>
+<NavLink to={"/samsungbrand" }><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+<NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png" alt='' /></NavLink>
+<NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg" alt='' /></NavLink>
+
+
+</Box>
 </Box>
 <Box sx={{width:'100%' }}>
       <SheetOne/>
@@ -62,33 +66,36 @@ function Products() {
     <Box sx={{width:'100%' }}>
       <SheetDishwasher/>
     </Box>
-    <div class='logos' >
+    <Box className='logos' >
 
-<div  class='logos-slide' >
+<Box  className='logos-slide' >
 
-<img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-<img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' />
-<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png"       alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-</div>
-<div  class='logos-slide' >
+<NavLink to={"/samsungbrand" }> <img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+<NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' /></NavLink>
+<NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+</Box>
+<Box  className='logos-slide' >
 
-<img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-<img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' />
-<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png"       alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-</div>
-<div  class='logos-slide' >
+<NavLink to={"/samsungbrand" }><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+<NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' /></NavLink>
+<NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
+</NavLink>
+</Box>
+<Box  className='logos-slide' >
 
-<img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-<img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' />
-<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png"       alt='' />
-<img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' />
-</div>
-</div>
+<NavLink to={"/samsungbrand" }><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
+<NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png" alt='' /></NavLink>
+<NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
+<NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg" alt='' /></NavLink>
+
+
+</Box>
+</Box>
 
     <Box sx={{width:'100%' }}>
       <Footer/>

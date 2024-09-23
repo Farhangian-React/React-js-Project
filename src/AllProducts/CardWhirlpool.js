@@ -1,9 +1,9 @@
 
 import 'react-slideshow-image/dist/styles.css';
 import React, {useContext,useState,useEffect} from 'react';
-import {CartContext} from '../../Shared/Cart-Context';
-import {CardData} from '../../Shared/Cart-Context';
-import {CardDataShow} from '../../Shared/Cart-Context';
+import {CartContext} from '../Shared/Cart-Context';
+import {CardData} from '../Shared/Cart-Context';
+import {CardDataShow} from '../Shared/Cart-Context';
 import ReactPaginate from 'react-paginate';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -12,45 +12,87 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import FilterDishwasher from "../../Product/Dishwasher/FilterDishwasher";
-import './Dishwasher.css';
+import FilterBrands from './FilterBrands';
 import { Divider } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import List from '@mui/joy/List';
+import ListItem from '@mui/joy/ListItem';
 function Tems({ currentItems }) {
-  const [cartItems,setCartItems]=useContext(CartContext);
- return (
-  <> 
-  <Box sx={{mt:2,mb:4}}>
-    <ul className='headers'>
-      <li>محصولات / </li>
-      <li> ماشین ظرف شویی</li>
+  const [data,setData]=useContext(CardData);
+  const [datashow,setDatashow]=useContext(CardDataShow);
+    const [cartItems,setCartItems]=useContext(CartContext);
+  
+    const FilteringDish=()=>{
+      
+   setDatashow(data.filter(i=> i.product === "Dish"));
+  
+    }
+    const FilteringWash=()=>{
     
-    </ul>
-  </Box>
-  <Box>
-  <Typography variant='h5'  sx={{px:5,pb:2}}> ماشین ظرفشویی های سهیل</Typography>
-    <Typography sx={{color:"#454545",fontSize:{xs:'14px',lg:'18px'}, px:5,pb:2}}>
-    چرا وقت گرانبهایی را صرف شستن ظروف کنید؟ مجموعه ما دارای طیف گسترده ای از ماشین ظرفشویی های قابل اعتماد و مجلل از برندهای مشهور است.
-    </Typography>
-    <Typography variant='h5'  sx={{px:5,pb:2}}>
-    انواع ماشین ظرفشویی پیشنهادی ما:
-    </Typography>
-   
-    <Typography  sx={{color:"#454545",fontSize:{xs:'14px',lg:'18px'},px:5,pb:2}}>
-    ماشین ظرفشویی توکار: ماشین ظرفشویی داخلی ما به طور یکپارچه در کابینت آشپزخانه شما ادغام می شود و راه حلی شیک و کم مصرف برای نیازهای ظرفشویی شما ارائه می کند. مجموعه مدل های داخلی ما را از مارک های پیشرو کاوش کنید.
-کشوهای ظروف: کشوهای ظروف ما یک محلول ظرفشویی انعطاف پذیر ارائه می دهند. با محفظه های جداگانه ای که می توانند به طور مستقل کار کنند، کشوهای ظرف برای خانه های کوچکتر یا آشپزخانه های کوچکتر مناسب هستند.
-ماشین ظرفشویی قابل حمل: ایده آل برای اجاره کنندگان یا هر کسی که گزینه قابل حمل را ترجیح می دهد، طیف ماشین ظرفشویی قابل حمل ما عملکرد را با قابلیت حمل ترکیب می کند. از آزادی حرکت ماشین ظرفشویی خود در هر کجا که لازم است لذت ببرید.
-بهترین ماشین ظرفشویی را در کلرادو بخرید
-از یکی از نمایشگاه‌های لوازم خانگی ما در دنور، کلرادو، و مناطق اطراف دیدن کنید تا بهترین ماشین‌های ظرفشویی موجود در بازار را تجربه کنید. چه به دنبال یک ماشین ظرفشویی مدرن از جنس استنلس استیل باشید یا یک ماشین ظرفشویی آماده پانل، کارکنان آگاه ما شما را از طریق موجودی ما راهنمایی می کنند و به شما کمک می کنند ماشین ظرفشویی مناسب برای آشپزخانه خود را پیدا کنید. برای کمک بیشتر با ما تماس بگیرید.
-    </Typography>
-  </Box>
-  <Box component="div" sx={{ display:'flex',flexDirection:{xs:'column',lg:'row'}}} >
-<FilterDishwasher/>
+      setDatashow(data.filter(i=> i.product === "Wash"));
+      
+       }
+       const FilteringGas=()=>{
+       
+        setDatashow(data.filter(i=> i.product === "Gas"));
+       
+         }
+         const FilteringRef=()=>{
+       
+          setDatashow(data.filter(i=> i.product === "Ref"));
+         
+           }
+   return (
+    <> 
+  
+  <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:1 }} >
+        <List
+              role="menu"
+              aria-label="Products"
+              variant="outlined"
+              orientation="horizontal"
+              sx={{
+                mt: 1,
+                boxShadow: 'md',
+                borderRadius: 'sm',
+                '--List-radius': '8px',
+                '--List-padding': '2px',
+                '--ListDivider-gap': '2px',
+                '--ListItemDecorator-size': '24px',
+                width:'100%',
+                backgroundColor:'#E0E1E3',
+                alignItems:'center',
+                
+               
+              }}
+            >
+                <ListItem role="none">
+                  <Button onClick={FilteringDish} sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
+         color:'white'}, fontSize:"17px",color:'#282828'}}> ماشین ظرفشویی</Button>   
+              </ListItem>
+              <ListItem  role="none">
+              <Button onClick={FilteringWash}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
+         color:'white'}, fontSize:"17px",color:'#282828'}}> ماشین لباسشویی</Button>
+              </ListItem>
+              <ListItem role="none">
+              <Button onClick={FilteringRef} sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
+         color:'white'}, fontSize:"17px",color:'#282828'}}>   یخچال و فریزر </Button>   
+              </ListItem>
+              <ListItem  role="none">
+              <Button onClick={FilteringGas}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
+         color:'white'}, fontSize:"17px",color:'#282828'}}>  پخت و پز</Button>
+              </ListItem>
+            </List>
+          </Box>
 
-<Box sx={{display:'flex',flexDirection:'column',justifyContent:'start'}}>
+
+  <Box component="div" sx={{ display:'flex',flexDirection:{xs:'column',lg:'row'}}} >
+<FilterBrands/>
+
+<Box sx={{display:'flex',flexDirection:'column',justifyContent:'start',mx:3}}>
 <Box sx={{my:{lg:3},mt:{xs:3},ml:1,mr:3,display:'flex',justifyContent:'start', height:'40px',bgcolor:{lg:"#E0E1E3"}}}>
 <Typography sx={{pb:1,px:2,fontSize:{xs:"20px",lg:'24px'},direction:'rtl'}}>
-ماشین ظرفشویی
+همه ی محصولات سامسونگ 
 </Typography>
 </Box>
 <Box  sx={{borderTop:'1px solid black',borderBottom:'1px solid black', display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:3,pb:3}}>
@@ -104,31 +146,32 @@ function Tems({ currentItems }) {
 );
     }
 
-export default function CardDishwasher({ itemsPerPage }) {
-
+export default function CardWhirlpool({ itemsPerPage }) {
 
 const [data,setData]=useContext(CardData);
 const [datashow,setDatashow]=useContext(CardDataShow);
 
 const getData=()=>{
-  fetch('http://localhost:3000/Allproducts' )
-  .then(res => res.json())
-  .then((result)=> {
-  setData(result.filter(i=>i.product === "Dish"));
-   setDatashow(result.filter(i=>i.product === "Dish"));
-  
-  
-  },
+fetch('http://localhost:3000/Allproducts' )
+.then(res => res.json())
+.then((result)=> {
+setData(result.filter(i=>i.brands === "Whirlpool"));
+ setDatashow(result.filter(i=>i.brands === "Whirlpool"));
+
+
+},
 (error) => {
   alert('error');
 }
-)
-}
+);
+
+  }
 
 useEffect( ()=>{
   getData();
 
 
+ 
 },[])
  
   const [itemOffset, setItemOffset] = useState(0);

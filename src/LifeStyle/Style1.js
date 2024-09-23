@@ -58,7 +58,7 @@ const [cartshow,setCartshow]=useState([]);
 }}>
    <Typography variant='h5' sx={{px:4,my:0,pt:1,color:'#C8A951',textAlign:'right'}} >
   به سبک خودت زندگی کن 
-  <Typography  sx={{fontSize:{xs:"16px",md:"20px"},py:3,my:0,color:'black',textAlign:'right',lineHeight:'0'}} > مطالب به روز و خواندنی در مورد هر آنچه که با آن زندگی می کنید
+  <Typography  sx={{fontSize:{xs:"14px",md:"18px"},py:3,my:0,color:'black',textAlign:'right',lineHeight:'0'}} > مطالب به روز و خواندنی در مورد هر آنچه که با آن زندگی می کنید
     </Typography>
    </Typography>
 </Box>
@@ -74,10 +74,10 @@ const [cartshow,setCartshow]=useState([]);
        backgroundRepeat: 'no-repeat',
        height:'300px',
        }} >
-    <Typography className='type1'  fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+    <Typography className='type1'  fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'16px'}}}>
     اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'20px',sm:"22px",md:'24px',lg:"26px"}}}>
    بیشتر بخوانید...
   </Typography>
   </Grid>
@@ -93,10 +93,10 @@ const [cartshow,setCartshow]=useState([]);
    height:'300px',
    m:2,
    }} >
-    <Typography className='type1' fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+    <Typography className='type1' fontWeight={400} sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'16px'}}}>
     ویژگی های لوازم خانگی دوست دار محیط زیست
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'20px',sm:"22px",md:'24px',lg:"26px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>
@@ -112,10 +112,10 @@ const [cartshow,setCartshow]=useState([]);
        height:'300px',
        m:2,
        }}>
-    <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+    <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'16px'}}}>
   نور نمایشگرهای دیجیتال و اثرات مخرب آن
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'20px',sm:"22px",md:'24px',lg:"26px"}}}>
    بیشتر بخوانید...
   </Typography>
   </Grid>
@@ -131,10 +131,10 @@ const [cartshow,setCartshow]=useState([]);
      height:'300px',
      m:2,
      }} >
-   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'16px'}}}>
 طرز تهیه ی آجیل بوداده برای شب یلدا
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'20px',sm:"22px",md:'24px',lg:"26px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>
@@ -150,10 +150,10 @@ xs={6} md={4} sx={{
  height:'300px',
  m:2,
  }} >
-   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'16px'}}}>
     محافظت از لوازم برقی در هنگام رعد و برق
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'20px',sm:"22px",md:'24px',lg:"26px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>
@@ -167,10 +167,10 @@ xs={6} md={4} sx={{
      height:'300px',
      m:2,
      }}>
-   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+   <Typography fontWeight={400} className='type1' sx={{color:'white',mt:{xs:27,md:28},mr:2,fontSize:{xs:'14px',md:'16px'}}}>
     ساده ترین راه ها برای داشتن منزلی با دکوراسیون پاییزی
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'22px',sm:"24px",md:'26px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mt:{xs:25,sm:17,md:17,lg:20},mr:{xs:8,sm:12,md:10,lg:14},color:'white',fontSize:{xs:'20px',sm:"22px",md:'24px',lg:"26px"}}}>
    بیشتر بخوانید...
   </Typography>
 </Grid>
@@ -201,10 +201,10 @@ sx={{height:"300px"}}
     alt=""
   />
       
-    <Typography className='type1'  fontWeight={400} sx={{color:'#353535',mt:2,mr:2,fontSize:{xs:'14px',md:'18px'}}}>
+    <Typography className='type1'  fontWeight={400} sx={{color:'#353535',mt:2,mr:2,fontSize:{xs:'14px',md:'16px'}}}>
    {item.text}
   </Typography>
-  <Typography className='type2'  fontWeight={400} sx={{mr:{xs:8,sm:12,md:10,lg:14},color:'#353535',fontSize:{xs:'18px',sm:"18px",md:'22px',lg:"28px"}}}>
+  <Typography className='type2'  fontWeight={400} sx={{mr:{xs:8,sm:12,md:10,lg:14},color:'#353535',fontSize:{xs:'20px',sm:"22px",md:'24px',lg:"26px"}}}>
    بیشتر بخوانید...
   </Typography>
 

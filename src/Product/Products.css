@@ -54,9 +54,7 @@ background:linear-gradient(to left ,rgba(255,255,255,0),white) ;
 .logos-slide{
     height: 50px;
     margin:0px;
- 
     animation: 10s slide infinite linear;
- 
 }
 .logos-slide img{
 margin: 0 40px;

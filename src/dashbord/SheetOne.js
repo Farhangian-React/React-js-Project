@@ -3,10 +3,56 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { Box, Button, Typography } from '@mui/material';
 import './Sheet.css';
 import { Slide } from 'react-slideshow-image';
+import { NavLink } from 'react-router-dom';
 
-const message= [ "jhgjdtga","jhfyjmhdytsxdg","kguyfdyuds"];
 
 export default function SheetOne() {
+
+    const responsiveSettings = [
+        {
+            breakpoint: 1536,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll:2
+            }
+        },
+        {
+            breakpoint: 0,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ];
+  
+    const images = [
+       
+      "https://decokaran.ir/image/cache/outputfiles/products/%D9%8EAshpaz_khane/kabinet/KT104%20(3)-700x700.jpg",
+      "https://110center.ir/images/articles/ivzmb1kgofq7rc3p9dw2htejy48lsxnu65a.jpg",
+      "https://farahamkadeh.ir/wp-content/uploads/2023/11/12dishwasher-min-1-780x470.png",
+    ]
+
   return (
 
     <>
@@ -76,18 +122,76 @@ export default function SheetOne() {
             </Grid>
            
         </Grid>
-        <Grid>
-        <Slide slidesToScroll={1} slidesToShow={4} indicators={true} sx={{ display: { xs: 'none', md: 'flex' } }}  >
-{message.map(i=>
-<Box>
-  <Typography>
-    
-  </Typography>
-</Box>
-)}
+        
+
+
+
+
+
+          <Grid  sx={{borderTop:"4px solid #E0AA3E",borderBottom:"4px solid #E0AA3E",backgroundImage:"linear-gradient(to top right, rgba(0,0,0,0),  #E0AA3E)",px:1,mx:{xs:0,md:8},my:2,py:3}} >
+          <Grid xs={12}  sx={{display:"flex",flexDirection:"row",justifyContent:"space-around",direction:"rtl",px:5,mt:0,mx:{xs:2,md:5}}}>
+         <Grid xs={8} sx={{display:"flex",flexDirection:"row",justifyContent:"start",direction:"rtl",px:1,mt:0,mx:1}}>
+          <Grid  sx={{display:{xs:"none",md:"flex"},alignSelf:"center",my:1,mx:{xs:6,md:4}}}>
+           <Box  sx={{backgroundImage:'linear-gradient(to bottom, rgba(0,0,0,0),  #352913),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyC_EWvczwtEpbLYz3XmeXHzU7rzTHmsUdKQ&s")',
+            display:"flex",justifyContent:"center",alignItems:"center",height:{xs:"70px",md:"110px"},width: {xs:"70px",md:"110px"},backgroundSize:"cover",backgroundRepeat:"no-repeat",borderRadius:"50%"}}>
+           </Box>
+           </Grid>
+<Grid className="animat" sx={{display:"flex",alignSelf:"center",mx:{xs:0,md:0}}} >
+           <Typography  sx={{fontSize:{xs:"16px",md:"28px"},color:"#4d4d4d"}}>
+پیشنهاد شگفت انگیز  
+           </Typography>
+          
+           </Grid>
+         </Grid>
+         <Grid xs={4}  sx={{alignSelf:"center"}} >
+         <Button variant='contained'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
+       color:'white'}, fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',m:3,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/allproducts" }> همه ی محصولات </NavLink></Button>
+         </Grid>
+        </Grid>
+
+        <Slide cssClass="slide" slidesToScroll={1} slidesToShow={2} indicators={false} responsive={responsiveSettings}  >
+      
+        <Box  sx={{backgroundImage:'linear-gradient(to bottom, rgba(0,0,0,0),  #352913),url("https://dkstatics-public.digikala.com/digikala-products/3613174.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90")',
+        display:"flex",justifyContent:"end",alignItems:"end",height:{xs:"400px",sm:"550",md:"400px"} ,backgroundSize:"cover",backgroundRepeat:"no-repeat",p:0,mt:2,mx:{xs:0,md:1},borderRadius:"5px"}}>
+                <Box sx={{display:"flex",flexDirection:"column",p:3,textAlign:"center",color:"#e4e4e4"}} >
+                    <Typography variant='h5' >انتخاب پاکیزگی</Typography>
+                    <Typography variant='body2'>از میان برترین های لباس شویی </Typography>
+                  <NavLink to={'/shop-washing-machine'}>  <Button  sx={{mt:2,p:0,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",fontSize:"16px",color:"white",width:"30px",alignSelf:"center",borderBottomLeftRadius:"15px"}}>خرید</Button></NavLink>
+                </Box>
+            </Box>
+            <Box  sx={{backgroundImage:'linear-gradient(to bottom, rgba(0,0,0,0),  #352913),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSERqwMEec6wyGTttP8XksshlgWiMZ4nTxPiA&s")',
+            display:"flex",justifyContent:"end",alignItems:"end",height:{xs:"400px",sm:"550",md:"400px"} ,backgroundSize:"cover",backgroundRepeat:"no-repeat",mt:2,mx:1,borderRadius:"5px"}}>
+                <Box sx={{display:"flex",flexDirection:"column",p:3,textAlign:"center",color:"#e4e4e4"}} >
+                    <Typography variant='h5' >انتخاب تازگی</Typography>
+                    <Typography variant='body2'>از میان برترین های یخچال و فریزر </Typography>
+                    <NavLink to={"/allrefriderators"}> <Button  sx={{mt:2,p:0,backgroundImage:"linear-gradient(to right ,#E0AA3E,#352913)",fontSize:"16px",color:"white",width:"30px",alignSelf:"center",borderBottomLeftRadius:"15px"}}>خرید</Button>
+               </NavLink> </Box>
+            </Box>
+            <Box  sx={{backgroundImage:'linear-gradient(to bottom, rgba(0,0,0,0),#352913),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP8rgDD5hIGMNgtCBmHIiFEOKS2LwBchvL7g&s")',
+            display:"flex",justifyContent:"end",alignItems:"end",height:{xs:"400px",sm:"550",md:"400px"} ,backgroundSize:"cover",backgroundRepeat:"no-repeat",mt:2,mx:1,borderRadius:"5px"}}>
+                <Box sx={{display:"flex",flexDirection:"column",p:3,textAlign:"center",color:"#e4e4e4"}} >
+                    <Typography variant='h5' >انتخاب راحتی</Typography>
+                    <Typography variant='body2'>از میان برترین های ماشین لباس شویی </Typography>
+                  <NavLink to={'/shop-dishwasher' }>  <Button  sx={{mt:2,p:0,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",fontSize:"16px",color:"white",width:"30px",alignSelf:"center",borderBottomLeftRadius:"15px"}}>خرید</Button>
+              </NavLink>  </Box>
+            </Box>
+            <Box  sx={{backgroundImage:'linear-gradient(to bottom, rgba(0,0,0,0),  #352913),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKSBWkRSgllj9CdUa984-XIVrZDaHd766MYQ&s")',
+            display:"flex",justifyContent:"end",alignItems:"end",height:{xs:"400px",sm:"550",md:"400px"} ,backgroundSize:"cover",backgroundRepeat:"no-repeat",mt:2,mx:1,borderRadius:"5px"}}>
+                <Box sx={{display:"flex",flexDirection:"column",p:3,textAlign:"center",color:"#e4e4e4"}} >
+                    <Typography variant='h5' >انتخاب خوشمزگی</Typography>
+                    <Typography variant='body2'>از میان برترین های اجاق گاز </Typography>
+                    <NavLink to={"/allgas"}><Button  sx={{mt:2,p:0,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",fontSize:"16px",color:"white",width:"30px",alignSelf:"center",borderBottomLeftRadius:"15px"}}>خرید</Button>
+              </NavLink>  </Box>
+            </Box>
         </Slide>
         </Grid>
+       
+         
+     
+       
+       
     
+       
     
     </>
   );

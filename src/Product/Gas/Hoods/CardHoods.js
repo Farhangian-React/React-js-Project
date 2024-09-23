@@ -94,11 +94,13 @@ import FilterHoods from "./FilterHoods";
     const [data,setData]=useContext(CardData);
     const [datashow,setDatashow]=useContext(CardDataShow);
     const getData=()=>{
-      fetch('http://localhost:3000/Hoods')
+      fetch('http://localhost:3000/Allproducts' )
       .then(res => res.json())
       .then((result)=> {
-        setData(result);
-        setDatashow(result);
+      setData(result.filter(i=>i.product === "Gas" && i.type === "hood"));
+       setDatashow(result.filter(i=>i.product === "Gas" && i.type === "hood" ));
+      
+      
       },
       (error) => {
         alert('error');

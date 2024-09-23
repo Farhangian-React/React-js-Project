@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import dishwashericon from '../img/dishwasher-icon.jpg';
 import washingmachins from '../img/washingmachin-icon2.png';
 import gasicon from '../img/gas-icon2.jpg';
-
 import Refrigeratoricon from '../img/Refrigerator-icon1.png';
 import { Typography } from '@mui/joy';
 import List from '@mui/joy/List';
@@ -14,7 +13,6 @@ import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import {NavLink} from 'react-router-dom';
 import './Footer.css';
 import Divider from '@mui/material/Divider';
-import TextField from '@mui/material/TextField';
 export default function Footer() {
   return (
     <Box sx={{ m:1, bgcolor:"#1c1c1c" ,display:'flex',flexDirection:'column'}} >

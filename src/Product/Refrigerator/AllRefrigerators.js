@@ -101,11 +101,13 @@ export default function AllRefrigerators({ itemsPerPage }) {
   const [datashow,setDatashow]=useContext(CardDataShow);
 
  const getData=()=>{
-  fetch('http://localhost:3000/Refrigerators')
+  fetch('http://localhost:3000/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
-    setData(result);
-setDatashow(result);
+  setData(result.filter(i=>i.product === "Ref"));
+   setDatashow(result.filter(i=>i.product === "Ref"));
+  
+  
   },
   (error) => {
     alert('error');

@@ -105,11 +105,13 @@ export default function CardRefrigeratorsFrenchDoor({ itemsPerPage }) {
   const [datashow,setDatashow]=useContext(CardDataShow);
 
  const getData=()=>{
-  fetch('http://localhost:3000/RefrigeratorsFrenchDoor')
+  fetch('http://localhost:3000/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
-    setData(result);
-setDatashow(result);
+  setData(result.filter(i=>i.product === "Ref" && i.type === "FrenchDoor"));
+   setDatashow(result.filter(i=>i.product === "Ref" && i.type === "FrenchDoor" ));
+  
+  
   },
   (error) => {
     alert('error');

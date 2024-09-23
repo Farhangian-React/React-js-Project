@@ -23,7 +23,8 @@ function Tems({ currentItems }) {
         <li> یخچال و فریزر / </li>
         <li> یخچال های فریزر تخصصی </li>
       </ul>
-    </Box>
+    </Box> 
+
     <Box>
       <Typography sx={{fontSize:{xs:'14px',lg:'18px'}, px:5,pb:2}}>راحتی را با یخچال فریزر پایین از سهیل کشف کنید. این پیکربندی ها یخچال را در بالای کشوی فریزر نشان می دهد که یخچال را در سطح چشم قرار می دهد.
       </Typography>
@@ -98,11 +99,13 @@ export default function CardRefrideratorSpecializedFreezer({ itemsPerPage }) {
   const [datashow,setDatashow]=useContext(CardDataShow);
 
  const getData=()=>{
-  fetch('http://localhost:3000/RefrideratorSpecializedFreezer')
+  fetch('http://localhost:3000/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
-    setData(result);
-setDatashow(result);
+  setData(result.filter(i=>i.product === "Ref" && i.type === "Special"));
+   setDatashow(result.filter(i=>i.product === "Ref" && i.type === "Special" ));
+  
+  
   },
   (error) => {
     alert('error');

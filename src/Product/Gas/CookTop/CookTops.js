@@ -11,6 +11,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import "../../Dishwasher/Dishwasher.css";
 export default  function CookTops() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -58,7 +59,7 @@ export default  function CookTops() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"20px"}}
+               sx={{color:"#E0AA3E",fontSize:"16px"}}
                >
                 پخت و پز 
                

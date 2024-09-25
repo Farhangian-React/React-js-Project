@@ -7,16 +7,19 @@
 
 .navlinkfooter{
     color:#bfbfbf;
-    font-size: 22px;
     text-decoration: none; 
     }
     .navlinkfooter:hover{
         color:  #E0AA3E;
     }
     .navlinkwhite{
+        font-size: small;
         color: #8a8a8a;
         text-decoration: none; 
     }
     .navlinkwhite:hover{
         color:  #E0AA3E;
     }
+
+
+

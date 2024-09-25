@@ -12,6 +12,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import FilterBrands from './FilterBrands';
 import { Divider } from '@mui/material';
 import { NavLink } from 'react-router-dom';
@@ -68,39 +69,40 @@ function Tems({ currentItems }) {
             >
                 <ListItem role="none">
                   <Button onClick={FilteringDish} sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
-         color:'white'}, fontSize:"17px",color:'#282828'}}> ماشین ظرفشویی</Button>   
+         color:'white'}, fontSize:{xs:"14px",md:"17px"},color:'#282828'}}> ماشین ظرفشویی</Button>   
               </ListItem>
               <ListItem  role="none">
               <Button onClick={FilteringWash}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
-         color:'white'}, fontSize:"17px",color:'#282828'}}> ماشین لباسشویی</Button>
+         color:'white'}, fontSize:{xs:"14px",md:"17px"},color:'#282828'}}> ماشین لباسشویی</Button>
               </ListItem>
               <ListItem role="none">
               <Button onClick={FilteringRef} sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
-         color:'white'}, fontSize:"17px",color:'#282828'}}>   یخچال و فریزر </Button>   
+         color:'white'}, fontSize:{xs:"14px",md:"17px"},color:'#282828'}}>   یخچال و فریزر </Button>   
               </ListItem>
               <ListItem  role="none">
               <Button onClick={FilteringGas}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
-         color:'white'}, fontSize:"17px",color:'#282828'}}>  پخت و پز</Button>
+         color:'white'}, fontSize:{xs:"14px",md:"17px"},color:'#282828'}}>  پخت و پز</Button>
               </ListItem>
             </List>
           </Box>
 
-  <Box component="div" sx={{ display:'flex',flexDirection:{xs:'column',lg:'row'}}} >
+  <Box component="div" sx={{ display:'flex',flexDirection:{xs:'column',md:'row'}}} >
 <FilterBrands/>
 
-<Box sx={{display:'flex',flexDirection:'column',justifyContent:'start',mx:3}}>
+<Box sx={{width:{xs:"90%",md:"95%"},display:'flex',flexDirection:'column',justifyContent:'start',mx:2}}>
 <Box sx={{my:{lg:3},mt:{xs:3},ml:1,mr:3,display:'flex',justifyContent:'start', height:'40px',bgcolor:{lg:"#E0E1E3"}}}>
 <Typography sx={{pb:1,px:2,fontSize:{xs:"20px",lg:'24px'},direction:'rtl'}}>
 همه ی محصولات سامسونگ 
 </Typography>
 </Box>
-<Box  sx={{borderTop:'1px solid black',borderBottom:'1px solid black', display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:3,pb:3}}>
+<Grid>
+<Box  sx={{borderTop:'1px solid black',borderBottom:'1px solid black', display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:0,pb:3}}>
 
 {currentItems &&
   currentItems.map((item) => (
     
     <NavLink to={'/CartBuyDishwasher'}  className={"linkss"}>    
-<Card className='cards' sx={{width:{xs:'350px',lg:'260px'},height:{xs:'600px',lg:'500px'},marginTop:'10px',marginBottom: '10px',mx:3,mt:3, p:1 }} key={item.id}>
+<Card className='cards' sx={{width:{xs:'350px',lg:'260px'},height:{xs:'600px',lg:'500px'},marginTop:'10px',marginBottom: '10px',mx:1,mt:3, p:1 }} key={item.id}>
 <CardMedia
   component="img"
  
@@ -121,7 +123,7 @@ function Tems({ currentItems }) {
 <Divider/>
 <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',p:2,borderBottom:'1px solid gray'}}>
    <Typography  variant="body2" color="black" sx={{textAlign:'center'}}>خرید نقدی</Typography>
-   <Typography  variant="h6" color="gray" sx={{textAlign:'center'}}>{item.price}</Typography>
+   <Typography  variant="h6" color="#674e06" sx={{textAlign:'center'}}>{item.price}</Typography>
 </Box>
 <CardActions sx={{display:'flex',justifyContent:'center'}}>
 <NavLink to={'/CartBuyDishwasher'}>  <Button size="large"
@@ -139,6 +141,7 @@ function Tems({ currentItems }) {
     
   ))}
   </Box>
+  </Grid>
   </Box>
 </Box>
   </>

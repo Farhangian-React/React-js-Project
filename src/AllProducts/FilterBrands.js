@@ -349,7 +349,7 @@ const handleChangeE1=(e)=>{
    
 return (
   <>
-  <Box component="div" sx={{width:{xs:'90%',md:'40%'},display:{xs:"none",md:'flex'},flexDirection:'column',justifyContent:{xs:'center',md:'start'}}}>
+  <Box component="div" sx={{width:{xs:'95%',md:'30%'},display:{xs:"none",md:'flex'},flexDirection:'column',justifyContent:{xs:'center',md:'start'}}}>
     <Box sx={{my:3,ml:1,mr:1, display:'flex' ,justifyContent:'start', height:'40px',width:'100%',bgcolor:'#E0E1E3'}}>
 <Typography sx={{pt:1,px:2,fontSize:'18px',direction:'rtl'}}>
 نوع نمایش
@@ -474,7 +474,7 @@ return (
     </Accordion>
 </Box>
 
-<Box component="div" sx={{width:{xs:'95%',lg:'40%'},alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
+<Box component="div" sx={{width:{xs:'95%',md:'100%'},alignSelf:"center",display:{xs:"flex",md:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
      
 <Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",bgcolor:'#E0E1E3'}}>
       <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >

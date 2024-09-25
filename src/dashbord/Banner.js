@@ -87,9 +87,9 @@ export default function Banner() {
              <Typography  level='h2' sx={{color:'white' ,my:3,px:2}}> {returnType1()}</Typography>
 
             <Typography   sx={{color:'white' ,my:1,px:2,fontSize:{xs:"16px",md:"18px",lg:"22px"}}}> {returnType2()}</Typography>
-            <Typography  sx={{fontSize:{xs:"14px",sm:"16px",md:"18px",lg:"22px"}}}>
-            <NavLink className='navbanner'  to={'/jashnehtabestane'}> {returnType3()}</NavLink>
-          </Typography>
+             <NavLink className='navbanner'  to={'/jashnehtabestane'}> <Typography  sx={{fontSize:"18px",color:"#E0AA3E",mt:5,px:2}} >
+           {returnType3()}
+          </Typography></NavLink>
           </Typography>
         
          </Box>

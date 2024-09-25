@@ -9,6 +9,7 @@ import TopNav from '../../dashbord/TopNav';
 import { PageTitle } from '../../Title/PageTitle';
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
+import "../Dishwasher/Dishwasher.css";
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default  function Gas() {
@@ -52,7 +53,7 @@ export default  function Gas() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"20px"}}
+               sx={{color:"#E0AA3E",fontSize:"16px"}}
                >
                 پخت و پز 
                

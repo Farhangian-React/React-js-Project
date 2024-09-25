@@ -57,13 +57,13 @@ function TopNav(props) {
         <Grid  xs={5} md={3} sx={{mt:3, display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
         <img className='imgsohil' width={60}  src='https://png.pngtree.com/png-clipart/20230817/original/pngtree-mountains-logo-design-sky-high-vector-picture-image_10974603.png'/>
                <Typography
-     variant="h5"
+    
      noWrap
      component="a"
      href="/"
      sx={{
        mr:{sx:0,md:2} ,
-       mt:1,
+       mt:{xs:2,md:1},
        display: 'flex',
        flexGrow: 0,
        fontFamily: 'monospace',
@@ -72,6 +72,7 @@ function TopNav(props) {
        letterSpacing: '.1rem',
        color: '#f2b705',
        textDecoration: 'none',
+       fontSize:{xs:"18px",md:"28px "}
      }}
    >
      S O H I L

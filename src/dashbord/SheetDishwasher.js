@@ -74,7 +74,7 @@ export default function SheetDishwasher() {
         </Grid>
                   <Grid  xs={12}  sx={{display:{xs:'flex',sm:'flex'},justifyContent:{xs:'center',sm:'center',md:'start'}}}>
        <Button variant='contained' sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-       color:'white'}, fontSize:"18px",color:'#eeeeee',m:3,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/shop-dishwasher" }>  مشاهده همه ی ماشین ظرفشویی ها </NavLink></Button>
+       color:'white'}, fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',m:3,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/shop-dishwasher" }>  مشاهده همه ی ماشین ظرفشویی ها </NavLink></Button>
         </Grid>
         </Grid>
       </Grid>     

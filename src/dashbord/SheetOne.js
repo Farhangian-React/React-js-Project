@@ -12,8 +12,8 @@ export default function SheetOne() {
         {
             breakpoint: 1536,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
+                slidesToShow: 4,
+                slidesToScroll: 4
             }
         },
         {
@@ -46,12 +46,6 @@ export default function SheetOne() {
         }
     ];
   
-    const images = [
-       
-      "https://decokaran.ir/image/cache/outputfiles/products/%D9%8EAshpaz_khane/kabinet/KT104%20(3)-700x700.jpg",
-      "https://110center.ir/images/articles/ivzmb1kgofq7rc3p9dw2htejy48lsxnu65a.jpg",
-      "https://farahamkadeh.ir/wp-content/uploads/2023/11/12dishwasher-min-1-780x470.png",
-    ]
 
   return (
 
@@ -82,9 +76,9 @@ export default function SheetOne() {
      }} >
   
 </Grid>
-<Grid xs={12} container    sx={{display:"flex",justifyContent:"center",flexDirection:{xs:"column",md:"row"},my:5}}>
+<Grid xs={12} container    sx={{display:"flex",justifyContent:"center",flexDirection:{xs:"column",sm:"row"},my:5}}>
             <Grid xs={12} md={3}  sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3,mx:2}}> 
-          <Box sx={{height:"130px",mx:6}}>
+            <Box sx={{height:{xs:"120px",sm:"160px"},mx:{xs:10,sm:3}}}>
                 <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>   با سهیل... </Typography>
                 <Typography sx={{my:2,textAlign:"center",color:"gray"}}>نمایشگاه های زیبا و با موقعیت مناسب خبره ترین کارشناسان لوازم خانگی ما آنچه را که شما می خواهید قیمت مورد نظر شما را داریم</Typography>
                 </Box>
@@ -97,7 +91,7 @@ export default function SheetOne() {
             <Box className='linevertical' sx={{display:{xs:"none",md:"flex"},alignSelf:"center"}}> </Box>
             <Box className='linehorizental' sx={{display:{xs:"flex",md:"none"},alignSelf:"center"}}> </Box>
             <Grid xs={12} md={3}   sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3,mx:2}}>
-       <Box sx={{height:"130px",mx:6}}>
+            <Box sx={{height:{xs:"120px",sm:"160px"},mx:{xs:10,sm:3}}}>
                 <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>خرید شما </Typography>
                 <Typography sx={{my:2,textAlign:"center",color:"gray"}}>بسیاری از آشپزخانه‌های خیره‌کننده الهام‌بخش طراحی هستند.
 لوازم خانگی متصل شده به صورت زنده دستگاه های جدید خود را در فروشگاه آزمایش کنید</Typography>
@@ -111,7 +105,7 @@ export default function SheetOne() {
             <Box className='linevertical' sx={{display:{xs:"none",md:"flex"},alignSelf:"center"}}> </Box>
             <Box className='linehorizental' sx={{display:{xs:"flex",md:"none"},alignSelf:"center"}}> </Box>
             <Grid xs={12} md={3}   sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3,mx:2}}>
-           <Box sx={{height:"130px",mx:6}}>
+           <Box sx={{height:{xs:"120px",sm:"160px"},mx:{xs:10,sm:3}}}>
                 <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>تحویل متخصص</Typography>
                 <Typography sx={{my:2,textAlign:"center",color:"gray"}}>   این شرکت متخصصانی را آموزش داده و با دانش ترین خدمه لوازم خانگی سهیل به کار گرفته است</Typography>
               </Box>

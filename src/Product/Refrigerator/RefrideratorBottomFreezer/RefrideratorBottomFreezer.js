@@ -10,6 +10,7 @@ import { PageTitle } from '../../../Title/PageTitle';
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import "../../Dishwasher/Dishwasher.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default  function RefrideratorBottomFreezer() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -27,7 +28,7 @@ export default  function RefrideratorBottomFreezer() {
 <>
 <PageTitle title='فریزر پایین/ یخچال و فریزر  ' description='   یخجال و فریزر '/>
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:1 }} >
+   <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"
@@ -52,7 +53,7 @@ export default  function RefrideratorBottomFreezer() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"20px"}}
+               sx={{color:"#E0AA3E",fontSize:"16px"}}
                >
                 یخچال و فریزر 
                

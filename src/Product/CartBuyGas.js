@@ -297,7 +297,7 @@ direction:"rtl"
           
         }}
       >
-        <AccordionSummary   sx={{color:"white",fontSize:'22px',  backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)"}}   expandIcon={<AddIcon />}> مشخصات اصلی</AccordionSummary>
+        <AccordionSummary   sx={{color:"white",fontSize:{xs:"14px",md:'18px'},  backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)"}}   expandIcon={<AddIcon sx={{fontSize:{xs:"16px",md:"22px"}}} />}> مشخصات اصلی</AccordionSummary>
         <AccordionDetails sx={{ml:{xs:5}}}>
           <Box  sx={{display:'flex'}}>
           <Grid xs={12} md={4} >
@@ -457,7 +457,7 @@ direction:"rtl"
           setIndex(expanded ? 1 : null);
         }}
       >
-        <AccordionSummary   sx={{color:"white",fontSize:'22px',  backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)"}}   expandIcon={<AddIcon />}>ویژگی ها و امکانات</AccordionSummary>
+        <AccordionSummary   sx={{color:"white",fontSize:{xs:"14px",md:'18px'},  backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)"}}   expandIcon={<AddIcon sx={{fontSize:{xs:"16px",md:"22px"}}} />}>ویژگی ها و امکانات</AccordionSummary>
         <AccordionDetails sx={{ml:{xs:5}}}> {cartItems.map(i=>
           <Box  sx={{ml:{xs:3},display:'flex',flexWrap:'wrap',justifyContent:'center'}}>  
           {i.Prop.map(j=>
@@ -490,7 +490,7 @@ direction:"rtl"
           setIndex(expanded ? 2 : null);
         }}
       >
-        <AccordionSummary  sx={{color:"white",fontSize:'22px',  backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)"}}   expandIcon={<AddIcon />}> مشخصات بیشتر</AccordionSummary>
+        <AccordionSummary  sx={{color:"white",fontSize:{xs:"14px",md:'18px'},  backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)"}}   expandIcon={<AddIcon sx={{fontSize:{xs:"16px",md:"22px"}}} />}> مشخصات بیشتر</AccordionSummary>
         <AccordionDetails>
         <Grid  >
         

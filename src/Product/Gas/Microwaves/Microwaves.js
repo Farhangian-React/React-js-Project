@@ -10,6 +10,7 @@ import { PageTitle } from '../../../Title/PageTitle';
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import "../../Dishwasher/Dishwasher.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default  function Microwaves() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -58,7 +59,7 @@ export default  function Microwaves() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"20px"}}
+               sx={{color:"#E0AA3E",fontSize:"16px"}}
                >
                 پخت و پز 
                

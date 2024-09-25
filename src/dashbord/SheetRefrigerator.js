@@ -31,7 +31,7 @@ export default function SheetRefrigerator() {
         </Grid>
                   <Grid  xs={12}  sx={{display:{xs:'flex',sm:'flex'},justifyContent:{xs:'center',sm:'center',md:'start'}}}>
        <Button variant='contained'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-       color:'white'}, fontSize:"18px",color:'#eeeeee',m:3,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/allrefriderators" }>  مشاهده همه ی یخچال و فریزرها </NavLink></Button>
+       color:'white'},fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',m:3,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/allrefriderators" }>  مشاهده همه ی یخچال و فریزرها </NavLink></Button>
         </Grid>
         </Grid>
         <Grid xs={12} md={6}  sx={{display:{sm:'flex'},flexDirection:"column",justifyContent:'center',my:2}}>

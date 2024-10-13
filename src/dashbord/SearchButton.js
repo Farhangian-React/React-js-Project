@@ -108,7 +108,7 @@ const handleInputChange = (e) => {
 <Grid   xs={3} sx={{mt:3, ml:0, display: { xs: 'flex', md: 'none' } ,justifyContent:'start'}}>
            <CollapsNavigationMenu />       
           </Grid>
-        <Grid sx={{mt: 3,display: { xs: 'none', md: 'flex' },justifyContent:'space-between'}}>  
+        <Grid sx={{mt: 3,py:1,display: { xs: 'none', md: 'flex' },justifyContent:'space-between'}}>  
               <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
               <NavLink to={'/buybasket'} >
               <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'white',fontSize:'22px'}}/>

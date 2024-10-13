@@ -1,5 +1,9 @@
 
-
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
 @keyframes slide {
     from{
 transform: translateX(0);

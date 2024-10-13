@@ -11,7 +11,6 @@ import RefrigeratorsFrenchDoor from './Product/Refrigerator/RefrideratorTowDoor/
 import RefrideratorSideBySide from './Product/Refrigerator/SideBySideRefriderator/RefrideratorSideBySide';
 import RefrideratorSpecializedFreezer from './Product/Refrigerator/RefrideratorSpecializedFreezer/RefrideratorSpecializedFreezer';
 import { Routes, Route} from 'react-router-dom';
-import Login  from './Login/Login';
 import LifeStyle from './LifeStyle/LifeStyle';
 import Gas from './Product/Gas/Gas';
 import {CartProvider} from './Shared/Cart-Context';
@@ -36,10 +35,13 @@ import SamsungBrands from './AllProducts/SamsungBrands';
 import LgBrands from './AllProducts/LgBrands';
 import WhirlpoolBrands from './AllProducts/WhirlpoolBrands';
 import BushBrands from "./AllProducts/BushBrands";
+import SignIn from "./Login/SignIn";
+import SignUp from "./Login/SignUp";
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
- 
+ <ToastContainer theme='colored'></ToastContainer>
  
   return (
     <>
@@ -47,7 +49,8 @@ function App() {
           <div className="content">
             <Routes>
              <Route path="/" exact element={<Products/>} />
-             <Route path="/login" exact element={<Login/>} />
+             <Route path="/signin" exact element={<SignIn/>} />
+             <Route path="/signup" exact element={<SignUp/>} />
              <Route path="/cartbuyrefrigerator" exact element={<CartBuyRefrigerator />} />
              <Route path="/cartbuygas" exact element={<CartBuyGas />} />
              <Route path="/CartBuyDishwasher" exact element={<CartBuyDishwasher />} />
@@ -80,7 +83,8 @@ function App() {
              <Route path='/lgbrand' exact element={<LgBrands/>} />
              <Route path='/whirlpoolbrand' exact element={<WhirlpoolBrands/>} />
              <Route path='/bushbrands' exact element={<BushBrands/>} />
-
+           
+           
              <Route path="*" element={<PageNotFount/>} />
             </Routes>
           </div>

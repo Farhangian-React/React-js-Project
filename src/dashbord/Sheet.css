@@ -58,3 +58,8 @@ transform: translateX(0);
 
    } 
 }
+.box{
+  clip-path: ellipse(500px 300px at 10% 20%);
+ border-radius: 20px;
+ margin: auto;
+}

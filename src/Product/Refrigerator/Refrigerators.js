@@ -19,6 +19,11 @@ export default  function Refrigerators() {
   const [anchorEl1, setAnchorEl1] = React.useState(null);
   const opens1 = Boolean(anchorEl1);
   const handleClose1 = () => {
+
+
+      
+
+    
     setAnchorEl1(null);
   }
   const handleClick1 = (event) => {

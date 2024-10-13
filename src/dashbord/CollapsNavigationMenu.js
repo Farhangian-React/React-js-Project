@@ -240,6 +240,9 @@ export default function CollapsNavigationMenu() {
             width: drawerWidth,
             boxSizing: 'border-box',
             height:'100vh',
+            display:"flex",
+            flexDirection:"column",
+            justifyContent:"space-between"
            
           },
         }}
@@ -278,7 +281,7 @@ export default function CollapsNavigationMenu() {
           </IconButton>
              </Grid>
         </DrawerHeader>
-        <Divider />
+      
         <List 
         sx={{fontSize:"18px",color:"#515151",width:"130px"}}
         >
@@ -410,12 +413,7 @@ export default function CollapsNavigationMenu() {
       </Menu>
             </ListItem>
             
-            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-            
-            </ListItem>
-            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-             
-             </ListItem>
+          
 
             <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
@@ -450,17 +448,15 @@ export default function CollapsNavigationMenu() {
            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
             
            </ListItem>
-           <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-            
+           <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}> 
             </ListItem>
         </List>
-        <Divider  />
-    <NavLink to={'/login'}>
-           <PermIdentityOutlinedIcon  sx={{mt:3,mr:22,fontSize:'35px',color:'black'}} />
-        </NavLink>
-          
-       
-       
+        <NavLink className="signup"  to={'signup'}>
+        <Box sx={{display:"flex",flexDirection:"row",justifyContent:"center",m:1,px:2,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",pb:1,borderRadius:1}}>
+           <Typography variant='body2' sx={{mt:2,color:"#eeeeee"}}>ورود یا عضویت </Typography>
+           <PermIdentityOutlinedIcon  sx={{mt:1,mr:2,fontSize:'30px',color:'white'}} />
+       </Box>
+       </NavLink>
       </Drawer>
    </Grid>
     </>

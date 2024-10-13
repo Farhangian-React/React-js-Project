@@ -14,6 +14,7 @@ import Refrigeratoricon from '../img/Refrigerator-icon1.png';
 import {NavLink} from 'react-router-dom';
 import './E.css';
 import { Typography } from '@mui/material';
+
 const useRovingIndex = (options) => {
   const {
     initialActiveIndex = 0,
@@ -695,7 +696,7 @@ export default function NavigationMenu() {
   const { targets, getTargetProps, setActiveIndex, focusNext, focusPrevious } =
     useRovingIndex();
   return (
-    <Box >
+    <Box sx={{display:"flex"}} >
       <List
      
         role="menubar"
@@ -801,6 +802,7 @@ export default function NavigationMenu() {
           />
         </ListItem>
       </List>
+    
     </Box>
   );
 }

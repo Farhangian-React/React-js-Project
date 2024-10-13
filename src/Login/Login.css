@@ -5,3 +5,22 @@
     text-align: center;
     direction: rtl;
 }
+.input{
+
+    direction: rtl;
+}
+.nav{
+    text-decoration: none;
+    color: rgb(29, 29, 215);
+    font-size: smaller;
+    padding-top: 9px;
+
+}
+.logbox{
+    width: 100%;
+    height: 20vh;
+    clip-path: polygon(0 1%, 100% 1%, 100% 33%, 0 56%);
+ border-radius: 20px;
+ margin: auto;
+ background-color: blanchedalmond;
+}

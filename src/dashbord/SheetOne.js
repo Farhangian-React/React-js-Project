@@ -4,6 +4,7 @@ import { Box, Button, Typography } from '@mui/material';
 import './Sheet.css';
 import { Slide } from 'react-slideshow-image';
 import { NavLink } from 'react-router-dom';
+import CallReceivedIcon from '@mui/icons-material/CallReceived';
 
 
 export default function SheetOne() {
@@ -76,6 +77,16 @@ export default function SheetOne() {
      }} >
   
 </Grid>
+<Box sx={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"relative"}}>
+<Box  sx={{position:"absolute",display:"flex",justifyContent:"start",alignItems:"flex-end",bgcolor:"bisque",width:"500px",height:"300px"}}>
+   <Button sx={{borderRadius:"10px",bgcolor:"white",m:1}}> nnnnnn</Button>
+   <Button sx={{borderRadius:"10px",bgcolor:"white",m:1}}> nnnnnn</Button>
+   <Button sx={{borderRadius:"10px",bgcolor:"white",m:1}}> nnnnnn</Button>
+</Box>
+<Box className="box" sx={{position:"relative",bottom:"1px",display:"flex",justifyContent:"center",alignSelf:"center",bgcolor:"blue",width:"500px",height:"300px"}}>
+<Typography variant='h4' sx={{textAlign:"center"}}>فروش فوق العاده ی سهیل</Typography>
+</Box>
+</Box>
 <Grid xs={12} container    sx={{display:"flex",justifyContent:"center",flexDirection:{xs:"column",sm:"row"},my:5}}>
             <Grid xs={12} md={3}  sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:3,mx:2}}> 
             <Box sx={{height:{xs:"120px",sm:"160px"},mx:{xs:10,sm:3}}}>

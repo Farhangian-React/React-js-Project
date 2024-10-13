@@ -14,6 +14,8 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import { Grid } from '@mui/material';
 import SearchButton from './SearchButton';
+import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import "./E.css";
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -57,7 +59,6 @@ function TopNav(props) {
         <Grid  xs={5} md={3} sx={{mt:3, display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
         <img className='imgsohil' width={60}  src='https://png.pngtree.com/png-clipart/20230817/original/pngtree-mountains-logo-design-sky-high-vector-picture-image_10974603.png'/>
                <Typography
-    
      noWrap
      component="a"
      href="/"
@@ -78,17 +79,10 @@ function TopNav(props) {
      S O H I L
    </Typography>
    </Grid>
-   <Grid  xs={3} sx={{mt:3,display:{xs:'flex',md:'none'},justifyContent:'center'}}>
-   <Buy sx={{py:0,my:1,display:'flex',justifyContent:'center',direction:'ltr'}}>
-              <NavLink to={'/buybasket'} >
-              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'white',fontSize:'22px'}}/>
-            </NavLink>
-            <Typography sx={{mt:1}}>( {cartItemsBuy.length} )</Typography>
-          </Buy>
-   </Grid>
+  
  <SearchButton/>
    </Grid>
-        </Toolbar>
+      </Toolbar>
       </Container>
     </AppBar>
     </HideOnScroll>
@@ -96,8 +90,18 @@ function TopNav(props) {
       mt:8 ,bgcolor:'black',px:1,py:0,color:'white',}}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters sx={{my:0 ,display:{xs:'flex',sm:'flex'},justifyContent:{xs:'end',sm:'space-around'}}}>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:'center', },marginLeft:{md:0},marginRight:{md:0} }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:'space-between', },marginLeft:{md:0},marginRight:{md:0} }}>
              <NavigationMenu/> 
+              <NavLink className="signup"  to={'/signup'}>
+                 <Box sx={{my:2,py:1,px:2,display: { xs: 'none', md: 'flex' },justifyContent:'space-between',border:'1px solid  #f2b705','&:hover': {
+    backgroundColor:'black',
+    border:'1px solid  #fff',
+  },borderRadius:1}}>
+                   <Typography variant='body2' sx={{mt:0.5,color:"#eeeeee"}}>ورود یا عضویت </Typography>
+           <PermIdentityOutlinedIcon  sx={{mr:2,fontSize:'26px',color:'white'}} />
+          
+       </Box> 
+       </NavLink>
             </Box>
         </Toolbar>
       </Container>

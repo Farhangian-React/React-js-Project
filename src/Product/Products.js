@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../dashbord/Banner';
 import SheetRefrigerator from '../dashbord/SheetRefrigerator';
 import Sheet3 from '../dashbord/SheetGas';
@@ -10,21 +10,24 @@ import Footer from '../Footer/Footer';
 import TopNav from '../dashbord/TopNav';
 import { PageTitle } from '../Title/PageTitle';
 import './Products.css';
-import { NavLink } from 'react-router-dom';
-
+import { NavLink, useNavigate } from 'react-router-dom';
 function Products() {
+  const navigate=useNavigate();
+  useEffect(()=>{
+let username=sessionStorage.getItem("id");
+if(username===""|| username===null){
+navigate("/signin");
+}
+  },[]);
   return (
     <>
     <PageTitle title='سهیل / وب سایت لوازم خانگی' description=' سهیل '/>
     <TopNav />
     <Box sx={{width:'100%' ,height:{xs:'800px',lg:'600px'}, bgcolor:"white"}}>
       <Banner/>
-    </Box>
-    
+    </Box>  
     <Box className='logos' >
-
 <Box  className='logos-slide' >
-
 <NavLink to={"/samsungbrand" }> <img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' /></NavLink>
 <NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
 <NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' /></NavLink>
@@ -32,7 +35,6 @@ function Products() {
 <NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
 </Box>
 <Box  className='logos-slide' >
-
 <NavLink to={"/samsungbrand" }><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png"    alt='' /></NavLink>
 <NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
 <NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png"  alt='' /></NavLink>
@@ -41,14 +43,11 @@ function Products() {
 </NavLink>
 </Box>
 <Box  className='logos-slide' >
-
 <NavLink to={"/samsungbrand" }><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png" alt='' /></NavLink>
 <NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
 <NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png" alt='' /></NavLink>
 <NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
 <NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg" alt='' /></NavLink>
-
-
 </Box>
 </Box>
 <Box sx={{width:'100%' }}>
@@ -86,14 +85,11 @@ function Products() {
 </NavLink>
 </Box>
 <Box  className='logos-slide' >
-
 <NavLink to={"/samsungbrand" }><img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/samsung_logo_icon_144912.png" alt='' /></NavLink>
 <NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg"    alt='' /></NavLink>
 <NavLink to={"/lgbrand"}><img src="https://cdn.icon-icons.com/icons2/3912/PNG/512/lg_logo_icon_247849.png" alt='' /></NavLink>
 <NavLink to={'/bushbrands'}><img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/bosch_logo_icon_181287.png" alt='' /></NavLink>
 <NavLink to={'/whirlpoolbrand'}><img src="https://i.pinimg.com/736x/58/6c/08/586c08b09fff9fc53d34d15844a80e1c.jpg" alt='' /></NavLink>
-
-
 </Box>
 </Box>
 

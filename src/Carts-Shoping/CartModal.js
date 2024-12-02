@@ -1,6 +1,6 @@
 import  React,{useContext,useState} from 'react';
 import {CartBuyContext} from '../Shared/Cart-Context';
-import Table from '@mui/joy/Table';
+import { NavLink } from 'react-router-dom';
 import Typography from '@mui/joy/Typography';
 import Box from '@mui/material/Box';
 import Buttons from './Buttons'; 
@@ -9,6 +9,18 @@ import './Carts.css';
 import Button from '@mui/material/Button';
 export default function CartModal() {
   const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
+  const addCommas=(nStr)=>{
+
+    if(nStr.length === 7){
+      return  nStr.substring(0,1) + "," + nStr.substring(1, 4) + "," + nStr.substring(4, 7);
+    }
+    if(nStr.length === 8){
+      return  nStr.substring(0, 2) + "," + nStr.substring(2, 5) + "," + nStr.substring(5, 8);
+    }
+    if(nStr.length === 9){
+      return  nStr.substring(0, 3) + "," + nStr.substring(3, 6) + "," + nStr.substring(6, 9);
+  }
+  }
 
   return (
     <>
@@ -25,14 +37,18 @@ export default function CartModal() {
         </Grid>
         <Grid xs={4} sx={{direction:"rtl",direction:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
            <Buttons i={item}  />
-            <Typography  sx={{mt:1,fontSize:"12px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
+            <Typography  sx={{mt:1,fontSize:"12px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{addCommas(item.pricenum)} تومان</Typography>
         </Grid>
     </Grid>
 ))}
   </Box>
-      <Box sx={{width:"400px",position:"fixed",top: 'auto', bottom: 0 ,alignSelf:"center",display:'flex',flexDirection:"column",justifyContent:'center',direction:'ltr',mb:5,mx:0}} >
-       <Button size='medium'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",color:'white',borderRadius:'5px',mx:3,px:1,mb:2}}> ثبت سفارش</Button>
-       <Button size='medium'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",color:'white',borderRadius:'5px',mx:3,px:1,mb:2}}> بازگشت به صفحه اصلی </Button>
+      <Box sx={{width:"auto",position:"fixed",top: 'auto', bottom: 0 ,alignSelf:"center",display:'flex',flexDirection:"column",justifyContent:'center',direction:'ltr',mb:5,mx:0}} >
+      <NavLink to={'/buybasket'}  className="linkss"><Button size='medium'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},
+       backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
+      color:'white',borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",mx:6,px:1,mb:2,width:"80%"}}> ثبت سفارش</Button></NavLink>
+       <NavLink to={'/'}  className="linkss">  <Button size='medium'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
+       color:'white'},backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",color:'white',
+       borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",mx:6,px:1,mb:2,width:"80%"}}> بازگشت به صفحه اصلی </Button></NavLink>
       </Box>
     </>
   )

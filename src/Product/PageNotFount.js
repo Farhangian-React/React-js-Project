@@ -11,7 +11,8 @@ export default function PageNotFount() {
     <>
     
        <Grid container spacing={2} columns={12} sx={{m:3,bgcolor:'blue',borderRadius:'10px'}}> 
-    <h1>hgdthrsrth kuyfkhjgm kjhyfgh   kuydtfgx </h1>
+    <h1> خطا</h1>
+    <h2> صفحه ای یافت نشد </h2>
       </Grid>
     </>
   );

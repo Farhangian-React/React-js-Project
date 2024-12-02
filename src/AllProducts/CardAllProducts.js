@@ -12,136 +12,138 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import FilterDishwasher from "../Product/Dishwasher/FilterDishwasher";
-import { Divider } from '@mui/material';
+import FilterBrands from './FilterBrands';
 import { NavLink } from 'react-router-dom';
+import Rating from '@mui/material/Rating';
 function Tems({ currentItems }) {
   const [cartItems,setCartItems]=useContext(CartContext);
+  const[datacomment,setDatacomment]=useState([]);
+  const getData=()=>{
+    fetch("http://localhost:3000/Allcomments")
+    .then((res)=>
+       res.json())
+       .then((data)=>{
+      setDatacomment(data);
+      }
+       )
+    .catch(err=>console.log(err));
+  }
+  useEffect(()=>{
+    getData();
+    
+  },[])
+      const sumscore=(item)=>{
+        let total=0;
+        let aver=0;
+     datacomment.map(i=>{
+      if(i.idcomment === item.id){
+        aver ++;
+        total += i.score; 
+      }
+      });
+       return total /aver;
+     }
  return (
   <> 
 
 
-  <Box component="div" sx={{ display:'flex',flexDirection:{xs:'column',lg:'row'}}} >
-<FilterDishwasher/>
+<Box sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
+<Box sx={{display:"flex",flexDirection:{xs:"column",lg:"row"},
+    justifyContent:"start",width:"100vw",p:4,bgcolor:"#eeeeee"}} >
+      <Box sx={{width:{xs:"90%",lg:"30%"},display:"flex",alignSelf:{xs:"center",lg:"start"},
+height:{lg:"65vh"},
+position:"sticky",
+top: "80px",
 
-<Box sx={{display:'flex',flexDirection:'column',justifyContent:'start',mx:3}}>
-<Box sx={{my:{lg:3},mt:{xs:3},ml:1,mr:3,display:'flex',justifyContent:'start', height:'40px',bgcolor:{lg:"#E0E1E3"}}}>
-<Typography sx={{pb:1,px:2,fontSize:{xs:"20px",lg:'24px'},direction:'rtl'}}>
-همه ی محصولات سهیل 
+}}>
+<FilterBrands/></Box>
+<Box sx={{width:{xs:"90%",lg:"75%"},display:'flex',flexDirection:'column',justifyContent:'start',mx:1,mt:{xs:3,lg:0}}}>
+<Box sx={{mx:3,display:'flex',justifyContent:'start',borderRadius:{xs:"none",lg:'10px'},direction:'rtl',borderBottom:{xs:"1px solid #414141",lg:"none"}, height:'6vh',color:{xs:"#282828",lg:"#585858"},bgcolor:{lg:"white"}}}>
+<Typography sx={{px:3,pt:0.5,fontSize:{xs:"22px"},direction:'rtl'}}>
+ محصولات سهیل  
 </Typography>
 </Box>
-<Box  sx={{borderTop:'1px solid black',borderBottom:'1px solid black', display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:3,pb:3}}>
+<Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:1.5,pb:3,px:0}}>
 
-{currentItems &&
-  currentItems.map((item) => (
+  {currentItems &&
+    currentItems.map((item) => (
     
-    <NavLink to={'/CartBuyDishwasher'}  className={"linkss"}>    
-<Card className='cards' sx={{width:{xs:'350px',lg:'260px'},height:{xs:'600px',lg:'500px'},marginTop:'10px',marginBottom: '10px',mx:3,mt:3, p:1 }} key={item.id}>
+      <NavLink to={'/cartsearch'}  className={"linkss"}> 
+     
+<Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},height:{xs:"370px",sm:'370px',md:"420px",lg:'420px'},marginTop:'10px',marginBottom: '10px',mx:0.8,mt:3, px:1.5,pb:1,pt:2 }} key={item.id}>
 <CardMedia
-  component="img"
- 
- image={item.img}
-  alt=""
-  onClick={()=>{
-    setCartItems([item]);
-   }}
-/>
-    <CardContent sx={{height:'75px',direction:"rtl"}}>
-  <Typography gutterBottom variant="body2" component="div" sx={{textAlign:'center'}}>
-    {item.title1}
-  </Typography>
-  <Typography variant="h6" color="black" sx={{textAlign:'center'}}>
-    {item.title2}
-  </Typography>
-</CardContent>
-<Divider/>
-<Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',p:2,borderBottom:'1px solid gray'}}>
-   <Typography  variant="body2" color="black" sx={{textAlign:'center'}}>خرید نقدی</Typography>
-   <Typography  variant="h6" color="gray" sx={{textAlign:'center'}}>{item.price}</Typography>
-</Box>
-<CardActions sx={{display:'flex',justifyContent:'center'}}>
-<NavLink to={'/CartBuyDishwasher'}>  <Button size="large"
-    fullWidth
-    variant="contained"
-    sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:1,py:0,px:8}}
+    component="img"
     onClick={()=>{
       setCartItems([item]);
-     }}>خرید </Button></NavLink>
-  
-</CardActions>
-
+     }}
+   image={item.img}
+    alt=""
+sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
+  />
+      <CardContent sx={{border:"none",height:'70px',direction:"rtl"}}>
+    <Typography gutterBottom variant="body2" component="div" sx={{textAlign:'center'}}>
+      {item.title1}
+    </Typography>
+    <Typography  sx={{fontSize:{xs:"14px",md:"16px",lg:"18px"},color:"#8a8a8a",textAlign:'center'}}>
+      {item.title2}
+      <Rating
+         sx={{fontSize:"14px",px:5,alignItems:"center"}}
+        name="simple-controlled"
+        value={sumscore(item)}
+      />
+    </Typography>
+  </CardContent>
+  <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',px:2,py:1,borderBottom:'1px solid #d4d4d4',borderTop:'1px solid #d4d4d4'}}>
+     <Typography  variant="body2" color="black" sx={{textAlign:'center'}}>خرید نقدی</Typography>
+     <Typography  variant="h6" color="#ea9e08" sx={{textAlign:'center'}}>{item.price}</Typography>
+  </Box>
+  <CardActions sx={{display:'flex',justifyContent:'center'}}>
+  <NavLink to={'/cartsearch'}>  <Button size="large"
+      fullWidth
+      variant="contained"
+      sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:{xs:"16px",lg:"18px"},
+      backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", mt:2,mb:{xs:0,md:2},py:0,px:{xs:5,lg:8},
+      borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px"}}
+      onClick={()=>{
+        setCartItems([item]);
+       }}>خرید </Button></NavLink>
+    
+  </CardActions>
+ 
 </Card>
 </NavLink>
-    
-  ))}
+      
+    ))}
+    </Box>
   </Box>
-  </Box>
+</Box>
 </Box>
   </>
 );
     }
 
 export default function CardAllProducts({ itemsPerPage }) {
-
-const [datadish,setDatadish]=useState([]);
-const [dataref,setDataref]=useState([]);
-const [datagas,setDatagas]=useState([]);
-const [datawashing,setDatawashing]=useState([]);
 const [data,setData]=useContext(CardData);
 const [datashow,setDatashow]=useContext(CardDataShow);
 
 const getData=()=>{
-fetch('http://localhost:3000/Dishwasher' )
+fetch('http://localhost:3000/Allproducts' )
 .then(res => res.json())
 .then((result)=> {
-  setDatadish(result);
-
+  setData(result);
+ setDatashow([...data]);
 },
 (error) => {
   alert('error');
 }
 )
-;
 
-  fetch('http://localhost:3000/Refrigerators' )
-  .then(res => res.json())
-  .then((result)=> {
-    setDataref(result);
 
-  },
-  (error) => {
-    alert('error');
-  }
-  );
-  fetch('http://localhost:3000/AllGas' )
-  .then(res => res.json())
-  .then((result)=> {
-    setDatagas(result);
-
-  },
-  (error) => {
-    alert('error');
-  }
-  );
-  fetch('http://localhost:3000/WashingMachine' )
-  .then(res => res.json())
-  .then((result)=> {
-    setDatawashing(result);
-
-  },
-  (error) => {
-    alert('error');
-  }
-  )
+ 
   }
 
 useEffect( ()=>{
   getData();
-setData(datadish.concat(datagas,dataref,datawashing));
- setDatashow([...data]);
- 
-
-
 },[])
  
   const [itemOffset, setItemOffset] = useState(0);

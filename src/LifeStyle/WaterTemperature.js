@@ -17,13 +17,14 @@ export default function WaterTemperature() {
    component="a"
    href="allrefriderators"
      sx={{
+      
       borderRadius:3,
        m:2,
        backgroundImage: 'linear-gradient(to right bottom, rgba(0,0,0,0), #030303),url("https://snowa.ir/wp-content/uploads/2024/04/1-600x338.jpg")',
        backgroundPosition: 'center',
        backgroundSize: 'cover',
        backgroundRepeat: 'no-repeat',
-       height:'400px',
+       height:'600px',
 
        
        }} >
@@ -35,7 +36,7 @@ export default function WaterTemperature() {
     اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف
   </Typography>
 </Box> <Box sx={{mt:0,py:0,display:"flex",justifyContent:'center'}}>
-<img className='imgsohil' width={200}  src='https://png.pngtree.com/png-clipart/20230817/original/pngtree-mountains-logo-design-sky-high-vector-picture-image_10974603.png'/>
+<img className='imgsohil' width={100}  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
  </Box>
   </Grid>
  

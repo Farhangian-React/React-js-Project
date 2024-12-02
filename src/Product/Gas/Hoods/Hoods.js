@@ -28,7 +28,7 @@ export default  function Hoods() {
 <>
 <PageTitle title="پخت و پز / هود   " description= "پخت و پز / هود   " />
    <TopNav/> 
-   <Box sx={{my:1  }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"
@@ -49,17 +49,11 @@ export default  function Hoods() {
              
             }}
           >
-                <ListItem role="none" sx={{mr:6}}>
-            <NavLink className='navlinkin' to={'/allrefriderators'}> یخچال و فریزر</NavLink>
-            </ListItem>
-            <ListItem role="none">
-            <NavLink className='navlinkin' to={'/shop-washing-machine'}>ماشین لباسشویی</NavLink>
-            </ListItem>
-            <ListItem role="none">
+             <ListItem role="none">
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"16px"}}
+               sx={{color:"#E0AA3E",fontSize:"16px",mx:0,px:0}}
                >
                 پخت و پز 
                
@@ -85,7 +79,7 @@ export default  function Hoods() {
         <NavLink  onClick={handleClose1}  disableRipple className='navlink' to={'/shop-ranges' }  > اجاق گاز و فر </NavLink> 
         </MenuItem>
         <MenuItem onClick={handleClose1} disableRipple>
-          <NavLink className='navlink' to={'/shop-cooktop'} > گاز صفحه ای </NavLink>
+          <NavLink className='navlink' to={'/shop-cooktop'} > گاز رومیزی </NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose1} disableRipple><NavLink className='navlink'  to={'/shop-hood'}>
         هود
@@ -95,11 +89,19 @@ export default  function Hoods() {
         </NavLink></MenuItem>
       </Menu>
             </ListItem>
+                <ListItem role="none">
+            <NavLink className='navlinkin' to={'/allrefriderators'}> یخچال و فریزر</NavLink>
+            </ListItem>
+            <ListItem role="none">
+            <NavLink className='navlinkin' to={'/shop-washing-machine'}>ماشین لباسشویی</NavLink>
+            </ListItem>
+           
             <ListItem role="none">
                <NavLink className='navlinkin '  to={'/shop-dishwasher'} >ماشین ظرفشویی</NavLink>    
             </ListItem>
           </List>
         </Box>
+        
         
    <CardHoods itemsPerPage={6}/>
           <Footer/>

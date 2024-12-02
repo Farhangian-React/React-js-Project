@@ -9,12 +9,12 @@ export default function Banner() {
   const [type,setType]=useState(1);
   useEffect(()=> {
     const interval = setInterval(()=>{
-      change();},3000);
+      change();},4000);
       return()=>{
         clearInterval(interval);};},[photo,type]);
 
         const change=()=>{
-          if(photo === 3 && type === 3){
+          if(photo === 4 && type === 4){
             setPhoto(1);
             setType(1);
             return;
@@ -24,10 +24,10 @@ export default function Banner() {
         };
         const returnPhotoURL=()=>{
           switch(photo){
-            case 1: return 'https://www.mountainhighappliance.com/uploads/slides/HP%20Hero%20Banner/mhoneforyoumonogramhpbanner.jpg';
-            case 2: return 'https://www.mountainhighappliance.com/uploads/slides/HP%20Hero%20Banner/blackfridayhomepagebanner.jpg';
-            case 3: return 'https://www.mountainhighappliance.com/uploads/slides/HP%20Hero%20Banner/mhjennaircurate2800.jpg';
-            case 4: return 'https://www.mountainhighappliance.com/uploads/slides/HP%20Hero%20Banner/hpbanner30thanniversary.jpg';
+            case 1: return 'https://www.bleeckerkitchen.com/wp-content/uploads/2022/01/Electric-Tools-you-need-in-your-Kitchen.jpg';
+            case 2: return 'https://m.media-amazon.com/images/I/81FQCyxhuKS._AC_UF894,1000_QL80_.jpg';
+            case 3: return 'https://assets.telkitchens.co.uk/srcane/uploads/2021/09/07060057/How-do-modern-kitchen-appliances-make-cooking-easier-and-ease-manual-work.jpg';
+            case 4: return 'https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/06292022/rs28a5f61sr/RS28A5F61SR_03_Silver_SCOM.jpg?$product-details-jpg$';
             default: return null;
           }
        
@@ -72,10 +72,10 @@ export default function Banner() {
        position: "absolute",
        backgroundImage: `url(${returnPhotoURL()})`,
        backgroundPosition: 'center',
-       backgroundSize: 'cover',
+       backgroundSize:'cover',
        backgroundRepeat: 'no-repeat',
-       height:'100 vh',
-       width:'100%'
+       width:'100%',
+       height:"auto"
        }} >
          
 

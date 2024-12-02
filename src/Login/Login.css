@@ -11,9 +11,9 @@
 }
 .nav{
     text-decoration: none;
-    color: rgb(29, 29, 215);
+    color:#eee;
     font-size: smaller;
-    padding-top: 9px;
+    padding-top: 16px;
 
 }
 .logbox{
@@ -22,5 +22,6 @@
     clip-path: polygon(0 1%, 100% 1%, 100% 33%, 0 56%);
  border-radius: 20px;
  margin: auto;
- background-color: blanchedalmond;
+ background-color: #2b31d5;
+ 
 }

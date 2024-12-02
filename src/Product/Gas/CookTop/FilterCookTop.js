@@ -55,16 +55,6 @@ export default  function FilterCookTop() {
   const [checkedD2, setCheckedD2] = useState(false);
   const [checkedE1, setCheckedE1] = useState(false);
   const [checkedE2, setCheckedE2] = useState(false);
-  const [checkedS1, setCheckedS1] = useState(false);
-  const [checkedS2, setCheckedS2] = useState(false);
-  const [checkedN1, setCheckedN1] = useState(false);
-  const [checkedN2, setCheckedN2] = useState(false);
-  const [checkedM1, setCheckedM1] = useState(false);
-  const [checkedM2, setCheckedM2] = useState(false);
-  const [checkedO1, setCheckedO1] = useState(false);
-  const [checkedO2, setCheckedO2] = useState(false);
-  const [checkedF1, setCheckedF1] = useState(false);
-  const [checkedF2, setCheckedF2] = useState(false);
   const [checkedY1, setCheckedY1] = useState(false);
   const [checkedY2, setCheckedY2] = useState(false);
   const [checkedP1, setCheckedP1] = useState(false);
@@ -78,17 +68,7 @@ export default  function FilterCookTop() {
   const [disabledD2,setDisabledD2]=useState(false);
   const [disabledE1,setDisabledE1]=useState(false);
   const [disabledE2,setDisabledE2]=useState(false);
-  const [disabledS1,setDisabledS1]=useState(false);
-  const [disabledS2,setDisabledS2]=useState(false);
-  const [disabledN1,setDisabledN1]=useState(false);
-  const [disabledN2,setDisabledN2]=useState(false);
-  const [disabledM1,setDisabledM1]=useState(false);
-  const [disabledM2,setDisabledM2]=useState(false);
-  const [disabledO1,setDisabledO1]=useState(false);
-  const [disabledO2,setDisabledO2]=useState(false);
-  const [disabledF1,setDisabledF1]=useState(false);
-  const [disabledF2,setDisabledF2]=useState(false);
-   const [disabledY1,setDisabledY1]=useState(false);
+  const [disabledY1,setDisabledY1]=useState(false);
   const [disabledY2,setDisabledY2]=useState(false);
   const [disabledP1,setDisabledP1]=useState(false);
   const [disabledP2,setDisabledP2]=useState(false);
@@ -99,14 +79,27 @@ export default  function FilterCookTop() {
   const [disabledH3,setDisabledH3]=useState(false);
   const [index, setIndex] = React.useState(null);
   
- 
+  const convertToEnglish=(str)=> {
+    let englishNumber =str
+    .replace(/۰/g, '0')
+    .replace(/۱/g, '1')
+    .replace(/۲/g, '2')
+    .replace(/۳/g, '3')
+    .replace(/۴/g, '4')
+    .replace(/۵/g, '5')
+    .replace(/۶/g, '6')
+    .replace(/۷/g, '7')
+    .replace(/۸/g, '8')
+    .replace(/۹/g, '9');
 
+ return(englishNumber);
+  }
 
   const sortArrayMaxtoMin= (e)=>{
     setChecked1(e.target.checked);
     setChecked1(!checked1);
   setDatashow([...data.sort((a, b) =>
-     b.pricenum - a.pricenum
+    convertToEnglish(b.pricenum) - convertToEnglish(a.pricenum)
   )]);
  
   }
@@ -116,7 +109,7 @@ export default  function FilterCookTop() {
     setChecked2(e.target.checked);
     setChecked2(!checked2);
     setDatashow([...data.sort((a, b) =>
-       a.pricenum - b.pricenum
+      convertToEnglish(a.pricenum) - convertToEnglish(b.pricenum)
     )]);
     }
 
@@ -453,139 +446,6 @@ const handleChangeD2=(e)=>{
     setDisabledD1(!disabledD1);
   }
 }
-const handleChangeS1=(e)=>{
-    setCheckedS1(e.target.checked); 
-    setCheckedS1(!checkedS1);
-    if(e.target.value === "دارد")
-    {
-      setDatashow([...data.filter(i=>i.ProofMode === "دارد" )]);
-      setDisabledS2(!disabledS2);
-    }
-    if(checkedS1){
-      setDatashow([...data]);
-      setDisabledS2(!disabledS2);
-    }
-    }
-    const handleChangeS2=(e)=>{
-      setCheckedS2(e.target.checked); 
-      setCheckedS2(!checkedS2);
-      if(e.target.value === "ندارد")
-      {
-        setDatashow([...data.filter(i=>i.ProofMode === "ندارد" )]);
-        setDisabledS1(!disabledS1);
-      }
-      if(checkedS2){
-        setDatashow([...data]);
-        setDisabledS1(!disabledS1);
-      }
-      }
-
-      const handleChangeN1=(e)=>{
-        setCheckedN1(e.target.checked); 
-        setCheckedN1(!checkedN1);
-        if(e.target.value === "دارد")
-        {
-          setDatashow([...data.filter(i=>i.StorageDrawer === "دارد" )]);
-          setDisabledN2(!disabledN2);
-        }
-        if(checkedN1){
-          setDatashow([...data]);
-          setDisabledN2(!disabledN2);
-        }
-        }
-        const handleChangeN2=(e)=>{
-          setCheckedN2(e.target.checked); 
-          setCheckedN2(!checkedN2);
-          if(e.target.value === "ندارد")
-          {
-            setDatashow([...data.filter(i=>i.StorageDrawer === "ندارد" )]);
-            setDisabledN1(!disabledN1);
-          }
-          if(checkedN2){
-            setDatashow([...data]);
-            setDisabledN1(!disabledN1);
-          }
-          }
-          const handleChangeM1=(e)=>{
-            setCheckedM1(e.target.checked); 
-            setCheckedM1(!checkedM1);
-            if(e.target.value === "دارد")
-            {
-              setDatashow([...data.filter(i=>i.WarmingDrawer === "دارد" )]);
-              setDisabledM2(!disabledM2);
-            }
-            if(checkedM1){
-              setDatashow([...data]);
-              setDisabledM2(!disabledM2);
-            }
-            }
-            const handleChangeM2=(e)=>{
-              setCheckedM2(e.target.checked); 
-              setCheckedM2(!checkedM2);
-              if(e.target.value === "ندارد")
-              {
-                setDatashow([...data.filter(i=>i.WarmingDrawer === "ندارد" )]);
-                setDisabledM1(!disabledN1);
-              }
-              if(checkedM2){
-                setDatashow([...data]);
-                setDisabledM1(!disabledM1);
-              }
-              }
-              const handleChangeO1=(e)=>{
-                setCheckedO1(e.target.checked); 
-                setCheckedO1(!checkedO1);
-                if(e.target.value === "دارد")
-                {
-                  setDatashow([...data.filter(i=>i.ContinuosGrate === "دارد" )]);
-                  setDisabledO2(!disabledO2);
-                }
-                if(checkedO1){
-                  setDatashow([...data]);
-                  setDisabledO2(!disabledO2);
-                }
-                }
-                const handleChangeO2=(e)=>{
-                  setCheckedO2(e.target.checked); 
-                  setCheckedO2(!checkedO2);
-                  if(e.target.value === "ندارد")
-                  {
-                    setDatashow([...data.filter(i=>i.ContinuosGrate === "ندارد" )]);
-                    setDisabledO1(!disabledO1);
-                  }
-                  if(checkedO2){
-                    setDatashow([...data]);
-                    setDisabledO1(!disabledO1);
-                  }
-                  }
-                  const handleChangeF1=(e)=>{
-                    setCheckedF1(e.target.checked); 
-                    setCheckedF1(!checkedF1);
-                    if(e.target.value === "دارد")
-                    {
-                      setDatashow([...data.filter(i=>i.SabbathMode === "دارد" )]);
-                      setDisabledF2(!disabledF2);
-                    }
-                    if(checkedF1){
-                      setDatashow([...data]);
-                      setDisabledF2(!disabledF2);
-                    }
-                    }
-                    const handleChangeF2=(e)=>{
-                      setCheckedF2(e.target.checked); 
-                      setCheckedF2(!checkedF2);
-                      if(e.target.value === "ندارد")
-                      {
-                        setDatashow([...data.filter(i=>i.SabbathMode === "ندارد" )]);
-                        setDisabledF1(!disabledF1);
-                      }
-                      if(checkedF2){
-                        setDatashow([...data]);
-                        setDisabledF1(!disabledF1);
-                      }
-                      }
-
-
 const handleChangeE1=(e)=>{
   setCheckedE1(e.target.checked); 
   setCheckedE1(!checkedE1);
@@ -743,12 +603,12 @@ const handleChangeE1=(e)=>{
         }
    return (
     <>
-    <Box component="div" sx={{width:{xs:'90%',lg:'25%'},display:{xs:"none",lg:'flex'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
-      <Box sx={{my:3,ml:1,mr:1, display:'flex' ,justifyContent:'start', height:'40px',width:'100%',bgcolor:'#E0E1E3'}}>
-<Typography sx={{pt:1,px:2,fontSize:'18px',direction:'rtl'}}>
-  نوع نمایش
+   <Box component="div" sx={{width:"400px",display:{xs:"none",lg:'flex'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
+    <Box sx={{mt:0.3,mr:0.7,display:'flex',justifyContent:'start',borderRadius:{xs:"none",lg:'10px'},direction:'rtl',borderBottom:{xs:"1px solid #414141",lg:"none"},
+     height:'50px',color:"#eeeeee",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",}}>
+<Typography sx={{px:2.2,pt:0.5,fontSize:{xs:"22px"},direction:'rtl'}}>  نوع نمایش 
 </Typography>
-</Box>   
+</Box>  
 <Accordion
         expanded={index === 0}
         onChange={(event, expanded) => {
@@ -897,116 +757,37 @@ const handleChangeE1=(e)=>{
 </FormGroup>
         </AccordionDetails>
       </Accordion>
-      <Accordion
-        expanded={index === 9}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 9 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> قابلیت خود تمیزی</AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedS1}   onChange={handleChangeS1} disabled={disabledS1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedS2}   onChange={handleChangeS2} disabled={disabledS2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 10}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 10 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>  کشوی ذخیره </AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedN1}   onChange={handleChangeN1} disabled={disabledN1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedN2}   onChange={handleChangeN2} disabled={disabledN2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 11}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 11 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> کشوی گرم کننده</AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedM1}   onChange={handleChangeM1} disabled={disabledM1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedM2}   onChange={handleChangeM2} disabled={disabledM2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 12}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 12 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>توری پیوسته </AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedO1}   onChange={handleChangeO1} disabled={disabledO1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedO2}   onChange={handleChangeO2} disabled={disabledO2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 13}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 13 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>حالت سبت</AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedF1}   onChange={handleChangeF1} disabled={disabledF1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedF2}   onChange={handleChangeF2} disabled={disabledF2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
 </Box>
 
-<Box component="div" sx={{width:{xs:'95%',lg:'40%'},alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
+
+<Box component="div" sx={{width:'95%',alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
      
-     <Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",bgcolor:'#E0E1E3'}}>
-           <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
-             <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
-                 <Grid >
-             <IconButton sx={{pt:0}}>
-       
-           <FilterAltOutlinedIcon/>
-         </IconButton>
-         </Grid>
-             <Grid >
-           <Typography sx={{fontSize:'18px',direction:'rtl'}}>
-       نوع نمایش
-     </Typography>
-     </Grid>
-             </Grid>
-             <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"end"}}> 
-             <IconButton
-           onClick={handleDrawerOpen}
+<Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
+      <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
+        <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
+            <Grid >
+        <IconButton sx={{pt:0}}>
+  
+      <FilterAltOutlinedIcon sx={{color:"#eeeeee"}}/>
+    </IconButton>
+    </Grid>
+        <Grid >
+      <Typography sx={{fontSize:'18px',direction:'rtl',color:"#eeeeee"}}>
+   فیلتر بر اساس
+</Typography>
+</Grid>
+        </Grid>
+        <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"end"}}> 
+        <IconButton
+      onClick={handleDrawerOpen}
+    
+      sx={{pb:1,pt:0,  ml: 0, ...(open && { display: 'none' }) }}
+    >
+      <ExpandMoreIcon />
+    </IconButton>
          
-           sx={{pb:1,pt:0,  ml: 0, ...(open && { display: 'none' }) }}
-         >
-           <ExpandMoreIcon />
-         </IconButton>
-              
-             </Grid>
-           </Grid>
+        </Grid>
+      </Grid>
          
           
         
@@ -1182,86 +963,6 @@ const handleChangeE1=(e)=>{
 <FormControlLabel  control={<Checkbox checked={checkedH2}   onChange={handleChangeH2} disabled={disabledH2} value={"۴۷ اینچ"} />} label="۴۷ اینچ" />
 <FormControlLabel  control={<Checkbox checked={checkedH3}   onChange={handleChangeH3} disabled={disabledH3} value={"۴۸ اینچ"} />} label="۴۸ اینچ" />
 </FormGroup>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 9}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 9 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> قابلیت خود تمیزی</AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedS1}   onChange={handleChangeS1} disabled={disabledS1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedS2}   onChange={handleChangeS2} disabled={disabledS2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 10}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 10 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>  کشوی ذخیره </AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedN1}   onChange={handleChangeN1} disabled={disabledN1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedN2}   onChange={handleChangeN2} disabled={disabledN2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 11}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 11 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> کشوی گرم کننده</AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedM1}   onChange={handleChangeM1} disabled={disabledM1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedM2}   onChange={handleChangeM2} disabled={disabledM2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 12}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 12 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>توری پیوسته </AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedO1}   onChange={handleChangeO1} disabled={disabledO1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedO2}   onChange={handleChangeO2} disabled={disabledO2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={index === 13}
-        onChange={(event, expanded) => {
-          setIndex(expanded ? 13 : null);
-        }}
-        sx={{borderBottom:'1px solid black',mr:1}}
-      >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>حالت سبت</AccordionSummary>
-        <AccordionDetails>
-   <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedF1}   onChange={handleChangeF1} disabled={disabledF1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedF2}   onChange={handleChangeF2} disabled={disabledF2} value={"ندارد"} />} label="ندارد" />
-</FormGroup>
-
         </AccordionDetails>
       </Accordion>
      

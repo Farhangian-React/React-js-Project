@@ -11,35 +11,66 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { Divider } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import CartBuyGas from '../CartBuyGas';
 import FilterGas from "./FilterGas";
+import Rating from '@mui/material/Rating';
   
    function Tems({ currentItems }) {
     const [cartItems,setCartItems]=useContext(CartContext);
+    const[datacomment,setDatacomment]=useState([]);
+    const convertToPersian=(str)=> {
+      let persianNumber =str
+      .replace(/0/g, '۰')
+      .replace(/1/g, '۱')
+      .replace(/2/g, '۲')
+      .replace(/3/g, '۳')
+      .replace(/4/g, '۴')
+      .replace(/5/g, '۵')
+      .replace(/6/g, '۶')
+      .replace(/7/g, '۷')
+      .replace(/8/g, '۸')
+      .replace(/9/g, '۹');
+  return(persianNumber);
+    }
+    const getData=()=>{
+      fetch("http://localhost:3000/Allcomments")
+      .then((res)=>
+         res.json())
+         .then((data)=>{
+        setDatacomment(data);
+        }
+         )
+      .catch(err=>console.log(err));
+    }
+    useEffect(()=>{
+      getData();
+      
+    },[])
+        const sumscore=(item)=>{
+          let total=0;
+          let aver=0;
+       datacomment.map(i=>{
+        if(i.idcomment === item.id){
+          aver ++;
+          total += i.score; 
+        }
+        });
+         return total /aver;
+       }
      return (
       <>
-      <Box sx={{mt:2,mb:4}}>
-      <ul className='headers'>
-        <li>محصولات / </li>
-        <li> پخت و پز / </li>
-        <li> همه ی اجاق گازها </li>
-      </ul>
-     
-    </Box>
-    <Box sx={{m:4,p:2}}>
- 
- <Typography variant='h5' sx={{px:5,pb:2}}>
- لوازم آشپزی برای فروش
+     <Box sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
+       <Box>
+    <Typography variant="h6" sx={{color:"#282828",py:4, px:5,pb:1,fontWeight: 550,textAlign:"justify"}}  >
+    پخت و پز
  </Typography>
- <Typography  sx={{color:"#454545",fontSize:{xs:'14px',lg:'18px'},px:5,pb:2}}>
+ <Typography sx={{color:"#414141",fontSize:"16px", px:5,pb:1,textAlign:"justify"}}>
 در sohil، انتخاب گسترده ما از وسایل آشپزی به شما کمک می کند تا تجربه آشپزخانه خود را بهبود ببخشید. از آشپزخانه هوشمند و اجاق گاز گرفته تا اجاق‌ها و مایکروویوهای خلاقانه، ما همه چیزهایی را که برای تهیه غذاهای خوشمزه به آسانی نیاز دارید، در اختیار داریم. بهترین معاملات را در مورد برندهای لوکس آشپزی مانند samsung،   wirpool , LG ,bush و موارد دیگر کاوش کنید!
  </Typography>
- <Typography variant='h5' sx={{ px:5,pb:2}}>
+ <Typography variant='h5' sx={{ px:5,pb:2,textAlign:"justify"}}>
   دسته بندی لوازم پخت و پز
  </Typography>
- <Typography  sx={{color:"#454545",fontSize:{xs:'14px',lg:'18px'},px:5,pb:2}}>
+ <Typography  sx={{color:"#414141",fontSize:"16px",px:5,pb:2,textAlign:"justify"}}>
  اجاق‌های دیواری: آشپزخانه خود را با اجاق‌های دیواری شیک و با صرفه‌جویی در فضا متحول کنید، کنترل دقیق دما و گزینه‌های پخت همه‌کاره را ارائه می‌دهد. اجاق‌های تک جداره، اجاق‌های دوجداره، اجاق‌های مایکروویو و کشوهای گرم‌کننده را کاوش کنید.
 اجاق‌های اجاق‌پز: تجربه آشپزی خود را با اجاق‌های قدرتمند و کارآمد ما که دارای کنترل گرمای پاسخگو و پیکربندی‌های چندگانه مشعل برای تطبیق با تکنیک‌های مختلف پخت هستند، ارتقا دهید. اجاق‌های برقی، گازی، و اجاق‌های القایی را هم‌اکنون کاوش کنید!
 محدوده ها: محدوده های ما راحتی یک اجاق گاز و اجاق گاز را در یک دستگاه ترکیب می کنند. فرقی نمی‌کند گاز، برق یا دو سوخت را ترجیح دهید، محدوده‌های ما کنترل دقیق دما و فضای پخت و پز کافی را ارائه می‌دهند تا به دستور العمل‌های مورد علاقه شما زنده شود.
@@ -47,72 +78,93 @@ import FilterGas from "./FilterGas";
 هودهای برد: آشپزخانه خود را با هودهای قدرتمندی که بوی آشپزی، چربی و ذرات معلق در هوا را از بین می برند، تازه و بدون دود نگه دارید. هودهای کانالی و هودهای بدون کانال ما که برای حداکثر تهویه و عملکرد بی سروصدا طراحی شده اند، کیفیت هوا و آسایشی که شایسته شماست را فراهم می کنند.
 لوازم کوچک: با وسایل کوچک ما، روال آشپزی خود را آسان‌تر کنید، که برای وعده‌های غذایی سریع و میان‌وعده با کمترین تلاش مناسب است. از مخلوط کن و غذاساز گرفته تا توستر و قهوه ساز، وسایل کوچک ما راحتی و کارایی را ارائه می دهند.
  </Typography>
- <Typography variant='h5' sx={{px:5,pb:2}}>
+ <Typography  sx={{color:"#414141",fontSize:"16px",px:5,pb:2,textAlign:"justify"}}>
 بهترین لوازم آشپزی را از ما بخرید
  </Typography>
- <Typography  sx={{color:"#454545",fontSize:{xs:'14px',lg:'18px'},px:5,pb:2}}>
+ <Typography  sx={{color:"#414141",fontSize:"16px",px:5,pb:2,mb:3,textAlign:"justify"}}>
  در sohil،تلاش ما فراتر از فروش لوازم خانگی است، ما متعهد به ارائه بهترین لوازم آشپزی موجود در بازار هستیم. اگر سؤالی دارید، اکنون با کارشناسان لوازم آشپزی ما تماس بگیرید..
  </Typography>
 </Box>
+<Box sx={{display:"flex",flexDirection:{xs:"column",lg:"row"},mb:5,
+    justifyContent:"start",width:"100vw",p:4,bgcolor:"#eeeeee"}} >
+      <Box sx={{width:{xs:"90%",lg:"30%"},display:"flex",alignSelf:{xs:"center",lg:"start"},
+height:{lg:"100vh"},
+position:"sticky",
+top: "80px",
 
-    <Box component="div" sx={{ display:'flex',flexDirection:{xs:'column',lg:'row'}}} >
-<FilterGas/>
+}}>
+<FilterGas/></Box>
 
-<Box sx={{display:'flex',flexDirection:'column',justifyContent:'start'}}>
-<Box sx={{my:{lg:3},mt:{xs:3},ml:1,mr:3,display:'flex',justifyContent:'start', height:'40px',bgcolor:{lg:"#E0E1E3"}}}>
-<Typography sx={{pb:1,px:2,fontSize:{xs:"20px",lg:'24px'},direction:'rtl'}}>
-همه ی اجاق گازها
+<Box sx={{width:{xs:"90%",lg:"75%"},display:'flex',flexDirection:'column',justifyContent:'center',alignSelf:"center",mx:0,mt:{xs:3,lg:0}}}>
+<Box sx={{mx:3,display:'flex',justifyContent:'start',borderRadius:{xs:"none",lg:'10px'},direction:'rtl',borderBottom:{xs:"1px solid #414141",lg:"none"},
+ height:'auto',color:{xs:"#282828",lg:"#585858"},bgcolor:{lg:"white"},pb:0.8}}>
+<Typography sx={{px:3,pt:0.5,fontSize:{xs:"22px"},direction:'rtl'}}>
+  پخت و پز 
 </Typography>
-</Box>
-     
-       <Box   sx={{borderTop:'1px solid black',borderBottom:'1px solid black', display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:3,pb:3}}>
-        {currentItems &&
-          currentItems.map((item) => (
-            <NavLink to={'/cartbuygas'}  className={"linkss"}>  
-            <Card className='cards' sx={{height:"500px", maxWidth:'250px',marginTop:'10px',marginBottom: '10px',marginX:'22px', p:1 }} key={item.id}>
-      <CardMedia
-          component="img"
-          height="220"
-         image={item.img}
-          alt=""
-          onClick={()=>{
-            setCartItems([item]);
-           }}
-        />
-            <CardContent sx={{height:"90px",direction:"rtl"}}>
-         
-          <Typography gutterBottom variant="body2" component="div" sx={{textAlign:'center'}}>
-            {item.title1}
-          </Typography>
-          <Typography variant="h6" color="black" sx={{textAlign:'center'}}>
-           {item.title2}
-          </Typography>
-        </CardContent>
-        <Divider/>
-  <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',p:2,borderBottom:'1px solid gray'}}>
+</Box> 
+<Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:1.5,pb:3,px:0}}>
+
+{currentItems &&
+  currentItems.map((item) => (
+  
+    <NavLink to={'/cartbuygas'}  className={"linkss"}> 
+<Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},height:{xs:"400px",sm:'400px',md:"450px",lg:'450px'},marginTop:'10px',marginBottom: '10px',mx:{xs:3,lg:1.5},mt:3, px:1.5,pb:1,pt:2 }} key={item.id}>
+<Box sx={{width:"35px",height:"20px",bgcolor:"#f5cd00",color:"#414141",borderRadius:"20%",px:0,py:0,mt:0.2,display:"flex",justifyContent:"center",alignItems:"center"}}>
+    <Typography sx={{fontSize:"12px",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
+    </Box>
+<CardMedia
+    component="img"
+    onClick={()=>{
+      setCartItems([item]);
+     }}
+   image={item.img}
+    alt=""
+sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
+  />
+    <CardContent sx={{border:"none",height:'30px',direction:"rtl"}}>
+    <Typography gutterBottom variant="body2" component="div" sx={{textAlign:'center'}}>
+      {item.title1}
+    </Typography>
+    </CardContent>
+    <CardContent sx={{display:"flex",flexDirection:"column",justifyContent:"center",
+    alignSelf:"center",alignItems:"center",
+    border:"none",height:'25px',direction:"rtl",py:0.8,my:0}}>
+    <Typography  sx={{fontSize:{xs:"12px",lg:"14px"},color:"#8a8a8a",textAlign:'center'}}>
+      {item.title2}
+      </Typography>
+      <Rating
+         sx={{color:"#f5cd00",fontSize:"12px",px:5,alignItems:"center"}}
+        name="simple-controlled"
+        value={sumscore(item)}
+      />
+  </CardContent>
+  <CardContent sx={{height:'20px',direction:"rtl",display:"flex",justifyContent:"center",flexDirection:"column",borderBottom:'1px solid #d4d4d4',borderTop:'1px solid #d4d4d4'}} >
+  <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',px:0.7,py:0.3}}>
      <Typography  variant="body2" color="black" sx={{textAlign:'center'}}>خرید نقدی</Typography>
-     <Typography  variant="h6" color="gray" sx={{textAlign:'center'}}>{item.price}</Typography>
-        </Box>
-        <CardActions sx={{display:'flex',justifyContent:'center'}}>
-        <NavLink className='buttonbuy' to={'/cartbuygas'}>  <Button size="large"
-            fullWidth
-            variant="contained"
-            
-            sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:1,py:0,px:8}}
-            onClick={()=>{
-              setCartItems([item]);
-              <CartBuyGas/>
-             }}>خرید </Button></NavLink>
-          
-        </CardActions>
-       
-      </Card>
-      </NavLink>
-          ))}
-        </Box>
+     <Typography  variant="h6" color="#926f34" sx={{textAlign:'center'}}>{item.price}</Typography>
+    </Box>
+  </CardContent>
+<CardActions sx={{display:'flex',justifyContent:'center'}}>
+<NavLink to={'/cartbuygas'}>  <Button size="large"
+    fullWidth
+    variant="contained"
+    sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:{xs:"16px",lg:"18px"},
+    backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", mt:2,mb:{xs:0,md:2},py:0,px:{xs:5,lg:8},
+    borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px"}}
+    onClick={()=>{
+      setCartItems([item]);
+     }}>خرید </Button></NavLink>
+  
+</CardActions>
+
+</Card>
+</NavLink>
+    
+  ))}
+  </Box>
     </Box>
   </Box>
-         
+     </Box>    
       </>
     );
   }

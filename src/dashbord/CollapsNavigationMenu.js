@@ -132,41 +132,49 @@ export default function CollapsNavigationMenu() {
   return (
     <>
     
-    <Grid xs={10} sx={{my:0,py:0,bgcolor:'black', display: 'flex',justifyContent:'start',ml:0,direction:'rtl',alignSelf:"center",}}>
-  
-    
-    
-    <IconButton
-      
-          
-      onClick={handleDrawerOpen1}
-    
-      sx={{ color:' #fff', ml: 0, ...(open1 && { display: 'none' }) }}
-    >
-      < SearchOutlinedIcon/>
-    </IconButton>
-
-
-
-    <IconButton
-      
-          
+    <Box sx={{bgcolor:"black",m:"auto", display: 'flex',flexDirection:"row",justifyContent:"space-around"}}>
+    <Box> 
+ <IconButton   
       onClick={handleDrawerOpen}
-    
-      sx={{ color:' #FFC412', ml: 0, ...(open && { display: '' }) }}
+      sx={{ color:' #FFC412', ml: 0,mr:5, ...(open && { display: '' }) }}
     >
       <MenuIcon />
     </IconButton>
+</Box> 
+<Box>
+<NavLink className="signup"  to={'/signup'}>
+             
+             
+       <PermIdentityOutlinedIcon  sx={{mr:1,mt:1,fontSize:'26px',color:'white'}} />
+      
+ 
+   </NavLink>
+   </Box>
+   <Box>
+   <Typography variant='h5' sx={{color:"#f2b705",mt:1}}>/</Typography></Box>
+   <Box>
+    <IconButton   
+      onClick={handleDrawerOpen1}
+      sx={{ color:' #fff', ml: 0,mt:0.5, ...(open1 && { display: 'none' }) }}
+    >
+      < SearchOutlinedIcon/>
+    </IconButton></Box>
+   
+
+
+
+
+
+
 
     <Drawer
-        sx={{
-          
+        sx={{  
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: '100%',
             boxSizing: 'border-box',
             height:'auto',
-           
+            direction:"rtl"
           },
         }}
         variant="persistent"
@@ -242,7 +250,8 @@ export default function CollapsNavigationMenu() {
             height:'100vh',
             display:"flex",
             flexDirection:"column",
-            justifyContent:"space-between"
+            justifyContent:"start",
+            direction:"rtl"
            
           },
         }}
@@ -349,19 +358,11 @@ export default function CollapsNavigationMenu() {
           }
         }
       >
-        <MenuItem onClick={handleClose2} disableRipple>
-        <NavLink className='navlink'> جشنواره های تابستانه 1402 </NavLink>
-          
-        </MenuItem>
-        <MenuItem onClick={handleClose2} disableRipple><NavLink className='navlink'>
-        
-           طرح فروش اقساطی
-       </NavLink> </MenuItem>
-        <MenuItem onClick={handleClose2} disableRipple><NavLink className='navlink'>
+        <MenuItem onClick={handleClose2} disableRipple><NavLink className='navlink' to={'/jashnehtabestane'}>
        
            جشنواره های زمستانه 1402
         </NavLink></MenuItem>
-        <MenuItem onClick={handleClose2} disableRipple><NavLink className='navlink'>
+        <MenuItem onClick={handleClose2} disableRipple><NavLink className='navlink' to={'/karttakhfif'}>
        
            فعال سازی کارت تخفیف
         </NavLink></MenuItem>
@@ -390,31 +391,17 @@ export default function CollapsNavigationMenu() {
             }
           }
       >
-        <MenuItem onClick={handleClose3} disableRipple>
-        <NavLink className='navlink'>    درخواست نصب و تعمیر </NavLink>
-          
-        </MenuItem>
-        <MenuItem onClick={handleClose3} disableRipple><NavLink className='navlink'>
-        
+        <MenuItem onClick={handleClose3} disableRipple><NavLink className='navlink'  to={'/AfterSalesService'}>
              خدمات پس از فروش
        </NavLink> </MenuItem>
-        <MenuItem onClick={handleClose3} disableRipple><NavLink className='navlink'>
-       
-              انتخاب الکترونیک
-        </NavLink></MenuItem>
-        <MenuItem onClick={handleClose3} disableRipple><NavLink className='navlink'>
-       
+        <MenuItem onClick={handleClose3} disableRipple><NavLink className='navlink' to={'/ContactUsForm'} >
              فرم تماس با ما 
         </NavLink></MenuItem>
-        <MenuItem onClick={handleClose3} disableRipple><NavLink className='navlink'>
-       
+        <MenuItem onClick={handleClose3} disableRipple><NavLink className='navlink' to={'/PopularQuestions'}>
           سوالات متداول 
   </NavLink></MenuItem>
       </Menu>
             </ListItem>
-            
-          
-
             <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton  >
@@ -451,14 +438,14 @@ export default function CollapsNavigationMenu() {
            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}> 
             </ListItem>
         </List>
-        <NavLink className="signup"  to={'signup'}>
+        <NavLink className="signup"  to={"/signin"}>
         <Box sx={{display:"flex",flexDirection:"row",justifyContent:"center",m:1,px:2,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",pb:1,borderRadius:1}}>
            <Typography variant='body2' sx={{mt:2,color:"#eeeeee"}}>ورود یا عضویت </Typography>
            <PermIdentityOutlinedIcon  sx={{mt:1,mr:2,fontSize:'30px',color:'white'}} />
        </Box>
        </NavLink>
       </Drawer>
-   </Grid>
+   </Box>
     </>
   );
 }

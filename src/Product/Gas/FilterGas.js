@@ -100,14 +100,28 @@ export default  function FilterGas() {
   const [disabledH3,setDisabledH3]=useState(false);
   const [index, setIndex] = React.useState(null);
   
- 
+  const convertToEnglish=(str)=> {
+    let englishNumber =str
+    .replace(/۰/g, '0')
+    .replace(/۱/g, '1')
+    .replace(/۲/g, '2')
+    .replace(/۳/g, '3')
+    .replace(/۴/g, '4')
+    .replace(/۵/g, '5')
+    .replace(/۶/g, '6')
+    .replace(/۷/g, '7')
+    .replace(/۸/g, '8')
+    .replace(/۹/g, '9');
+
+ return(englishNumber);
+  }
 
 
   const sortArrayMaxtoMin= (e)=>{
     setChecked1(e.target.checked);
     setChecked1(!checked1);
   setDatashow([...data.sort((a, b) =>
-     b.pricenum - a.pricenum
+    convertToEnglish(b.pricenum) - convertToEnglish(a.pricenum)
   )]);
  
   }
@@ -117,10 +131,9 @@ export default  function FilterGas() {
     setChecked2(e.target.checked);
     setChecked2(!checked2);
     setDatashow([...data.sort((a, b) =>
-       a.pricenum - b.pricenum
+      convertToEnglish(a.pricenum) - convertToEnglish(b.pricenum)
     )]);
     }
-
 
     const handleChangeB1 = (e) => {
    
@@ -174,7 +187,6 @@ export default  function FilterGas() {
                       setDatashow([...data.filter(i=>i.brands === "samsung" )]);
                       }
         }
-  
     };
   const handleChangeB2 = (e) => {
   setCheckedB2(e.target.checked);
@@ -744,10 +756,10 @@ const handleChangeE1=(e)=>{
         }
    return (
     <>
-    <Box component="div" sx={{width:{xs:'90%',lg:'25%'},display:{xs:"none",lg:'flex'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
-      <Box sx={{my:3,ml:1,mr:1, display:'flex' ,justifyContent:'start', height:'40px',width:'100%',bgcolor:'#E0E1E3'}}>
-<Typography sx={{pt:1,px:2,fontSize:'18px',direction:'rtl'}}>
-  نوع نمایش
+     <Box component="div" sx={{width:"400px",display:{xs:"none",lg:'flex'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
+    <Box sx={{mt:0.3,mr:0.7,display:'flex',justifyContent:'start',borderRadius:{xs:"none",lg:'10px'},direction:'rtl',borderBottom:{xs:"1px solid #414141",lg:"none"},
+     height:'50px',color:"#eeeeee",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",}}>
+<Typography sx={{px:2.2,pt:0.5,fontSize:{xs:"22px"},direction:'rtl'}}>  نوع نمایش 
 </Typography>
 </Box>   
 <Accordion
@@ -981,21 +993,20 @@ const handleChangeE1=(e)=>{
 </Box>
 
 
-
-<Box component="div" sx={{width:{xs:'95%',lg:'40%'},alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
+<Box component="div" sx={{width:'95%',alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
      
-<Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",bgcolor:'#E0E1E3'}}>
+<Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
       <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
         <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
             <Grid >
         <IconButton sx={{pt:0}}>
   
-      <FilterAltOutlinedIcon/>
+      <FilterAltOutlinedIcon sx={{color:"#eeeeee"}}/>
     </IconButton>
     </Grid>
         <Grid >
-      <Typography sx={{fontSize:'18px',direction:'rtl'}}>
-  نوع نمایش
+      <Typography sx={{fontSize:'18px',direction:'rtl',color:"#eeeeee"}}>
+   فیلتر بر اساس
 </Typography>
 </Grid>
         </Grid>
@@ -1010,6 +1021,7 @@ const handleChangeE1=(e)=>{
          
         </Grid>
       </Grid>
+    
     
      
    

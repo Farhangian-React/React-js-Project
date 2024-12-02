@@ -105,10 +105,11 @@ const handleInputChange = (e) => {
 }
    return (
 <>
-<Grid   xs={3} sx={{mt:3, ml:0, display: { xs: 'flex', md: 'none' } ,justifyContent:'start'}}>
-           <CollapsNavigationMenu />       
-          </Grid>
-        <Grid sx={{mt: 3,py:1,display: { xs: 'none', md: 'flex' },justifyContent:'space-between'}}>  
+<Box sx={{mt:3, ml:2, display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu /> 
+
+               
+          </Box>
+        <Box sx={{mt: 3,py:1,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between'}}>  
               <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
               <NavLink to={'/buybasket'} >
               <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'white',fontSize:'22px'}}/>
@@ -159,7 +160,7 @@ const handleInputChange = (e) => {
    
    {filteredUsers.map((item) => (
     <NavLink to={'/cartsearch'}  className={"linksearch"}>  
-   <Grid xs={12} onClick={()=>{
+   <Box  onClick={()=>{
       setCartItems([item]);
       setOpen(false);
 
@@ -176,14 +177,14 @@ const handleInputChange = (e) => {
 
             <Typography  sx={{mt:1,fontSize:"12px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
         </Grid>
-    </Grid>
+    </Box>
     </NavLink>
 ))}
   
   </Box>
   </ModalDialog>
   </Modal>
-  </Grid>
+  </Box>
   
   </>
     );

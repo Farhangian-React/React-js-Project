@@ -11,9 +11,9 @@ import "./Dishwasher.css";
 export default  function Dishwasher() {
   return (
 <>
-<PageTitle title='ماشین ظرف شویی' description=' ماشین ظرف شویی '/>
+<PageTitle title='ماشین ظرفشویی' description=' ماشین ظرفشویی '/>
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:1 }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"

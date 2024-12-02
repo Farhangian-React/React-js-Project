@@ -15,8 +15,6 @@ import LifeStyle from './LifeStyle/LifeStyle';
 import Gas from './Product/Gas/Gas';
 import {CartProvider} from './Shared/Cart-Context';
 import AboutSnova from './About Us/AboutSvova';
-import SheetRefrigerator from './dashbord/SheetRefrigerator';
-import SheetGas from './dashbord/SheetGas';
 import WaterTemperature from "./LifeStyle/WaterTemperature";
 import Refrigerators from "./Product/Refrigerator/Refrigerators";
 import CodeTakhfif from "./jashnvareh/CodeTakhfif";
@@ -37,12 +35,17 @@ import WhirlpoolBrands from './AllProducts/WhirlpoolBrands';
 import BushBrands from "./AllProducts/BushBrands";
 import SignIn from "./Login/SignIn";
 import SignUp from "./Login/SignUp";
-import { ToastContainer } from 'react-toastify';
+import AfterSalesService from './Service/AfterSalesService';
+import PopularQuestions from "./Service/PopularQuestions";
+import ContactUsForm from './Service/ContactUsForm';
+import ProductOff from "./jashnvareh/ProductOff";
+import ProductJashnvareh from "./jashnvareh/ProductJashnvareh";
+import CartBuyJashnvareh from "./jashnvareh/CartBuyJashnvareh";
+import Stores from './Stores/Stores';
+import "leaflet/dist/leaflet.css";
+import './index.css';
 
-
-function App() {
- <ToastContainer theme='colored'></ToastContainer>
- 
+function App() { 
   return (
     <>
      <CartProvider>
@@ -57,10 +60,8 @@ function App() {
              <Route path="/cartbuywashingmachine" exact element={<CartBuyWashingMachine />} />
              <Route path="/buybasket" exact element={<Carts/>} />
              <Route path="/buybasketmodal" exact element={<CartModal/>} />
-             <Route path="/refriderator" exact element={<SheetRefrigerator/>} />
              <Route path="/allrefriderators" exact element={<Refrigerators/>} />
              <Route path="/allgas" exact element={<Gas/>} />
-             <Route path= "/cooking" exact element={<SheetGas/>} />
              <Route path= "/shop-cooktop" exact element={<CookTops/>} />
              <Route path= "/shop-microwaves" exact element={<Microwaves/>} />
              <Route path= "/shop-hood" exact element={<Hoods/>} />
@@ -83,8 +84,13 @@ function App() {
              <Route path='/lgbrand' exact element={<LgBrands/>} />
              <Route path='/whirlpoolbrand' exact element={<WhirlpoolBrands/>} />
              <Route path='/bushbrands' exact element={<BushBrands/>} />
-           
-           
+             <Route path='/PopularQuestions' exact element={<PopularQuestions/>} /> 
+            <Route path='/AfterSalesService' exact element={<AfterSalesService/>} />
+            <Route path='/ContactUsForm' exact element={<ContactUsForm/>} />
+            <Route path='/ProductOff' exact element={<ProductOff/>} />
+            <Route path='/ProductJashnvareh' exact element={<ProductJashnvareh/>} />
+            <Route path='/CartBuyJashnvareh' exact element={<CartBuyJashnvareh/>} />
+            <Route path='/Stores' exact element={<Stores/>} />
              <Route path="*" element={<PageNotFount/>} />
             </Routes>
           </div>

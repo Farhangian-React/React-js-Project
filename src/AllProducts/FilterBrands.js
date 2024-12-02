@@ -349,12 +349,12 @@ const handleChangeE1=(e)=>{
    
 return (
   <>
-  <Box component="div" sx={{width:{xs:'95%',md:'30%'},display:{xs:"none",md:'flex'},flexDirection:'column',justifyContent:{xs:'center',md:'start'}}}>
-    <Box sx={{my:3,ml:1,mr:1, display:'flex' ,justifyContent:'start', height:'40px',width:'100%',bgcolor:'#E0E1E3'}}>
-<Typography sx={{pt:1,px:2,fontSize:'18px',direction:'rtl'}}>
-نوع نمایش
-</Typography>
-</Box>   
+  <Box component="div" sx={{width:"400px",display:{xs:"none",lg:'flex'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
+     <Box sx={{mt:0.3,mr:0.7,display:'flex',justifyContent:'start',borderRadius:{xs:"none",lg:'10px'},direction:'rtl',borderBottom:{xs:"1px solid #414141",lg:"none"},
+      height:'50px',color:"#eeeeee",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",}}>
+ <Typography sx={{px:2.2,pt:0.5,fontSize:{xs:"22px"},direction:'rtl'}}>  نوع نمایش 
+ </Typography>
+ </Box>    
 <Accordion
       expanded={index === 0}
       onChange={(event, expanded) => {
@@ -474,20 +474,18 @@ return (
     </Accordion>
 </Box>
 
-<Box component="div" sx={{width:{xs:'95%',md:'100%'},alignSelf:"center",display:{xs:"flex",md:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
-     
-<Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",bgcolor:'#E0E1E3'}}>
+<Box component="div" sx={{width:'95%',alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>     
+<Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
       <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
         <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
             <Grid >
         <IconButton sx={{pt:0}}>
-  
-      <FilterAltOutlinedIcon/>
+      <FilterAltOutlinedIcon sx={{color:"#eeeeee"}}/>
     </IconButton>
     </Grid>
         <Grid >
-      <Typography sx={{fontSize:'18px',direction:'rtl'}}>
-  نوع نمایش
+      <Typography sx={{fontSize:'18px',direction:'rtl',color:"#eeeeee"}}>
+   فیلتر بر اساس
 </Typography>
 </Grid>
         </Grid>
@@ -499,10 +497,8 @@ return (
     >
       <ExpandMoreIcon />
     </IconButton>
-         
         </Grid>
       </Grid>
-    
      
    
            <Drawer

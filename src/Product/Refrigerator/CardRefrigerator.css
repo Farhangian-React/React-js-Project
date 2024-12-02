@@ -4,41 +4,50 @@
    direction:ltr;
    justify-content: center;
    flex-grow: 10;
-  padding-top: 7px;
-  padding-bottom: 7px;
+   padding: 10px;
+
 
    
  
  }
  .paginationli{
-  border: 1px solid black;
-   font-size: larger;
-   padding-left: 10px;
-   padding-right: 10px;
-   padding-top: 1px;
-   padding-bottom: 1px;
+  border: 1px solid #d4d4d4;
+   font-size:medium;
+   padding-left:10px ;
+   padding-right:10px ;
+   padding-top: 5px;
+   padding-bottom:5px ;
    margin: 2px;
+   color: #3d3d3d;
  }
  .previousStyle{
-  font-size: larger;
-   border: 1px solid black;
-
-   padding-left: 10px;
-   padding-right: 10px;
-   padding-top: 1px;
-   padding-bottom: 1px;
-   margin: 2px;
-   background-color: #E0E1E3;
+  font-size: medium;
+   border: 1px solid #d4d4d4;
+   color: #3d3d3d;
+align-self: center;
+padding:5px;
+margin: 2px;
+background-image: linear-gradient(to left ,#eeeeee,#282828);
+   
+ }
+ .previousStyle:hover{
+  scale: 1.1;
+  color:#eeeeee;
+  background-image:linear-gradient(to left ,#E0AA3E,#282828) ;
  }
  .nextStyle{
-  font-size: larger;
-   border: 1px solid black;
-   padding-left: 10px;
-   padding-right: 10px;
-   padding-top: 1px;
-   padding-bottom: 1px;
+  font-size: medium;
+   border: 1px solid #d4d4d4;
+   color: #3d3d3d;
+   align-self: center;
+   padding:5px;
    margin: 2px;
-   background-color: #E0E1E3;
+  background-image: linear-gradient(to right ,#eeeeee,#282828);
+ }
+ .nextStyle:hover{
+  scale: 1.1;
+  color:#eeeeee;
+  background-image:linear-gradient(to right ,#E0AA3E,#282828) ;
  }
 .headers{
   list-style-type: none;

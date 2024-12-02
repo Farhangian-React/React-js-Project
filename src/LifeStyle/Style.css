@@ -6,13 +6,19 @@
 }
  .grid:hover{
     text-decoration: none;
-    opacity:0.7;
-    scale: 1.07;
+    opacity:0.8;
+    scale: 1.05;
   .type1{
   display: none;
   }
 .type2{
    display: flex;
+   justify-content: center;
+   align-self: center;
+ 
+}
+.gerdalia{
+   display: none;
 }
     
  }
@@ -20,6 +26,7 @@
  .type2{
    display: none;
  }
+ 
  .head {
     position: relative;
     
@@ -54,4 +61,53 @@
 }
 .disply{
    display: flex;
+}
+.gerdalitop{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   align-self: center;
+   right: -1px;
+  top: 200px;
+   width: 100%;
+   height:40px;
+   background-image:linear-gradient(to bottom ,#f9f0de,#565452);
+   border-top-left-radius: 80%;
+   border-top-right-radius: 50%;
+   padding-right: 15px;
+}
+.gerdalia{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   align-self: center;
+   position: absolute;
+   right: -1px;
+   bottom: 0;
+   width: 100%;
+   height:40px;
+   background-image:linear-gradient(to bottom ,#f9f0de,#565452);
+   border-top-left-radius: 80%;
+   border-top-right-radius: 50%;
+   padding-right: 15px;
+   
+}
+
+.linka{
+   text-decoration: none;
+}
+.home{
+   background-color:white;
+   box-shadow: 10px 10px 10px  #9e9b98;
+   color:#4d4d4d ;
+   padding: 10px;
+   margin:8px ;
+   font-size: medium;
+   border-top-left-radius: 30px;
+   border-top-right-radius:15px ;
+
+}
+.home:hover{
+   background-image:linear-gradient(to bottom ,#f9f0de,#565452) ;
+   transform: translateY(-4px);
 }

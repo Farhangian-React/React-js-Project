@@ -3,7 +3,7 @@ import Box from '@mui/joy/Box';
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 import {NavLink} from 'react-router-dom';
-import CardGas  from './CardGas';
+import CardGas  from './CardGas'; 
 import Footer from '../../Footer/Footer';
 import TopNav from '../../dashbord/TopNav';
 import { PageTitle } from '../../Title/PageTitle';
@@ -26,9 +26,9 @@ export default  function Gas() {
   }
   return (
 <>
-<PageTitle title=' پخت و پز ' description='  همه ی اجاق گاز ها '/>
+<PageTitle title='همه ی محصولات مرتبط با پخت و پز' description='  پخت و پز'/>
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:0 }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"
@@ -53,7 +53,7 @@ export default  function Gas() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"16px"}}
+               sx={{color:"#E0AA3E",fontSize:"16px",mx:0,px:0}}
                >
                 پخت و پز 
                

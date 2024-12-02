@@ -26,9 +26,9 @@ export default  function RefrideratorTopFreezer() {
   }
   return (
 <>
-<PageTitle title='فریزر پایین/ یخچال و فریزر  ' description='   یخجال و فریزر '/>
+<PageTitle title=' یخچال و فریزر / فریزر بالا  ' description='   یخجال و فریزر '/>
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:0.5 }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"
@@ -53,7 +53,7 @@ export default  function RefrideratorTopFreezer() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"16px"}}
+               sx={{color:"#E0AA3E",fontSize:"16px",mx:0,px:0}}
                >
                 یخچال و فریزر 
                

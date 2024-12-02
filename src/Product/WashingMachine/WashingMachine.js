@@ -10,9 +10,10 @@ import { PageTitle } from '../../Title/PageTitle';
 export default  function WashingMachine() {
   return (
 <>
+
 <PageTitle title='ماشین لباس شویی' description=' ماشین لباس شویی '/>
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:1 }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"

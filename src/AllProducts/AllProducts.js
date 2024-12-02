@@ -49,7 +49,7 @@ export default  function AllProducts() {
         </Box>
         
         
-          <CardAllProducts  itemsPerPage={24}/>
+          <CardAllProducts  itemsPerPage={9}/>
           <Footer/>
    </>
    );}    

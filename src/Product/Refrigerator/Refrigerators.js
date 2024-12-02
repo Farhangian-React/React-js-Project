@@ -34,7 +34,7 @@ export default  function Refrigerators() {
 <>
 <PageTitle title=' همه ی یخچال و فریزرها  ' description='   یخجال و فریزر '/>
    <TopNav/> 
-    <Box sx={{display:"flex",justifyContent:"end",my:{xs:8,md:1} ,mx:0.5 }} >
+    <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"
@@ -110,7 +110,7 @@ export default  function Refrigerators() {
           </List>
         </Box>
         
-   <AllRefrigerators itemsPerPage={6}/>
+   <AllRefrigerators itemsPerPage={8}/>
           <Footer/>
 </>
   );

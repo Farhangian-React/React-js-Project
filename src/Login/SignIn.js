@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -17,7 +16,8 @@ import Grid from "@mui/material/Grid";
 import TopNav from '../dashbord/TopNav';
 import Footer from '../Footer/Footer';
 import { PageTitle } from '../Title/PageTitle';
-import img from "../img/signup1.jpg";
+import logimage from "../img/loge1.png";
+import logimage1 from "../img/loge2.png";
 const SignIn = () => {
   const [id,setId]=useState("");
   const [password,setPassword]=useState("");
@@ -78,36 +78,33 @@ toast.error("ورود ناموفق");
   return (
     <>
        <PageTitle  title=' ورود به حساب کاربری   '  description=' ورود /  ورود در سهیل  '/>
-   <TopNav/>
-    <ToastContainer></ToastContainer>
-    <Box 
-         xs={12} md={12}
-      sx={{
-        display:'flex',
-        justifyContent:'space-around',
-        flexDirection:"row",
-       backgroundImage: `url(${img})`,
-       backgroundPosition: 'center',
-       backgroundSize: 'cover',
-       backgroundRepeat: 'no-repeat',
-       height:"50 vh",
-       width:'100%'
-       }} >
-         
-    <Container  maxWidth="xs" sx={{display:"flex"}}>
-      <CssBaseline />
+   <TopNav/> {/*<CssBaseline />*/}
       <div>
      <ToastContainer/>  
     </div>
-      <Box sx={{height:"70vh",border:"2px solid white",backdropFilter:"blur(10px)",my:2,p:4}} >
-        <Typography  variant="h5" sx={{textAlign:"center",my:1}}>
+   <Box 
+      sx={{
+
+        display:'flex',
+        justifyContent:'center',
+        flexDirection:"row",
+       backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcDOnBx2I4GMh9q1Z37yKX3mF9YEdMC9i2GQ&s")`,
+       backgroundPosition: 'center',
+       backgroundSize: 'cover',
+       backgroundRepeat: 'no-repeat',
+       height:'100vh',
+       width:'100%'
+       }} >
+      <Box maxWidth="xs"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mx:10,mt:{xs:20,lg:6},
+      height:{xs:"300px",md:"600px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
+        <Typography  variant="h5" sx={{textAlign:"center",mt:{xs:10,md:1},color:"#fff"}}>
        ورود به حساب کاربری
         </Typography>
        
         <form  noValidate onSubmit={handlesubmit}>
           <Grid container spacing={2} sx={{mt:1}}>
             <Grid  item xs={12}   >
-            <FormLabel sx={{mb:1,color:"#615d5d"}}>نام کاربری یا ایمیل</FormLabel>
+            <FormLabel sx={{mb:1,color:"#fff"}}>نام کاربری یا ایمیل</FormLabel>
               <Input
             color="warning"
             placeholder=' نام کاربری'
@@ -129,7 +126,7 @@ toast.error("ورود ناموفق");
               </Typography>
             </Grid>
             <Grid item xs={12}>
-            <FormLabel sx={{mb:1,color:"#615d5d"}}> رمز  </FormLabel>
+            <FormLabel sx={{mb:1,color:"#fff"}}> رمز  </FormLabel>
               <Input
                 color="warning"
               placeholder="رمز"
@@ -151,10 +148,12 @@ toast.error("ورود ناموفق");
              </Typography>
             </Grid>
             <Grid item xs={12} sx={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="مرا به خاطر بسپار"
-              />
+            <FormControlLabel
+             
+             control={<Checkbox color="info" value="allowExtraEmails" sx={{color:"#E0AA3E"}} />}
+             label="مرا بخاطر بسپار"
+             sx={{color:"#eee"}}
+           />
               <NavLink className="nav">یاد آوری رمز عبور</NavLink>
             </Grid>
        
@@ -182,8 +181,24 @@ toast.error("ورود ناموفق");
         
          </form>
       </Box>
-      
-    </Container>
+   
+
+
+    <Box sx={{width:"100%",display:"flex",justifyContent:"center",alignSelf:"start",mx:1,mt:1}}> 
+   <Box sx={{alignSelf:"center",
+       display:"flex",
+       borderRadius:1,
+       backgroundImage:{xs:`url(${logimage1})`,lg:`url(${logimage})`},
+       backgroundPosition: 'center',
+       backgroundSize:"contained",
+       backgroundRepeat: 'no-repeat',
+       width:"100%",
+       height:{xs:"300px",md:"600px"},
+       mt:{xs:10,md:1},
+     
+      }}>
+        </Box>
+    </Box>
    </Box>
     <Footer/>
     </>

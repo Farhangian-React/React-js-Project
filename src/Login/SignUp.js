@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -17,7 +16,9 @@ import FormLabel from '@mui/joy/FormLabel';
 import TopNav from '../dashbord/TopNav';
 import Footer from '../Footer/Footer';
 import { PageTitle } from '../Title/PageTitle';
-import img from "../img/signup1.jpg";
+import logimage from "../img/log2.png";
+import logimage1 from "../img/log11.png";
+
 export default function SignUp() {
   const [id,setId]=useState("");
     const [fname,setFname]=useState("");
@@ -85,42 +86,41 @@ fetch("http://localhost:3000/users",{
     <>
    <PageTitle  title=' عضویت در سهیل '  description=' عضویت /  عضویت در سهیل  '/>
    <TopNav/>
-   <Box 
-         xs={12} md={12}
-      sx={{
-        display:'flex',
-        justifyContent:'space-around',
-        flexDirection:"row",
-       backgroundImage: `url(${img})`,
-       backgroundPosition: 'center',
-       backgroundSize: 'cover',
-       backgroundRepeat: 'no-repeat',
-       height:"50 vh",
-       width:'100%'
-       }} >
-         
-    <Container  maxWidth="xs" sx={{display:"flex"}}>
-      <CssBaseline />
+   <CssBaseline />
       <div>
      <ToastContainer/>  
     </div>
-      <Box sx={{height:"100vh",border:"2px solid white",backdropFilter:"blur(10px)",my:{xs:10,md:2},px:4,py:1}} >
-        <Typography  variant="h5" sx={{textAlign:"center",my:1}}>
+   <Box 
+      sx={{
+
+        display:'flex',
+        justifyContent:'center',
+        flexDirection:"row",
+       backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcDOnBx2I4GMh9q1Z37yKX3mF9YEdMC9i2GQ&s")`,
+       backgroundPosition: 'center',
+       backgroundSize: 'cover',
+       backgroundRepeat: 'no-repeat',
+       height:'100vh',
+       width:'100%'
+       }} >
+      <Box maxWidth="xs"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mx:10,mt:{xs:20,lg:6},
+      height:{xs:"300px",md:"600px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
+        <Typography  variant="h5" sx={{textAlign:"center",mt:1.5,color:"#eee"}}>
        عضویت در سایت سهیل
         </Typography>
-        <Grid sx={{mb:0,borderBottom:"1px solid black",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
-        <Typography variant ="body2" sx={{color:"#282828",mb:0,pb:0}}>
+        <Grid sx={{mb:0,borderBottom:"1px solid white",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+        <Typography variant ="body2" sx={{color:"#cecece",mb:0,pb:0}}>
      قبلا عضو شده اید؟
         </Typography>
         <NavLink to={"/signin"}><Button  sx={{p:0,width:"30px",':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-       color:'white'},fontSize:{xs:"12px",md:"14px"},color:'#eeeeee',mb:1,
+       color:'white'},fontSize:{xs:"12px",md:"14px"},color:'#cecece',mb:1,
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>ورود</Button></NavLink>
         </Grid>
         <form  noValidate onSubmit={handlesubmit}>
           <Grid container spacing={2} sx={{mt:1}}>
          
             <Grid  item xs={12} sm={6}  >
-            <FormLabel sx={{mb:1,color:"#615d5d"}}>نام</FormLabel>
+            <FormLabel sx={{mb:1,color:"#cecece"}}>نام</FormLabel>
               <Input
             color="warning"
             placeholder='نام'
@@ -142,7 +142,7 @@ fetch("http://localhost:3000/users",{
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-            <FormLabel sx={{mb:1,color:"#615d5d"}}>نام خانوادگی</FormLabel>
+            <FormLabel sx={{mb:1,color:"#cecece"}}>نام خانوادگی</FormLabel>
               <Input
               color="warning"
               placeholder='نام خانوادگی'
@@ -161,8 +161,8 @@ fetch("http://localhost:3000/users",{
                {error.lname}
              </Typography>
             </Grid>
-            <Grid  item xs={12}  >
-            <FormLabel sx={{mb:1,color:"#615d5d"}}>نام کاربری</FormLabel>
+            <Grid  item xs={12} sm={6}  >
+            <FormLabel sx={{mb:1,color:"#cecece"}}>نام کاربری</FormLabel>
               <Input
             color="warning"
             placeholder='نام کاربری'
@@ -172,19 +172,44 @@ fetch("http://localhost:3000/users",{
                 required
                 fullWidth
                 id="username"
-                label="نام ;hvfvd"
-                autoFocus
+                label="نام "
+                defaultValue={""}
                 value={id}
                 onChange={(e)=> setId(e.target.value)}
-               className='input'
+              
               />
               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
                 {error.fname}
               </Typography>
             </Grid>
+            <Grid item xs={12} sm={6}>
+            <FormLabel sx={{mb:1,color:"#cecece"}}> رمز  </FormLabel>
+              <Input
+              color="warning"
+              placeholder="رمز" 
+              autoComplete="current-password"
+              name="password"
+              variant="outlined"
+                required
+                fullWidth
+                id="password"
+                label="Password"
+                defaultValue={""}
+                value={password}
+                type="password"
+                
+               
+               
+                onChange={(e)=> setPassword(e.target.value)}
+              />
+               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+               
+               {error.password}
+             </Typography>
+            </Grid>
             <Grid item xs={12}>
-            <FormLabel sx={{mb:1,color:"#615d5d"}}>آدرس ایمیل  </FormLabel>
+            <FormLabel sx={{mb:1,color:"#cecece"}}>آدرس ایمیل  </FormLabel>
               <Input
                 color="warning"
               placeholder='آدرس ایمیل'
@@ -201,40 +226,19 @@ fetch("http://localhost:3000/users",{
                {error.email}
              </Typography>
             </Grid>
-            <Grid item xs={12}>
-            <FormLabel sx={{mb:1,color:"#615d5d"}}> رمز  </FormLabel>
-              <Input
-                color="warning"
-              placeholder="رمز"
-                variant="outlined"
-                required
-                fullWidth
-                defaultValue={""}
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-                value={password}
-                onChange={(e)=> setPassword(e.target.value)}
-              />
-               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
-               
-               {error.password}
-             </Typography>
-            </Grid>
+           
             <Grid item xs={12}>
               <FormControlLabel
              
                 control={<Checkbox color="info" value="allowExtraEmails" sx={{color:"#E0AA3E"}} />}
                 label="ثبت نام و استفاده از سهیل به معنی پذیرش قوانین و مقررات آن است."
-                sx={{color:"#b7b7b7"}}
+                sx={{color:"#eee"}}
               />
             </Grid>
           </Grid>
           <Button
            sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-           color:'white'},fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',mt:2,py:0.3,
+           color:'white'},fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',mt:1.5,py:0.3,
            backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
             type="submit"
             fullWidth
@@ -242,8 +246,23 @@ fetch("http://localhost:3000/users",{
            عضویت
           </Button>
         </form>
-      </Box>
-    </Container>
+     
+    </Box>
+    <Box sx={{width:"100%",display:"flex",justifyContent:"center",alignSelf:"start",mx:1,mt:1}}> 
+   <Box sx={{alignSelf:"center",
+       display:"flex",
+       borderRadius:1,
+       backgroundImage:{xs:`url(${logimage1})`,lg:`url(${logimage})`},
+       backgroundPosition: 'center',
+       backgroundSize:"contained",
+       backgroundRepeat: 'no-repeat',
+       width:"100%",
+       height:{xs:"300px",md:"600px"},
+       mt:{xs:10,md:1},
+     
+      }}>
+        </Box>
+    </Box>
     </Box>
     <Footer/>
     </>

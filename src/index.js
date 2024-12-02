@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './Fonts/a83daff6a3fcaf7cf89f771c940e401f.ttf';
+import './Fonts/vazirfont/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.woff2';
 
 
 
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById('root') ).render(
  
   <Router>
      <div dir="rtl">
-     <App />
+     <App  />
    </div>
     </Router> 
   

@@ -13,24 +13,10 @@ transform: translateX(0);
 
    } 
 }
-.logos{ 
-    margin-top: 20px;
-    margin-bottom: 30px;
-     display: inline-block;
-overflow: hidden;
-padding: 20px 0;
- white-space: nowrap;
- background:white;
- height: 100px;
- width: 100%;
- display: flex;
- justify-content: center;
-padding-left: 0px;
-padding-right: 0px;
-position: relative;
 
-
- 
+.link{
+    text-decoration: none;
+    color:#eeeeee;
 }
 .logos:hover .logos-slide {
 animation-play-state: paused;
@@ -64,4 +50,44 @@ background:linear-gradient(to left ,rgba(255,255,255,0),white) ;
 margin: 0 40px;
 height: 100px;
 width: 150px;
+}
+.washimg {
+    align-self: center;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range-start:100px ;
+    animation-range-end: 800px;
+}
+@keyframes fade{
+    from{scale: 0.6;opacity: 0.2;}
+    to{scale: 1;opacity: 1;}
+}
+.cc{
+    overflow: visible;
+    height: auto;
+    
+}
+.refbutton{
+    display: none;
+}
+.bagbox{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: white;
+  
+}.tinybox{
+    width:90%;
+    margin-left: 90px;
+    margin-top: 20px;
+    margin-bottom:20px ;
+    margin-right:40px ;
+}
+.closebotton{
+    display: flex;
+    border: none;
+    color: #E0AA3E;
+    font-size: 16px;
+    background-color: white;
+
 }

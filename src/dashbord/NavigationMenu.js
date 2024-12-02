@@ -537,35 +537,23 @@ const Shows = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) => 
                    '--ListItemDecorator-size': '32px',
                    backgroundColor:'#fff',
                    width:'220px',
-                   height:'200px',
+                   height:'100px',
                    alignItems:'start',
                    display:'flex',
                    justifyContent: 'center'
                  }}
           >
-            <ListItem role="none">
-                <NavLink className='navlink' to={'/jashnehtabestane'} {...getTargetProps(0)}>
-              جشنواره تابستانه 
-              </NavLink >
-             
-            </ListItem>
+           
             <ListItem role="none">
               
-              <NavLink  className='navlink' to={'/shop-dishwasher'} {...getTargetProps(1)}>
-                طرح فروش اقساطی
-              </NavLink >
-             
-            </ListItem>
-            <ListItem role="none">
-              
-              <NavLink  className='navlink' to={'/shop-dishwasher'}  {...getTargetProps(2)}>
+              <NavLink  className='navlink' to={'/jashnehtabestane'}  {...getTargetProps(0)}>
                 جشنواره زمستانه  
               </NavLink >            
              
             </ListItem>
             <ListItem role="none">
              
-              <NavLink  className='navlink' to={'/karttakhfif'}  {...getTargetProps(3)}>
+              <NavLink  className='navlink' to={'/karttakhfif'}  {...getTargetProps(1)}>
                 فعال سازی کارت تخفیف
               </NavLink >  
              
@@ -660,28 +648,19 @@ const Servis = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) =>
              
             
           >
+       
             <ListItem role="none">
-              <NavLink className='navlink'  to={'/shop-dishwasher'} {...getTargetProps(0)}>
-                درخواست نصب و تعمیر
-              </NavLink>
-            </ListItem>
-            <ListItem role="none">
-              <NavLink className='navlink' to={'/shop-dishwasher'}  {...getTargetProps(1)}>
+              <NavLink className='navlink' to={'/AfterSalesService'}  {...getTargetProps(0)}>
                 خدمات پس از فروش
               </NavLink>
             </ListItem>
             <ListItem role="none">
-              <NavLink className='navlink' to={'/shop-dishwasher'}  {...getTargetProps(2)}>
-                انتخاب الکترونیک
-              </NavLink>
-            </ListItem>
-            <ListItem role="none">
-              <NavLink className='navlink' to={'/shop-dishwasher'}  {...getTargetProps(3)}>
+              <NavLink className='navlink' to={'/ContactUsForm'}  {...getTargetProps(1)}>
                 فرم تماس با ما
               </NavLink>
             </ListItem>
             <ListItem role="none">
-              <NavLink className='navlink' to={'/shop-dishwasher'}  {...getTargetProps(4)}>
+              <NavLink className='navlink' to={'/PopularQuestions'}  {...getTargetProps(2)}>
                 سوالات متداول
               </NavLink>
             </ListItem>
@@ -750,7 +729,7 @@ export default function NavigationMenu() {
             role="menuitem"
             {...getTargetProps(2)}
             component="a"
-            href="#navigation-menu"
+            href="/Stores"
             className='hover'
           >
             فروشگاه

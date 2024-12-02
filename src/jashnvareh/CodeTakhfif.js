@@ -2,173 +2,209 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/joy';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-
-import Link from "@mui/material/Link";
-import { NavLink } from 'react-router-dom';
-import Paper from "@mui/material/Paper";
-
+import CssBaseline from "@mui/material/CssBaseline";
 import { PageTitle } from "../Title/PageTitle";
-
-import './Code.css';
+import { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from "react-toastify";
+import Input from '@mui/joy/Input';
+import FormLabel from '@mui/joy/FormLabel';
+import "react-toastify/dist/ReactToastify.css";
+import './jashnvareh.css';
 
 export default function CodeTakhfif() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
+  const [id,setId]=useState("");
+  const [code,setCode]=useState("");
+  const [numcall,setNumcall]=useState("");
+  const [error,setError]=useState({});
+  const navigate=useNavigate();
+  const isvalidate = ()=>{
+    let isvalid =true;
+    let errmesage={};
+    if(code === null || code === ""){  
+      isvalid = false;
+errmesage.code="لطفا کد جشنواره را وارد کنید";
+    }
+    if(numcall === null || numcall === ""){
+      
+      isvalid = false;
+errmesage.numcall="لطفا  شماره همراه خود را وارد کنید";
+    }
+    if(id === null || id === ""){
+      
+      isvalid = false;
+errmesage.id="لطفا  شماره پذیرش خود را وارد کنید";
+    }
+    if(!isvalid){
+      toast.warning(errmesage);
+    }
+    setError(errmesage);
+    return isvalid;
+  }
+
+  const handlesubmit=(e)=>{
+  
+e.preventDefault();
+let result={id,code,numcall};
+if(isvalidate()){
+//console.log(result);
+fetch("http://localhost:3000/users",{
+  method:"POST",
+  headers:{"content-type":"aplication/jopes"},
+  body:JSON.stringify(result)
+
+}).then((res)=>{
+  toast.success("عضویت با موفقیت صورت گرفت");
+  navigate("/signin");    
+}).catch((err)=>{
+  toast.error("");
+})
+  }
+}
 
        
 
   return (
     <>
-      <PageTitle title='  ورود' description=' سهیل/جشنواره/کد تخفیف   '/>
-         <Grid 
-         xs={12} md={12}
+      <PageTitle title=' سهیل/جشنواره/کد تخفیف   ' description='جشنواره  '/>
+ 
+   
+   <CssBaseline />
+      <div>
+     <ToastContainer/>  
+    </div>
+         <Box 
       sx={{
         display:'flex',
-        justifyContent:'space-around',
+        justifyContent:'start',
         flexDirection:"row",
        position: "absolute",
-       backgroundImage: `url("https://graphic-bank.com/wp-content/uploads/edd/2020/07/GRAPHIC-BANK01315162601673.jpg")`,
+       backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/014/724/816/non_2x/abstract-black-triangular-background-with-gold-lines-free-vector.jpg")`,
        backgroundPosition: 'center',
        backgroundSize: 'cover',
        backgroundRepeat: 'no-repeat',
        height:'100vh',
        width:'100%'
        }} >
-         
-
-
-
-       <Grid  xs={6} md={6} sx={{width:"500px",mx:1,display:{xs:"none",md:"flex"}}}>
-       <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#282828' , ml:1,mt:30,width:"160px",
-         height:'160px',opacity:{xs:0.9,lg:0.8},position:'relative'}}>
+       <Box  sx={{width:"100%",mx:1,display:{xs:"none",md:"flex"},justifyContent:"center",mt:3,mr:20}}>
+       <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#282828' , ml:22,mt:30,width:"200px",
+         height:'200px',opacity:{xs:0.9,lg:0.8},position:'relative'}}>
         <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:3}}>فروش  </Typography>
       </Box>
-      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:45 ,mr:4,width:"180px",
-         height:'189px',opacity:{xs:0.9,lg:0.8},position:'absolute'}}>
+      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:45 ,mr:4,width:"220px",
+         height:'220px',opacity:{xs:0.9,lg:0.8},position:'absolute'}}>
         <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:3}}>جشنواره </Typography>
       </Box>
-      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:23 ,mr:15,width:"180px",
-         height:'180px',opacity:{xs:0.9,lg:0.8},position:'absolute'}}>
+      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:23 ,mr:15,width:"220px",
+         height:'220px',opacity:{xs:0.9,lg:0.8},position:'absolute'}}>
         <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:3}}>محصولات  </Typography>
       </Box>
-      <Box sx={{
-
-        borderRadius:"50%" ,mt:29 ,mr:2,width:"200px",
-         height:'200px',position:'absolute'}}>
-        <img className='imgsohil' width={300}  src='https://png.pngtree.com/png-clipart/20230817/original/pngtree-mountains-logo-design-sky-high-vector-picture-image_10974603.png'/>
-      </Box>
- 
-       </Grid>
-
-       <Grid  xs={12} md={6} sx={{width:"500px",mx:1,my:5,display:"flex"}}>
       
+ 
+       </Box>
 
-  
+       <Box maxWidth="sm"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mr:10,ml:{xs:10,md:35},mt:{xs:20,md:10},
+      height:{xs:"300px",md:"600px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
+        <Typography  variant="h5" sx={{textAlign:"center",my:1,color:"#fff"}}>
+        مشتری گرامی ضمن تشکر از خرید شما جهت فعال سازی جشنواره سهیل اطلاعات زیر را با دقت تکمیل نمایید
+        </Typography>
        
-        <Grid
-            
-            component={Paper}
-            elevation={6}
-            square
-            sx={{bgcolor:'#eeeeee'}}
-          >
-            <Box
-              sx={{
-                my: 1,
-                mx: 4,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <Typography fontWeight={400}   sx={{py:4,textAlign:"center",color:"#E0AA3E",fontSize:"18px"}}>
-                مشتری گرامی ضمن تشکر از خرید شما جهت فعال سازی جشنواره سهیل اطلاعات زیر را با دقت تکمیل نمایید
-              </Typography>
-              <Box
-                component="form"
-                noValidate
-                onSubmit={handleSubmit}
-                sx={{ mt: 1 }}
-              >
-                <label>  کد جشنواره</label>
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="code"
-                  name="code"
-                  autoComplete="code"
-                  autoFocus
-                  variant="standard"
-                />
-                <label> شماره ی پذیرش </label>
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-       
-                  variant="standard"
-                />
-                <label>   شماره ی همراه</label>
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="code"
-                  name="code"
-                  autoComplete="code"
-                  autoFocus
-                  variant="standard"
-                />
-             
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{bgcolor:"#E0AA3E", mt: 1, mb: 1 }}
-                >
-                  مرحله ی بعد 
-                </Button> 
-                <NavLink to={'/'} >
-                <Button
-                  
-                  fullWidth
-                  variant="contained"
-                  sx={{bgcolor:"#E0AA3E", mt: 1, mb: 1 }}
-                >
-                   
-              < HomeOutlinedIcon sx={{mr:1,ml:1,color:'white',fontSize:'22px'}}/>
-           
-                 صفحه اصلی
-                </Button>
-                 </NavLink>
+        <form  noValidate onSubmit={handlesubmit}>
+          <Grid container spacing={2} sx={{mt:1}}>
+            <Grid  item xs={12}   >
+            <FormLabel sx={{mb:1,color:"#fff"}}> شماره پذیرش</FormLabel>
+              <Input
+            color="warning"
+            placeholder=' شماره پذیرش'
+                autoComplete="id"
+                name="نام"
+                variant="outlined"
+                required
+                fullWidth
+                id="id"
+                label=" شماره پذیرش"
+                autoFocus
+                value={id}
+                onChange={(e)=> setId(e.target.value)}
+               className='input'
+              />
+              <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
+                {error.id}
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+            <FormLabel sx={{mb:1,color:"#fff"}}> کد جشنواره  </FormLabel>
+              <Input
+                color="warning"
+              placeholder="کد جشنواره"
+                variant="outlined"
+                required
+                fullWidth
+                autoFocus
+                name="code"
+                label="code"
+                className='input'
+                id="code"
+                autoComplete="id"
+                value={code}
+                onChange={(e)=> setCode(e.target.value)}
+              />
+               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+               
+               {error.code}
+             </Typography>
+            </Grid>
+            <Grid  item xs={12}   >
+            <FormLabel sx={{mb:1,color:"#fff"}}>   شماره همراه</FormLabel>
+              <Input
+            color="warning"
+            placeholder=' شماره همراه'
+                autoComplete="id"
+                name="شماره همراه"
+                variant="outlined"
+                required
+                fullWidth
+                id="id"
+                label=" شماره همراه"
+                autoFocus
+                value={numcall}
+                onChange={(e)=> setNumcall(e.target.value)}
+               className='input'
+              />
+              <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+               
+                {error.numcall}
+              </Typography>
+            </Grid>
+        
+       
+  </Grid>
+          <Button
+           sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
+           color:'white'},fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',my:5,px:1,py:0.3,
+           backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
+            type="submit"
+           fullWidth
+          >
+            مرحله ی بعد 
+          </Button>
+          <NavLink to={"/signup"}>
+          <Button
+           sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
+           color:'white'},fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',my:0,px:1,py:0.3,
+           backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
            
-                
-              </Box>
-                   <Box sx={{display:"flex",alignItems:"center",mt:0,
-                justifyContent:'center',borderRadius:2  ,width:"130px",height:'130px'}}>
-             
-                  <img className='imgsohil' width={200}  src='https://png.pngtree.com/png-clipart/20230817/original/pngtree-mountains-logo-design-sky-high-vector-picture-image_10974603.png'/>
-                 
-                  </Box>
-            </Box>
-          </Grid>
-         
+          fullWidth
+          >
+           صفحه اصلی 
+          </Button></NavLink>        
+         </form>
+  
+          </Box>
 
-       </Grid>
-
-      </Grid>
-
+      </Box>
      
     
 

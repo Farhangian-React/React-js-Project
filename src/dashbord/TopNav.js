@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import NavigationMenu from './NavigationMenu';
 import { styled } from '@mui/material/styles';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
@@ -52,12 +51,12 @@ function TopNav(props) {
   return (
     <>
      <HideOnScroll {...props}>
-    <AppBar position="fixed" className='nav' sx={{mt:0 ,bgcolor:'black',px:1,color:'white'}}>
+    <AppBar position="fixed" className='nav' sx={{mt:0 ,mb:0,bgcolor:'black',px:1,color:'white'}}>
       <Container maxWidth='xl'>
-        <Toolbar disableGutters sx={{ my:0, display:{xs:'flex',sm:'flex',},justifyContent:{xs:'space-between'}}} >
+        <Toolbar disableGutters sx={{ my:0, display:"flex",justifyContent:'space-between'}} >
       <Grid container spacing={4} sx={{display:'flex',justifyContent:'space-between'}}>
-        <Grid  xs={5} md={3} sx={{mt:3, display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
-        <img className='imgsohil' width={60}  src='https://png.pngtree.com/png-clipart/20230817/original/pngtree-mountains-logo-design-sky-high-vector-picture-image_10974603.png'/>
+        <Grid  sx={{mt:3, display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
+        <img className='imgsohil' width={60}  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
                <Typography
      noWrap
      component="a"
@@ -86,14 +85,14 @@ function TopNav(props) {
       </Container>
     </AppBar>
     </HideOnScroll>
-    <AppBar position='sticky' className='nav' sx={{display:{xs:'none',md:'flex'},
-      mt:8 ,bgcolor:'black',px:1,py:0,color:'white',}}>
+    <AppBar position='sticky' className='nav' sx={{display:{xs:'none',lg:'flex'},
+      mt:8 ,mb:0,bgcolor:'black',px:1,py:0,color:'white',}}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters sx={{my:0 ,display:{xs:'flex',sm:'flex'},justifyContent:{xs:'end',sm:'space-around'}}}>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:'space-between', },marginLeft:{md:0},marginRight:{md:0} }}>
+          <Box sx={{ flexGrow: 1, display:{ xs:'none',lg: 'flex'}, justifyContent:'space-around',marginLeft:{md:0},marginRight:{md:0} }}>
              <NavigationMenu/> 
               <NavLink className="signup"  to={'/signup'}>
-                 <Box sx={{my:2,py:1,px:2,display: { xs: 'none', md: 'flex' },justifyContent:'space-between',border:'1px solid  #f2b705','&:hover': {
+                 <Box sx={{my:2,py:1,px:2,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between',border:'1px solid  #f2b705','&:hover': {
     backgroundColor:'black',
     border:'1px solid  #fff',
   },borderRadius:1}}>
@@ -106,6 +105,10 @@ function TopNav(props) {
         </Toolbar>
       </Container>
     </AppBar>
+
+
+
+    
     </>
   );
 }

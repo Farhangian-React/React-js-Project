@@ -1,19 +1,80 @@
-
-.navicon:hover{
-    border-radius: 10px;
-    background-color:#98a0ac;
-    transform: translateY(5px);
+.navicon1 ,.navicon2 , .navicon3 , .navicon4 , .navicon5{
+    margin: 0 5px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0);
+  
+    font-size: 2.5rem;
+    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.4));
+  
 }
-
+.navicon1:hover{
+    background: #05417a;
+    color: #050801;
+    box-shadow: 0 0 5px var( #05417a),
+    0 0 25px var( #05417a),
+    0 0 50px var( #05417a),
+    0 0 200px var( #05417a);
+    transform: translateY(-5px);
+   
+}
+.navicon2:hover{
+    background: #722b1c;
+    color: #050801;
+    box-shadow: 0 0 5px var( #722b1c),
+    0 0 25px var( #722b1c),
+    0 0 50px var( #722b1c),
+    0 0 200px var( #722b1c);
+    transform: translateY(-5px);
+}
+.navicon3:hover{
+    background: #040cec;
+    color: #050801;
+    box-shadow: 0 0 5px var( #040cec),
+    0 0 25px var( #040cec),
+    0 0 50px var( #040cec),
+    0 0 200px var( #040cec);
+    transform: translateY(-5px);
+}
+.navicon4:hover{
+    background: #0e5d36;
+    color: #050801;
+    box-shadow: 0 0 5px var( #0e5d36),
+    0 0 25px var( #0e5d36),
+    0 0 50px var( #0e5d36),
+    0 0 200px var( #0e5d36);
+    transform: translateY(-5px);
+}
+.navicon5:hover{
+    background: #05417a;
+    color: #050801;
+    box-shadow: 0 0 5px var( #05417a),
+    0 0 25px var( #05417a),
+    0 0 50px var( #05417a),
+    0 0 200px var( #05417a);
+    transform: translateY(-5px); 
+   
+}
 .navlinkfooter{
-    color:#bfbfbf;
-    text-decoration: none; 
+    color:#ecd2a0;
+    text-decoration: none;
+    font-size: small; 
     }
     .navlinkfooter:hover{
         color:  #E0AA3E;
+       
+        
     }
     .navlinkwhite{
-        font-size: small;
+        font-size: smaller;
         color: #8a8a8a;
         text-decoration: none; 
     }
@@ -23,3 +84,8 @@
 
 
 
+.linkfooter{
+    color: #ecd2a0;
+    text-decoration: none;
+    font-size: smaller;
+}

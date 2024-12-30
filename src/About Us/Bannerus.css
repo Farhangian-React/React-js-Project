@@ -14,30 +14,21 @@ height: 50vh;
         background-image:url('https://media.licdn.com/dms/image/D5612AQHVuQxCMAMmkA/article-cover_image-shrink_600_2000/0/1709023232761?e=2147483647&v=beta&t=DXeQ-HgpoBvjJwYGToBFkf7YcWS_sjRqfezpvrmSuxo');
         background-size: cover;
  }
-
 }
 .sheetus1{
    
     background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJG0SBMxBY8WuJuSw0Ez2bNkOG7MvwqdIn6RWvspRLusWG_wy7XI5ciyNCekTaF_4-Hg&usqp=CAU');
     background-size: cover;
 }
-
 .boxbanner{
- 
     width: 500px;
-    
-  
-
 }
 @media only screen and (max-width: 768px){
-    .boxbanner{
-       
+    .boxbanner{ 
         width: 300px;
-        
     }
 }
 .boxmain{
-    
   position: relative;  
 }
 .boxheader{

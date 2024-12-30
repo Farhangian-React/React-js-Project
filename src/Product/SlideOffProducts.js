@@ -20,13 +20,13 @@ import { Slide } from 'react-slideshow-image';
 export default function SlideOffProducts()  {
     const [cartItems,setCartItems]=useContext(CartContext);
     const [data,setData]=useContext(CardData);
-    const [datashow,setDatashow]=useContext(CardDataShow);
+
    const getData=()=>{
     fetch('http://localhost:3000/Allproducts' )
     .then(res => res.json())
     .then((result)=> {
     setData(result.filter(i=>i.off !== "" ));
-     setDatashow(result.filter(i=>i.off !== "" ));
+    
     },
     (error) => {
       alert('error');

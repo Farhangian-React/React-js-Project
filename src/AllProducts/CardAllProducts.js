@@ -40,6 +40,7 @@ function Tems({ currentItems }) {
         aver ++;
         total += i.score; 
       }
+      return total;
       });
        return total /aver;
      }

@@ -12,9 +12,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import FilterBrands from './FilterBrands';
-import { Divider } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
@@ -61,6 +59,7 @@ return(persianNumber);
           aver ++;
           total += i.score; 
         }
+        return total;
         });
          return total /aver;
        }

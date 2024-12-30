@@ -259,7 +259,7 @@ function PopularQuestions() {
 </Typography>
 <Box sx={{width:"30%",display:"flex",justifyContent:"center",alignSelf:"center",my:3}}>
   <NavLink to={'/ContactUsForm'}>
-<button  >  <span className='formbutton'>  تماس با ما</span>   </button></NavLink>
+<button className='button1'  >  <span className='formbutton'>  تماس با ما</span>   </button></NavLink>
 </Box>
    </Box> 
         </Box>

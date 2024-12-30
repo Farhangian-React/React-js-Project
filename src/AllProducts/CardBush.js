@@ -56,9 +56,11 @@ return(persianNumber);
         let aver=0;
      datacomment.map(i=>{
       if(i.idcomment === item.id){
+     
         aver ++;
         total += i.score; 
       }
+      return total;
       });
        return total /aver;
      }

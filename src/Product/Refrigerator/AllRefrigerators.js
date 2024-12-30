@@ -36,11 +36,14 @@ const getData=()=>{
      res.json())
      .then((data)=>{
     setDatacomment(data);
+      console.log(cartItems);
+    
     }
      )
   .catch(err=>console.log(err));
 }
 useEffect(()=>{
+
   getData();
   
 },[])
@@ -157,32 +160,28 @@ sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
   );
       }
 
-export default function AllRefrigerators({ itemsPerPage }) {
- 
-  
+export default function AllRefrigerators({ itemsPerPage }) {  
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
 
- const getData=()=>{
-  fetch('http://localhost:3000/Allproducts' )
-  .then(res => res.json())
-  .then((result)=> {
-  setData(result.filter(i=>i.product === "Ref"));
-   setDatashow(result.filter(i=>i.product === "Ref"));
-  
-  
-  },
-  (error) => {
-    alert('error');
-  }
-  )
- }
+
  
 
   useEffect( ()=>{
-    getData();
-
-  
+   
+      fetch('http://localhost:3000/Allproducts' )
+      .then(res => res.json())
+      .then((result)=> {
+      setData(result.filter(i=>i.product === "Ref"));
+       setDatashow(result.filter(i=>i.product === "Ref"));
+       console.log(data);
+      
+      },
+      (error) => {
+        alert('error');
+      }
+      )
+     
   },[])
    
     const [itemOffset, setItemOffset] = useState(0);

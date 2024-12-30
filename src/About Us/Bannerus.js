@@ -7,7 +7,6 @@ export default function Bannerus() {
   const addstyle=()=>{
     refbox.current.className="cc";
     refbutton.current.className="refbutton";
-   
   }
   return (
     <>
@@ -83,15 +82,10 @@ export default function Bannerus() {
            برای بهتر شدن و پیشرفت است. تلاش و کار سخت از مهم‌ترین دلایل بقا
             و پایداری برند سهیل است. اسنوا می‌داند مسیر پیشرفت و تعالی بی انتهاست و از تلاش دست نخواهد کشید.
           </Typography>
-
 </Box>
 <Box ref={refbutton} onClick={addstyle}  sx={{display:"flex",justifyContent:"center",alignSelf:"center",my:0.5}} >
-
-<button >  <span className='formbutton'>   مطالب بیشتر </span>   </button>
-
+<button >  <span className='formbutton'>   مطالب بیشتر </span></button>
         </Box>
     </>
-           
-
   );
 }

@@ -48,8 +48,5 @@ export default function Sheetus2() {
     <Typography  sx={{fontSize:{xs:'18px',lg:'24px'},mt:0.5,textAlign:'center',color:'#282828',fontWeight:"500"}}> ارزش های ما   </Typography>
     </Box>
     </Box>
-    
-   
-     
     </>
   )}

@@ -104,12 +104,10 @@ const Refrigerators  = React.forwardRef(({ focusNext, focusPrevious, ...props },
     <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
       <Box onMouseLeave={() => setAnchorEl(null)}>
         <Button
-          
-          aria-haspopup
           aria-expanded={open ? 'true' : 'false'}
           ref={ref}
           {...props}
-          role="menuitem"
+       
           onKeyDown={(event) => {
             props.onKeyDown?.(event);
             if (event.key.match(/(ArrowLeft|ArrowRight|Tab)/)) {
@@ -135,7 +133,6 @@ const Refrigerators  = React.forwardRef(({ focusNext, focusPrevious, ...props },
         <Popper id={id} open={open} anchorEl={anchorEl}  placement='left-end' disablePortal keepMounted>
        
           <List
-            role="menu"
             aria-label="Products"
             variant='outlined'
             orientation="vertical"
@@ -163,29 +160,29 @@ const Refrigerators  = React.forwardRef(({ focusNext, focusPrevious, ...props },
              
             
           >
-            <ListItem role="none" >
+            <ListItem  >
             <NavLink className='navlink' to={"/shop-refrigeratorfrenchdoor" } {...getTargetProps(0)}>  یخچال های دو در </NavLink>
              
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
            
               
                 <NavLink className='navlink' to={'/shop-refrigeratorsidbysid'} {...getTargetProps(1)}> یخچال های ساید بای ساید  </NavLink> 
              
             </ListItem>
-            <ListItem role="none" >
+            <ListItem >
            
              
             <NavLink className='navlink' to={'/shop-refrideratorbottomfreezer'} {...getTargetProps(2)}> یخچال و فریزر پایین  </NavLink>
             
             </ListItem>
-            <ListItem role="none" >
+            <ListItem >
          
             
             <NavLink className='navlink' to={"/shop-refrideratortopfreezer"} {...getTargetProps(3)}> یخچال و فریزر بالا  </NavLink>
             
             </ListItem>
-            <ListItem role="none" >
+            <ListItem  >
             
               
                <NavLink className='navlink' to={'/shop-refrideratorspecializedfreezer'} {...getTargetProps(4)}>  یخچال و فریزر تخصصی </NavLink>  
@@ -237,12 +234,9 @@ const Cooking  = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
     <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
       <Box onMouseLeave={() => setAnchorEl(null)}>
         <Button
-          
-          aria-haspopup
           aria-expanded={open ? 'true' : 'false'}
           ref={ref}
           {...props}
-          role="menuitem"
           onKeyDown={(event) => {
             props.onKeyDown?.(event);
             if (event.key.match(/(ArrowLeft|ArrowRight|Tab)/)) {
@@ -266,7 +260,6 @@ const Cooking  = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
         <Popper id={id} open={open} anchorEl={anchorEl}  placement='left-end' disablePortal keepMounted>
        
           <List
-            role="menu"
             aria-label="Products"
             variant='outlined'
             orientation="vertical"
@@ -296,23 +289,23 @@ const Cooking  = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
              
             
           >
-            <ListItem role="none" >
+            <ListItem >
             <NavLink className='navlink' to={'/shop-ranges'} {...getTargetProps(0)}> اجاق گاز و فر</NavLink>
              
             </ListItem>
-            <ListItem role="none">
+            <ListItem>
            
               
                 <NavLink className='navlink' to={'/shop-cooktop'} {...getTargetProps(1)}> گاز صفحه ای</NavLink> 
              
             </ListItem>
-            <ListItem role="none" >
+            <ListItem  >
            
              
             <NavLink className='navlink' to={'/shop-Hood'} {...getTargetProps(2)}> هود   </NavLink>
             
             </ListItem>
-            <ListItem role="none" >
+            <ListItem  >
          
             
             <NavLink className='navlink' to={'/shop-microwaves'}  {...getTargetProps(3)}> مایکروویو </NavLink>
@@ -368,11 +361,9 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
       <Box onMouseLeave={() => setAnchorEl(null)}>
         <Link
           
-          aria-haspopup
-          aria-expanded={open ? 'true' : 'false'}
+         
           ref={ref}
           {...props}
-          role="menuitem"
           onKeyDown={(event) => {
             props.onKeyDown?.(event);
             if (event.key.match(/(ArrowLeft|ArrowRight|Tab)/)) {
@@ -396,7 +387,6 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
         <Popper id={id} open={open} anchorEl={anchorEl} disablePortal keepMounted>
        
           <List
-            role="menu"
             aria-label="Products"
             variant='outlined'
             orientation="vertical"
@@ -422,7 +412,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
              
             
           >
-            <ListItem role="none" >
+            <ListItem  >
                 <ListItemDecorator  >
               <img src={Refrigeratoricon} width={20} alt='img1' />
               </ListItemDecorator>
@@ -430,7 +420,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
                  <NavLink className='navlink' to={"/allrefriderators" } {...getTargetProps(0)}>  <Refrigerators/> </NavLink>
              
             </ListItem>
-            <ListItem role="none">
+            <ListItem>
             <ListItemDecorator  >
               <img src={washingmachins} width={20} alt='img2' />
               </ListItemDecorator>
@@ -438,7 +428,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
                 <NavLink className='navlink' to={'/shop-washing-machine'} {...getTargetProps(1)}>ماشین لباسشویی</NavLink> 
              
             </ListItem>
-            <ListItem role="none" >
+            <ListItem >
             <ListItemDecorator  >
               <img src={gasicon} width={20} alt='img3' />
               </ListItemDecorator>
@@ -446,7 +436,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
             <NavLink className='navlink' to={'/allgas'} {...getTargetProps(2)}><Cooking/> </NavLink>
             
             </ListItem>
-            <ListItem role="none" >
+            <ListItem  >
               <ListItemDecorator  >
               <img src={dishwashericon} width={20} alt='img4' />
               </ListItemDecorator>
@@ -493,12 +483,8 @@ const Shows = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) => 
     <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
       <Box onMouseLeave={() => setAnchorEl(null)}>
         <Link
-         
-          aria-haspopup
-          aria-expanded={open ? 'true' : 'false'}
           ref={ref}
           {...props}
-          role="menuitem"
           onKeyDown={(event) => {
             props.onKeyDown?.(event);
             if (event.key.match(/(ArrowLeft|ArrowRight|Tab)/)) {
@@ -521,7 +507,6 @@ const Shows = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) => 
         </Link>
         <Popper id={id} open={open} anchorEl={anchorEl} disablePortal keepMounted>
           <List
-                 role="menu"
                  aria-label="Products"
                  variant="outlined"
                  orientation="vertical"
@@ -544,14 +529,14 @@ const Shows = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) => 
                  }}
           >
            
-            <ListItem role="none">
+            <ListItem>
               
               <NavLink  className='navlink' to={'/jashnehtabestane'}  {...getTargetProps(0)}>
                 جشنواره زمستانه  
               </NavLink >            
              
             </ListItem>
-            <ListItem role="none">
+            <ListItem>
              
               <NavLink  className='navlink' to={'/karttakhfif'}  {...getTargetProps(1)}>
                 فعال سازی کارت تخفیف
@@ -596,11 +581,8 @@ const Servis = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) =>
     <ClickAwayListener  onClickAway={() => setAnchorEl(null)}>
       <Box  onMouseLeave={() => setAnchorEl(null)}>
         <Link
-          aria-haspopup
-          aria-expanded={open ? 'true' : 'false'}
           ref={ref}
           {...props}
-          role="menuitem"
           onKeyDown={(event) => {
             props.onKeyDown?.(event);
             if (event.key.match(/(ArrowLeft|ArrowRight|Tab)/)) {
@@ -624,7 +606,6 @@ const Servis = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) =>
         </Link>
         <Popper id={id} open={open} anchorEl={anchorEl} disablePortal keepMounted>
         <List
-            role="menu"
             aria-label="Products"
             variant="outlined"
             orientation="vertical"
@@ -649,17 +630,17 @@ const Servis = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) =>
             
           >
        
-            <ListItem role="none">
+            <ListItem >
               <NavLink className='navlink' to={'/AfterSalesService'}  {...getTargetProps(0)}>
                 خدمات پس از فروش
               </NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
               <NavLink className='navlink' to={'/ContactUsForm'}  {...getTargetProps(1)}>
                 فرم تماس با ما
               </NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
               <NavLink className='navlink' to={'/PopularQuestions'}  {...getTargetProps(2)}>
                 سوالات متداول
               </NavLink>
@@ -677,8 +658,6 @@ export default function NavigationMenu() {
   return (
     <Box sx={{display:"flex"}} >
       <List
-     
-        role="menubar"
         orientation="horizontal"
         className='lis'
         
@@ -694,7 +673,7 @@ export default function NavigationMenu() {
         }}
       >
         
-        <ListItem  className='list'  role="none">
+        <ListItem  className='list'>
           
           <Products 
             onMouseEnter={() => {
@@ -709,7 +688,7 @@ export default function NavigationMenu() {
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem className='list' role="none">
+        <ListItem className='list'>
           <Shows
             onMouseEnter={() => {
               setActiveIndex(1);
@@ -723,10 +702,10 @@ export default function NavigationMenu() {
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem  className='list' role="none">
+        <ListItem  className='list'>
           <Link
            sx={{color:'white',textDecoration:'none'}}
-            role="menuitem"
+           
             {...getTargetProps(2)}
             component="a"
             href="/Stores"
@@ -738,10 +717,10 @@ export default function NavigationMenu() {
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem  className='list' role="none">
+        <ListItem  className='list' >
           <Link
           sx={{color:'white',textDecoration:'none'}}
-            role="menuitem"
+           
             {...getTargetProps(3)}
             component="a"
             href="/about-snova"
@@ -753,10 +732,10 @@ export default function NavigationMenu() {
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem  className='list' role="none">
+        <ListItem  className='list' >
           <Link
            sx={{color:'white',textDecoration:'none'}}
-            role="menuitem"
+          
             {...getTargetProps(4)}
             component="a"
             href="/life-style"
@@ -768,7 +747,7 @@ export default function NavigationMenu() {
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem  className='list' role="none">
+        <ListItem  className='list'>
           <Servis
             onMouseEnter={() => {
               setActiveIndex(5);

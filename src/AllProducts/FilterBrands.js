@@ -72,23 +72,33 @@ export default  function FilterBrands(){
   const [disabledH3,setDisabledH3]=useState(false);
   const [index, setIndex] = React.useState(null);
   
- 
-
+  const convertToEnglish=(str)=> {
+    let englishNumber =str
+    .replace(/۰/g, '0')
+    .replace(/۱/g, '1')
+    .replace(/۲/g, '2')
+    .replace(/۳/g, '3')
+    .replace(/۴/g, '4')
+    .replace(/۵/g, '5')
+    .replace(/۶/g, '6')
+    .replace(/۷/g, '7')
+    .replace(/۸/g, '8')
+    .replace(/۹/g, '9');
+ return(englishNumber);
+  }
   const sortArrayMaxtoMin= (e)=>{
     setChecked1(e.target.checked);
     setChecked1(!checked1);
   setDatashow([...data.sort((a, b) =>
-     b.pricenum - a.pricenum
+    convertToEnglish(b.pricenum) - convertToEnglish(a.pricenum)
   )]);
  
-  }
-
-  
+  } 
   const sortArrayMintoMax= (e)=>{
     setChecked2(e.target.checked);
     setChecked2(!checked2);
     setDatashow([...data.sort((a, b) =>
-       a.pricenum - b.pricenum
+      convertToEnglish(a.pricenum) - convertToEnglish(b.pricenum)
     )]);
     }
  const handleChangeC1=(e)=>{
@@ -357,6 +367,7 @@ return (
  </Box>    
 <Accordion
       expanded={index === 0}
+
       onChange={(event, expanded) => {
         setIndex(expanded ? 0 : null);
       }}

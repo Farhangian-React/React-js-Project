@@ -1,13 +1,12 @@
 import React, { useState,useEffect,useRef } from 'react';
-import {Box,Link} from '@mui/material';
+import {Box} from '@mui/material';
 import Footer from '../Footer/Footer';
 import TopNav from '../dashbord/TopNav';
 import { PageTitle } from '../Title/PageTitle';
 import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 import '../Product/Products.css';
-import { NavLink, useNavigate } from 'react-router-dom';
-
+import {useNavigate } from 'react-router-dom';
 import { Button, Typography } from '@mui/material';
 function AfterSalesService() {
   const navigate=useNavigate();
@@ -101,7 +100,7 @@ const scrollToElement8 = () => {
 
        
          <Box  sx={{ display:"flex",flexDirection:"row",mx:5,width:{xs:"100%",lg:"80%"},alignSelf:"end",justifyContent:"space-between",
-         height:'170px',bgcolor:'black',bgcolor:"#fff",mb:5,px:0,py:0}}>
+         height:'170px',bgcolor:"#fff",mb:5,px:0,py:0}}>
         <Button onClick={scrollToElement1} sx={{width:"10%",mr:0.5,ml:0.2,display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
           <Box
              sx={{
@@ -257,7 +256,7 @@ const scrollToElement8 = () => {
           
          </Box>
       </Box>      
-    <Box ref={sheet1} sx={{mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
+    <Box ref={sheet1} sx={{my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
        <Box  sx={{display:"flex",justifyContent:"start",flexDirection:"column",my:{xs:2,lg:10},width:{xs:"100%",lg:"100%"}}}>
        <Box  sx={{mx:{xs:2,lg:5},height:"auto"}} >
          <Box sx={{ my:3,borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
@@ -316,7 +315,7 @@ sx = {{
         >
         </Box>
         </Box>
-        <Box ref={sheet2} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
+        <Box ref={sheet2} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
         <Box
          
           sx={{
@@ -364,7 +363,7 @@ sx = {{
         </Box>
 
 
-        <Box ref={sheet3} sx={{mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
+        <Box ref={sheet3} sx={{my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
        <Box  sx={{display:"flex",justifyContent:"start",flexDirection:"column",my:{xs:2,lg:10},width:{xs:"100%",lg:"100%"}}}>
        <Box  sx={{mx:{xs:2,lg:5},height:"auto"}} >
          <Box sx={{ my:3,borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
@@ -410,7 +409,7 @@ sx = {{
         </Box>
         </Box>
 
-        <Box ref={sheet4} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
+        <Box ref={sheet4} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
         <Box
           className='washimg'
           sx={{
@@ -456,7 +455,7 @@ sx = {{
         </Box>
    
    
-        <Box ref={sheet5} sx={{mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
+        <Box ref={sheet5} sx={{my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
        <Box  sx={{display:"flex",justifyContent:"start",flexDirection:"column",my:{xs:2,lg:10},width:{xs:"100%",lg:"100%"}}}>
        <Box  sx={{mx:{xs:2,lg:5},height:"auto"}} >
          <Box sx={{ my:3,borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
@@ -502,7 +501,7 @@ sx = {{
         </Box>
 
 
-        <Box ref={sheet6} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
+        <Box ref={sheet6} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
         <Box
           className='washimg'
           sx={{
@@ -552,7 +551,7 @@ sx = {{
         </Box>
    
    
-        <Box ref={sheet7} sx={{mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
+        <Box ref={sheet7} sx={{my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column",lg:"row"}}}> 
        <Box  sx={{display:"flex",justifyContent:"start",flexDirection:"column",my:{xs:2,lg:10},width:{xs:"100%",lg:"100%"}}}>
        <Box  sx={{mx:{xs:2,lg:5},height:"auto"}} >
          <Box sx={{ my:3,borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
@@ -597,7 +596,7 @@ sx = {{
         </Box>
         </Box>
 
-        <Box ref={sheet8} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
+        <Box ref={sheet8} sx={{ backgroundImage:{xs:"linear-gradient(to top ,#E0AA3E,#282828)",lg:"linear-gradient(to left ,#E0AA3E,#282828)"},my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:{xs:"column-reverse",lg:"row"}}}> 
         <Box
           className='washimg'
           sx={{
@@ -644,19 +643,6 @@ sx = {{
         </Box>   
         </Box>
         </Box>
-   
-
-
-
-
-
-
-
-
-
-
-
-
 </Box>
     <Box sx={{width:'100%' }}>
       <Footer/>

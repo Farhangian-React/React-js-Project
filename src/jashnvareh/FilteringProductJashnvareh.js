@@ -372,6 +372,8 @@ const handleChangeC2=(e)=>{
       
 }
 const handleChangeC3=(e)=>{
+  console.log(datashow);
+  console.log(setData(data));
   setCheckedC3(e.target.checked); 
        setCheckedC3(!checkedC3);
       setDatashow([...data.filter(i=>i.color === e.target.value )]);

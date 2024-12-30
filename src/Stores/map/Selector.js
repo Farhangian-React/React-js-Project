@@ -59,26 +59,17 @@ setDataselactor(result);
     const cit = fromCities.find(
       (cit) => cit.city === e.target.value
     );
-
 const fff=fromCities.filter((f)=>{return f.city===cit.city;});
   datamapshow.map((t)=>{
-
    t.cities=fff;
 setDatamapshow([t]);
-
    })
   setAddress(cit.properties);
-
-
   };
   return (
-
     <>
-    <Box sx={{mx:2,my:2,mx:2,px:2,py:1,borderRadius:'10px',display:"flex",flexDirection:"column",justifyContent:"start"}}>
-  
-  
+    <Box sx={{my:2,mx:2,px:2,py:1,borderRadius:'10px',display:"flex",flexDirection:"column",justifyContent:"start"}}>
   <Box  sx={{py:2,px:5,mx:1,borderRadius:'10px',display:"flex",flexDirection:"row",justifyContent:"center",backgroundImage:"linear-gradient(to right ,#c2e59c, #64b3f4)"}}>
-  
     <FormControl variant="standard" sx={{ my:1,mx:3, minWidth: 120, }}>
         <InputLabel id="demo-simple-select-standard-label"> انتخاب استان</InputLabel>
         <Select
@@ -97,7 +88,6 @@ setDatamapshow([t]);
       <FormControl variant='standard' sx={{ direction:"ltr", my:1,mx:3, minWidth: 120 }}>
         <InputLabel id="demo-simple-select-standard-label" > انتخاب شهر</InputLabel>
         <Select
-        
           value={fromCities.city}
           onChange={handleFromcities}
          label="انتخاب شهر"

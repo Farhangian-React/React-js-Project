@@ -1,5 +1,4 @@
-import React, {useContext} from 'react';
-import {CartBuyContext} from '../Shared/Cart-Context';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,7 +6,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import NavigationMenu from './NavigationMenu';
-import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
@@ -30,24 +28,7 @@ HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
   window: PropTypes.func,
 };
-const Buy = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor:'black',
-  border:'1px solid  #f2b705',
-  '&:hover': {
-    backgroundColor:'black',
-    border:'1px solid  #fff',
-  },
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: '150px',
-  },
-}));
 function TopNav(props) {
-  const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
   return (
     <>
      <HideOnScroll {...props}>
@@ -56,7 +37,7 @@ function TopNav(props) {
         <Toolbar disableGutters sx={{ my:0, display:"flex",justifyContent:'space-between'}} >
       <Grid container spacing={4} sx={{display:'flex',justifyContent:'space-between'}}>
         <Grid  sx={{mt:3, display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
-        <img className='imgsohil' width={60}  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
+        <img className='imgsohil' width={60} alt='' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
                <Typography
      noWrap
      component="a"

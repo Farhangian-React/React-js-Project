@@ -61,7 +61,23 @@
     ]
   },
   "devDependencies": {
+    "hint": "^7.1.13",
     "json-server": "^1.0.0-beta.3",
     "json-server-auth": "^2.1.0"
   }
+  ,
+    "hintConfig": {
+        "connector": {
+            "name": "connectorName"
+        },
+        "formatters": ["formatterName"],
+        "parsers": ["parserName"],
+        "hints": {
+            "hint1": "error",
+            "hint2": "warning",
+            "hint3": "off"
+        },
+        "hintsTimeout": 120000
+    }
+
 }

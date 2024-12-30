@@ -59,6 +59,7 @@ return(persianNumber);
           aver ++;
           total += i.score; 
         }
+        return total;
         });
          return total /aver;
        }

@@ -1,6 +1,4 @@
 import * as React from 'react';
-import  {useEffect,useState,useContext} from 'react';
-import {CartContext} from "../Shared/Cart-Context";
 import { NavLink } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
@@ -13,9 +11,6 @@ import InsertLinkIcon from '@mui/icons-material/InsertLink';
 import MarkAsUnreadIcon from '@mui/icons-material/MarkAsUnread';
 import './jashnvareh.css';
 export default function TabestaneJashnvareh() {
-  const [cartItems,setCartItems]=useContext(CartContext);
-  const [datajashnvareh,setDatajashnvareh]=useState([]);
-  const [datajashnvarehshow,setDatajashnvarehshow]=useState([]);
   return (
     <>
     <PageTitle  title=' جشنواره تابستانه  '  description=' جشنواره / جشنواره تابستانه  '/>
@@ -79,7 +74,7 @@ export default function TabestaneJashnvareh() {
 
 
 
-         <Box sx={{ backgroundColor:"white",mx:5,my:2 ,mx:5,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:"column"}}> 
+         <Box sx={{ backgroundColor:"white",mx:5,my:2,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:"column"}}> 
       <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       

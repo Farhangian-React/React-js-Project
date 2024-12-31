@@ -86,6 +86,8 @@ fetch('http://localhost:3000/Allproducts')
 .then(res => res.json())
 .then((result)=> {
   setData(result);
+  console.log(cartItems);
+  console.log(setCartItemsBuy(cartItemsBuy));
 },
 (error) => {
   alert('error');
@@ -141,7 +143,7 @@ const handleInputChange = (e) => {
   >
     <ModalClose />
     <Box sx={{my:7,px:1,width:"80%",display:'flex',justifyContent:"space-between",alignSelf:"center",bgcolor:"white"}}>
-   <IconButton type="button" sx={{ p: '10px' }} aria-label="search" >
+   <IconButton type="button" sx={{ p: '10px' }}  >
         <SearchIcon />
       </IconButton> 
       <InputBase
@@ -166,14 +168,14 @@ const handleInputChange = (e) => {
 
      }}  sx={{width:"95%",direction:"rtl",bgcolor:"white",display:"flex",flexDirection:"row",justifyContent:"space-around",m:1,p:1}} >
     <Grid xs={4} sx={{width:"200px",alignSelf:"center"}} >
-    <img src={item.img} width={120}/>
+    <img src={item.img} width={120} alt=''/>
     </Grid>
         <Grid xs={4} sx={{width:"100px",alignSelf:"center"}}>
             <Typography  sx={{fontSize:"14px"}}>
             {item.title1}
             </Typography>
         </Grid>
-        <Grid xs={4} sx={{width:"100%",direction:"rtl",direction:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
+        <Grid xs={4} sx={{width:"100%",direction:"rtl",display:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
 
             <Typography  sx={{mt:1,fontSize:"12px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
         </Grid>

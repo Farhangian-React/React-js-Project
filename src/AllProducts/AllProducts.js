@@ -28,9 +28,7 @@ export default  function AllProducts() {
               '--ListItemDecorator-size': '24px',
               width:'100%',
               backgroundColor:'#E0E1E3',
-              alignItems:'center',
-              
-             
+              alignItems:'center',       
             }}
           >
               <ListItem role="none">
@@ -47,8 +45,6 @@ export default  function AllProducts() {
             </ListItem>
           </List>
         </Box>
-        
-        
           <CardAllProducts  itemsPerPage={9}/>
           <Footer/>
    </>

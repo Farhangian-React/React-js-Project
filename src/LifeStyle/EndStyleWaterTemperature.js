@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import "./Style.css";
-import { Box,Typography} from '@mui/material';
+import { Typography} from '@mui/material';
 export default function EndStyleWaterTemperature() {
   return (
     <>

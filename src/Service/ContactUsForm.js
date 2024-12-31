@@ -6,13 +6,10 @@ import Box from '@mui/material/Box';
 import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import  {useContext,useState,useRef} from 'react';
-import {CartBuyContext, CartContext} from '../Shared/Cart-Context';
-import CommentIcon from '@mui/icons-material/Comment';
+import  {useState} from 'react';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import "react-toastify/dist/ReactToastify.css";
 import { Textarea } from '@mui/joy';
-import { useEffect } from 'react';
 import {Grid,Typography} from "@mui/material";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,20 +19,12 @@ import './service.css';
 import  contactimg1 from "../img/contact2.png";
 
 function ContactUsForm() {
-
-    const [cartItems,setCartItems]=useContext(CartContext);
-    const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
     const [callnum,setCallnum]=useState("");
     const [massage,setMassage]=useState("");
     const [comment,setComment]=useState("");
-    const [score,setScore]=useState("");
     const [error,setError]=useState({});
-    const[commenuser,setCommenuser]=useState([]);
- 
-
-     
       const isvalidate = ()=>{
         let isvalid =true;
         let errmesage={};
@@ -129,7 +118,7 @@ function ContactUsForm() {
               <Input
             color="warning"
             placeholder=' نام و نام خانوادگی '
-                autoComplete="fname"
+               
                 name="نام"
                 variant="outlined"
                 required
@@ -221,7 +210,7 @@ function ContactUsForm() {
            
             </Grid>
 <Grid item xs={12} sx={{display:"flex",justifyContent:"center",alignSelf:"center",my:1.5}} >
-<button type='submit' >  <span className='formbutton'>   ثبت و ارسال </span>   </button>
+<button className='button1' type='submit' >  <span className='formbutton'>   ثبت و ارسال </span>   </button>
         </Grid>
           </Grid>
         </form>

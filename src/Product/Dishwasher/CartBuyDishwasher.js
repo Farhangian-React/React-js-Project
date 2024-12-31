@@ -35,7 +35,6 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import HiveIcon from '@mui/icons-material/Hive';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import Rating from '@mui/material/Rating';
-import {  useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Input from '@mui/joy/Input';

@@ -22,7 +22,7 @@ export default function Carts() {
 const totalPrice=cartItemsBuy.reduce((prevValue,currValue)=>{
   return Number(prevValue)+ Number(currValue.pricenum)},0);
   const deletList=(e)=>{
-      setCartItemsBuy([...cartItemsBuy.filter(q=>q.id !=e.id)])
+      setCartItemsBuy([...cartItemsBuy.filter(q=>q.id !==e.id)])
     }
 const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
@@ -61,7 +61,7 @@ const [open, setOpen] = useState(false);
             <TableRow
               key={item.id}
             >
-              <TableCell align='center' vertical-align='top'><img src={item.img} width={70}/></TableCell>
+              <TableCell align='center' vertical-align='top'><img src={item.img} width={70} alt=''/></TableCell>
               <TableCell align='center' vertical-align='top'>{item.title1}</TableCell>
               <TableCell align='center' vertical-align='top'>{item.title2}</TableCell>
               <TableCell align='center' vertical-align='top'>{<Buttons i={item}  />}</TableCell>

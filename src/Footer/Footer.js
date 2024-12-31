@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Grid from '@mui/material/Grid';
 import { Facebook, Instagram,  Telegram ,LinkedIn ,WhatsApp} from "@mui/icons-material";
 import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
@@ -19,11 +18,9 @@ import Divider from '@mui/material/Divider';
 export default function Footer() {
   return (
     <Box sx={{ m:1, px:5,bgcolor:"#1c1c1c" ,display:'flex',flexDirection:'column'}} >
-      
        <Box  sx={{ mx:1,my:2, bgcolor:"#1c1c1c" ,display:'flex',flexDirection:'row'}} >
         <Box sx={{m:"auto", bgcolor:"#1c1c1c" ,display:'flex',flexDirection:'row',width:"65%"}}>
         <List
-            role="footer"
             aria-label="Products"
             variant="outlined"
             orientation="vertical"
@@ -36,35 +33,34 @@ export default function Footer() {
               bgcolor:"#1c1c1c"
             }}   
           >
-            <ListItem role="none">
+            <ListItem >
             <ListItemDecorator>
               <img src={Refrigeratoricon} width={30} alt='' />
               </ListItemDecorator>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
            
             <NavLink  className='navlinkfooter' to={'/allrefriderators'}>  یخچال و فریزر </NavLink>
             </ListItem>
             <Divider component="li" />
-            <ListItem role="none">
+            <ListItem >
             <NavLink className='navlinkwhite' to={'/shop-refrigeratorsidbysid'}> ساید بای ساید </NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
             <NavLink className='navlinkwhite' to={'/shop-refrideratortopfreezer'}> فریزر بالا</NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
                <NavLink className='navlinkwhite' to={'/shop-refrideratorbottomfreezer'} >فریزر پایین </NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
             <NavLink className='navlinkwhite' to={'/shop-refrigeratorfrenchdoor'} > فریزر دو در</NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
                <NavLink className='navlinkwhite' to={'/shop-refrideratorspecializedfreezer'}>یخچال و فریزر تخصصی</NavLink>
             </ListItem>
           </List>
     
         <List
-            role="footer"
             aria-label="Products"
             variant="outlined"
             orientation="vertical"
@@ -77,31 +73,30 @@ export default function Footer() {
               bgcolor:"#1c1c1c"
             }}  
           >
-            <ListItem role="none">
+            <ListItem >
             <ListItemDecorator>
               <img src={gasicon} width={30} alt='' />
               </ListItemDecorator>
             </ListItem>
-            <ListItem role="none">
+            <ListItem>
             <NavLink  className='navlinkfooter' to={'/allgas'}>   اجاق گاز   </NavLink>
             </ListItem>
       <Divider component="li" />
-            <ListItem role="none">
+            <ListItem>
             <NavLink className='navlinkwhite' to={'/shop-ranges'}>  اجاق گاز و فر </NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
             <NavLink className='navlinkwhite' to={'/shop-cooktop'}> گاز صفحه ای</NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
                <NavLink className='navlinkwhite' to={'/shop-hood'} >هود </NavLink>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
             <NavLink className='navlinkwhite' to={'/shop-microwaves'}>مایکروویو</NavLink>
             </ListItem>
           </List>
    
         <List
-            role="footer"
             aria-label="Products"
             variant="outlined"
             orientation="vertical"
@@ -114,12 +109,12 @@ export default function Footer() {
               bgcolor:"#1c1c1c"
             }}  
           >
-            <ListItem role="none">
+            <ListItem >
             <ListItemDecorator>
               <img src={washingmachins} width={30} alt='' />
               </ListItemDecorator>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
             <NavLink  className='navlinkfooter' to={'/shop-washing-machine'}>   ماشین لباسشویی  </NavLink>
             </ListItem>
             <Divider component="li" />
@@ -129,7 +124,6 @@ export default function Footer() {
        
        
         <List
-            role="footer"
             aria-label="Products"
             variant="outlined"
             orientation="vertical"
@@ -142,12 +136,12 @@ export default function Footer() {
               bgcolor:"#1c1c1c"
             }}
           >
-            <ListItem role="none">
+            <ListItem >
             <ListItemDecorator>
               <img src={dishwashericon} width={30}  alt=''/>
               </ListItemDecorator>
             </ListItem>
-            <ListItem role="none">
+            <ListItem >
             <NavLink  className='navlinkfooter' to={'/shop-dishwasher'}>ماشین ظرفشویی </NavLink>
             </ListItem>
           </List>
@@ -175,7 +169,6 @@ export default function Footer() {
             </Box>
           <Box   >
         <List
-            role="footer"
             aria-label="Products"
             variant="outlined"
             orientation="vertical"
@@ -192,7 +185,7 @@ export default function Footer() {
               <Typography level='h6' sx={{color:'#ececec',mt:0}}> سهیل در شبکه های اجتمایی</Typography>
               </ListItem>
               <ListItem>
-                <List  role="footer"
+                <List  
             aria-label="Products"
             variant="outlined"
             orientation="horizontal"

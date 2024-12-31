@@ -2,7 +2,6 @@
 import React, {useContext,useState,useEffect} from 'react';
 import {CartContext} from '../Shared/Cart-Context';
 import {CardData} from '../Shared/Cart-Context';
-import {CartBuyContext} from '../Shared/Cart-Context';
 import { styled, useTheme } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -38,12 +37,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 
 export default function CollapsNavigationMenu() {
-
-
-
   const [cartItems,setCartItems]=useContext(CartContext);
-  const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
-  
   const [data,setData]=useContext(CardData);
   const [searchItem, setSearchItem] = useState('');
   const [filteredUsers, setFilteredUsers] = useState([]);
@@ -52,6 +46,7 @@ export default function CollapsNavigationMenu() {
   .then(res => res.json())
   .then((result)=> {
     setData(result);
+    console.log(cartItems);
   },
   (error) => {
     alert('error');
@@ -120,21 +115,13 @@ export default function CollapsNavigationMenu() {
     setOpen1(false);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
-
   return (
     <>
     
     <Box sx={{bgcolor:"black",m:"auto", display: 'flex',flexDirection:"row",justifyContent:"space-around"}}>
     <Box> 
- <IconButton   
+ <IconButton
+title="Title" 
       onClick={handleDrawerOpen}
       sx={{ color:' #FFC412', ml: 0,mr:5, ...(open && { display: '' }) }}
     >
@@ -153,7 +140,8 @@ export default function CollapsNavigationMenu() {
    <Box>
    <Typography variant='h5' sx={{color:"#f2b705",mt:1}}>/</Typography></Box>
    <Box>
-    <IconButton   
+    <IconButton 
+    title="Title"
       onClick={handleDrawerOpen1}
       sx={{ color:' #fff', ml: 0,mt:0.5, ...(open1 && { display: 'none' }) }}
     >
@@ -195,7 +183,9 @@ export default function CollapsNavigationMenu() {
       /></Grid>
            <Grid sx={{width:"100%",direction:"ltr"}}>
 
-            <IconButton onClick={handleDrawerClose1}>
+            <IconButton 
+          title='Title'
+            onClick={handleDrawerClose1}>
             {theme.direction === 'ltr' ? <CloseIcon /> : <CloseIcon />}
           </IconButton>
              </Grid>
@@ -212,14 +202,14 @@ export default function CollapsNavigationMenu() {
 
      }} sx={{bgcolor:"white",display:"flex",flexDirection:"row",justifyContent:"space-around",m:1,p:1}} >
     <Grid xs={4} sx={{alignSelf:"center"}} >
-    <img src={item.img} width={120}/>
+    <img src={item.img} width={120} alt=''/>
     </Grid>
         <Grid xs={4} sx={{alignSelf:"center"}}>
             <Typography  sx={{fontSize:"14px"}}>
             {item.title1}
             </Typography>
         </Grid>
-        <Grid xs={4} sx={{direction:"rtl",direction:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
+        <Grid xs={4} sx={{direction:"rtl",display:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
 
             <Typography  sx={{mt:1,fontSize:"12px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
         </Grid>
@@ -285,7 +275,9 @@ export default function CollapsNavigationMenu() {
            </Grid>
            <Grid sx={{width:"100%",direction:"ltr"}}>
 
-            <IconButton onClick={handleDrawerClose}>
+            <IconButton 
+             title='Title'
+            onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
              </Grid>

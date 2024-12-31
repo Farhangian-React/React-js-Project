@@ -1,17 +1,12 @@
 import * as React from 'react';
-import { useRef,useEffect } from 'react';
+import { useEffect } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import "./Style.css";
-import { Box,Button,Typography,Card,CardContent,CardMedia} from '@mui/material';
+import { Box,Typography,Card,CardMedia} from '@mui/material';
 import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { NavLink } from 'react-router-dom';
 export default function Style1({itemsPerPage}) {
-
-
-
-
-
 const [cartimage,setCartimage]=useState([]);
 const [cartshow,setCartshow]=useState([]);
   const getCartimage=()=>{
@@ -35,21 +30,20 @@ const [cartshow,setCartshow]=useState([]);
 
   const handelclick1=()=>{
    
-    setCartshow(cartimage.filter(q=> q.id1 ==1))
+    setCartshow(cartimage.filter(q=> q.id1 ===1))
   }
   const handelclick2=()=>{
     
-    setCartshow(cartimage.filter(q=> q.id1 ==2))
+    setCartshow(cartimage.filter(q=> q.id1 ===2))
   }
   const handelclick3=()=>{
    
-    setCartshow(cartimage.filter(q=> q.id1 ==3))
+    setCartshow(cartimage.filter(q=> q.id1 ===3))
   }
   const [itemOffset, setItemOffset] = useState(0);
-  const endOffset = itemOffset + itemsPerPage;
-  const currentItems = cartimage.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(cartshow.length / itemsPerPage);
   const handlePageClick = (event) => {
+    console.log(itemOffset);
     const newOffset = (event.selected * itemsPerPage) % cartshow.length;
     setItemOffset(newOffset);
   };
@@ -83,7 +77,7 @@ const [cartshow,setCartshow]=useState([]);
    
   }}
     >
-<Box className="gerdalia"><NavLink className="linkj" to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+<Box className="gerdalia"><NavLink className='linka'  to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
         </NavLink></Box>
 
    <Box className='type2' >
@@ -109,7 +103,7 @@ const [cartshow,setCartshow]=useState([]);
    m:2
   }}
   >
- <Box className="gerdalia"><NavLink className="linkj" to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+ <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
         </NavLink></Box>
 
         <Box className='type2' >
@@ -133,7 +127,7 @@ const [cartshow,setCartshow]=useState([]);
     overflow:"hidden",
     borderRadius:"10px",
    m:2}}>
-  <Box className="gerdalia"><NavLink className="linkj" to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+  <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
         </NavLink></Box>
 
    <Box className='type2' >
@@ -157,7 +151,7 @@ const [cartshow,setCartshow]=useState([]);
     overflow:"hidden",
     borderRadius:"10px",
    m:2}}>
-   <Box className="gerdalia"><NavLink className="linkj" to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+   <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
         </NavLink></Box>
 
    <Box className='type2' >
@@ -182,7 +176,7 @@ sx={{
   overflow:"hidden",
   borderRadius:"10px",
  m:2}}>
-  <Box className="gerdalia"><NavLink className="linkj" to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+  <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
         </NavLink></Box>
 
    <Box className='type2' >
@@ -205,7 +199,7 @@ sx={{
     overflow:"hidden",
     borderRadius:"10px",
    m:2}}>
- <Box className="gerdalia"><NavLink className="linkj" to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+ <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
         </NavLink></Box>
 
    <Box className='type2' >
@@ -232,7 +226,7 @@ sx={{
   >
 
 
-<Card className='cards' sx={{height:"370px",bgcolor:"#f9f9f2",marginTop:'10px',marginBottom: '10px',mx:1,mt:3, p:1 }} key={item.id}>
+<Card  sx={{height:"370px",bgcolor:"#f9f9f2",marginTop:'10px',marginBottom: '10px',mx:1,mt:3, p:1 }} key={item.id}>
 <CardMedia
 sx={{height:"300px"}}
     component="img"

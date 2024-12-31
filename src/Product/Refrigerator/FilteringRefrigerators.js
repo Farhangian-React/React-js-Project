@@ -162,7 +162,8 @@ export default  function FilteringRefrigerators() {
     }
 
     const handleChangeB1 = (e) => {
-   
+      console.log(datashow);
+      console.log(setData(data));
       setCheckedB1(e.target.checked); 
        setCheckedB1(!checkedB1);
       setDatashow([...data.filter(i=>i.brands === e.target.value )]);

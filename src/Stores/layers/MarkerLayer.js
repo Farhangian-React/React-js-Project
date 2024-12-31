@@ -1,4 +1,4 @@
-import { Marker, Popup, Tooltip } from "react-leaflet";
+import { Marker, Popup } from "react-leaflet";
 import { defaultIcon } from "../icons/defaultIcon";
 import React, {useContext,useEffect} from 'react';
 import {CardDatamap} from '../../Shared/Cart-Context';
@@ -13,6 +13,7 @@ export const MarkerLayer = () => {
 .then((result)=> {
 setDatamap(result);
 setDatamapshow(result);
+console.log(datamap);
 },
     (error) => {
       alert('error');
@@ -22,7 +23,7 @@ setDatamapshow(result);
   
     useEffect( ()=>{
       getData();
-  
+
     },[]);
 
  

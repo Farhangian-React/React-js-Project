@@ -1,5 +1,5 @@
 
-button {
+.button1 {
     /* Variables */
     --button_radius: 0.75em;
     --button_color: #151313;
@@ -27,12 +27,12 @@ button {
    
   }
   
-  button:hover .formbutton {
+  .button1:hover .formbutton {
     /* Pull the button upwards when hovered */
     transform: translateY(-0.33em);
   }
   
-  button:active .formbutton {
+  .button1:active .formbutton {
     /* Push the button downwards when pressed */
     transform: translateY(0);
   }

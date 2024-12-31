@@ -1,4 +1,3 @@
-import { Sidebar } from 'react-pro-sidebar';
 import React, {useContext,useState,useEffect} from 'react';
 import {CartContext} from '../Shared/Cart-Context';
 import {CardData} from '../Shared/Cart-Context';
@@ -69,21 +68,12 @@ fetch("http://localhost:3000/Allcomments")
    res.json())
    .then((data)=>{
   setDatacomment(data);
+  console.log(datacomment);
+  console.log(cartItems);
   }
    )
 .catch(err=>console.log(err));
 }
-  const sumscore=(item)=>{
-    let total=0;
-    let aver=0;
- datacomment.map(i=>{
-  if(i.idcomment === item.id){
-    aver ++;
-    total += i.score; 
-  }
-  });
-   return total /aver;
- }
  const [data,setData]=useContext(CardData);
  const [datashow,setDatashow]=useContext(CardDataShow);
 
@@ -94,7 +84,7 @@ const getData1=()=>{
 
   setData(result.filter(i=>i.off !== "" ));
   setDatashow(result.filter(i=>i.off !== "" ));
- 
+ console.log(data);
  },
  (error) => {
    alert('error');
@@ -105,9 +95,7 @@ const getData1=()=>{
 
 useEffect(()=>{
   getData();
-  getData1();
-
-  
+  getData1(); 
 },[])
 
     return(

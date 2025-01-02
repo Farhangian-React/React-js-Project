@@ -1,5 +1,5 @@
 {
-  "homepage": " https://farhangian-react.github.io/React-js-Project/",
+  "homepage": " https://farhangian-react.github.io/React-js-Project",
   "name": "snova-app",
   "version": "0.1.0",
   "private": true,
@@ -40,7 +40,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "master -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

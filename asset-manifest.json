@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-js-Project/static/css/main.f36545aa.css",
+    "main.js": "/React-js-Project/static/js/main.6fda7541.js",
+    "static/js/787.7290c045.chunk.js": "/React-js-Project/static/js/787.7290c045.chunk.js",
+    "static/media/Stores.png": "/React-js-Project/static/media/Stores.39f7d45b77539d6be47e.png",
+    "static/media/log2.png": "/React-js-Project/static/media/log2.321e9717b1b0ccc4875a.png",
+    "static/media/gas-icon2.jpg": "/React-js-Project/static/media/gas-icon2.53b5f3f86fe6550f6cc3.jpg",
+    "static/media/loge1.png": "/React-js-Project/static/media/loge1.104104973633e9694664.png",
+    "static/media/log11.png": "/React-js-Project/static/media/log11.3c591d744f88301f0b66.png",
+    "static/media/contact2.png": "/React-js-Project/static/media/contact2.6f3fdbbd8c13c8277d7f.png",
+    "static/media/loge2.png": "/React-js-Project/static/media/loge2.138dd02b80dcbb476f1e.png",
+    "static/media/Questions-pana2.png": "/React-js-Project/static/media/Questions-pana2.ea3548e1770a3d64a60c.png",
+    "static/media/mass2.png": "/React-js-Project/static/media/mass2.58daa4d73b63a2657ca7.png",
+    "static/media/iranmap.png": "/React-js-Project/static/media/iranmap.d4d0a462b69f6d0b90fa.png",
+    "static/media/Vazir-Bold-FD-WOL.woff2": "/React-js-Project/static/media/Vazir-Bold-FD-WOL.b7fe4ff3b9ebef1ebfff.woff2",
+    "index.html": "/React-js-Project/index.html",
+    "main.f36545aa.css.map": "/React-js-Project/static/css/main.f36545aa.css.map",
+    "main.6fda7541.js.map": "/React-js-Project/static/js/main.6fda7541.js.map",
+    "787.7290c045.chunk.js.map": "/React-js-Project/static/js/787.7290c045.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f36545aa.css",
+    "static/js/main.6fda7541.js"
+  ]
+}

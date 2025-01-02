@@ -84,11 +84,10 @@ return cartItems;
       }
       else{
         offref.current.className="offref";
-        return cartItems;
+        return console.log(cartItems);
       }
     }
     )}
-  
   const convertToEnglish=(str)=> {
     let englishNumber =str
     .replace(/۰/g, '0')
@@ -200,11 +199,11 @@ useEffect(()=>{
     }
        )
     .catch(err=>toast.error(err))
-    return cartItems;
+    return console.log(cartItems);
   });
   cartItems.map(i=>{
     setImage(i.img);
-    return cartItems;
+    return console.log(cartItems);
   })  
   },[cartItems])
   useEffect(()=>{ 
@@ -227,7 +226,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 }).catch((err)=>{
     toast.error("");
 })
-return cartItems;
+return console.log(cartItems);
       })
           }
       }

@@ -49,7 +49,7 @@ return(persianNumber);
     const carts=[...cartItemsBuy];
    
     const index=carts.findIndex(q=>q.id===t.id);
-    carts[index].pricenum=convertToPersian((Number(convertToEnglish((t.pricenum)))+ Number(convertToEnglish(t.pricenum))/count)+'');
+    carts[index].pricenum1=convertToPersian((Number(convertToEnglish((t.pricenum1)))+ Number(convertToEnglish(t.pricenum1))/count)+'');
     setCartItemsBuy([...carts]);
    
   }
@@ -61,7 +61,7 @@ return(persianNumber);
       setCount(Math.max(count - 1, 0));
     const carts=[...cartItemsBuy];
     const index=carts.findIndex(q=>q.id===t.id);
-    carts[index].pricenum=convertToPersian((Number(convertToEnglish((t.pricenum)))- Number(convertToEnglish(t.pricenum))/count)+'');
+    carts[index].pricenum1=convertToPersian((Number(convertToEnglish((t.pricenum1)))- Number(convertToEnglish(t.pricenum1))/count)+'');
     setCartItemsBuy([...carts]);
     console.log(cartItems);
     console.log(cartItemsBuy);

@@ -35,7 +35,6 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import HiveIcon from '@mui/icons-material/Hive';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import Rating from '@mui/material/Rating';
-import {  useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Input from '@mui/joy/Input';
@@ -72,7 +71,6 @@ export default function CartBuyGas() {
   const [score,setScore]=useState("");
   const [error,setError]=useState({});
   const[commenuser,setCommenuser]=useState([]);
-  const navigate=useNavigate();
   const boxcommentref=useRef();
   const buttoncommentref=useRef();
   const boxnotcomments=useRef();
@@ -80,15 +78,16 @@ export default function CartBuyGas() {
   const offref=useRef();
   const boxoff=useRef();
   const offrefprice=()=>{
-    {cartItems.map(i=>{
+    cartItems.map(i=>{
       if(i.off !== ""){
 offref.current.className="offref";
       }
       else{
 boxoff.current.className="boxoff";
       }
+      return console.log(setCartItems(cartItems));
     }
-    )}
+    )
   }
 
 
@@ -173,7 +172,8 @@ errmesage.score="لطفا  امتیاز خود را وارد کنید";
   const sumscore=()=>{
      let total=0;
   commenuser.map(i=>{
-     total += i.score
+     total += i.score;
+     return console.log(total);
    });
     return total / commenuser.length;
   }
@@ -192,24 +192,28 @@ displycomments.current.className="disply";
   } 
 useEffect(()=>{
  
-  {cartItems.map(i=>{ 
+  cartItems.map(i=>{ 
     fetch("http://localhost:3000/Allcomments")
     .then((res)=>
        res.json())
        .then((data)=>{
-      {data.map(j=>{
+    data.map(j=>{
       if(j.idcomment === i.id){
         setCommenuser([...data.filter(j=>j.idcomment === i.id )]);
       }
+      return console.log(cartItems);
     }
-      )}
+      )
       }
        )
        
     .catch(err=>toast.error(err))
-  })};   
-  {cartItems.map(i=>{
-    setImage(i.img);})}  
+    return console.log(cartItems);
+  });   
+  cartItems.map(i=>{
+    setImage(i.img);
+  return console.log(cartItems);
+  })
   },[cartItems])
   useEffect(()=>{ 
     offrefprice();
@@ -219,7 +223,7 @@ useEffect(()=>{
     e.preventDefault();
     if(isvalidate()){
       //console.log(result);
-      {cartItems.map(i=>{ 
+      cartItems.map(i=>{ 
         let idcomment=i.id;
   let result={idcomment,name,email,advantage,disadvantages,
   score,comment}
@@ -232,7 +236,8 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 }).catch((err)=>{
     toast.error("");
 })
-      })}
+return console.log(cartItems);
+      })
           }
       }
   const handleDrawerClose = () => {
@@ -278,7 +283,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
          {cartItems.map(i=> 
          <Box   sx={{mt:{xs:1,md:1},display:'flex', flexDirection:'column',justifyContent:'center',bgcolor:'white'}}> 
          <Box sx={{px:5,mt:1,mb:{xs:12,lg:12},width:'15%',height:'20px'}}>
-         <img src={i.berand} width={'90%'}/>
+         <img src={i.berand} width={'90%'} alt=''/>
          </Box>
           <Typography variant='h5' sx={{px:5,mb:3,mt:0,textAlign:'right',fontSize:"16px"}}  >
        {i.title1}
@@ -449,7 +454,7 @@ direction:"rtl"
         height:{xs:"110px",lg:"90px"},
         width:{xs:"110px",lg:"90px"},
        my:{xs:2,lg:1},p:0
-       ,display:'flex',alignItems:'center',justifyContent:'center',mx:1}}> 
+       ,alignItems:'center',justifyContent:'center',mx:1}}> 
         </Box>
         </Link>
         <Link onClick={()=>setImage(i.imga1)}>
@@ -464,7 +469,7 @@ direction:"rtl"
         height:{xs:"110px",lg:"90px"},
         width:{xs:"110px",lg:"90px"},
        my:{xs:2,lg:1},p:0
-       ,display:'flex',alignItems:'center',justifyContent:'center',mx:1}}> 
+       ,alignItems:'center',justifyContent:'center',mx:1}}> 
         </Box>
         </Link>
         <Link onClick={()=>setImage(i.imga2)}>
@@ -479,7 +484,7 @@ direction:"rtl"
         height:{xs:"110px",lg:"90px"},
         width:{xs:"110px",lg:"90px"},
        my:{xs:2,lg:1},p:0
-       ,display:'flex',alignItems:'center',justifyContent:'center',mx:1}}> 
+       ,alignItems:'center',justifyContent:'center',mx:1}}> 
         </Box>
         </Link>
         <Box className="allproduct"
@@ -506,7 +511,7 @@ direction:"rtl"
           <Box  sx={{width:'100%',height:'100 vh',direction:{xs:'rtl',md:'ltr'}, display:'flex',flexDirection:{xs:"column",lg:"row"},justifyContent:'center',bgcolor:'#fff'}}>
         <Grid sx={{mx:{xs:2,md:2},mt:{xs:2,lg:1},display:'flex',justifyContent:'center'}} >
              {cartItems.map(i=> 
-        <img  src={image} width={'100%'}   /> 
+        <img  src={image} width={'100%'} alt=''  /> 
         )}
         </Grid>
      
@@ -516,43 +521,30 @@ direction:"rtl"
        
     
       >
-       <Grid  xs={4} md={4} sx={{alignItems:'center',display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.img)}><img  src={i.img} width={'100%'} height={'100 vh'}/></Link>)} </Grid>
-       <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}> {cartItems.map(i=><Link onClick={()=>setImage(i.imga1)}><img src={i.imga1} width={'100%'} height={'100 vh'}/></Link>)} </Grid> 
-      <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga2)}><img src={i.imga2}  width={'100%'} height={'100 vh'}/></Link>)} </ Grid> 
-       <Grid xs={4} md={4}  sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga3)}><img src={i.imga3}  width={'100%'}  height={'100 vh'}/></Link>)}</Grid> 
-       <Grid  xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.img)}><img  src={i.img} width={'100%'}  height={'100 vh'}/></Link>)} </Grid>
-       <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}> {cartItems.map(i=><Link onClick={()=>setImage(i.imga1)}><img src={i.imga1} width={'100%'} height={'100 vh'}/></Link>)} </Grid> 
-      <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga2)}><img src={i.imga2}  width={'100%'}  height={'100 vh'}/></Link>)} </ Grid> 
-      <Grid  xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.img)}><img  src={i.img} width={'100%'}  height={'100 vh'}/></Link>)} </Grid>
-       <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}> {cartItems.map(i=><Link onClick={()=>setImage(i.imga1)}><img src={i.imga1} width={'100%'} height={'100 vh'}/></Link>)} </Grid> 
-      <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga2)}><img src={i.imga2}  width={'100%'}  height={'100 vh'}/></Link>)} </ Grid> 
-       <Grid xs={4} md={4}  sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga3)}><img src={i.imga3}  width={'100%'} height={'100 vh'}/></Link>)}</Grid> 
-       <Grid xs={4} md={4}  sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga3)}><img src={i.imga3}  width={'100%'} height={'100 vh'}/></Link>)}</Grid> 
+       <Grid  xs={4} md={4} sx={{alignItems:'center',display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.img)}><img  src={i.img} width={'100%'} height={'100 vh'} alt=''/></Link>)} </Grid>
+       <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}> {cartItems.map(i=><Link onClick={()=>setImage(i.imga1)}><img src={i.imga1} width={'100%'} height={'100 vh'} alt=''/></Link>)} </Grid> 
+      <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga2)}><img src={i.imga2}  width={'100%'} height={'100 vh'} alt=''/></Link>)} </ Grid> 
+       <Grid xs={4} md={4}  sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga3)}><img src={i.imga3}  width={'100%'}  height={'100 vh'} alt=''/></Link>)}</Grid> 
+       <Grid  xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.img)}><img  src={i.img} width={'100%'}  height={'100 vh'} alt=''/></Link>)} </Grid>
+       <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}> {cartItems.map(i=><Link onClick={()=>setImage(i.imga1)}><img src={i.imga1} width={'100%'} height={'100 vh'} alt=''/></Link>)} </Grid> 
+      <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga2)}><img src={i.imga2}  width={'100%'}  height={'100 vh'} alt=''/></Link>)} </ Grid> 
+      <Grid  xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.img)}><img  src={i.img} width={'100%'}  height={'100 vh'} alt=''/></Link>)} </Grid>
+       <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}> {cartItems.map(i=><Link onClick={()=>setImage(i.imga1)}><img src={i.imga1} width={'100%'} height={'100 vh'} alt=''/></Link>)} </Grid> 
+      <Grid xs={4} md={4} sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga2)}><img src={i.imga2}  width={'100%'}  height={'100 vh'} alt=''/></Link>)} </ Grid> 
+       <Grid xs={4} md={4}  sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga3)}><img src={i.imga3}  width={'100%'} height={'100 vh'} alt=''/></Link>)}</Grid> 
+       <Grid xs={4} md={4}  sx={{alignItems:'center',p:0,display:'flex',justifyContent:'center',m:0}}>{cartItems.map(i=><Link onClick={()=>setImage(i.imga3)}><img src={i.imga3}  width={'100%'} height={'100 vh'} alt=''/></Link>)}</Grid> 
        </Grid>
         </Box>
-        
-         
         </ModalDialog>
       </Modal>
-
       </Box>
-      
-       
         </Box>
-       
       )}
         </Box> 
-       
-       
-     
 </Box>
-
-  
-
 <Box container sx={{display:'flex',flexDirection:'column',bgcolor:'white',mx:5,mt:0,mb:5,borderRadius:'10px',direction:'rtl'}}>
 <Grid container
-           justifyContent={'start'}
-        
+justifyContent={'start'}        
        rowSpacing={0} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
        margin={0}
        sx={{display:'flex',flexDirection:'column'}}
@@ -737,13 +729,13 @@ direction:"rtl"
                }} 
              >
                <ListItem role="none" >
-              <img src={j.Fimg} width={250} height={250}/> 
+              <img src={j.Fimg} width={250} height={250} alt=''/> 
                </ListItem>
                <ListItem role="none">
-               <Typography sx={{mt:0,fontSize:{xs:'16px',md:'20px'},fontWeight:'600'}}>{j. Ftitle1} </Typography>
+               <Typography sx={{mt:0,fontSize:{xs:'16px',md:'20px'},fontWeight:'600'}}>{j.Ftitle1} </Typography>
                </ListItem>
                <ListItem role="none">
-                 <Typography sx={{fontSize:{xs:'12px',md:'16px'}}}> {j. Ftitle2}  </Typography>
+                 <Typography sx={{fontSize:{xs:'12px',md:'16px'}}}>{j.Ftitle2}</Typography>
                </ListItem>
              </List>
            </Grid>
@@ -764,10 +756,10 @@ direction:"rtl"
         </Grid>
         </AccordionDetails>
       </Accordion>
-   
+
         </Grid>
 </Box>
-        <Box sx={{display:'flex',bgcolor:'white',mx:5,mt:0,mb:5,flexDirection:{xs:"column",lg:"row"},mt:{xs:3,lg:1},borderRadius:'10px',direction:'rtl'}}>
+        <Box sx={{display:'flex',bgcolor:'white',mx:5,mb:5,flexDirection:{xs:"column",lg:"row"},mt:{xs:3,lg:1},borderRadius:'10px',direction:'rtl'}}>
 <Box  sx={{width:"100%",display:"flex",justifyContent:"start",flexDirection:"column",mt:{xs:3,lg:1},pb:{lg:3}}}>
 {cartItems.map(i=>
     <Box container sx={{whiteSpace:"wrap",width:"90%",display:'flex',flexDirection:"row",alignSelf:"center",bgcolor:'white',px:3,py:0,mx:{xs:1,md:5},mb:2,mt:{xs:2,md:2},borderRadius:'10px',direction:'rtl'}}>

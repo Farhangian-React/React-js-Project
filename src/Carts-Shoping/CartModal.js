@@ -73,7 +73,7 @@ return(persianNumber);
         <Grid xs={4} sx={{direction:"rtl",display:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
           <Buttons t={item}/>
           <Typography  sx={{mt:1,fontSize:"16px",textAlign:"center",alignSelf:"center",color:"#fa003f"}}  >
-          {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
+          {addCommas(convertToPersian((convertToEnglish(item.pricenum1)-(convertToEnglish(item.pricenum1)*item.off / 100))+''))} تومان 
          </Typography>
          
         </Grid>

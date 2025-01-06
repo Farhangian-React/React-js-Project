@@ -62,7 +62,7 @@ function ContactUsForm() {
           //console.log(result);
          
       let result={name,email,callnum,massage,comment}
-      fetch("http://localhost:3000/Allpopularquestions",{
+      fetch("https://serverjson-project.onrender.com/Allpopularquestions",{
         method:"POST",
         headers:{"content-type":"aplication/jopes"},
         body:JSON.stringify(result)

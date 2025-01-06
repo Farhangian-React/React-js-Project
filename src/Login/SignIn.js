@@ -52,7 +52,7 @@ errmesage.password="لطفا رمز را وارد کنید";
 e.preventDefault();
 if(isvalidate()){
 //console.log("result");
-fetch("http://localhost:3000/users/"+id).then((res)=>{
+fetch("https://serverjson-project.onrender.com/users/"+id).then((res)=>{
   return res.json();
 }).then((resp)=>{
   if(Object.keys(resp).length===0){

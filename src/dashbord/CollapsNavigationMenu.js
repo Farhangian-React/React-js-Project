@@ -42,7 +42,7 @@ export default function CollapsNavigationMenu() {
   const [searchItem, setSearchItem] = useState('');
   const [filteredUsers, setFilteredUsers] = useState([]);
   const getData=()=>{
-  fetch('http://localhost:3000/Allproducts')
+  fetch('https://serverjson-project.onrender.com/Allproducts')
   .then(res => res.json())
   .then((result)=> {
     setData(result);

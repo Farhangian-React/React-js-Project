@@ -42,7 +42,7 @@ function Tems({ currentItems }) {
     }
     }
     const getData=()=>{
-      fetch("http://localhost:3000/Allcomments")
+      fetch("https://serverjson-project.onrender.com/Allcomments")
       .then((res)=>
          res.json())
          .then((data)=>{
@@ -166,7 +166,7 @@ export default function CardWashingMachine({ itemsPerPage }) {
   const [datashow,setDatashow]=useContext(CardDataShow);
 
  const getData=()=>{
-  fetch('http://localhost:3000/Allproducts' )
+  fetch('https://serverjson-project.onrender.com/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
   setData(result.filter(i=>i.product === "Wash"));

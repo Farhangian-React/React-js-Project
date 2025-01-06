@@ -10,7 +10,7 @@ export default function Style1({itemsPerPage}) {
 const [cartimage,setCartimage]=useState([]);
 const [cartshow,setCartshow]=useState([]);
   const getCartimage=()=>{
-    fetch('http://localhost:3000/Cartimage')
+    fetch('https://serverjson-project.onrender.com/Cartimage')
     .then(res => res.json())
     .then((result)=> {
       setCartimage(result);

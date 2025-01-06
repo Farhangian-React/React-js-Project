@@ -49,7 +49,7 @@ e.preventDefault();
 let result={id,code,numcall};
 if(isvalidate()){
 //console.log(result);
-fetch("http://localhost:3000/users",{
+fetch("https://serverjson-project.onrender.com/users",{
   method:"POST",
   headers:{"content-type":"aplication/jopes"},
   body:JSON.stringify(result)

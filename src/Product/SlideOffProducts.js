@@ -22,7 +22,7 @@ export default function SlideOffProducts()  {
     const [data,setData]=useContext(CardData);
 
    const getData=()=>{
-    fetch('http://localhost:3000/Allproducts' )
+    fetch('https://serverjson-project.onrender.com/Allproducts' )
     .then(res => res.json())
     .then((result)=> {
     setData(result.filter(i=>i.off !== "" ));

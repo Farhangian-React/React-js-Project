@@ -63,7 +63,7 @@ return(persianNumber);
   }
 
 const getData=()=>{
-fetch("http://localhost:3000/Allcomments")
+fetch("https://serverjson-project.onrender.com/Allcomments")
 .then((res)=>
    res.json())
    .then((data)=>{
@@ -79,7 +79,7 @@ fetch("http://localhost:3000/Allcomments")
  const [datashow,setDatashow]=useContext(CardDataShow);
 
 const getData1=()=>{
- fetch('http://localhost:3000/Allproducts' )
+ fetch('https://serverjson-project.onrender.com/Allproducts' )
  .then(res => res.json())
  .then((result)=> {
 

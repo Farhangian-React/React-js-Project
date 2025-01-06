@@ -193,7 +193,7 @@ displycomments.current.className="disply";
 useEffect(()=>{
  
   cartItems.map(i=>{ 
-    fetch("http://localhost:3000/Allcomments")
+    fetch("https://serverjson-project.onrender.com/Allcomments")
     .then((res)=>
        res.json())
        .then((data)=>{
@@ -227,7 +227,7 @@ useEffect(()=>{
         let idcomment=i.id;
   let result={idcomment,name,email,advantage,disadvantages,
   score,comment}
-  fetch("http://localhost:3000/Allcomments",{
+  fetch("https://serverjson-project.onrender.com/Allcomments",{
     method:"POST",
     headers:{"content-type":"aplication/jopes"},
     body:JSON.stringify(result)

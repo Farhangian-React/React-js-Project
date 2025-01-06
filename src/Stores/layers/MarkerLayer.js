@@ -8,7 +8,7 @@ export const MarkerLayer = () => {
   const [datamap,setDatamap]=useContext(CardDatamap);
   const [datamapshow,setDatamapshow]=useContext(CardDatamapshow);
   const getData=()=>{
-    fetch('http://localhost:3000/features' )
+    fetch('https://serverjson-project.onrender.com/features' )
 .then(res => res.json())
 .then((result)=> {
 setDatamap(result);

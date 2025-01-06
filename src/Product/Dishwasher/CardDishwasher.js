@@ -34,7 +34,7 @@ function Tems({ currentItems }) {
 return(persianNumber);
   }
   const getData=()=>{
-    fetch("http://localhost:3000/Allcomments")
+    fetch("https://serverjson-project.onrender.com/Allcomments")
     .then((res)=>
        res.json())
        .then((data)=>{
@@ -165,7 +165,7 @@ const [data,setData]=useContext(CardData);
 const [datashow,setDatashow]=useContext(CardDataShow);
 
 const getData=()=>{
-  fetch('http://localhost:3000/Allproducts' )
+  fetch('https://serverjson-project.onrender.com/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
   setData(result.filter(i=>i.product === "Dish"));

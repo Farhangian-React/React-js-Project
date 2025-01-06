@@ -19,7 +19,7 @@ export default function Selector() {
   const [datamapshow,setDatamapshow]=useContext(CardDatamapshow);
   const [dataselactor,setDataselactor]=useState([]);
   const getData=()=>{
-    fetch('http://localhost:3000/features' )
+    fetch('https://serverjson-project.onrender.com/features' )
 .then(res => res.json())
 .then((result)=> {
 setDataselactor(result);

@@ -417,7 +417,7 @@ title="Title"
            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton >
-              <NavLink className='navlinkcoll' to={"/about-snova"}>سبک زندگی
+              <NavLink className='navlinkcoll' to={"/life-style"}>سبک زندگی
            </NavLink> </ListItemButton>
            </Grid>
            <Grid sx={{width:"100%"}}>

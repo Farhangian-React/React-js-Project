@@ -703,46 +703,22 @@ export default function NavigationMenu() {
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
         <ListItem  className='list'>
-          <Link
-           sx={{color:'white',textDecoration:'none'}}
-           
-            {...getTargetProps(2)}
-            component="a"
-            href="/shop-ranges"
-            className='hover'
-          >
-            فروشگاه
-          </Link>
+        <NavLink className='hover' to={"/Stores"}   {...getTargetProps(2)} sx={{color:'white',textDecoration:'none'}} >
+            فروشگاه </NavLink>  
         </ListItem>
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
         <ListItem  className='list' >
-          <Link
-          sx={{color:'white',textDecoration:'none'}}
-           
-            {...getTargetProps(3)}
-            component="a"
-            href="/about-snova"
-            className='hover'
-          >
-          چرا سهیل
-          </Link>
+        <NavLink className='hover' to={"/about-snova"}   {...getTargetProps(3)} sx={{color:'white',textDecoration:'none'}} >
+            چرا سهیل </NavLink> 
         </ListItem>
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
         <ListItem  className='list' >
-          <Link
-           sx={{color:'white',textDecoration:'none'}}
-          
-            {...getTargetProps(4)}
-            component="a"
-            href="/life-style"
-            className='hover'
-          >
-            سبک زندگی
-          </Link>
+        <NavLink className='hover' to={"/life-style"}   {...getTargetProps(4)} sx={{color:'white',textDecoration:'none'}} >
+             سبک زندگی </NavLink>
         </ListItem>
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>

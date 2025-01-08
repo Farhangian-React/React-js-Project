@@ -708,7 +708,7 @@ export default function NavigationMenu() {
            
             {...getTargetProps(2)}
             component="a"
-            href="/Stores"
+            href="/shop-ranges"
             className='hover'
           >
             فروشگاه

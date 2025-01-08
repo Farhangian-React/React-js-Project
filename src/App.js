@@ -62,10 +62,10 @@ function App() {
              <Route path="/buybasketmodal" exact element={<CartModal/>} />
              <Route path="/allrefriderators" exact element={<Refrigerators/>} />
              <Route path="/allgas" exact element={<Gas/>} />
-             <Route path= "/shop-cooktop" exact element={<CookTops/>} />
-             <Route path= "/shop-microwaves" exact element={<Microwaves/>} />
-             <Route path= "/shop-hood" exact element={<Hoods/>} />
-             <Route path= "/shop-ranges" exact element={<Ranges/>} />
+             <Route path="/shop-cooktop" exact element={<CookTops/>} />
+             <Route path="/shop-microwaves" exact element={<Microwaves/>} />
+             <Route path="/shop-hood" exact element={<Hoods/>} />
+             <Route path="/shop-ranges" exact element={<Ranges/>} />
              <Route path="/shop-refrigeratorfrenchdoor" exact element={<RefrigeratorsFrenchDoor/>} />
              <Route path="/shop-refrigeratorsidbysid" exact element={<RefrideratorSideBySide/>} />
              <Route path="/shop-refrideratorbottomfreezer" exact element={<RefrideratorBottomFreezer/>} />
@@ -85,14 +85,14 @@ function App() {
              <Route path='/whirlpoolbrand' exact element={<WhirlpoolBrands/>} />
              <Route path='/bushbrands' exact element={<BushBrands/>} />
              <Route path='/PopularQuestions' exact element={<PopularQuestions/>} /> 
-            <Route path='/AfterSalesService' exact element={<AfterSalesService/>} />
-            <Route path='/ContactUsForm' exact element={<ContactUsForm/>} />
-            <Route path='/ProductOff' exact element={<ProductOff/>} />
-            <Route path='/ProductJashnvareh' exact element={<ProductJashnvareh/>} />
-            <Route path='/CartBuyJashnvareh' exact element={<CartBuyJashnvareh/>} />
-            <Route path='/Stores' exact element={<Stores/>} />
+             <Route path='/AfterSalesService' exact element={<AfterSalesService/>} />
+             <Route path='/ContactUsForm' exact element={<ContactUsForm/>} />
+             <Route path='/ProductOff' exact element={<ProductOff/>} />
+             <Route path='/ProductJashnvareh' exact element={<ProductJashnvareh/>} />
+             <Route path='/CartBuyJashnvareh' exact element={<CartBuyJashnvareh/>} />
+             <Route path='/Stores' exact element={<Stores/>} />
              <Route path="*" element={<PageNotFount/>} />
-            </Routes>
+             </Routes>
           </div>
     </CartProvider>
       </>

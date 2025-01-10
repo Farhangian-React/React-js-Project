@@ -84,27 +84,26 @@ toast.error("ورود ناموفق");
     </div>
    <Box 
       sx={{
-
         display:'flex',
-        justifyContent:'center',
-        flexDirection:"row",
+        justifyContent:'start',
+        flexDirection:{xs:"column",lg:"row"},
        backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcDOnBx2I4GMh9q1Z37yKX3mF9YEdMC9i2GQ&s")`,
        backgroundPosition: 'center',
        backgroundSize: 'cover',
        backgroundRepeat: 'no-repeat',
-       height:'100vh',
+       height:{xs:'100vh',lg:"85vh"},
        width:'100%'
        }} >
-      <Box maxWidth="xs"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mx:10,mt:{xs:20,lg:6},
+      <Box maxWidth="xs"  sx={{display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:20,lg:6},
       height:{xs:"300px",md:"600px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
-        <Typography  variant="h5" sx={{textAlign:"center",mt:{xs:10,md:1},color:"#fff"}}>
+        <Typography  sx={{fontSize:{xs:"36px",lg:"30px"},textAlign:"center",mt:{xs:1,lg:1},color:"#fff"}}>
        ورود به حساب کاربری
         </Typography>
        
         <form  noValidate onSubmit={handlesubmit}>
           <Grid container spacing={2} sx={{mt:1}}>
             <Grid  item xs={12}   >
-            <FormLabel sx={{mb:1,color:"#fff"}}>نام کاربری یا ایمیل</FormLabel>
+            <FormLabel sx={{fontSize:"18px",fontWeight:400,mb:1,color:"#fff"}}>نام کاربری یا ایمیل</FormLabel>
               <Input
             color="warning"
             placeholder=' نام کاربری'
@@ -119,6 +118,7 @@ toast.error("ورود ناموفق");
                 value={id}
                 onChange={(e)=> setId(e.target.value)}
                className='input'
+               sx={{fontSize:"24px"}}
               />
               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
@@ -126,7 +126,7 @@ toast.error("ورود ناموفق");
               </Typography>
             </Grid>
             <Grid item xs={12}>
-            <FormLabel sx={{mb:1,color:"#fff"}}> رمز  </FormLabel>
+            <FormLabel sx={{fontSize:"18px",fontWeight:400,mb:1,color:"#fff"}}> رمز  </FormLabel>
               <Input
                 color="warning"
               placeholder="رمز"
@@ -141,6 +141,7 @@ toast.error("ورود ناموفق");
                 autoComplete="current-password"
                 value={password}
                 onChange={(e)=> setPassword(e.target.value)}
+                sx={{fontSize:"24px"}}
               />
                <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
@@ -152,7 +153,7 @@ toast.error("ورود ناموفق");
              
              control={<Checkbox color="info" value="allowExtraEmails" sx={{color:"#E0AA3E"}} />}
              label="مرا بخاطر بسپار"
-             sx={{color:"#eee"}}
+             sx={{color:"#eee",fontSize:"36px"}}
            />
               <NavLink className="nav">یاد آوری رمز عبور</NavLink>
             </Grid>
@@ -160,7 +161,7 @@ toast.error("ورود ناموفق");
   </Grid>
           <Button
            sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-           color:'white'},fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',my:5,px:1,py:0.3,
+           color:'white'},fontSize:{xs:"24px",md:"28px"},color:'#eeeeee',my:5,px:1,py:0.3,
            backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
             type="submit"
            fullWidth
@@ -170,7 +171,7 @@ toast.error("ورود ناموفق");
           <NavLink to={"/signup"}>
           <Button
            sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-           color:'white'},fontSize:{xs:"14px",md:"18px"},color:'#eeeeee',my:0,px:1,py:0.3,
+           color:'white'},fontSize:{xs:"24px",md:"28px"},color:'#eeeeee',my:0,px:1,py:0.3,
            backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
            
           fullWidth
@@ -188,7 +189,7 @@ toast.error("ورود ناموفق");
    <Box sx={{alignSelf:"center",
        display:"flex",
        borderRadius:1,
-       backgroundImage:{xs:`url(${logimage1})`,lg:`url(${logimage})`},
+       backgroundImage:{xs:`url(${logimage})`,lg:`url(${logimage})`},
        backgroundPosition: 'center',
        backgroundSize:"contained",
        backgroundRepeat: 'no-repeat',

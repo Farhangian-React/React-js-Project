@@ -680,7 +680,19 @@ direction:"rtl"
             }} 
           >
             <ListItem role="none" >
-           <img src={j.Fimg} width={250} height={250}/> 
+            <Box
+             sx={{
+              display:'flex',
+              justifyContent:'center',
+             backgroundImage: `url(${j.Fimg})`,
+             backgroundPosition: 'center',
+             backgroundSize:'cover',
+             backgroundRepeat: 'no-repeat',
+             width:{xs:'150px',lg:"250"},
+             height:{xs:"150px",lg:"250"}
+             }}
+          >
+          </Box>
             </ListItem>
             <ListItem role="none">
             <Typography sx={{mt:0,fontSize:{xs:'16px',md:'20px'},fontWeight:'600'}}>{j. Ftitle1} </Typography>
@@ -700,7 +712,6 @@ direction:"rtl"
           setIndex(expanded ? 2 : null);
         }}
       >
-        <AccordionSummary  sx={{color:"#585858",fontSize:{xs:"14px",md:'16px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"14px",md:"18px"}}}/>}> مشخصات بیشتر</AccordionSummary>
         <AccordionSummary  sx={{color:"#585858",fontSize:{xs:"14px",md:'16px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"14px",md:"18px"}}}/>}> مشخصات بیشتر</AccordionSummary>
         <AccordionDetails>
         <Grid  >

@@ -3,7 +3,6 @@ import {CardData} from '../../Shared/Cart-Context';
 import {CardDataShow} from '../../Shared/Cart-Context';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import FormLabel from '@mui/joy/FormLabel';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
@@ -21,26 +20,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Grid } from '@mui/material';
 
-const drawerWidth = 240;
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
-}));
- 
 export default  function FilterWashingMachine() {
- const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
   const [checked1, setChecked1] = useState(false); 
@@ -87,6 +67,7 @@ export default  function FilterWashingMachine() {
   const [disabledH2,setDisabledH2]=useState(false);
   const [disabledH3,setDisabledH3]=useState(false);
   const [index, setIndex] = React.useState(null);
+  const [index1, setIndex1] = React.useState(null);
   
   const convertToEnglish=(str)=> {
     let englishNumber =str
@@ -855,10 +836,19 @@ const handleChangeE1=(e)=>{
         </AccordionDetails>
       </Accordion>
 </Box>
+
+
 <Box component="div" sx={{width:'95%',alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
-     
-<Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
-      <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
+        <Accordion
+        expanded={index1 === 0}
+        onChange={(event, expanded) => {
+          setIndex1(expanded ? 0 : null);
+        }}
+        sx={{borderBottom:'1px solid black',backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mr:1}}
+      >
+        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>
+
+        <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
         <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
             <Grid >
         <IconButton sx={{pt:0}}>
@@ -873,40 +863,12 @@ const handleChangeE1=(e)=>{
 </Grid>
         </Grid>
         <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"end"}}> 
-        <IconButton
-      onClick={handleDrawerOpen}
-    
-      sx={{pb:1,pt:0,  ml: 0, ...(open && { display: 'none' }) }}
-    >
-      <ExpandMoreIcon />
-    </IconButton>
         </Grid>
       </Grid>
-           <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-            height:'100vh',
-           
-          },
-        }}
-        variant="persistent"
-        anchor="right"
-        open={open}
-      >
-        <DrawerHeader sx={{mt:1,display:"flex",justifyContent:"space-between",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
-        <Typography variant='h6' sx={{px:2,direction:'rtl',color:"white"}}>
-  نوع نمایش
-</Typography>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </DrawerHeader>
 
-        <Divider />
+        </AccordionSummary>
+        <AccordionDetails >
+        <FormGroup>
         <Accordion
         expanded={index === 0}
         onChange={(event, expanded) => {
@@ -1076,12 +1038,9 @@ const handleChangeE1=(e)=>{
 </FormGroup>
         </AccordionDetails>
       </Accordion>
-
-
-
-      </Drawer>
-
-</Box>   
+        </FormGroup>
+        </AccordionDetails>
+      </Accordion>  
 </Box>
 </>
    )}

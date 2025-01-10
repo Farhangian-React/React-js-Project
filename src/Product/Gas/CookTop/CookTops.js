@@ -28,7 +28,7 @@ export default  function CookTops() {
 <>
 <PageTitle title="پخت و پز / اجاق گاز صفحه ای" description= "پخت و پز / اجاق گاز صفحه ای" />
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,lg:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"

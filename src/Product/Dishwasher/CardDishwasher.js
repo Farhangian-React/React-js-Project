@@ -78,7 +78,7 @@ return(persianNumber);
     justifyContent:"start",width:"100vw",p:4,bgcolor:"#eeeeee"}} >
       <Box sx={{width:{xs:"90%",lg:"30%"},display:"flex",alignSelf:{xs:"center",lg:"start"},
 height:{lg:"100vh"},
-position:"sticky",
+position:{xs:"static",lg:"sticky"},
 top: "80px",
 
 }}>

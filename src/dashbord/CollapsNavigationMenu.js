@@ -237,7 +237,7 @@ title="Title"
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            height:'100vh',
+            height:"60vh",
             display:"flex",
             flexDirection:"column",
             justifyContent:"start",
@@ -397,7 +397,7 @@ title="Title"
             <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton  >
-              <NavLink className='navlinkcoll' sx={{fontSize:"16px"}} to={'/Stores'}>
+              <NavLink className='navlinkcoll' sx={{fontSize:"16px"}} to={"/Stores"}>
               فروشگاه ها
            </NavLink> </ListItemButton>
            </Grid>

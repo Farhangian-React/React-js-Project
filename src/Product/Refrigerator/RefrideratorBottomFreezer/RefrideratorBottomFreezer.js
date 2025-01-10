@@ -28,7 +28,7 @@ export default  function RefrideratorBottomFreezer() {
 <>
 <PageTitle title=' یخچال و فریزر / فریزر پایین ' description='   یخجال و فریزر '/>
    <TopNav/>  
-      <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,md:0.7} ,mx:0.5 }} >
+      <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,lg:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"

@@ -8,6 +8,7 @@ import Footer from '../../Footer/Footer';
 import TopNav from '../../dashbord/TopNav';
 import { PageTitle } from '../../Title/PageTitle';
 import ListItemButton from '@mui/material/ListItemButton';
+import SlideOffProducts from "../../Product/SlideOffProducts";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import "../Dishwasher/Dishwasher.css";
@@ -111,6 +112,7 @@ export default  function Refrigerators() {
         </Box>
         
    <AllRefrigerators itemsPerPage={8}/>
+<SlideOffProducts/>
           <Footer/>
 </>
   );

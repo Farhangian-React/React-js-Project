@@ -13,7 +13,7 @@ import './jashnvareh.css';
 export default function TabestaneJashnvareh() {
   return (
     <>
-    <PageTitle  title=' جشنواره تابستانه  '  description=' جشنواره / جشنواره تابستانه  '/>
+    <PageTitle  title=' جشنواره زمستانه  '  description=' جشنواره / جشنواره زمستانه  '/>
    <TopNav/>
 
    <Box sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
@@ -80,7 +80,7 @@ export default function TabestaneJashnvareh() {
       
         display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}
        >
-        <Typography  sx={{fontSize:{xs:"16px",lg:"20px"},textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},textAlign:"center",color:"black",py:1}}>
         جشنواره زمستانه ی سهیل
         </Typography>
         </Box>
@@ -105,7 +105,7 @@ export default function TabestaneJashnvareh() {
       
         display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}
        >
-        <Typography  sx={{fontSize:{xs:"16px",lg:"20px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
         نحوه شرکت در جشنواره سهیل
         </Typography>
         </Box>
@@ -134,7 +134,7 @@ export default function TabestaneJashnvareh() {
           پس از تایید شماره شبا مبلغ هدیه جشنواره ، حداکثر ظرف مدت یک ماه واریز و از طریق پیامک اطلاع رسانی خواهد شد.
             </Typography>
             <Box  sx={{boxShadow:"10px 10px 10px #E0AA3E ",display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}>
-        <Typography  sx={{fontSize:{xs:"16px",lg:"20px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
         نکات مهم:
           </Typography>
           </Box>
@@ -151,7 +151,7 @@ export default function TabestaneJashnvareh() {
             4-این جشنواره به مصرف کنندگانی تعلق می‌گیرد که محصولات مشمول جشنواره را از پانزدهم مهر ماه تا پایان زمان جشنواره ، خریداری و نصب نمایند.
             </Typography>
             <Box  sx={{boxShadow:"10px 10px 10px #E0AA3E ",display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}>
-        <Typography  sx={{fontSize:{xs:"16px",lg:"20px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
         نصب محصول
           </Typography>
           </Box>
@@ -159,7 +159,7 @@ export default function TabestaneJashnvareh() {
           به منظور بهره مندی از شرایط جشنواره خرید زمستانه سهیل با مرکز تماس مشتریان گروه انتخاب از طریق شماره ۱۶۹۹ (بدون پیش شماره از سراسر کشور) تماس حاصل کنید و درخواست نصب محصول خریداری شده خود را اعلام نمایید. در این مرحله یک کد پذیرش نصب برای شما پیامک می‌شود. شایان ذکرست، فعالسازی این جشنواره تنها برای شماره تلفن همراهی خواهد بود که به این مرکز اعلام می‌کنید.
         </Typography> 
         <Box  sx={{boxShadow:"10px 10px 10px #E0AA3E ",display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}>
-        <Typography  sx={{fontSize:{xs:"16px",lg:"20px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
         دریافت کد تخفیف جشنواره
           </Typography>
           </Box>

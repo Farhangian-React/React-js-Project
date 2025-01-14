@@ -103,8 +103,8 @@ fetch("https://serverjson-project.onrender.com/users",{
        height:{xs:'100vh',lg:"85vh"},
        width:'100%'
        }} >
-      <Box maxWidth="xs"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:26,lg:6},
-      height:{xs:"300px",md:"600px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
+      <Box maxWidth="xs"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:18,lg:2},
+      height:{xs:"650px",lg:"550px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:1}} >
         <Typography   sx={{fontSize:{xs:"36px",lg:"30px"},textAlign:"center",mt:1.5,pb:2,color:"#eee"}}>
        عضویت در سایت سهیل
         </Typography>
@@ -113,14 +113,14 @@ fetch("https://serverjson-project.onrender.com/users",{
      قبلا عضو شده اید؟
         </Typography>
         <NavLink to={"/signin"}><Button  sx={{px:3,py:0,':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-       color:'white'},fontSize:{xs:"24px",md:"28px"},color:'#cecece',mb:1,
+       color:'white'},fontSize:{xs:"24px",md:"20px"},color:'#cecece',mb:1,
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>ورود</Button></NavLink>
         </Grid>
         <form  noValidate onSubmit={handlesubmit}>
           <Grid container spacing={2} sx={{mt:1}}>
          
             <Grid  item xs={12} sm={6}  >
-            <FormLabel sx={{fontSize:"18px",mb:1,color:"#cecece"}}>نام</FormLabel>
+            <FormLabel sx={{fontSize:"15px",mb:1,color:"#cecece"}}>نام</FormLabel>
               <Input
             color="warning"
             placeholder='نام'
@@ -135,7 +135,7 @@ fetch("https://serverjson-project.onrender.com/users",{
                 value={fname}
                 onChange={(e)=> setFname(e.target.value)}
                className='input'
-               sx={{fontSize:"24px"}}
+               sx={{fontSize:"18px"}}
               />
               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
@@ -143,7 +143,7 @@ fetch("https://serverjson-project.onrender.com/users",{
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-            <FormLabel sx={{fontSize:"18px",mb:1,color:"#cecece"}}>نام خانوادگی</FormLabel>
+            <FormLabel sx={{fontSize:"15px",mb:1,color:"#cecece"}}>نام خانوادگی</FormLabel>
               <Input
               color="warning"
               placeholder='نام خانوادگی'
@@ -156,7 +156,7 @@ fetch("https://serverjson-project.onrender.com/users",{
                 autoComplete="lname"
                 value={lname}
                 onChange={(e)=> setLname(e.target.value)}
-                sx={{fontSize:"24px"}}
+                sx={{fontSize:"18px"}}
               />
                <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
@@ -164,7 +164,7 @@ fetch("https://serverjson-project.onrender.com/users",{
              </Typography>
             </Grid>
             <Grid  item xs={12} sm={6}  >
-            <FormLabel sx={{fontSize:"18px",mb:1,color:"#cecece"}}>نام کاربری</FormLabel>
+            <FormLabel sx={{fontSize:"15px",mb:1,color:"#cecece"}}>نام کاربری</FormLabel>
               <Input
             color="warning"
             placeholder='نام کاربری'
@@ -178,7 +178,7 @@ fetch("https://serverjson-project.onrender.com/users",{
                 defaultValue={""}
                 value={id}
                 onChange={(e)=> setId(e.target.value)}
-                sx={{fontSize:"24px"}}
+                sx={{fontSize:"18px"}}
               
               />
               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
@@ -187,7 +187,7 @@ fetch("https://serverjson-project.onrender.com/users",{
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-            <FormLabel sx={{fontSize:"18px",mb:1,color:"#cecece"}}> رمز  </FormLabel>
+            <FormLabel sx={{fontSize:"15px",mb:1,color:"#cecece"}}> رمز  </FormLabel>
               <Input
               color="warning"
               placeholder="رمز" 
@@ -201,7 +201,7 @@ fetch("https://serverjson-project.onrender.com/users",{
                 defaultValue={""}
                 value={password}
                 type="password"
-                sx={{fontSize:"24px"}}
+                sx={{fontSize:"18px"}}
                
                
                 onChange={(e)=> setPassword(e.target.value)}
@@ -212,7 +212,7 @@ fetch("https://serverjson-project.onrender.com/users",{
              </Typography>
             </Grid>
             <Grid item xs={12}>
-            <FormLabel sx={{fontSize:"18px",mb:1,color:"#cecece"}}>آدرس ایمیل  </FormLabel>
+            <FormLabel sx={{fontSize:"15px",mb:1,color:"#cecece"}}>آدرس ایمیل  </FormLabel>
               <Input
                 color="warning"
               placeholder='آدرس ایمیل'
@@ -223,7 +223,7 @@ fetch("https://serverjson-project.onrender.com/users",{
               
                 value={email}
                 onChange={(e)=> setEmail(e.target.value)}
-                sx={{fontSize:"24px"}}
+                sx={{fontSize:"18px"}}
               />
               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
@@ -242,7 +242,7 @@ fetch("https://serverjson-project.onrender.com/users",{
           </Grid>
           <Button
            sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-           color:'white'},fontSize:{xs:"24px",md:"28px"},color:'#eeeeee',mt:1.5,py:0.3,
+           color:'white'},fontSize:{xs:"24px",md:"20px"},color:'#eeeeee',mt:{xs:1.5,lg:0.3},py:0.3,
            backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
             type="submit"
             fullWidth

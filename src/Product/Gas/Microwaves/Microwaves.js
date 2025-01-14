@@ -11,6 +11,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import "../../Dishwasher/Dishwasher.css";
+import SlideOffProducts from "../../../Product/SlideOffProducts";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default  function Microwaves() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -104,6 +105,7 @@ export default  function Microwaves() {
         
         
    <CardMicrowaves itemsPerPage={6}/>
+   <SlideOffProducts/>
           <Footer/>
 </>
   );

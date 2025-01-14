@@ -13,10 +13,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import FilterDishwasher from "../../Product/Dishwasher/FilterDishwasher";
+import { ToastContainer, toast } from "react-toastify";
 import './Dishwasher.css';
 import { NavLink } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
-function Tems({ currentItems }) {
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+function Tems({ currentItems,load }) {
   const [cartItems,setCartItems]=useContext(CartContext);
   const[datacomment,setDatacomment]=useState([]);
   const convertToPersian=(str)=> {
@@ -92,8 +95,16 @@ top: "80px",
 </Typography>
 </Box>
 <Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:0,pb:3,px:0}}>
-
-{currentItems && 
+{
+  load ? 
+  <Backdrop
+  sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+  open
+>
+<CircularProgress color="inherit" />
+</Backdrop>
+:
+currentItems && 
   currentItems.map((item) => (
     <NavLink to={'/CartBuyDishwasher'}  className={"linkss"}>    
 <Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},
@@ -152,6 +163,7 @@ sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
 </Card>
 </NavLink>
   ))}
+
   </Box>
   </Box>
 </Box>
@@ -163,21 +175,21 @@ sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
 export default function CardDishwasher({ itemsPerPage }) {
 const [data,setData]=useContext(CardData);
 const [datashow,setDatashow]=useContext(CardDataShow);
+const [isLoading,setIsLoading]=useState(true);
 
 const getData=()=>{
-  fetch('https://serverjson-project.onrender.com/Allproducts' )
-  .then(res => res.json())
-  .then((result)=> {
+fetch('https://serverjson-project.onrender.com/Allproducts' ).then((res)=>{
+  return res.json();
+}).then((result)=>{
   setData(result.filter(i=>i.product === "Dish"));
-   setDatashow(result.filter(i=>i.product === "Dish"));
-  
-  
-  },
-(error) => {
-  alert('error');
-}
-)
-}
+  setDatashow(result.filter(i=>i.product === "Dish"));
+  setIsLoading(false);
+}).catch((err)=>{
+toast.error(" ورود ناموفق داده");
+setIsLoading(false);
+});
+  }
+
 
 useEffect( ()=>{
   getData();
@@ -195,7 +207,7 @@ const handlePageClick = (event) => {
 };
 return (
   <>
-    <Tems currentItems={currentItems}   />
+    <Tems currentItems={currentItems} load={isLoading}  />
     <ReactPaginate
       breakLabel="..."
       nextLabel=" >>"

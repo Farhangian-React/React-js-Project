@@ -11,10 +11,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 import FilteringTopFreezer from './FilteringTopFreezer';
 import Rating from '@mui/material/Rating';
-function Tems({ currentItems }) {
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+function Tems({ currentItems,load }) {
     const [cartItems,setCartItems]=useContext(CartContext);
     const[datacomment,setDatacomment]=useState([]);
     const convertToPersian=(str)=> {
@@ -85,12 +86,18 @@ top: "80px",
 </Typography>
 </Box>
  <Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:1.5,pb:3,px:0}}>
-
-  {currentItems &&
+  {
+    load ? 
+    <Backdrop
+    sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+    open
+  >
+  <CircularProgress color="inherit" />
+  </Backdrop>
+  :
+  currentItems &&
     currentItems.map((item) => (
-    
       <NavLink to={'/cartbuyrefrigerator'}  className={"linkss"}> 
-     
      <Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},
 height:{xs:"400px",sm:'400px',md:"450px",lg:'450px'},marginTop:'10px',marginBottom: '10px',mx:{xs:3,lg:1.5},mt:3, px:1.5,pb:1,pt:2 }} key={item.id}>
 <Box sx={{width:"35px",height:"20px",bgcolor:"#f5cd00",color:"#414141",borderRadius:"20%",px:0,py:0,mt:0.2,display:"flex",justifyContent:"center",alignItems:"center"}}>
@@ -162,18 +169,19 @@ export default function CardRefrideratorTopFreezer({ itemsPerPage }) {
   
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
-
+  const[isLoading,setIsLoading]=useState(true);
  const getData=()=>{
   fetch('https://serverjson-project.onrender.com/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
   setData(result.filter(i=>i.product === "Ref" && i.type === "TopFreezer"));
    setDatashow(result.filter(i=>i.product === "Ref" && i.type === "TopFreezer" ));
-  
+  setIsLoading(false);
   
   },
   (error) => {
     alert('error');
+    setIsLoading(false);
   }
   )
  }
@@ -194,7 +202,7 @@ export default function CardRefrideratorTopFreezer({ itemsPerPage }) {
   };
   return (
     <>
-      <Tems currentItems={currentItems}  />
+      <Tems currentItems={currentItems} load={isLoading} />
       <ReactPaginate
         breakLabel="..."
         nextLabel=" >>"

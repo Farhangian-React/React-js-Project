@@ -7,6 +7,7 @@ import CardWashingMachine from './CardWashingMachine';
 import Footer from '../../Footer/Footer';
 import TopNav from '../../dashbord/TopNav';
 import { PageTitle } from '../../Title/PageTitle';
+import SlideOffProducts from "../../Product/SlideOffProducts";
 export default  function WashingMachine() {
   return (
 <>
@@ -47,6 +48,7 @@ export default  function WashingMachine() {
           </List>
         </Box>
           <CardWashingMachine itemsPerPage={6}/>
+      <SlideOffProducts/>
           <Footer/>
    </>
    );}    

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
+
+import {CartBuyContext} from '../Shared/Cart-Context';
 import { NavLink } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -12,6 +14,8 @@ import Slide from '@mui/material/Slide';
 import { Grid } from '@mui/material';
 import SearchButton from './SearchButton';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { styled } from '@mui/material/styles';
 import "./E.css";
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -28,7 +32,27 @@ HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
   window: PropTypes.func,
 };
+
+const Buy = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor:'black',
+  border:'1px solid  #f2b705',
+  '&:hover': {
+    backgroundColor:'black',
+    border:'1px solid  #fff',
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: '150px',
+  },
+}));
 function TopNav(props) {
+const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
+
+
   return (
     <>
      <HideOnScroll {...props}>
@@ -59,7 +83,18 @@ function TopNav(props) {
      S O H I L
    </Typography>
    </Grid>
-  
+
+   <Box sx={{mt:3, ml:2, display: { xs: 'flex', lg: 'none' } ,justifyContent:'center',direction:"ltr"}}> 
+<Box sx={{m:"auto", display: 'flex',flexDirection:"row",justifyContent:"space-around"}}>
+
+      <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
+            <NavLink to={'/buybasket'} >
+              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'gray',fontSize:'22px'}}/>
+            </NavLink>
+              <Typography sx={{mt:1}}>  ( {cartItemsBuy.length} )</Typography>
+          </Buy>
+      </Box>       
+          </Box>
  <SearchButton/>
    </Grid>
       </Toolbar>

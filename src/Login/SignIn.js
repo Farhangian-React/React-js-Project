@@ -17,8 +17,8 @@ import TopNav from '../dashbord/TopNav';
 import Footer from '../Footer/Footer';
 import { PageTitle } from '../Title/PageTitle';
 import logimage from "../img/loge1.png";
-import logimage1 from "../img/loge2.png";
 const SignIn = () => {
+  const [isLoading,setIsLoading]=useState(true);
   const [id,setId]=useState("");
   const [password,setPassword]=useState("");
   const [error,setError]=useState({});
@@ -51,7 +51,6 @@ errmesage.password="لطفا رمز را وارد کنید";
   const handlesubmit=(e)=>{
 e.preventDefault();
 if(isvalidate()){
-//console.log("result");
 fetch("https://serverjson-project.onrender.com/users/"+id).then((res)=>{
   return res.json();
 }).then((resp)=>{
@@ -68,8 +67,10 @@ fetch("https://serverjson-project.onrender.com/users/"+id).then((res)=>{
       toast.error("  لطفا ابتدا عضو شوید ");
     }
   }
+  setIsLoading(false);
 }).catch((err)=>{
 toast.error("ورود ناموفق");
+setIsLoading(false);
 });
   }
 }
@@ -94,8 +95,8 @@ toast.error("ورود ناموفق");
        height:{xs:'100vh',lg:"85vh"},
        width:'100%'
        }} >
-      <Box maxWidth="xs"  sx={{display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:20,lg:6},
-      height:{xs:"300px",md:"600px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
+      <Box maxWidth="xs"  sx={{display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:10,lg:3},
+      height:{xs:"600px",lg:"450px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
         <Typography  sx={{fontSize:{xs:"36px",lg:"30px"},textAlign:"center",mt:{xs:1,lg:1},color:"#fff"}}>
        ورود به حساب کاربری
         </Typography>
@@ -103,7 +104,7 @@ toast.error("ورود ناموفق");
         <form  noValidate onSubmit={handlesubmit}>
           <Grid container spacing={2} sx={{mt:1}}>
             <Grid  item xs={12}   >
-            <FormLabel sx={{fontSize:"18px",fontWeight:400,mb:1,color:"#fff"}}>نام کاربری یا ایمیل</FormLabel>
+            <FormLabel sx={{fontSize:"15px",fontWeight:400,mb:1,color:"#fff"}}>نام کاربری یا ایمیل</FormLabel>
               <Input
             color="warning"
             placeholder=' نام کاربری'
@@ -118,7 +119,7 @@ toast.error("ورود ناموفق");
                 value={id}
                 onChange={(e)=> setId(e.target.value)}
                className='input'
-               sx={{fontSize:"24px"}}
+               sx={{fontSize:"18px"}}
               />
               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
@@ -126,7 +127,7 @@ toast.error("ورود ناموفق");
               </Typography>
             </Grid>
             <Grid item xs={12}>
-            <FormLabel sx={{fontSize:"18px",fontWeight:400,mb:1,color:"#fff"}}> رمز  </FormLabel>
+            <FormLabel sx={{fontSize:"15px",fontWeight:400,mb:1,color:"#fff"}}> رمز  </FormLabel>
               <Input
                 color="warning"
               placeholder="رمز"
@@ -141,7 +142,7 @@ toast.error("ورود ناموفق");
                 autoComplete="current-password"
                 value={password}
                 onChange={(e)=> setPassword(e.target.value)}
-                sx={{fontSize:"24px"}}
+                sx={{fontSize:"18px"}}
               />
                <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
                
@@ -159,19 +160,22 @@ toast.error("ورود ناموفق");
             </Grid>
        
   </Grid>
-          <Button
+ 
+ 
+          <Button 
            sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-           color:'white'},fontSize:{xs:"24px",md:"28px"},color:'#eeeeee',my:5,px:1,py:0.3,
+           color:'white'},fontSize:{xs:"24px",lg:"20px"},color:'#eeeeee',my:{xs:5,lg:2},px:1,py:0.3,
            backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
             type="submit"
            fullWidth
           >
            ورود
           </Button>
+          
           <NavLink to={"/signup"}>
           <Button
            sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-           color:'white'},fontSize:{xs:"24px",md:"28px"},color:'#eeeeee',my:0,px:1,py:0.3,
+           color:'white'},fontSize:{xs:"24px",lg:"20px"},color:'#eeeeee',my:0,px:1,py:0.3,
            backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
            
           fullWidth

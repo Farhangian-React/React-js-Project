@@ -256,7 +256,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
     </div>
     <Box sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
     {cartItems.map(i=>
-    <Box container sx={{display:'flex',flexDirection:"row",bgcolor:'white',mx:5,mb:2,mt:{xs:10,md:2},borderRadius:'10px',direction:'rtl'}}>
+    <Box container sx={{display:'flex',flexDirection:"row",bgcolor:'white',mx:5,mb:2,mt:{xs:10,lg:2},borderRadius:'10px',direction:'rtl'}}>
       <Typography variant='body1' sx={{px:2,py:1,color:"gray"}}> محصولات / ماشین لباسشویی  /
        </Typography><Typography variant='body2' sx={{py:1,color:"#353535"}}>{i.title1} </Typography>
     </Box>
@@ -676,7 +676,7 @@ direction:"rtl"
             aria-label="Products"
             variant="outlined"
             orientation='vertical'
-            sx={{mt: 2,mb:0,border:'none',alignItems:'start',height:"480px"
+            sx={{mt: 2,mb:0,border:'none',alignItems:'start',height:"500px",boxShadow:" 5px 5px 40px #dcdcdc "
             }} 
           >
             <ListItem role="none" >
@@ -688,8 +688,8 @@ direction:"rtl"
              backgroundPosition: 'center',
              backgroundSize:'cover',
              backgroundRepeat: 'no-repeat',
-             width:{xs:'150px',lg:"250"},
-             height:{xs:"150px",lg:"250"}
+             width:{xs:'150px',lg:"250px"},
+             height:{xs:"150px",lg:"250px"}
              }}
           >
           </Box>

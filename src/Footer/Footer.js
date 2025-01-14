@@ -18,8 +18,8 @@ import Divider from '@mui/material/Divider';
 export default function Footer() {
   return (
     <Box sx={{ m:1, px:5,bgcolor:"#1c1c1c" ,display:'flex',flexDirection:'column'}} >
-       <Box  sx={{ mx:1,my:2, bgcolor:"#1c1c1c" ,display:'flex',flexDirection:'row'}} >
-        <Box sx={{m:"auto", bgcolor:"#1c1c1c" ,display:'flex',flexDirection:'row',width:"65%"}}>
+       <Box  sx={{ mx:1,my:2, bgcolor:"#1c1c1c" ,display:'flex',flexDirection:{xs:"column",lg:'row'}}} >
+        <Box sx={{m:{xs:3,lg:"auto"} , bgcolor:"#1c1c1c" ,display:'flex',alignSelf:{xs:"center",lg:"center"},justifyContent:"center",flexDirection:'row',width:{xs:"90%",lg:"65%"}}}>
         <List
             aria-label="Products"
             variant="outlined"
@@ -40,23 +40,23 @@ export default function Footer() {
             </ListItem>
             <ListItem >
            
-            <NavLink  className='navlinkfooter' to={'/allrefriderators'}>  یخچال و فریزر </NavLink>
+            <NavLink  className='navlinkfooter' to={'/allrefriderators'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>  یخچال و فریزر </NavLink>
             </ListItem>
             <Divider component="li" />
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-refrigeratorsidbysid'}> ساید بای ساید </NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-refrigeratorsidbysid'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> ساید بای ساید </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-refrideratortopfreezer'}> فریزر بالا</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-refrideratortopfreezer'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> فریزر بالا</NavLink>
             </ListItem>
             <ListItem >
-               <NavLink className='navlinkwhite' to={'/shop-refrideratorbottomfreezer'} >فریزر پایین </NavLink>
+               <NavLink className='navlinkwhite' to={'/shop-refrideratorbottomfreezer'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>فریزر پایین </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-refrigeratorfrenchdoor'} > فریزر دو در</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-refrigeratorfrenchdoor'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> فریزر دو در</NavLink>
             </ListItem>
             <ListItem >
-               <NavLink className='navlinkwhite' to={'/shop-refrideratorspecializedfreezer'}>یخچال و فریزر تخصصی</NavLink>
+               <NavLink className='navlinkwhite' to={'/shop-refrideratorspecializedfreezer'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>یخچال و فریزر تخصصی</NavLink>
             </ListItem>
           </List>
     
@@ -79,20 +79,20 @@ export default function Footer() {
               </ListItemDecorator>
             </ListItem>
             <ListItem>
-            <NavLink  className='navlinkfooter' to={'/allgas'}>   اجاق گاز   </NavLink>
+            <NavLink  className='navlinkfooter' to={'/allgas'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>   اجاق گاز   </NavLink>
             </ListItem>
       <Divider component="li" />
             <ListItem>
-            <NavLink className='navlinkwhite' to={'/shop-ranges'}>  اجاق گاز و فر </NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-ranges'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>  اجاق گاز و فر </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-cooktop'}> گاز صفحه ای</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-cooktop'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> گاز صفحه ای</NavLink>
             </ListItem>
             <ListItem >
-               <NavLink className='navlinkwhite' to={'/shop-hood'} >هود </NavLink>
+               <NavLink className='navlinkwhite' to={'/shop-hood'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>هود </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-microwaves'}>مایکروویو</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-microwaves'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>مایکروویو</NavLink>
             </ListItem>
           </List>
    
@@ -115,7 +115,7 @@ export default function Footer() {
               </ListItemDecorator>
             </ListItem>
             <ListItem >
-            <NavLink  className='navlinkfooter' to={'/shop-washing-machine'}>   ماشین لباسشویی  </NavLink>
+            <NavLink  className='navlinkfooter' to={'/shop-washing-machine'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>   ماشین لباسشویی  </NavLink>
             </ListItem>
             <Divider component="li" />
             
@@ -142,11 +142,11 @@ export default function Footer() {
               </ListItemDecorator>
             </ListItem>
             <ListItem >
-            <NavLink  className='navlinkfooter' to={'/shop-dishwasher'}>ماشین ظرفشویی </NavLink>
+            <NavLink  className='navlinkfooter' to={'/shop-dishwasher'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>ماشین ظرفشویی </NavLink>
             </ListItem>
           </List>
           </Box>
-          <Box sx={{m:1,display:'flex',flexDirection:'column',width:"35%",px:2,py:7}}>
+          <Box sx={{m:1,display:'flex',flexDirection:'column',width:{xs:"90%",lg:"35%"},px:2,py:{xs:1,lg:5}}}>
             <Typography variant='body2'  sx={{color:"#8a8a8a",textAlign:"justify",mb:3}}>
             در فروشگاه 
           <NavLink className={"linkfooter"} to={"/"} >  “سهیل” </NavLink> 

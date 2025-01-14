@@ -1,12 +1,10 @@
 import React, {useContext,useState} from 'react';
-
 import {CardData} from '../../../Shared/Cart-Context';
 import {CardDataShow} from '../../../Shared/Cart-Context';
 import IconButton from '@mui/material/IconButton';
 import { Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
-
 import Box from '@mui/material/Box';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
@@ -15,7 +13,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
 import AccordionSummary from '@mui/material/AccordionSummary';
-
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 export default  function FilterRages() {
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
@@ -981,7 +979,8 @@ const handleChangeE1=(e)=>{
       >
         <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}} 
          aria-controls="panel1-content"
-         expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}> 
+         expandIcon={<ArrowDropDownIcon sx={{':hover':{color:"black"},fontSize:{xs:"18px",md:"22px"}}} />}
+       > 
           <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
             <Grid >
         <IconButton sx={{pt:0}}>

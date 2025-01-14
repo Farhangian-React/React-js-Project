@@ -7,6 +7,7 @@ import CardCookTop  from './CardCookTop';
 import Footer from '../../../Footer/Footer';
 import TopNav from '../../../dashbord/TopNav';
 import { PageTitle } from '../../../Title/PageTitle';
+import SlideOffProducts from "../../../Product/SlideOffProducts";
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -104,6 +105,7 @@ export default  function CookTops() {
         
         
    <CardCookTop itemsPerPage={6}/>
+   <SlideOffProducts/>
           <Footer/>
 </>
   );

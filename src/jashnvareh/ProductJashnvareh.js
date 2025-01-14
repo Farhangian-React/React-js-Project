@@ -16,6 +16,8 @@ import TopNav from '../dashbord/TopNav';
 import Footer from '../Footer/Footer';
 import './jashnvareh.css';
 import { PageTitle } from '../Title/PageTitle';
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 export default function ProductJashnvareh() {
   const [cartItems,setCartItems]=useContext(CartContext);
   const[datacomment,setDatacomment]=useState([]);
@@ -77,6 +79,7 @@ fetch("https://serverjson-project.onrender.com/Allcomments")
 }
  const [data,setData]=useContext(CardData);
  const [datashow,setDatashow]=useContext(CardDataShow);
+ const[isLoading,setIsLoading]=useState(true);
 
 const getData1=()=>{
  fetch('https://serverjson-project.onrender.com/Allproducts' )
@@ -85,10 +88,12 @@ const getData1=()=>{
 
   setData(result.filter(i=>i.jashnvareh !== "no" ));
   setDatashow(result.filter(i=>i.jashnvareh !== "no" ));
+  setIsLoading(false);
 console.log(data); 
  },
  (error) => {
    alert('error');
+   setIsLoading(false);
  }
  )
 }
@@ -122,19 +127,30 @@ top: "80px"}} >
 </Box>
 <Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',alignItems:"start",mr:5,ml:10,pb:3,px:0}}>
 {
+    isLoading ? 
+    <Backdrop
+    sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+    open
+  >
+  <CircularProgress color="inherit" />
+  </Backdrop>
+  :
     datashow.map((item) => (      
       <NavLink to={'/CartBuyJashnvareh'}  className={"linkss"}>
-      <Card  sx={{width:"260px",height:"360px",mx:"auto",my:3,px:1,py:2.5 }} key={item.id}>
-      <CardMedia
-      sx={{width:"90px",height:"120px",m:"auto"}}
-          component="img"
-          onClick={()=>{
-            setCartItems([item]);
-           }}
-         image={item.img}
-          alt=""
-        />
-            <CardContent sx={{height:'55px',direction:"rtl"}}>
+    <Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},height:{xs:"400px",sm:'400px',md:"450px",lg:'450px'},marginTop:'10px',marginBottom: '10px',mx:{xs:3,lg:1.5},mt:3, px:1.5,pb:1,pt:2 }} key={item.id}>
+<Box sx={{width:"35px",height:"20px",bgcolor:"#f5cd00",color:"#414141",borderRadius:"20%",px:0,py:0,mt:0.2,display:"flex",justifyContent:"center",alignItems:"center"}}>
+    <Typography sx={{fontSize:"12px",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
+    </Box>
+<CardMedia
+    component="img"
+    onClick={()=>{
+      setCartItems([item]);
+     }}
+   image={item.img}
+    alt=""
+sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
+  />
+    <CardContent sx={{border:"none",height:'30px',direction:"rtl"}}>
           <Typography gutterBottom variant="body2" component="div" sx={{textAlign:'center'}}>
             {item.title1}
           </Typography>

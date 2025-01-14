@@ -6,6 +6,7 @@ import {NavLink} from 'react-router-dom';
 import CardDishwasher from './CardDishwasher';
 import Footer from '../../Footer/Footer';
 import TopNav from '../../dashbord/TopNav';
+import SlideOffProducts from "../../Product/SlideOffProducts";
 import {PageTitle} from '../../Title/PageTitle';
 import "./Dishwasher.css";
 export default  function Dishwasher() {
@@ -51,6 +52,7 @@ export default  function Dishwasher() {
         
         
           <CardDishwasher  itemsPerPage={6}/>
+          <SlideOffProducts/>
           <Footer/>
    </>
    );}    

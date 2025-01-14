@@ -10,37 +10,12 @@ import Checkbox from '@mui/material/Checkbox';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
-import { styled,useTheme } from '@mui/material/styles';
-import Drawer from '@mui/material/Drawer';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Grid } from '@mui/material';
-const drawerWidth = 240;
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
-}));
 export default  function FilteringSpecializedFreezer() {
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
   const [checked1, setChecked1] = useState(false); 
@@ -123,6 +98,7 @@ export default  function FilteringSpecializedFreezer() {
   const [disabledH7,setDisabledH7]=useState(false);
   const [disabledH8,setDisabledH8]=useState(false);
   const [index, setIndex] = React.useState(null);
+  const [index1, setIndex1] = React.useState(null);
   
   const convertToEnglish=(str)=> {
     let englishNumber =str
@@ -1513,11 +1489,20 @@ const handleChangeE1=(e)=>{
       </Accordion>
 </Box>
 <Box component="div" sx={{width:'95%',alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>     
-<Box sx={{ px:1,alignSelf:"center",width:"100%",height:"15%",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
-      <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
-        <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
+<Accordion
+        expanded={index1 === 0}
+        onChange={(event, expanded) => {
+          setIndex1(expanded ? 0 : null);
+        }}
+        sx={{borderBottom:'1px solid black',backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mr:1}}
+      >
+        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}} 
+         aria-controls="panel1-content"
+         expandIcon={<ArrowDropDownIcon sx={{':hover':{color:"black"},fontSize:{xs:"18px",md:"22px"}}} />}> 
+          <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
             <Grid >
         <IconButton sx={{pt:0}}>
+  
       <FilterAltOutlinedIcon sx={{color:"#eeeeee"}}/>
     </IconButton>
     </Grid>
@@ -1527,45 +1512,9 @@ const handleChangeE1=(e)=>{
 </Typography>
 </Grid>
         </Grid>
-        <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"end"}}> 
-        <IconButton
-      onClick={handleDrawerOpen}
-    
-      sx={{pb:1,pt:0,  ml: 0, ...(open && { display: 'none' }) }}
-    >
-      <ExpandMoreIcon />
-    </IconButton>
-        </Grid>
-      </Grid>
-    
-     
-   
-           <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-            height:'100vh',
-           
-          },
-        }}
-        variant="persistent"
-        anchor="right"
-        open={open}
-      >
-        <DrawerHeader sx={{mt:1,display:"flex",justifyContent:"space-between",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
-        <Typography variant='h6' sx={{px:2,direction:'rtl',color:"white"}}>
-  نوع نمایش
-</Typography>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </DrawerHeader>
-
-        <Divider />
-               
+          </AccordionSummary>
+        <AccordionDetails >
+        <FormGroup>      
 
 <Accordion
         expanded={index === 0}
@@ -1742,11 +1691,10 @@ const handleChangeE1=(e)=>{
 </FormGroup>
         </AccordionDetails>
       </Accordion>
-
-
-      </Drawer>
-
-</Box>   
+      </FormGroup>
+      </AccordionDetails>
+      </Accordion>
+  
 </Box>
 </>
    )}

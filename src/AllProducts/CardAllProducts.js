@@ -15,7 +15,9 @@ import Box from '@mui/material/Box';
 import FilterBrands from './FilterBrands';
 import { NavLink } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
-function Tems({ currentItems }) {
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+function Tems({ currentItems,load }) {
   const [cartItems,setCartItems]=useContext(CartContext);
   const[datacomment,setDatacomment]=useState([]);
   const getData=()=>{
@@ -53,7 +55,7 @@ function Tems({ currentItems }) {
     justifyContent:"start",width:"100vw",p:4,bgcolor:"#eeeeee"}} >
       <Box sx={{width:{xs:"90%",lg:"30%"},display:"flex",alignSelf:{xs:"center",lg:"start"},
 height:{lg:"65vh"},
-position:"sticky",
+position:{xs:"static",lg:"sticky"},
 top: "80px",
 
 }}>
@@ -65,12 +67,18 @@ top: "80px",
 </Typography>
 </Box>
 <Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:1.5,pb:3,px:0}}>
-
-  {currentItems &&
+  {
+  load ? 
+  <Backdrop
+  sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+  open
+>
+<CircularProgress color="inherit" />
+</Backdrop>
+:
+  currentItems &&
     currentItems.map((item) => (
-    
       <NavLink to={'/cartsearch'}  className={"linkss"}> 
-     
 <Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},height:{xs:"370px",sm:'370px',md:"420px",lg:'420px'},marginTop:'10px',marginBottom: '10px',mx:0.8,mt:3, px:1.5,pb:1,pt:2 }} key={item.id}>
 <CardMedia
     component="img"
@@ -126,16 +134,19 @@ sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
 export default function CardAllProducts({ itemsPerPage }) {
 const [data,setData]=useContext(CardData);
 const [datashow,setDatashow]=useContext(CardDataShow);
-
+const[isLoading,setIsLoading]=useState(true);
 const getData=()=>{
 fetch('https://serverjson-project.onrender.com/Allproducts' )
 .then(res => res.json())
 .then((result)=> {
   setData(result);
  setDatashow([...data]);
+ setIsLoading(false);
+
 },
 (error) => {
   alert('error');
+  setIsLoading(false);
 }
 )
 
@@ -157,7 +168,7 @@ const handlePageClick = (event) => {
 };
 return (
   <>
-    <Tems currentItems={currentItems}  />
+    <Tems currentItems={currentItems}  load={isLoading} />
     <ReactPaginate
       breakLabel="..."
       nextLabel=" >>"

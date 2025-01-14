@@ -31,13 +31,14 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-slideshow-image": "^4.2.1",
+    "react-spinners": "^0.15.0",
     "react-toastify": "^10.0.5",
     "register-service-worker": "^1.7.2",
     "styled-components": "^5.3.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "server":"json-server --watch data/db.json --port 3000 ",
+    "server": "json-server --watch data/db.json --port 3000 ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -43,7 +43,7 @@ import './CartBuy.css';
 import { Textarea } from '@mui/joy';
 import { useEffect } from 'react';
 import SlideSimilarRef from "./SlideSimilarRef";
-const drawerWidth = 440;
+
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -206,6 +206,7 @@ useEffect(()=>{
     return console.log(cartItems);
   })  
   },[cartItems])
+  
   useEffect(()=>{ 
     offrefprice();
   },[])
@@ -233,6 +234,7 @@ return console.log(cartItems);
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
   const addToCart=(p)=>{ 
     setCartItems([p]);  
    if(cartItemsBuy.includes(p)){
@@ -262,7 +264,7 @@ return console.log(cartItems);
     </div>
     <Box sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
     {cartItems.map(i=>
-    <Box container sx={{display:'flex',flexDirection:"row",bgcolor:'white',mx:5,mb:2,mt:{xs:10,md:2},borderRadius:'10px',direction:'rtl'}}>
+    <Box container sx={{display:'flex',flexDirection:"row",bgcolor:'white',mx:5,mb:2,mt:{xs:10,lg:2},borderRadius:'10px',direction:'rtl'}}>
       <Typography variant='body1' sx={{px:2,py:1,color:"gray"}}> محصولات / یخچال و فریزر /
        </Typography><Typography variant='body2' sx={{py:1,color:"#353535"}}>{i.title1} </Typography>
     </Box>
@@ -314,12 +316,12 @@ return console.log(cartItems);
         <Drawer
        sx={{
          position:"absolute",
-         width: drawerWidth,
-         height:"auto",
+         width: {xs:"300px",lg:"380px"},
          flexShrink: 0,
          '& .MuiDrawer-paper': {
-           width: drawerWidth,
-           boxSizing: 'border-box', 
+          width: {xs:"300px",lg:"380px"},
+           boxSizing: 'border-box',
+           height:"100vh", 
          },
        }}
        variant="persistent"
@@ -668,16 +670,28 @@ direction:"rtl"
       <Box  sx={{ml:{xs:3},display:'flex',flexWrap:'wrap',justifyContent:'center'}}>  
       {i.Prop.map(j=>
          <Grid xs={6} md={3} sx={{display:"flex",justifyContent:"center",alignSelf:"center",px:1}}>  
-       <List
-           aria-label="Products"
-           variant="outlined"
-           orientation='vertical'
-           sx={{mt: 2,mb:0,border:'none',alignItems:'start',height:"480px"
-           }} 
-         >
-           <ListItem role="none" >
-          <img src={j.Fimg} width={250} height={250} alt=''/> 
-           </ListItem>
+         <List
+            aria-label="Products"
+            variant="outlined"
+            orientation='vertical'
+            sx={{mt: 2,mb:0,border:'none',alignItems:'start',height:"500px",boxShadow:" 5px 5px 40px #dcdcdc "
+            }} 
+          >
+            <ListItem role="none" >
+            <Box
+             sx={{
+              display:'flex',
+              justifyContent:'center',
+             backgroundImage: `url(${j.Fimg})`,
+             backgroundPosition: 'center',
+             backgroundSize:'cover',
+             backgroundRepeat: 'no-repeat',
+             width:{xs:'150px',lg:"250px"},
+             height:{xs:"150px",lg:"250px"}
+             }}
+          >
+          </Box>
+            </ListItem>
            <ListItem role="none">
            <Typography sx={{mt:0,fontSize:{xs:'16px',md:'20px'},fontWeight:'600'}}>{j.Ftitle1} </Typography>
            </ListItem>

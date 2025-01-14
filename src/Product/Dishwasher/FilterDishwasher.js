@@ -10,6 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 import IconButton from '@mui/material/IconButton';
@@ -1083,7 +1084,8 @@ return (
         }}
         sx={{borderBottom:'1px solid black',backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mr:1}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>
+        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  
+         expandIcon={<ArrowDropDownIcon sx={{':hover':{color:"black"},fontSize:{xs:"18px",md:"22px"}}} />}>
 
         <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
         <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>

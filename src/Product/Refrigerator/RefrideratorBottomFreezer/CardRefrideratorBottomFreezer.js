@@ -14,7 +14,9 @@ import Box from '@mui/material/Box';
 import FilteringBottomFreezer from './FilteringBottomFreezer';
 import "../Refrigerator.css";
 import Rating from '@mui/material/Rating';
-function Tems({ currentItems }) {
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+function Tems({ currentItems,load }) {
     const [cartItems,setCartItems]=useContext(CartContext);
     const[datacomment,setDatacomment]=useState([]);
     const convertToPersian=(str)=> {
@@ -85,10 +87,17 @@ top: "80px",
 </Typography>
 </Box>
 <Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',mx:0,pb:3,px:0}}>
-
-  {currentItems &&
+  {
+    load ? 
+    <Backdrop
+    sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+    open
+  >
+  <CircularProgress color="inherit" />
+  </Backdrop>
+  :
+  currentItems &&
     currentItems.map((item) => (
-    
       <NavLink to={'/cartbuyrefrigerator'}  className={"linkss"}> 
      
      <Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},
@@ -162,18 +171,19 @@ export default function CardRefrideratorBottomFreezer({ itemsPerPage }) {
   
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
-
+  const[isLoading,setIsLoading]=useState(true);
  const getData=()=>{
   fetch('https://serverjson-project.onrender.com/Allproducts' )
   .then(res => res.json())
   .then((result)=> {
   setData(result.filter(i=>i.product === "Ref" && i.type === "BottomFreezer"));
    setDatashow(result.filter(i=>i.product === "Ref" && i.type === "BottomFreezer" ));
-  
+  setIsLoading(false);
   
   },
   (error) => {
     alert('error');
+    setIsLoading(false);
   }
   )
  }
@@ -194,7 +204,7 @@ export default function CardRefrideratorBottomFreezer({ itemsPerPage }) {
   };
   return (
     <>
-      <Tems currentItems={currentItems}  />
+      <Tems currentItems={currentItems} load={isLoading}  />
       <ReactPaginate
         breakLabel="..."
         nextLabel=" >>"

@@ -106,17 +106,17 @@ const handleInputChange = (e) => {
   setFilteredUsers(filteredItems);
 }
    return (
-<>
-<Box sx={{mt:3, ml:2, display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu /> 
+<> 
 
-               
+<Box sx={{mt:3, ml:2, display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu />   
           </Box>
+         
         <Box sx={{mt: 3,py:1,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between'}}>  
               <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
-              <NavLink to={'/buybasket'} >
-              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'white',fontSize:'22px'}}/>
+            <NavLink to={'/buybasket'} >
+              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'gray',fontSize:'22px'}}/>
             </NavLink>
-            <Typography sx={{mt:1}}>Quote ( {cartItemsBuy.length} )</Typography>
+              <Typography sx={{mt:1}}>  ( {cartItemsBuy.length} )</Typography>
           </Buy>
           <Search>
             <SearchIconWrapper>
@@ -157,7 +157,7 @@ const handleInputChange = (e) => {
         }
       />
    </Box>
-   <Box  sx={{bgcolor:"#f1f1f1",display:'flex' ,flexWrap:'wrap' ,overflow:"auto",justifyContent:'end',flexDirection:"row",mx:3,pb:3}}>
+   <Box  sx={{bgcolor:"#f1f1f1",display:'flex' ,flexWrap:'wrap' ,overflowY:"scroll",overflowX:"hidden",justifyContent:'center',flexDirection:"row",mx:3,pb:3}}>
   
    
    {filteredUsers.map((item) => (

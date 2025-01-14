@@ -7,6 +7,7 @@ import CardRefrideratorTopFreezer  from './CardRefrideratorTopFreezer';
 import Footer from '../../../Footer/Footer';
 import TopNav from '../../../dashbord/TopNav';
 import { PageTitle } from '../../../Title/PageTitle';
+import SlideOffProducts from "../../../Product/SlideOffProducts";
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -96,15 +97,15 @@ export default  function RefrideratorTopFreezer() {
             <NavLink className='navlinkin' to={'/shop-washing-machine'}>ماشین لباسشویی</NavLink>
             </ListItem>
             <ListItem role="none">
-            <NavLink className='navlinkin' to={'/shop-gas-cooker'}>پخت و پز  </NavLink>
+            <NavLink className='navlinkin' to={'/allgas'}>پخت و پز  </NavLink>
             </ListItem>
             <ListItem role="none">
                <NavLink className='navlinkin '  to={'/shop-dishwasher'} >ماشین ظرفشویی</NavLink>    
             </ListItem>
           </List>
         </Box>
-        
    <CardRefrideratorTopFreezer itemsPerPage={5}/>
+   <SlideOffProducts/>
           <Footer/>
 </>
   );

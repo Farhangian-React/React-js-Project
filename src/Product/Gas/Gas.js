@@ -10,6 +10,7 @@ import { PageTitle } from '../../Title/PageTitle';
 import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import "../Dishwasher/Dishwasher.css";
+import SlideOffProducts from "../../Product/SlideOffProducts";
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default  function Gas() {
@@ -103,6 +104,7 @@ export default  function Gas() {
         </Box>
         
    <CardGas itemsPerPage={8}/>
+   <SlideOffProducts/>
           <Footer/>
 </>
   );

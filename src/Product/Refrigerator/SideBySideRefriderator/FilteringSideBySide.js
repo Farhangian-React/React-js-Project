@@ -10,6 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 import IconButton from '@mui/material/IconButton';
@@ -1501,7 +1502,7 @@ const handleChangeE1=(e)=>{
       >
         <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}} 
          aria-controls="panel1-content"
-         expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}> 
+         expandIcon={<ArrowDropDownIcon sx={{':hover':{color:"black"},fontSize:{xs:"18px",md:"22px"}}} />}> 
           <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
             <Grid >
         <IconButton sx={{pt:0}}>

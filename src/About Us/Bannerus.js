@@ -10,7 +10,7 @@ export default function Bannerus() {
   }
   return (
     <>
-    <Box className='banner' sx={{height:{xs:"60vh",lg:"100vh"},mt:{xs:10,lg:0}}}>
+    <Box className='banner' sx={{height:{xs:"40vh",lg:"100vh"},mt:{xs:10,lg:0}}}>
     <svg width='100%' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#f2d7a2" fill-opacity="0.8" d="M0,0L720,256L1440,96L1440,0L720,0L0,0Z"></path>
         <text className='text' font-size="32"   x="1050" y="100" fill='#282828' > تفاوت خرید را در دستگاه های سهیل تجربه کنید</text>

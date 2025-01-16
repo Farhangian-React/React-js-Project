@@ -15,7 +15,7 @@ function AboutSnova() {
     <Box sx={{width:'100%' ,height:'100 vh', bgcolor:"white"}}>
       <Bannerus/> 
     </Box>
-      <Box  className='sheetus1' sx={{width:'100%', bgcolor:'#f9f9f2',height:'100vh'}}>
+      <Box  className='sheetus1' sx={{width:'100%', bgcolor:'#f9f9f2',height:{xs:"50vh",lg:'70vh'}}}>
 <Sheetus1/>
     </Box>
     <Box  className='sheetus2' sx={{width:'100%', bgcolor:'#f9f9f2',height:'auto'}}>

@@ -55,8 +55,8 @@ width: 150px;
     align-self: center;
     animation: fade linear;
     animation-timeline: view();
-    animation-range-start:100px ;
-    animation-range-end: 800px;
+    animation-range-start:200px ;
+    animation-range-end: 600px;
 }
 @keyframes fade{
     from{scale: 0.6;opacity: 0.2;}

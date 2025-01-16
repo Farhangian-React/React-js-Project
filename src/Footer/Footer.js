@@ -35,7 +35,7 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={Refrigeratoricon} width={30} alt='' />
+              <img src={Refrigeratoricon} width={40} alt='' />
               </ListItemDecorator>
             </ListItem>
             <ListItem >
@@ -75,7 +75,7 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={gasicon} width={30} alt='' />
+              <img src={gasicon} width={40} alt='' />
               </ListItemDecorator>
             </ListItem>
             <ListItem>
@@ -111,7 +111,7 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={washingmachins} width={30} alt='' />
+              <img src={washingmachins} width={40} alt='' />
               </ListItemDecorator>
             </ListItem>
             <ListItem >
@@ -138,7 +138,7 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={dishwashericon} width={30}  alt=''/>
+              <img src={dishwashericon} width={40}  alt=''/>
               </ListItemDecorator>
             </ListItem>
             <ListItem >
@@ -154,16 +154,20 @@ export default function Footer() {
             ماشین ظرفشویی و لوازم پخت و پز را با سهولت کامل خریداری کنید. قیمت رقابتی، فروش اقساطی، ارسال سریع به تمام نقاط ایران، تنوع بالای محصولات، فروشگاه “سهیل” را به یکی از معتبرترین فروشگاه آنلاین در ایران تبدیل نموده است. همکاران ما در  “سهیل” همواره سعی نموده‌اند اطلاعات کامل و دقیقی را نسبت به محصولات، شیوه‌های ارسال، نحوه‌ی پرداخت، گارانتی محصولات و… در اختیار مشتریان عزیز قرار دهند و خط مشی ما، جلب رضایت مشتری در تمامی مراحل خرید آنلاین است.
             </Typography>
             <Box  sx={{display:'flex',flexDirection:"row",alignSelf:"start"}}>
-     <PlaceOutlinedIcon sx={{pr:0,pt:{xs:2,lg:1},color:"#ecd2a0",fontSize:"20px"}}/> 
-      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"12px"}}> دفتر مرکزی: تهران، سعادت آباد، میدان کتاب، بلوار کوهستان، نبش گل‌گشت، پلاک 2/1</Typography>
+     <PlaceOutlinedIcon sx={{pr:0,pt:{xs:2,lg:1},color:"#ecd2a0",fontSize:"24px"}}/> 
+      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"14px"}}> دفتر مرکزی: تهران، سعادت آباد، میدان کتاب، بلوار کوهستان، نبش گل‌گشت، پلاک 2/1</Typography>
     </Box>
     <Box  sx={{display:'flex',flexDirection:"row",alignSelf:"start"}}>
-     <PhoneEnabledOutlinedIcon sx={{pr:0,pt:1,color:"#ecd2a0",fontSize:"20px"}}/> 
-      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"12px"}}>90008929 (روزهای کاری ساعت 8:30 الی 17)</Typography>
+     <PhoneEnabledOutlinedIcon sx={{pr:0,pt:1,color:"#ecd2a0",fontSize:"24px"}}/> 
+      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"14px"}}> <NavLink className={"linkacont"}> 
+09300318282</NavLink> </Typography>
     </Box>
     <Box  sx={{display:'flex',flexDirection:"row",alignSelf:"start"}}>
-     <EmailOutlinedIcon sx={{pr:0,pt:1,color:"#ecd2a0",fontSize:"20px"}}/> 
-      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"12px"}}> info@sohil.com</Typography>
+     <EmailOutlinedIcon sx={{pr:0,pt:1,color:"#ecd2a0",fontSize:"24px"}}/>
+     <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"14px"}}>  <NavLink className={"linkacont"}> 
+elhamfarhangian6@gmail.com </NavLink> </Typography> 
+      
+     
     </Box>
             </Box>
             </Box>
@@ -202,7 +206,7 @@ export default function Footer() {
             </List>
           </Box>
       <Box sx={{bgcolor:'#1c1c1c',mb:3,mt:0}}>
-        <Typography sx={{textAlign:'center',fontSize:"14px",color:'#8a8a8a',mt:8}}>
+        <Typography sx={{textAlign:'center',fontSize:"12px",color:'#8a8a8a',mt:8}}>
            © 1384-1402 Copyright:سهیل -کلیه حقوق محفوظ است
         </Typography>
       </Box>

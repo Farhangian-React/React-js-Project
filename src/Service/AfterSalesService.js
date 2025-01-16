@@ -94,11 +94,9 @@ const scrollToElement8 = () => {
        backgroundSize:'cover',
        backgroundRepeat: 'no-repeat',
        width:'100%',
-       height:"100vh"
+       height:{xs:"50vh",lg:"90vh"}
        }} >
-         
-
-       
+    
          <Box  sx={{ display:"flex",flexDirection:"row",mx:5,width:{xs:"100%",lg:"80%"},alignSelf:"end",justifyContent:"space-between",
          height:'170px',bgcolor:"#fff",mb:5,px:0,py:0}}>
         <Button onClick={scrollToElement1} sx={{width:"10%",mr:0.5,ml:0.2,display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>

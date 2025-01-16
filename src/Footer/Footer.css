@@ -89,3 +89,14 @@
     text-decoration: none;
     font-size: smaller;
 }
+
+.linkacont{
+    color: #8a8a8a;
+    text-decoration: none;
+    font-size: smaller;
+}
+.linkacont:hover{
+    color: #ecd2a0;
+    text-decoration: none;
+
+}

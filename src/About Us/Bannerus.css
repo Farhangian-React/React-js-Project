@@ -21,7 +21,8 @@ height: 50vh;
     background-size: cover;
 }
 .boxbanner{
-    width: 500px;
+  width: 600px;
+  min-height: auto;
 }
 @media only screen and (max-width: 768px){
     .boxbanner{ 

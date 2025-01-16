@@ -30,15 +30,16 @@ const [cartshow,setCartshow]=useState([]);
 
   const handelclick1=()=>{
    
-    setCartshow(cartimage.filter(q=> q.id1 ===1))
+    setCartshow(cartimage.filter(q=> q.id1 ==="1"));
+  
   }
   const handelclick2=()=>{
     
-    setCartshow(cartimage.filter(q=> q.id1 ===2))
+    setCartshow(cartimage.filter(q=> q.id1 ==="2"))
   }
   const handelclick3=()=>{
    
-    setCartshow(cartimage.filter(q=> q.id1 ===3))
+    setCartshow(cartimage.filter(q=> q.id1 ==="3"))
   }
   const [itemOffset, setItemOffset] = useState(0);
   const pageCount = Math.ceil(cartshow.length / itemsPerPage);
@@ -50,16 +51,16 @@ const [cartshow,setCartshow]=useState([]);
   return (
     <>
     <Box  sx={{ backgroundImage:"linear-gradient(to bottom ,#f9f0de,#565452)",
-   borderTopLeftRadius: "150px",borderTopRightRadius: "30px",height:'120px',my:{xs:6,md:3},mx:3,display:"flex",justifyContent:"start",alignSelf:"end",
+   borderTopLeftRadius: "150px",borderTopRightRadius: "30px",height:'120px',my:{xs:10,lg:3},mx:3,display:"flex",justifyContent:"start",alignSelf:"end",
 }}>
    <Typography variant='h5' sx={{px:4,my:0,pt:2,color:'#4f3b02',textAlign:'right'}} >
   به سبک خودت زندگی کن 
-  <Typography  sx={{fontSize:{xs:"14px",md:"18px"},pt:2,pb:0,my:0,color:'black',lineHeight:'0'}} > مطالب به روز و خواندنی در مورد هر آنچه که با آن زندگی می کنید
+  <Typography  sx={{fontSize:{xs:"14px",lg:"18px"},pt:2.5,pb:0,my:0,color:'#282828',lineHeight:'0'}} > مطالب به روز و خواندنی در مورد هر آنچه که با آن زندگی می کنید
     </Typography>
    </Typography>
 </Box>
 <Grid container  sx={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
-  <Grid xs={6} md={4} className='grid' 
+  <Grid xs={5} lg={4} className='grid' 
    component="a"
    href="/water-temperature"
    sx={{
@@ -77,7 +78,7 @@ const [cartshow,setCartshow]=useState([]);
    
   }}
     >
-<Box className="gerdalia"><NavLink className='linka'  to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+<Box className="gerdalia"><NavLink className='linka'  to={'/ProductOff'} > اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف
         </NavLink></Box>
 
    <Box className='type2' >
@@ -85,7 +86,7 @@ const [cartshow,setCartshow]=useState([]);
    بیشتر بخوانید...
   </Typography></Box>
   </Grid>
-  <Grid xs={6} md={3} 
+  <Grid xs={5} lg={3} 
   className='grid' 
   component="a"
   href="allrefriderators"
@@ -103,7 +104,7 @@ const [cartshow,setCartshow]=useState([]);
    m:2
   }}
   >
- <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+ <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > ویژگی های لوازم خانگی دوست دار محیط زیست
         </NavLink></Box>
 
         <Box className='type2' >
@@ -111,7 +112,7 @@ const [cartshow,setCartshow]=useState([]);
    بیشتر بخوانید...
   </Typography></Box>
 </Grid>
-  <Grid xs={6} md={3} 
+  <Grid xs={5} lg={3} 
   className='grid' 
   component="a"
   href="allrefriderators"
@@ -127,7 +128,7 @@ const [cartshow,setCartshow]=useState([]);
     overflow:"hidden",
     borderRadius:"10px",
    m:2}}>
-  <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+  <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > نور آبی نمایشگرهای دیجیتالی و اثرات مخرب آن  
         </NavLink></Box>
 
    <Box className='type2' >
@@ -135,7 +136,7 @@ const [cartshow,setCartshow]=useState([]);
    بیشتر بخوانید...
   </Typography></Box>
   </Grid>
-  <Grid xs={6} md={3} 
+  <Grid xs={5} lg={3} 
   className='grid' 
   component="a"
   href="allrefriderators"
@@ -151,7 +152,7 @@ const [cartshow,setCartshow]=useState([]);
     overflow:"hidden",
     borderRadius:"10px",
    m:2}}>
-   <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+   <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > طرز تهیه آجیل بو داده برای شب یلدا  
         </NavLink></Box>
 
    <Box className='type2' >
@@ -163,7 +164,7 @@ const [cartshow,setCartshow]=useState([]);
 className='grid' 
 component="a"
 href="allrefriderators"
-xs={6} md={4}
+xs={5} lg={4}
 sx={{
   position:"relative",
    display:'flex',
@@ -176,7 +177,7 @@ sx={{
   overflow:"hidden",
   borderRadius:"10px",
  m:2}}>
-  <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+  <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > محافظت از لوازم برقی در هنگام رعد و برق  
         </NavLink></Box>
 
    <Box className='type2' >
@@ -184,9 +185,9 @@ sx={{
    بیشتر بخوانید...
   </Typography></Box>
 </Grid>
-<Grid className='grid' 
+<Grid xs={5} lg={3} className='grid' 
    component="a"
-   href="allrefriderators" xs={6} md={3}
+   href="allrefriderators"
    sx={{
     position:"relative",
      display:'flex',
@@ -199,7 +200,7 @@ sx={{
     overflow:"hidden",
     borderRadius:"10px",
    m:2}}>
- <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > <Typography className='type1' variant='body1' sx={{textAlign:"start",color:"#201e1c",fontWeight:"400",pr:0}}>   اهمیت دمای آب لباسشویی برای شستشوی لباس های مختلف</Typography>
+ <Box className="gerdalia"><NavLink className='linka' to={'/ProductOff'} > ساده‌ترین راه‌ها برای داشتن منزلی با دکوراسیون پاییزی 
         </NavLink></Box>
 
    <Box className='type2' >

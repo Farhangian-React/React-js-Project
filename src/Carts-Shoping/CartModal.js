@@ -59,20 +59,20 @@ return(persianNumber);
 
   return (
     <>
-<Box sx={{bgcolor:"#f1f1f1",display:"flex",flexDirection:"column",height:"100vh",justifyContent:"start",mb:"auto"}}>  
+<Box sx={{bgcolor:"#f1f1f1",display:"flex",flexDirection:"column",height:"auto",justifyContent:"start",mb:"auto"}}>  
 {cartItemsBuy.map((item) => (
     <Grid xs={12} sx={{bgcolor:"white",display:"flex",flexDirection:"row",justifyContent:"space-around",m:1,p:1}} >
     <Grid xs={4} sx={{alignSelf:"center"}} >
     <img src={item.img} width={120} alt=''/>
     </Grid>
         <Grid xs={4} sx={{alignSelf:"center"}}>
-            <Typography  sx={{fontSize:{xs:"22px",lg:"16px"}}}>
+            <Typography  sx={{fontSize:{xs:"18px",lg:"16px"}}}>
             {item.title1}
             </Typography>
         </Grid>
         <Grid xs={4} sx={{direction:"rtl",display:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
         
-          <Typography  sx={{fontSize:{xs:"22px",lg:"16px"},textAlign:"center",alignSelf:"center",color:"#fa003f"}}  >
+          <Typography  sx={{fontSize:{xs:"18px",lg:"16px"},textAlign:"center",alignSelf:"center",color:"#fa003f"}}  >
           {addCommas(convertToPersian((convertToEnglish(item.pricenum1)-(convertToEnglish(item.pricenum1)*item.off / 100))+''))} تومان 
          </Typography>
          
@@ -80,13 +80,15 @@ return(persianNumber);
     </Grid>
 
 ))}
-  <NavLink to={'/buybasket'}  className="linkss"><Button size='medium'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},
+<Grid sx={{my:5}}>
+  <NavLink to={'/buybasket'}  className="linkss"><Button  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",
-      color:'white',borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",mx:6,px:1,mb:2,width:"80%"}}> ثبت سفارش</Button></NavLink>
-       <NavLink to={'/'}  className="linkss">  <Button size='medium'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
+      color:'white',borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",mx:4,px:1,mb:2,width:"80%",fontSize:"18px"}}> ثبت سفارش</Button></NavLink>
+       <NavLink to={'/'}  className="linkss">  <Button  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
        color:'white'},backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",color:'white',
-       borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",mx:6,px:1,mb:2,width:"80%"}}> بازگشت به صفحه اصلی </Button></NavLink>
-  </Box>
+       borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",mx:4,px:1,mb:2,width:"80%",fontSize:"18px"}}> بازگشت به صفحه اصلی </Button></NavLink>
+</Grid> 
+ </Box>
     
     </>
   )

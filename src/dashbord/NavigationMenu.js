@@ -161,31 +161,31 @@ const Refrigerators  = React.forwardRef(({ focusNext, focusPrevious, ...props },
             
           >
             <ListItem  >
-            <NavLink className='navlink' to={"/shop-refrigeratorfrenchdoor" } {...getTargetProps(0)}>  یخچال های دو در </NavLink>
+            <NavLink className='navlink1' to={"/shop-refrigeratorfrenchdoor" } {...getTargetProps(0)}>  یخچال های دو در </NavLink>
              
             </ListItem>
             <ListItem >
            
               
-                <NavLink className='navlink' to={'/shop-refrigeratorsidbysid'} {...getTargetProps(1)}> یخچال های ساید بای ساید  </NavLink> 
+                <NavLink className='navlink1' to={'/shop-refrigeratorsidbysid'} {...getTargetProps(1)}> یخچال های ساید بای ساید  </NavLink> 
              
             </ListItem>
             <ListItem >
            
              
-            <NavLink className='navlink' to={'/shop-refrideratorbottomfreezer'} {...getTargetProps(2)}> یخچال و فریزر پایین  </NavLink>
+            <NavLink className='navlink1' to={'/shop-refrideratorbottomfreezer'} {...getTargetProps(2)}> یخچال و فریزر پایین  </NavLink>
             
             </ListItem>
             <ListItem >
          
             
-            <NavLink className='navlink' to={"/shop-refrideratortopfreezer"} {...getTargetProps(3)}> یخچال و فریزر بالا  </NavLink>
+            <NavLink className='navlink1' to={"/shop-refrideratortopfreezer"} {...getTargetProps(3)}> یخچال و فریزر بالا  </NavLink>
             
             </ListItem>
             <ListItem  >
             
               
-               <NavLink className='navlink' to={'/shop-refrideratorspecializedfreezer'} {...getTargetProps(4)}>  یخچال و فریزر تخصصی </NavLink>  
+               <NavLink className='navlink1' to={'/shop-refrideratorspecializedfreezer'} {...getTargetProps(4)}>  یخچال و فریزر تخصصی </NavLink>  
               
             </ListItem>
            
@@ -290,25 +290,25 @@ const Cooking  = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
             
           >
             <ListItem >
-            <NavLink className='navlink' to={'/shop-ranges'} {...getTargetProps(0)}> اجاق گاز و فر</NavLink>
+            <NavLink className='navlink1' to={'/shop-ranges'} {...getTargetProps(0)}> اجاق گاز و فر</NavLink>
              
             </ListItem>
             <ListItem>
            
               
-                <NavLink className='navlink' to={'/shop-cooktop'} {...getTargetProps(1)}> گاز صفحه ای</NavLink> 
+                <NavLink className='navlink1' to={'/shop-cooktop'} {...getTargetProps(1)}> گاز صفحه ای</NavLink> 
              
             </ListItem>
             <ListItem  >
            
              
-            <NavLink className='navlink' to={'/shop-Hood'} {...getTargetProps(2)}> هود   </NavLink>
+            <NavLink className='navlink1' to={'/shop-Hood'} {...getTargetProps(2)}> هود   </NavLink>
             
             </ListItem>
             <ListItem  >
          
             
-            <NavLink className='navlink' to={'/shop-microwaves'}  {...getTargetProps(3)}> مایکروویو </NavLink>
+            <NavLink className='navlink1' to={'/shop-microwaves'}  {...getTargetProps(3)}> مایکروویو </NavLink>
             
             </ListItem>
           </List>
@@ -417,7 +417,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
               <img src={Refrigeratoricon} width={20} alt='img1' />
               </ListItemDecorator>
               
-                 <NavLink className='navlink' to={"/allrefriderators" } {...getTargetProps(0)}>  <Refrigerators/> </NavLink>
+                 <NavLink className='navlink1' to={"/allrefriderators" } {...getTargetProps(0)}>  <Refrigerators/> </NavLink>
              
             </ListItem>
             <ListItem>
@@ -425,7 +425,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
               <img src={washingmachins} width={20} alt='img2' />
               </ListItemDecorator>
               
-                <NavLink className='navlink' to={'/shop-washing-machine'} {...getTargetProps(1)}>ماشین لباسشویی</NavLink> 
+                <NavLink className='navlink1' to={'/shop-washing-machine'} {...getTargetProps(1)}>ماشین لباسشویی</NavLink> 
              
             </ListItem>
             <ListItem >
@@ -433,7 +433,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
               <img src={gasicon} width={20} alt='img3' />
               </ListItemDecorator>
              
-            <NavLink className='navlink' to={'/allgas'} {...getTargetProps(2)}><Cooking/> </NavLink>
+            <NavLink className='navlink1' to={'/allgas'} {...getTargetProps(2)}><Cooking/> </NavLink>
             
             </ListItem>
             <ListItem  >
@@ -441,7 +441,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
               <img src={dishwashericon} width={20} alt='img4' />
               </ListItemDecorator>
               
-               <NavLink className='navlink' to={'/shop-dishwasher'} {...getTargetProps(4)}>ماشین ظرفشویی</NavLink>  
+               <NavLink className='navlink1' to={'/shop-dishwasher'} {...getTargetProps(4)}>ماشین ظرفشویی</NavLink>  
               
             </ListItem>
           </List>
@@ -531,14 +531,14 @@ const Shows = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) => 
            
             <ListItem>
               
-              <NavLink  className='navlink' to={'/jashnehtabestane'}  {...getTargetProps(0)}>
+              <NavLink  className='navlink1' to={'/jashnehtabestane'}  {...getTargetProps(0)}>
                 جشنواره زمستانه  
               </NavLink >            
              
             </ListItem>
             <ListItem>
              
-              <NavLink  className='navlink' to={'/karttakhfif'}  {...getTargetProps(1)}>
+              <NavLink  className='navlink1' to={'/karttakhfif'}  {...getTargetProps(1)}>
                 فعال سازی کارت تخفیف
               </NavLink >  
              
@@ -631,17 +631,17 @@ const Servis = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) =>
           >
        
             <ListItem >
-              <NavLink className='navlink' to={'/AfterSalesService'}  {...getTargetProps(0)}>
+              <NavLink className='navlink1' to={'/AfterSalesService'}  {...getTargetProps(0)}>
                 خدمات پس از فروش
               </NavLink>
             </ListItem>
             <ListItem >
-              <NavLink className='navlink' to={'/ContactUsForm'}  {...getTargetProps(1)}>
+              <NavLink className='navlink1' to={'/ContactUsForm'}  {...getTargetProps(1)}>
                 فرم تماس با ما
               </NavLink>
             </ListItem>
             <ListItem >
-              <NavLink className='navlink' to={'/PopularQuestions'}  {...getTargetProps(2)}>
+              <NavLink className='navlink1' to={'/PopularQuestions'}  {...getTargetProps(2)}>
                 سوالات متداول
               </NavLink>
             </ListItem>

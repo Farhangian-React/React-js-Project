@@ -35,28 +35,28 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={Refrigeratoricon} width={40} alt='' />
+              <img src={Refrigeratoricon} width={50} alt='' />
               </ListItemDecorator>
             </ListItem>
             <ListItem >
            
-            <NavLink  className='navlinkfooter' to={'/allrefriderators'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>  یخچال و فریزر </NavLink>
+            <NavLink  className='navlinkfooter' to={'/allrefriderators'} sx={{fontSize:{xs:"22px",lg:"20px"}}}>  یخچال و فریزر </NavLink>
             </ListItem>
             <Divider component="li" />
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-refrigeratorsidbysid'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> ساید بای ساید </NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-refrigeratorsidbysid'} sx={{fontSize:{xs:"20px",lg:"18px"}}}> ساید بای ساید </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-refrideratortopfreezer'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> فریزر بالا</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-refrideratortopfreezer'} sx={{fontSize:{xs:"20px",lg:"18px"}}}> فریزر بالا</NavLink>
             </ListItem>
             <ListItem >
-               <NavLink className='navlinkwhite' to={'/shop-refrideratorbottomfreezer'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>فریزر پایین </NavLink>
+               <NavLink className='navlinkwhite' to={'/shop-refrideratorbottomfreezer'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>فریزر پایین </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-refrigeratorfrenchdoor'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> فریزر دو در</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-refrigeratorfrenchdoor'} sx={{fontSize:{xs:"20px",lg:"18px"}}}> فریزر دو در</NavLink>
             </ListItem>
             <ListItem >
-               <NavLink className='navlinkwhite' to={'/shop-refrideratorspecializedfreezer'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>یخچال و فریزر تخصصی</NavLink>
+               <NavLink className='navlinkwhite' to={'/shop-refrideratorspecializedfreezer'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>یخچال و فریزر تخصصی</NavLink>
             </ListItem>
           </List>
     
@@ -75,24 +75,24 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={gasicon} width={40} alt='' />
+              <img src={gasicon} width={50} alt='' />
               </ListItemDecorator>
             </ListItem>
             <ListItem>
-            <NavLink  className='navlinkfooter' to={'/allgas'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>   اجاق گاز   </NavLink>
+            <NavLink  className='navlinkfooter' to={'/allgas'} sx={{fontSize:{xs:"22px",lg:"20px"}}}>   اجاق گاز   </NavLink>
             </ListItem>
       <Divider component="li" />
             <ListItem>
-            <NavLink className='navlinkwhite' to={'/shop-ranges'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>  اجاق گاز و فر </NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-ranges'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>  اجاق گاز و فر </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-cooktop'} sx={{fontSize:{xs:"18px",lg:"16px"}}}> گاز صفحه ای</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-cooktop'} sx={{fontSize:{xs:"20px",lg:"18px"}}}> گاز صفحه ای</NavLink>
             </ListItem>
             <ListItem >
-               <NavLink className='navlinkwhite' to={'/shop-hood'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>هود </NavLink>
+               <NavLink className='navlinkwhite' to={'/shop-hood'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>هود </NavLink>
             </ListItem>
             <ListItem >
-            <NavLink className='navlinkwhite' to={'/shop-microwaves'} sx={{fontSize:{xs:"18px",lg:"16px"}}}>مایکروویو</NavLink>
+            <NavLink className='navlinkwhite' to={'/shop-microwaves'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>مایکروویو</NavLink>
             </ListItem>
           </List>
    
@@ -111,11 +111,11 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={washingmachins} width={40} alt='' />
+              <img src={washingmachins} width={50} alt='' />
               </ListItemDecorator>
             </ListItem>
             <ListItem >
-            <NavLink  className='navlinkfooter' to={'/shop-washing-machine'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>   ماشین لباسشویی  </NavLink>
+            <NavLink  className='navlinkfooter' to={'/shop-washing-machine'} sx={{fontSize:{xs:"22px",lg:"20px"}}}>   ماشین لباسشویی  </NavLink>
             </ListItem>
             <Divider component="li" />
             
@@ -138,11 +138,11 @@ export default function Footer() {
           >
             <ListItem >
             <ListItemDecorator>
-              <img src={dishwashericon} width={40}  alt=''/>
+              <img src={dishwashericon} width={50}  alt=''/>
               </ListItemDecorator>
             </ListItem>
             <ListItem >
-            <NavLink  className='navlinkfooter' to={'/shop-dishwasher'} sx={{fontSize:{xs:"20px",lg:"18px"}}}>ماشین ظرفشویی </NavLink>
+            <NavLink  className='navlinkfooter' to={'/shop-dishwasher'} sx={{fontSize:{xs:"22px",lg:"20px"}}}>ماشین ظرفشویی </NavLink>
             </ListItem>
           </List>
           </Box>
@@ -155,16 +155,16 @@ export default function Footer() {
             </Typography>
             <Box  sx={{display:'flex',flexDirection:"row",alignSelf:"start"}}>
      <PlaceOutlinedIcon sx={{pr:0,pt:{xs:2,lg:1},color:"#ecd2a0",fontSize:"24px"}}/> 
-      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"14px"}}> دفتر مرکزی: تهران، سعادت آباد، میدان کتاب، بلوار کوهستان، نبش گل‌گشت، پلاک 2/1</Typography>
+      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"18px"}}> دفتر مرکزی: تهران، سعادت آباد، میدان کتاب، بلوار کوهستان، نبش گل‌گشت، پلاک 2/1</Typography>
     </Box>
     <Box  sx={{display:'flex',flexDirection:"row",alignSelf:"start"}}>
      <PhoneEnabledOutlinedIcon sx={{pr:0,pt:1,color:"#ecd2a0",fontSize:"24px"}}/> 
-      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"14px"}}> <NavLink className={"linkacont"}> 
+      <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"18px"}}> <NavLink className={"linkacont"}> 
 09300318282</NavLink> </Typography>
     </Box>
     <Box  sx={{display:'flex',flexDirection:"row",alignSelf:"start"}}>
      <EmailOutlinedIcon sx={{pr:0,pt:1,color:"#ecd2a0",fontSize:"24px"}}/>
-     <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"14px"}}>  <NavLink className={"linkacont"}> 
+     <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"18px"}}>  <NavLink className={"linkacont"}> 
 elhamfarhangian6@gmail.com </NavLink> </Typography> 
       
      
@@ -195,18 +195,18 @@ elhamfarhangian6@gmail.com </NavLink> </Typography>
             orientation="horizontal"
             sx={{border:'none'}}
             >     
-                <NavLink  className='navicon1'><Facebook  sx={{fontSize:"28px",color:"#3e98ed"}}/></NavLink>
-                <NavLink  className='navicon2'><Instagram sx={{fontSize:"28px",color:"#f35131"}} /></NavLink>
-                <NavLink  className='navicon3'><Telegram  color="info" sx={{fontSize:"28px"}} /></NavLink>
-                <NavLink  className='navicon4'><WhatsApp   sx={{fontSize:"28px",color:"#4fe69b"}} /></NavLink>
-                <NavLink className='navicon5'><LinkedIn   sx={{fontSize:"28px",color:"#3e98ed"}} /></NavLink>
+                <NavLink  className='navicon1'><Facebook  sx={{fontSize:"30px",color:"#3e98ed"}}/></NavLink>
+                <NavLink  className='navicon2'><Instagram sx={{fontSize:"30px",color:"#f35131"}} /></NavLink>
+                <NavLink  className='navicon3'><Telegram  color="info" sx={{fontSize:"30px"}} /></NavLink>
+                <NavLink  className='navicon4'><WhatsApp   sx={{fontSize:"30px",color:"#4fe69b"}} /></NavLink>
+                <NavLink className='navicon5'><LinkedIn   sx={{fontSize:"30px",color:"#3e98ed"}} /></NavLink>
               </List>
               </ListItem> 
             
             </List>
           </Box>
       <Box sx={{bgcolor:'#1c1c1c',mb:3,mt:0}}>
-        <Typography sx={{textAlign:'center',fontSize:"12px",color:'#8a8a8a',mt:8}}>
+        <Typography sx={{textAlign:'center',fontSize:"14px",color:'#8a8a8a',mt:8}}>
            © 1384-1402 Copyright:سهیل -کلیه حقوق محفوظ است
         </Typography>
       </Box>

@@ -24,11 +24,11 @@
 }
 .navlinks{
 color:#E0AA3E;
-font-size: large;
+font-size: 24px;
 }
 .navlinkin{
 color:#585858;
-font-size: medium;
+font-size: 18px;
 }
 
  /* width */
@@ -74,3 +74,13 @@ font-size: medium;
     padding: 15px;
     background-color: #E0AA3E;
   }
+  .navlink{
+    color:#4c4e58;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+.navlink:hover{
+    color:#E0AA3E ; 
+}

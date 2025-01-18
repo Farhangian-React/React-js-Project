@@ -849,11 +849,11 @@ const handleChangeE1=(e)=>{
             <Grid >
         <IconButton sx={{pt:0}}>
   
-      <FilterAltOutlinedIcon sx={{color:"#eeeeee"}}/>
+      <FilterAltOutlinedIcon sx={{color:"#eeeeee",fontSize:"30px"}}/>
     </IconButton>
     </Grid>
         <Grid >
-      <Typography sx={{fontSize:'18px',direction:'rtl',color:"#eeeeee"}}>
+      <Typography sx={{fontSize:'26px',direction:'rtl',color:"#eeeeee"}}>
    فیلتر بر اساس
 </Typography>
 </Grid>
@@ -872,7 +872,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>قیمت </AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}>قیمت </AccordionSummary>
         <AccordionDetails >
         <FormGroup>
 <FormControlLabel control={<Checkbox checked={checked1} value={"گرانترین به ارزانترین"}  onChange={sortArrayMaxtoMin} />} label="گرانترین به ارزانترین" />
@@ -888,7 +888,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>رنگ بدنه</AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}>رنگ بدنه</AccordionSummary>
         <AccordionDetails>
         <FormGroup>
 <FormControlLabel  control={<Checkbox  checked={checkedC1}   onChange={handleChangeC1} value={"سفید"}  />} label="سفید" />
@@ -904,7 +904,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> مکانیسم شستشو</AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}> مکانیسم شستشو</AccordionSummary>
         <AccordionDetails>
         <FormGroup>
 <FormControlLabel  control={<Checkbox  checked={checkedX1}   onChange={handleChangeX1} value={"بازدهی بالا"}  />} label="بازدهی بالا" />
@@ -920,7 +920,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}> آب گرمکن داخلی </AccordionSummary>
+      <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}> آب گرمکن داخلی </AccordionSummary>
         <AccordionDetails>
    <FormGroup>
 <FormControlLabel control={<Checkbox checked={checkedD1} value={"دارد"} disabled={disabledD1}  onChange={handleChangeD1} />} label="دارد" />
@@ -938,7 +938,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>  برند</AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}>  برند</AccordionSummary>
         <AccordionDetails>
         <FormGroup>
 <FormControlLabel control={<Checkbox  checked={checkedB1}   onChange={handleChangeB1} value={"Whirlpool"} />} label="Whirlpool" />
@@ -955,7 +955,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> رتبه ی انرژی </AccordionSummary>
+         <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}> رتبه ی انرژی </AccordionSummary>
         <AccordionDetails>
    <FormGroup>
 <FormControlLabel control={<Checkbox checked={checkedE1}   onChange={handleChangeE1} disabled={disabledE1} value={"دارد"}  />} label="دارد" />
@@ -972,7 +972,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>  گزینه ی بخار </AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}>  گزینه ی بخار </AccordionSummary>
         <AccordionDetails>
         <FormGroup>
         <FormControlLabel control={<Checkbox checked={checkedY1}   onChange={handleChangeY1} disabled={disabledY1} value={"دارد"}  />} label="دارد" />
@@ -989,7 +989,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>  عمق</AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}>  عمق</AccordionSummary>
         <AccordionDetails>
    <FormGroup>
 <FormControlLabel  control={<Checkbox checked={checkedP1}  onChange={handleChangeP1} disabled={disabledP1} value={"۲۹ اینچ"} />} label="۲۹ اینچ" />
@@ -1008,7 +1008,7 @@ const handleChangeE1=(e)=>{
         sx={{borderBottom:'1px solid black',mr:1}}
    
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}} />}>  عرض</AccordionSummary>
+         <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}>  عرض</AccordionSummary>
         <AccordionDetails >
         <FormGroup>
 <FormControlLabel  control={<Checkbox checked={checkedW1}  onChange={handleChangeW1} disabled={disabledW1} value={"۲۷ اینچ"} />} label="۲۷ اینچ" />
@@ -1025,7 +1025,7 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>  ارتفاع</AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'20px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'18px',pl:1.5}} />}>  ارتفاع</AccordionSummary>
         <AccordionDetails>
    <FormGroup>
 <FormControlLabel  control={<Checkbox checked={checkedH1}  onChange={handleChangeH1} disabled={disabledH1} value={"۳۸ اینچ"} />} label="۳۸ اینچ" />

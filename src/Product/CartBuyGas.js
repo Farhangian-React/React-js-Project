@@ -122,6 +122,7 @@ boxoff.current.className="boxoff";
     .replace(/9/g, '۹');
 return(persianNumber);
   }
+
   const addCommas=(nStr)=>{
   
     if(nStr.length === 7){
@@ -272,63 +273,63 @@ return console.log(cartItems);
     </div>
     <Box sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
     {cartItems.map(i=>
-    <Box container sx={{display:'flex',flexDirection:"row",bgcolor:'white',mx:5,mb:2,mt:{xs:10,lg:2},borderRadius:'10px',direction:'rtl'}}>
-      <Typography variant='body1' sx={{px:2,py:1,color:"gray"}}> محصولات / پخت و پز /
-       </Typography>
-       <Typography variant='body2' sx={{py:1,color:"#353535"}}>{i.title1} </Typography>
+       <Box container sx={{display:'flex',flexDirection:"row",bgcolor:'white',mx:5,mb:2,mt:{xs:12,lg:2},borderRadius:'10px',direction:'rtl'}}>
+       <Typography  sx={{px:2,py:1,color:"gray",fontSize:"16px"}}> محصولات / پخت و پز /
+      </Typography><Typography sx={{pt:1.2,color:"#674e06",fontSize:"14px"}}>{i.title1} </Typography>
     </Box>
     )}
-    <Box container sx={{height:"auto",display:'flex',flexDirection:{xs:'column',lg:"row"},bgcolor:'white',mx:5,mt:0,mb:5,borderRadius:'10px',direction:'rtl'}}>
+     <Box container sx={{height:"auto",bgcolor:"blue",display:'flex',flexDirection:{xs:'column',lg:"row"},bgcolor:'white',mx:5,mt:0,mb:5,borderRadius:'10px',direction:'rtl'}}>
         <Box >
          {cartItems.map(i=> 
          <Box   sx={{mt:{xs:1,md:1},display:'flex', flexDirection:'column',justifyContent:'center',bgcolor:'white'}}> 
          <Box sx={{px:5,mt:1,mb:{xs:12,lg:12},width:'15%',height:'20px'}}>
-         <img src={i.berand} width={'90%'} alt=''/>
+         <img src={i.berand} width={'90%'}/>
          </Box>
           <Typography variant='h5' sx={{px:5,mb:3,mt:0,textAlign:'right',fontSize:"16px"}}  >
        {i.title1}
         </Typography>
-        <Typography  sx={{px:5,mb:1,color:'gray',textAlign:'right'}}  >
+        <Typography variant='h6'  sx={{px:5,mb:1,color:'gray',textAlign:'right'}}  >
       {i.title2}
         </Typography>
         <Rating
-        sx={{fontSize:"16px",px:5,mb:1}}
+             sx={{fontSize:"22px",px:5,mb:3}}
        name="simple-controlled"
        value={sumscore()}
      />
-        <Typography variant="body2" sx={{px:5,color:'black',textAlign:'right'}}>
+          <Typography  sx={{px:5,my:1,color:'#585858',textAlign:'right',fontSize:"15px",textAlign:"justify"}}>
     {i.title3}
         </Typography>
         <Box sx={{display:'flex',flexDirection:'row',justifyContent:'start'}}>
-         <Typography variant='h6' sx={{px:5,mt:2,textAlign:'right'}}>قیمت :</Typography>
-          <Typography ref={offref} variant="h5" sx={{color:'#674e06',px:5,mt:2,textAlign:'right'}}  >
+         <Typography variant='h5' sx={{px:5,mt:2.6,textAlign:'right'}}>قیمت :</Typography>
+          <Typography ref={offref} variant="h4" sx={{color:'#b77d08',px:5,mt:2,textAlign:'right'}}  >
          {  i.price}
           </Typography>
           
           </Box>
-          <Box ref={boxoff} sx={{display:'flex',flexDirection:'row',justifyContent:'start',mb:2,mt:0}}>
+          <Box ref={boxoff} sx={{display:'flex',flexDirection:'row',justifyContent:'start',my:1.5}}>
          <Typography variant='h5' sx={{color:"red",px:5,mt:0.5,textAlign:'right'}}>قیمت با  {convertToPersian(i.off)}%   تخفیف :</Typography>
           <Typography variant="h5" sx={{color:'red',px:1,mt:0.5,textAlign:'right'}}  >
        
           {addCommas(convertToPersian((convertToEnglish(i.pricenum)-(convertToEnglish(i.pricenum)*i.off / 100))+''))} تومان 
          </Typography>
           </Box>
-        <Button size='medium'  color='secondary'  onClick={()=>
+        <Button size='large'  color='secondary'  onClick={()=>
          addToCart(i)
        }
-       sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",
+       sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"22px",
        borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
-       backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:25, my:3,py:0.5,px:0}}
+       backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:30, my:3,py:0.5,px:0}}
        > 
         افزودن به سبد خرید  </Button>
         <Drawer
        sx={{
          position:"absolute",
          width: drawerWidth,
-         height:"auto",
+         height:"60vh",
          flexShrink: 0,
          '& .MuiDrawer-paper': {
            width: drawerWidth,
+           height:"60vh",
            boxSizing: 'border-box', 
          },
        }}
@@ -379,37 +380,36 @@ direction:"rtl"
          <Typography variant='body2' sx={{direction:'rtl',pl:5,pr:1,color:'#333637'}}> درخواست مرجوع کردن کالا در گروه یخچال و فریزر با دلیل "انصراف از خرید" تنها در صورتی قابل تایید است که کالا در شرایط اولیه باشد 
           (در صورت پلمپ بودن، کالا نباید باز شده باشد).</Typography>
           </Box>
-          
-        <Box sx={{m:3, display:'flex',justifyContent:'center'}}>
+          <Box sx={{m:2, display:'flex',justifyContent:'center'}}>
         <Tooltip color='warning'  title="اضافه به علاقمندی">
       <IconButton sx={{pl:2,color:'black' }}>
-        <FavoriteBorderIcon />
+        <FavoriteBorderIcon sx={{fontSize:"32px"}} />
       </IconButton>
     </Tooltip>
     <Tooltip title=" به اشتراک گذاری کالا ">
       <IconButton  sx={{pl:2,color:'black' }}>
-         <ShareIcon/>
+         <ShareIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
     <Tooltip title=" اطلاع رسانی شگفت انگیز ">
       <IconButton  sx={{pl:2,color:'black' }}>
-         <NotificationsActiveOutlinedIcon/>
+         <NotificationsActiveOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
     <Tooltip title=" نمودار قیمت">
       <IconButton  sx={{pl:2,color:'black' }}>
-         <TimelineOutlinedIcon/>
+         <TimelineOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
         
     <Tooltip title=" مقایسه کالا ">
       <IconButton  sx={{pl:2,color:'black' }}>
-        <AutoAwesomeMotionOutlinedIcon/>
+        <AutoAwesomeMotionOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
     <Tooltip title=" افزودن به لیست ">
       <IconButton  sx={{pl:2,color:'black' }}>
-   <TocOutlinedIcon/>
+   <TocOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
          
@@ -555,7 +555,7 @@ justifyContent={'start'}
           setIndex(expanded ? 0 : null);   
         }}
       >
-        <AccordionSummary   sx={{color:"#585858",fontSize:{xs:"14px",md:'16px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"14px",md:"18px"}}} />}> مشخصات اصلی</AccordionSummary>
+         <AccordionSummary   sx={{color:"#585858",fontSize:{xs:"18px",md:'20px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"18px",md:"20px"}}} />}> مشخصات اصلی</AccordionSummary>
         <AccordionDetails sx={{ml:{xs:5}}}>
           <Box  sx={{display:'flex'}}>
           <Grid xs={12} md={4} >
@@ -715,7 +715,7 @@ justifyContent={'start'}
           setIndex(expanded ? 1 : null);
         }}
       >
-        <AccordionSummary   sx={{color:"#585858",fontSize:{xs:"14px",md:'16px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"14px",md:"18px"}}}/>}>ویژگی ها و امکانات</AccordionSummary>
+         <AccordionSummary   sx={{color:"#585858",fontSize:{xs:"18px",md:'20px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"18px",md:"20px"}}} />}>ویژگی ها و امکانات</AccordionSummary>
         <AccordionDetails sx={{ml:{xs:5}}}> 
          {cartItems.map(i=>
           <Box  sx={{ml:{xs:3},display:'flex',flexWrap:'wrap',justifyContent:'center'}}>  
@@ -761,7 +761,7 @@ justifyContent={'start'}
           setIndex(expanded ? 2 : null);
         }}
       >
-        <AccordionSummary  sx={{color:"#585858",fontSize:{xs:"14px",md:'16px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"14px",md:"18px"}}}/>}> مشخصات بیشتر</AccordionSummary>
+  <AccordionSummary   sx={{color:"#585858",fontSize:{xs:"18px",md:'20px'}}}   expandIcon={<AddIcon sx={{fontSize:{xs:"18px",md:"20px"}}} />}> مشخصات بیشتر</AccordionSummary>
         <AccordionDetails>
         <Grid  >
         
@@ -771,12 +771,12 @@ justifyContent={'start'}
 
         </Grid>
 </Box>
-        <Box sx={{display:'flex',bgcolor:'white',mx:5,mb:5,flexDirection:{xs:"column",lg:"row"},mt:{xs:3,lg:1},borderRadius:'10px',direction:'rtl'}}>
+<Box sx={{display:'flex',bgcolor:'white',mx:5,mt:0,mb:5,flexDirection:{xs:"column",lg:"row"},mt:{xs:3,lg:1},borderRadius:'10px',direction:'rtl'}}>
 <Box  sx={{width:"100%",display:"flex",justifyContent:"start",flexDirection:"column",mt:{xs:3,lg:1},pb:{lg:3}}}>
 {cartItems.map(i=>
     <Box container sx={{whiteSpace:"wrap",width:"90%",display:'flex',flexDirection:"row",alignSelf:"center",bgcolor:'white',px:3,py:0,mx:{xs:1,md:5},mb:2,mt:{xs:2,md:2},borderRadius:'10px',direction:'rtl'}}>
-     <MessageOutlinedIcon sx={{pr:2,pt:3,color:"#E0AA3E",fontSize:"28px"}}/> 
-      <Typography  sx={{px:2,py:1,color:"#3d3d3d",fontSize:"18px"}}> نظرات کاربران<Typography variant='body2' sx={{py:0,color:"#6e6e6e"}}>{i.title1} </Typography>
+     <MessageOutlinedIcon sx={{pr:2,pt:3,color:"#E0AA3E",fontSize:"34px"}}/> 
+      <Typography  sx={{px:2,py:1,color:"#3d3d3d",fontSize:"18px",fontWeight:'bold'}}> نظرات کاربران<Typography variant='body2' sx={{pt:0.4,color:"#674e06"}}> {i.title1} </Typography>
        </Typography>
     </Box>)}
     <Box  sx={{whiteSpace:"wrap",display:'flex',flexDirection:"column",bgcolor:'white',p:3,mx:{xs:1,md:5},mb:2,mt:{xs:2,md:2},border:"1px dashed #d0d0d0",borderRadius:'10px',direction:'rtl'}}>
@@ -797,7 +797,7 @@ justifyContent={'start'}
       </Typography>
   
     </Box>
-    <Button ref={buttoncommentref} onClick={addcomments}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",
+    <Button ref={buttoncommentref} onClick={addcomments}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"22px",
        borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:25, my:3,py:0.5,px:0}}> مشاهده ی دیدگاه کاربران </Button>
        <Box  ref={boxnotcomments} sx={{display:"none"}}> <Typography variant='h6' sx={{color:"#585858",textAlign:"center",mx:5}}> دیدگاهی برای این محصول ثبت نشده است</Typography> 
@@ -830,16 +830,17 @@ justifyContent={'start'}
     >   
     {cartItems.map(i=>
     <Box container sx={{mx:3,py:3,display:'flex',flexDirection:"column",bgcolor:'white',direction:'rtl'}}>
-      <Typography  sx={{pl:0.6,py:0,color:"#6e6e6e",fontSize:"16px"}}> اولین نفری باشید که دیدگاهی را ارسال می کنید برای : 
+      <Typography  sx={{pl:0.6,py:0,color:"#3d3d3d",fontSize:"18px"}}> اولین نفری باشید که دیدگاهی را ارسال می کنید برای : 
        </Typography>
-       <Typography variant='body2' sx={{pt:0.4,color:"#3d3d3d"}}> " {i.title1} "</Typography>
+       <Typography variant='body2' sx={{pt:0.4,color:"#674e06"}}>  {i.title1} </Typography>
        <Box className='linetinck'></Box>
     </Box>
     )}
          <form  noValidate onSubmit={handlesubmit}>
           <Box sx={{mt:1,mx:3}}>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"12px"}}>نام <AcUnitIcon  sx={{fontSize:"7px",color:"#615d5d"}}/></FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}>نام <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/></FormLabel>
               <Input
+              sx={{fontSize:"24px"}}
             color="warning"
             placeholder='نام'
                 autoComplete="fname"
@@ -853,12 +854,13 @@ justifyContent={'start'}
                value={name}
                onChange={(e)=> setName(e.target.value)}
               />
-              <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+              <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
                
                 {error.name}
               </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"12px"}}> آدرس ایمیل <AcUnitIcon  sx={{fontSize:"7px",color:"#615d5d"}}/></FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}> آدرس ایمیل <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/></FormLabel>
               <Input
+              sx={{fontSize:"24px"}}
                 color="warning"
               placeholder='آدرس ایمیل'
                 variant="outlined"
@@ -869,12 +871,13 @@ justifyContent={'start'}
                 onChange={(e)=> setEmail(e.target.value)}
               
               />
-              <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+              <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
                
                {error.email}
              </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"12px"}}><HiveIcon sx={{fontSize:"10px",color:"green"}}/>نقاط قوت   </FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}><HiveIcon sx={{fontSize:"12px",color:"green"}}/>نقاط قوت   </FormLabel>
               <Input
+              sx={{fontSize:"24px"}}
                 color="warning"
             type='text'
                 variant="outlined"
@@ -884,13 +887,13 @@ justifyContent={'start'}
                 value={advantage}
                 onChange={(e)=> setAdvantage(e.target.value)}
               />
-              <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+              <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
                
                {error.advantage}
              </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"12px"}}><HiveIcon sx={{fontSize:"10px",color:"red"}}/> نقاط ضعف  </FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}><HiveIcon sx={{fontSize:"12px",color:"red"}}/> نقاط ضعف  </FormLabel>
               <Input
-               
+               sx={{fontSize:"24px"}}
                color="warning"
             type='text'
                 variant="outlined"
@@ -899,11 +902,11 @@ justifyContent={'start'}
                 value={disadvantages}
                 onChange={(e)=> setDisadvantages(e.target.value)}
               />
-               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+               <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
                {error.disadvantages}
             
              </Typography>
-                <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"12px"}}> امتیاز شما</FormLabel>
+                <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}> امتیاز شما</FormLabel>
                 <Rating
         name="simple-controlled"
         value={score}
@@ -913,12 +916,13 @@ justifyContent={'start'}
           ;
         }}
       />
-       <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+       <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
                {error.score}
               
              </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"12px"}}> دیدگاه شما <AcUnitIcon  sx={{fontSize:"7px",color:"#615d5d"}}/>  </FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}> دیدگاه شما <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/>  </FormLabel>
             <Textarea
+          
              color="warning"
                  variant="outlined"
                  required
@@ -927,10 +931,10 @@ justifyContent={'start'}
                  value={comment}
                  onChange={(e)=> setComment(e.target.value)}
              rows="50" cols="30"
-             sx={{width:"100%",height:"200px"}}
+             sx={{width:"100%",height:"200px",fontSize:"24px"}}
              ></Textarea>
 
-               <Typography variant='body2' sx={{color:"#f54141",mt:1}}>
+               <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
                {error.comment}
               
              </Typography>
@@ -938,7 +942,7 @@ justifyContent={'start'}
             
 
           <Button
-           sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",
+           sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"22px",
            borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
            backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mt:2,py:0.3,px:6}}
             type="submit"
@@ -948,7 +952,8 @@ justifyContent={'start'}
           </Button>
           </Box>
         </form>
-        </Box>
+        </Box> 
+
 </Box> 
 
    <SlideSimilarGas/>     

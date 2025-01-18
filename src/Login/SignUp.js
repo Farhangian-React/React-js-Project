@@ -103,7 +103,7 @@ fetch("https://serverjson-project.onrender.com/users",{
        height:{xs:'100vh',lg:"85vh"},
        width:'100%'
        }} >
-      <Box maxWidth="xs"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:18,lg:2},
+      <Box maxWidth="xs"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:20,lg:2},
       height:{xs:"650px",lg:"550px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:1}} >
         <Typography   sx={{fontSize:{xs:"36px",lg:"30px"},textAlign:"center",mt:1.5,pb:2,color:"#eee"}}>
        عضویت در سایت سهیل

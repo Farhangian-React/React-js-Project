@@ -24,7 +24,7 @@ import Grid from "@mui/material/Grid";
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import "./E.css";
-const drawerWidth = 240;
+const drawerWidth = 300;
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -162,7 +162,9 @@ title="Title"
             width: '100%',
             boxSizing: 'border-box',
             height:'auto',
-            direction:"rtl"
+            direction:"rtl",
+            alignSelf:"center",
+            m:"auto"
           },
         }}
         variant="persistent"
@@ -200,36 +202,24 @@ title="Title"
       setCartItems([item]);
       handleDrawerClose1();
 
-     }} sx={{bgcolor:"white",display:"flex",flexDirection:"row",justifyContent:"space-around",m:1,p:1}} >
+     }} sx={{bgcolor:"white",display:"flex",flexDirection:"row",justifyContent:"center",m:1,p:1}} >
     <Grid xs={4} sx={{alignSelf:"center"}} >
-    <img src={item.img} width={120} alt=''/>
+    <img src={item.img} width={160} alt=''/>
     </Grid>
         <Grid xs={4} sx={{alignSelf:"center"}}>
-            <Typography  sx={{fontSize:"14px"}}>
+            <Typography  sx={{fontSize:"24px"}}>
             {item.title1}
             </Typography>
         </Grid>
         <Grid xs={4} sx={{direction:"rtl",display:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
 
-            <Typography  sx={{mt:1,fontSize:"12px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
+            <Typography  sx={{mt:1,fontSize:"24px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
         </Grid>
     </Grid>
     </NavLink>
 ))}
   </Box>
-  
-          
-       
-       
       </Drawer>
-
-
-
-
-
-
-
-       
       <Drawer
         sx={{
           width: drawerWidth,
@@ -286,19 +276,18 @@ title="Title"
         <List 
         sx={{fontSize:"18px",color:"#515151",width:"130px"}}
         >
-            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"16px"}}
+            <ListItem disablePadding sx={{width:"260px",display:"flex",justifyContent:"space-around",m:2}}>
+             <ListItemButton sx={{fontSize:"22px"}}
                onClick={handleClick1}
                >
                محصولات
               </ListItemButton>
-              </Grid>
-              <Grid sx={{width:"100%"}}>
-              <KeyboardArrowDownIcon  onClick={handleClick1}/></Grid>
+             
+              <KeyboardArrowDownIcon  onClick={handleClick1} sx={{fontSize:"34px"}}/>
               <Menu
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
-              { backgroundColor: '#fff',width:'220px' } ,direction:'rtl'
+              { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
             }
           }
         id="demo-customized-menu"
@@ -327,15 +316,15 @@ title="Title"
       
       </Menu>
             </ListItem>
-            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"16px"}}
+            <ListItem disablePadding sx={{width:"260px",display:"flex",justifyContent:"space-around",m:2}}>
+              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"22px"}}
                onClick={handleClick2}
                >
                جشنواره ها
               </ListItemButton>
               </Grid>
               <Grid sx={{width:"100%"}}>
-              <KeyboardArrowDownIcon  onClick={handleClick2}/></Grid>
+              <KeyboardArrowDownIcon  onClick={handleClick2} sx={{fontSize:"34px"}}/></Grid>
               <Menu
         id="demo-customized-menu"
         MenuListProps={{
@@ -346,7 +335,7 @@ title="Title"
         onClose={handleClose2}
         sx={
           { mt: "1px", "& .MuiMenu-paper": 
-            { backgroundColor: '#fff',width:'220px' } ,direction:'rtl'
+            { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
           }
         }
       >
@@ -360,15 +349,15 @@ title="Title"
         </NavLink></MenuItem>
       </Menu>
             </ListItem>
-            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"16px"}}
+            <ListItem disablePadding sx={{width:"260px",display:"flex",justifyContent:"space-around",m:2}}>
+              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"22px"}}
                onClick={handleClick3}
                >
                خدمات
               </ListItemButton>
               </Grid>
               <Grid sx={{width:"100%"}}>
-              <KeyboardArrowDownIcon  onClick={handleClick3}/></Grid>
+              <KeyboardArrowDownIcon  onClick={handleClick3} sx={{fontSize:"34px"}}/></Grid>
               <Menu
         id="demo-customized-menu"
         MenuListProps={{
@@ -379,7 +368,7 @@ title="Title"
         onClose={handleClose3}
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
-              { backgroundColor: '#fff',width:'220px' } ,direction:'rtl'
+              { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
             }
           }
       >
@@ -394,7 +383,7 @@ title="Title"
   </NavLink></MenuItem>
       </Menu>
             </ListItem>
-            <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
+            <ListItem disablePadding sx={{width:"300px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton  >
               <NavLink className='navlinkcoll' sx={{fontSize:"16px"}} to={"/Stores"}>
@@ -404,7 +393,7 @@ title="Title"
            <Grid sx={{width:"100%"}}>
              </Grid>
            </ListItem>
-           <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
+           <ListItem disablePadding sx={{width:"300px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton >
               <NavLink className='navlinkcoll' to={"/about-snova"}>
@@ -414,7 +403,7 @@ title="Title"
            <Grid sx={{width:"100%"}}>
              </Grid>
            </ListItem>
-           <ListItem disablePadding sx={{width:"210px",display:"flex",justifyContent:"space-around",m:2}}>
+           <ListItem disablePadding sx={{width:"300px",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton >
               <NavLink className='navlinkcoll' to={"/life-style"}>سبک زندگی

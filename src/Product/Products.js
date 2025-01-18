@@ -89,15 +89,15 @@ navigate("/signin");
             case 1: return "فصل پر جایزه";
             case 2: return "انتخاب به جا";
             case 3: return "فرصت های بر آب رفته";
-            case 4: return 'اعتبار شیرین 100 میلیون تومانی';
+            case 4: return 'اعتبار شیرین ۱۰۰ میلیون تومانی';
             default: return null;
           }
        
         };
         const returnType2=()=>{
           switch(type){
-            case 1: return "هدیه ی خرید برای همه تا سقف 10 میلیون تومان در جشنواره های پاییزه ی سهیل";
-            case 2: return 'اجاق گاز 4 شعله ی سهیل با فضای کمتر و پخت بهتر';
+            case 1: return "هدیه ی خرید برای همه تا سقف ۱۰ میلیون تومان در جشنواره های پاییزه ی سهیل";
+            case 2: return 'اجاق گاز ۴ شعله ی سهیل با فضای کمتر و پخت بهتر';
             case 3: return "به جای ظرف شستن  برای هنر وقت بزارید";
             case 4: return 'تخیف های باور نکردنی و ویژه';
             default: return null;
@@ -145,13 +145,13 @@ navigate("/signin");
          
 
        
-         <Box  sx={{mt:{xs:50,lg:22} ,mb:20, mx:5,width:{md:'600px',lg:'800px'},
+         <Box sx={{width:{xs:"80vw",lg:"50vw"},mt:{xs:50,lg:22} ,mb:20, mx:5,
          height:'250px',bgcolor:'black',opacity:{xs:0.8,lg:0.6}}}>
           <Typography  sx={{display:'flex', flexDirection:'column',justifyContent:'space-between',
           borderRight:'10px solid white',mt:6,mr:8,pr:2,pt:0,color:'white' ,textAlign:'right'}}>
-             <Typography  level='h2' sx={{color:'white' ,mt:1,px:2}}> {returnType1()}</Typography>
+             <Typography  variant='h4' sx={{color:'white' ,my:1,px:2}}> {returnType1()}</Typography>
 
-            <Typography   sx={{color:'white' ,mt:0.5,px:2,fontSize:{xs:"16px",md:"18px",lg:"22px"}}}> {returnType2()}</Typography>
+            <Typography   sx={{color:'white' ,mt:0.5,px:2,fontSize:{xs:"18px",lg:"18px"}}}> {returnType2()}</Typography>
              <NavLink className='navbanner'  to={returnType4()}> <Typography  sx={{fontSize:"18px",color:"#E0AA3E",mt:1,px:2}} >
            {returnType3()}
           </Typography></NavLink>
@@ -252,7 +252,7 @@ navigate("/signin");
        bgcolor:"white",alignSelf:"start",my:3,mx:{xs:2,lg:5}}}>   ادامه ی مطلب... </Button>
                   <Box  sx={{display:"flex",justifyContent:"start"}}>
        <Button variant='contained'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-       color:'white'},fontSize:{xs:"14px",lg:"16px"},color:'#eeeeee',m:3,
+       color:'white'},fontSize:{xs:"22px",lg:"18px"},color:'#eeeeee',m:3,
        borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/allrefriderators" }>  مشاهده همه ی یخچال و فریزرها </NavLink></Button>
         </Box>
@@ -302,7 +302,7 @@ navigate("/signin");
        bgcolor:"white",alignSelf:"start",my:3,mx:{xs:2,lg:5}}}>   ادامه ی مطلب... </Button>
                   <Box  xs={12}  sx={{display:{xs:'flex',sm:'flex'},justifyContent:'start'}}>
        <Button variant='contained'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-       color:'white'},fontSize:{xs:"14px",md:"16px"},color:'#eeeeee',m:3,
+       color:'white'},fontSize:{xs:"22px",md:"18px"},color:'#eeeeee',m:3,
        borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/shop-washing-machine" }>  مشاهده همه ی ماشین لباسشویی ها  </NavLink></Button>
         </Box>
@@ -357,7 +357,7 @@ navigate("/signin");
        bgcolor:"white",alignSelf:"start",my:3,mx:{xs:2,lg:5}}}>   ادامه ی مطلب... </Button>
                   <Box  xs={12}  sx={{display:{xs:'flex',sm:'flex'},justifyContent:"start"}}>
        <Button variant='contained'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-       color:'white'},fontSize:{xs:"14px",md:"16px"},color:'#eeeeee',m:3,
+       color:'white'},fontSize:{xs:"22px",md:"18px"},color:'#eeeeee',m:3,
        borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/allgas" }>  مشاهده همه ی اجاق گازها  </NavLink></Button>
         </Box>
@@ -411,7 +411,7 @@ navigate("/signin");
        bgcolor:"white",alignSelf:"start",my:3,mx:{xs:2,lg:5}}}>   ادامه ی مطلب... </Button>
                     <Box  xs={12}  sx={{display:{xs:'flex',sm:'flex'},justifyContent:'start'}}>
          <Button variant='contained'  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",
-         color:'white'},fontSize:{xs:"14px",md:"16px"},color:'#eeeeee',m:3,
+         color:'white'},fontSize:{xs:"22px",md:"18px"},color:'#eeeeee',m:3,
           borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
          backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>  <NavLink className='link' to={"/shop-dishwasher" }>  مشاهده همه ی ماشین ظرفشویی ها  </NavLink></Button>
           </Box>

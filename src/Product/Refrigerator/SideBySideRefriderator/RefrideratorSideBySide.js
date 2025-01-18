@@ -29,7 +29,7 @@ export default  function RefrideratorSideBySide() {
 <>
 <PageTitle title=' یخچال و فریزر / یخچال‌فریزرهای ساید بای ساید  ' description='   یخجال و فریزر '/>
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:8,lg:0.7} ,mx:0.5 }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:10,lg:0.7} ,mx:0.5 }} >
       <List
             role="menu"
             aria-label="Products"
@@ -54,7 +54,7 @@ export default  function RefrideratorSideBySide() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"16px",mx:0,px:0}}
+               sx={{color:"#E0AA3E",fontSize:"24px",mx:0,px:0}}
                >
                 یخچال و فریزر 
                
@@ -62,7 +62,7 @@ export default  function RefrideratorSideBySide() {
               <Menu
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
-              { backgroundColor: '#fff',width:'220px' } ,direction:'rtl'
+              { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
             }
           }
         id="demo-customized-menu"

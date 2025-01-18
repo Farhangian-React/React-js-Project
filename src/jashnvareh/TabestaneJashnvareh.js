@@ -27,7 +27,7 @@ export default function TabestaneJashnvareh() {
        backgroundSize:'cover',
        backgroundRepeat: 'no-repeat',
        width:'100%',
-       height:"80vh",
+       height:{xs:"50vh",lg:"80vh"},
        
        }} >
            <Box  sx={{ display:"flex",flexDirection:"row",mx:5,width:"50%",alignSelf:"end",justifyContent:"center",
@@ -78,9 +78,9 @@ export default function TabestaneJashnvareh() {
       <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
        >
-        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
         جشنواره زمستانه ی سهیل
         </Typography>
         </Box>
@@ -103,9 +103,9 @@ export default function TabestaneJashnvareh() {
             <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
        >
-        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
         نحوه شرکت در جشنواره سهیل
         </Typography>
         </Box>
@@ -133,8 +133,13 @@ export default function TabestaneJashnvareh() {
           <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
           پس از تایید شماره شبا مبلغ هدیه جشنواره ، حداکثر ظرف مدت یک ماه واریز و از طریق پیامک اطلاع رسانی خواهد شد.
             </Typography>
-            <Box  sx={{boxShadow:"10px 10px 10px #E0AA3E ",display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}>
-        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+        
+            <Box     
+       sx={{boxShadow:"10px 10px 10px #E0AA3E ",
+      
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+       >
+        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
         نکات مهم:
           </Typography>
           </Box>
@@ -150,16 +155,24 @@ export default function TabestaneJashnvareh() {
             <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
             4-این جشنواره به مصرف کنندگانی تعلق می‌گیرد که محصولات مشمول جشنواره را از پانزدهم مهر ماه تا پایان زمان جشنواره ، خریداری و نصب نمایند.
             </Typography>
-            <Box  sx={{boxShadow:"10px 10px 10px #E0AA3E ",display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}>
-        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+            <Box     
+       sx={{boxShadow:"10px 10px 10px #E0AA3E ",
+      
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+       >
+        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
         نصب محصول
           </Typography>
           </Box>
           <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
           به منظور بهره مندی از شرایط جشنواره خرید زمستانه سهیل با مرکز تماس مشتریان گروه انتخاب از طریق شماره ۱۶۹۹ (بدون پیش شماره از سراسر کشور) تماس حاصل کنید و درخواست نصب محصول خریداری شده خود را اعلام نمایید. در این مرحله یک کد پذیرش نصب برای شما پیامک می‌شود. شایان ذکرست، فعالسازی این جشنواره تنها برای شماره تلفن همراهی خواهد بود که به این مرکز اعلام می‌کنید.
         </Typography> 
-        <Box  sx={{boxShadow:"10px 10px 10px #E0AA3E ",display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}>
-        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},fontWeight:"500",textAlign:"center",color:"black",py:1}}>
+        <Box     
+       sx={{boxShadow:"10px 10px 10px #E0AA3E ",
+      
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+       >
+        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
         دریافت کد تخفیف جشنواره
           </Typography>
           </Box>
@@ -169,30 +182,30 @@ export default function TabestaneJashnvareh() {
             <Box sx={{display:"flex",justifyContent:"center",flexDirection:{xs:"column",lg:"row"},mx:10,my:5}}>
             <Box  sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:2}}> 
             <Typography variant='h5' sx={{mt:3,textAlign:"center"}}>
-                 <BuildOutlinedIcon sx={{color:"#E0AA3E",fontSize:"60px"}}/>
+                 <BuildOutlinedIcon sx={{color:"#E0AA3E",fontSize:{xs:"80px",lg:"60px"}}}/>
             </Typography>
-                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>   در زمان نصب محصول  </Typography>
-                <Typography sx={{mx:7,textAlign:"center",color:"gray"}}>پس از درخواست نصب محصول و مشاهده فاکتور خرید، تاریخ خرید توسط نماینده مجاز خدمات پس از خرید ثبت می گردد.</Typography>
+                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:{xs:"32px",lg:"24px"},color:"#282828"}}>   در زمان نصب محصول  </Typography>
+                <Typography sx={{mx:7,textAlign:"center",color:"gray",fontSize:{xs:"22px",lg:"18px"}}}>پس از درخواست نصب محصول و مشاهده فاکتور خرید، تاریخ خرید توسط نماینده مجاز خدمات پس از خرید ثبت می گردد.</Typography>
             </Box>
             <Divider  orientation="vertical" variant="fullWidth"  flexItem sx={{display:{xs:"none",lg:"flex",color:"#E0AA3E"}}} />
             <Box  sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:2}}>
             <Typography variant='h5' sx={{mt:3,textAlign:"center"}}>
-                 <MarkAsUnreadIcon  sx={{color:"#E0AA3E",fontSize:"60px"}}/>
+                 <MarkAsUnreadIcon  sx={{color:"#E0AA3E",fontSize:{xs:"80px",lg:"60px"}}}/>
             </Typography>
-                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}>  دریافت کد شش حرفی جشنواره  </Typography>
-                <Typography sx={{mx:7,textAlign:"center",color:"gray"}}>به ازای هر محصول درج شده در جدول فوق، یک کد شش حرفی به شماره پذیرش مصرف کننده اختصاص داده می شود</Typography>
+                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:{xs:"32px",lg:"24px"},color:"#282828"}}>  دریافت کد شش حرفی جشنواره  </Typography>
+                <Typography sx={{mx:7,textAlign:"center",color:"gray",fontSize:{xs:"22px",lg:"18px"}}}>به ازای هر محصول درج شده در جدول فوق، یک کد شش حرفی به شماره پذیرش مصرف کننده اختصاص داده می شود</Typography>
             </Box>
             <Divider  orientation="vertical" variant="fullWidth"  flexItem sx={{display:{xs:"none",lg:"flex",color:"#E0AA3E"}}}  />
             <Box sx={{display:"flex",justifyContent:"center",flexDirection:"column",py:2}}>
            
             <Typography variant='h5' sx={{mt:3,textAlign:"center"}}>
-                 <InsertLinkIcon  sx={{color:"#E0AA3E",fontSize:"60px"}}/>
+                 <InsertLinkIcon  sx={{color:"#E0AA3E",fontSize:{xs:"80px",lg:"60px"}}}/>
             </Typography>
            
-                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:"24px",color:"#282828"}}> دریافت لینک فعالسازی </Typography>
+                <Typography sx={{mt:1,mb:2,textAlign:"center",fontSize:{xs:"32px",lg:"24px"},color:"#282828"}}> دریافت لینک فعالسازی </Typography>
                
                
-                <Typography sx={{mx:7,textAlign:"center",color:"gray"}}>لینک فعالسازی از طریق پیامک برای مصرف کننده ارسال خواهد شد که با کلیک بر روی این گزینه فعالسازی صورت می‌گیرد.</Typography>
+                <Typography sx={{mx:7,textAlign:"center",color:"gray",fontSize:{xs:"22px",lg:"18px"}}}>لینک فعالسازی از طریق پیامک برای مصرف کننده ارسال خواهد شد که با کلیک بر روی این گزینه فعالسازی صورت می‌گیرد.</Typography>
             </Box>
         </Box>
         </Box>

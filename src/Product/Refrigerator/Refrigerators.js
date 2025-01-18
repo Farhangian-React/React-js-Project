@@ -53,6 +53,7 @@ export default  function Refrigerators() {
               backgroundColor:'#E0E1E3',
               alignItems:'center',
               
+              
              
             }}
           >
@@ -60,7 +61,7 @@ export default  function Refrigerators() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"16px"}}
+               sx={{color:"#E0AA3E",fontSize:"24px"}}
                >
                 یخچال و فریزر 
                
@@ -68,7 +69,7 @@ export default  function Refrigerators() {
               <Menu
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
-              { backgroundColor: '#fff',width:'220px' } ,direction:'rtl'
+              { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
             }
           }
         id="demo-customized-menu"

@@ -43,7 +43,7 @@ import '../CartBuy.css';
 import { Textarea } from '@mui/joy';
 import { useEffect } from 'react';
 import SlideSimilarDish from "./SlideSimilarDish";
-const drawerWidth = 440;
+const drawerWidth = 450;
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -275,16 +275,16 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       {i.title2}
         </Typography>
         <Rating
-        sx={{fontSize:"18px",px:5,mb:1}}
+        sx={{fontSize:"22px",px:5,mb:3}}
        name="simple-controlled"
        value={sumscore()}
      />
-        <Typography  sx={{px:5,color:'#585858',textAlign:'right',fontSize:"15px",textAlign:"justify"}}>
+        <Typography  sx={{px:5,my:1,color:'#585858',textAlign:'right',fontSize:"15px",textAlign:"justify"}}>
     {i.title3}
         </Typography>
         <Box sx={{display:'flex',flexDirection:'row',justifyContent:'start'}}>
          <Typography variant='h5' sx={{px:5,mt:2.6,textAlign:'right'}}>قیمت :</Typography>
-          <Typography ref={offref} variant="h5" sx={{color:'#674e06',px:5,mt:2,textAlign:'right'}}  >
+          <Typography ref={offref} variant="h4" sx={{color:'#b77d08',px:5,mt:2,textAlign:'right'}}  >
          {  i.price}
           </Typography>
           
@@ -308,10 +308,11 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
        sx={{
          position:"absolute",
          width: drawerWidth,
-         height:"auto",
+         height:"60vh",
          flexShrink: 0,
          '& .MuiDrawer-paper': {
            width: drawerWidth,
+           height:"60vh",
            boxSizing: 'border-box', 
          },
        }}
@@ -366,33 +367,33 @@ direction:"rtl"
         <Box sx={{m:2, display:'flex',justifyContent:'center'}}>
         <Tooltip color='warning'  title="اضافه به علاقمندی">
       <IconButton sx={{pl:2,color:'black' }}>
-        <FavoriteBorderIcon />
+        <FavoriteBorderIcon sx={{fontSize:"32px"}} />
       </IconButton>
     </Tooltip>
     <Tooltip title=" به اشتراک گذاری کالا ">
       <IconButton  sx={{pl:2,color:'black' }}>
-         <ShareIcon/>
+         <ShareIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
     <Tooltip title=" اطلاع رسانی شگفت انگیز ">
       <IconButton  sx={{pl:2,color:'black' }}>
-         <NotificationsActiveOutlinedIcon/>
+         <NotificationsActiveOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
     <Tooltip title=" نمودار قیمت">
       <IconButton  sx={{pl:2,color:'black' }}>
-         <TimelineOutlinedIcon/>
+         <TimelineOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
         
     <Tooltip title=" مقایسه کالا ">
       <IconButton  sx={{pl:2,color:'black' }}>
-        <AutoAwesomeMotionOutlinedIcon/>
+        <AutoAwesomeMotionOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
     <Tooltip title=" افزودن به لیست ">
       <IconButton  sx={{pl:2,color:'black' }}>
-   <TocOutlinedIcon/>
+   <TocOutlinedIcon  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
          
@@ -722,7 +723,7 @@ direction:"rtl"
 {cartItems.map(i=>
     <Box container sx={{whiteSpace:"wrap",width:"90%",display:'flex',flexDirection:"row",alignSelf:"center",bgcolor:'white',px:3,py:0,mx:{xs:1,md:5},mb:2,mt:{xs:2,md:2},borderRadius:'10px',direction:'rtl'}}>
      <MessageOutlinedIcon sx={{pr:2,pt:3,color:"#E0AA3E",fontSize:"34px"}}/> 
-      <Typography  sx={{px:2,py:1,color:"#3d3d3d",fontSize:"22px"}}> نظرات کاربران<Typography variant='body2' sx={{pt:0.4,color:"#674e06"}}> {i.title1} </Typography>
+      <Typography  sx={{px:2,py:1,color:"#3d3d3d",fontSize:"18px",fontWeight:'bold'}}> نظرات کاربران<Typography variant='body2' sx={{pt:0.4,color:"#674e06"}}> {i.title1} </Typography>
        </Typography>
     </Box>)}
     <Box  sx={{whiteSpace:"wrap",display:'flex',flexDirection:"column",bgcolor:'white',p:3,mx:{xs:1,md:5},mb:2,mt:{xs:2,md:2},border:"1px dashed #d0d0d0",borderRadius:'10px',direction:'rtl'}}>
@@ -743,7 +744,7 @@ direction:"rtl"
       </Typography>
   
     </Box>
-    <Button ref={buttoncommentref} onClick={addcomments}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",
+    <Button ref={buttoncommentref} onClick={addcomments}  sx={{':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"22px",
        borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
        backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mx:25, my:3,py:0.5,px:0}}> مشاهده ی دیدگاه کاربران </Button>
        <Box  ref={boxnotcomments} sx={{display:"none"}}> <Typography variant='h6' sx={{color:"#585858",textAlign:"center",mx:5}}> دیدگاهی برای این محصول ثبت نشده است</Typography> 
@@ -784,8 +785,9 @@ direction:"rtl"
     )}
          <form  noValidate onSubmit={handlesubmit}>
           <Box sx={{mt:1,mx:3}}>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}>نام <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/></FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}>نام <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/></FormLabel>
               <Input
+              sx={{fontSize:"24px"}}
             color="warning"
             placeholder='نام'
                 autoComplete="fname"
@@ -803,8 +805,9 @@ direction:"rtl"
                
                 {error.name}
               </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}> آدرس ایمیل <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/></FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}> آدرس ایمیل <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/></FormLabel>
               <Input
+              sx={{fontSize:"24px"}}
                 color="warning"
               placeholder='آدرس ایمیل'
                 variant="outlined"
@@ -819,8 +822,9 @@ direction:"rtl"
                
                {error.email}
              </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}><HiveIcon sx={{fontSize:"12px",color:"green"}}/>نقاط قوت   </FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}><HiveIcon sx={{fontSize:"12px",color:"green"}}/>نقاط قوت   </FormLabel>
               <Input
+              sx={{fontSize:"24px"}}
                 color="warning"
             type='text'
                 variant="outlined"
@@ -834,9 +838,9 @@ direction:"rtl"
                
                {error.advantage}
              </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}><HiveIcon sx={{fontSize:"12px",color:"red"}}/> نقاط ضعف  </FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}><HiveIcon sx={{fontSize:"12px",color:"red"}}/> نقاط ضعف  </FormLabel>
               <Input
-               
+               sx={{fontSize:"24px"}}
                color="warning"
             type='text'
                 variant="outlined"
@@ -849,7 +853,7 @@ direction:"rtl"
                {error.disadvantages}
             
              </Typography>
-                <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}> امتیاز شما</FormLabel>
+                <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}> امتیاز شما</FormLabel>
                 <Rating
         name="simple-controlled"
         value={score}
@@ -863,8 +867,9 @@ direction:"rtl"
                {error.score}
               
              </Typography>
-            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}> دیدگاه شما <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/>  </FormLabel>
+            <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"18px"}}> دیدگاه شما <AcUnitIcon  sx={{fontSize:"8px",color:"#615d5d"}}/>  </FormLabel>
             <Textarea
+          
              color="warning"
                  variant="outlined"
                  required
@@ -873,7 +878,7 @@ direction:"rtl"
                  value={comment}
                  onChange={(e)=> setComment(e.target.value)}
              rows="50" cols="30"
-             sx={{width:"100%",height:"200px"}}
+             sx={{width:"100%",height:"200px",fontSize:"24px"}}
              ></Textarea>
 
                <Typography variant='body1' sx={{color:"#f54141",mt:1}}>

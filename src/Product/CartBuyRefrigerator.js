@@ -217,15 +217,15 @@ useEffect(()=>{
     if(isvalidate()){
       //console.log(result);
       cartItems.map(i=>{ 
-        let idcomment=i.id;
-  let result={idcomment,name,email,advantage,disadvantages,
-  score,comment}
+       
   fetch("https://serverjson-project.onrender.com/Allcomments",{
     method:"POST",
-    headers:{"content-type":"aplication/jopes"},
-    body:JSON.stringify(result)
+    headers:{"content-type":"aplication/json"},
+    body:JSON.stringify({idcomment:i.id,name:name,email:email,advantage:advantage,disadvantages:disadvantages,
+      score:score,comment:comment})
 }).then((res)=>{
 toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ; 
+
 }).catch((err)=>{
     toast.error("");
 })

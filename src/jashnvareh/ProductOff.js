@@ -109,7 +109,7 @@ useEffect(()=>{
 
 <PageTitle title='کالاهای تخفیف دار' description='  جشنواره'/>
    <TopNav/> 
-   <Box sx={{width:"90%",display:"flex",alignSelf:"center",justifyContent:"start",py:1.5,mx:"auto",mt:{xs:15,lg:5},mb:5,boxShadow:"10px 10px 10px #585858 "}}>
+   <Box sx={{bgcolor:"red",width:"95%",display:"flex",alignSelf:"center",justifyContent:"start",py:{xs:"2em",lg:1},mx:"auto",mt:"3em",mb:"1.5em",boxShadow:"10px 10px 10px #585858 "}}>
 
     <Typography variant='h5' sx={{color:"#585858",textAlign:"start",px:5}}>کالاهای تخفیف دار </Typography>
    </Box>
@@ -171,7 +171,8 @@ sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
   <NavLink to={'/cartbuygas'}>  <Button size="large"
       fullWidth
       variant="contained"
-      sx={{ borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#eeeeee',fontSize:"18px",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:1,py:0,px:8}}
+      sx={{  borderTopRightRadius:"0.5em",borderTopLeftRadius: "1em",borderBottomRightRadius:"1em",borderBottomLeftRadius:"0.5em",':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},
+       color:'#eeeeee',fontSize:"1.5em",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:"0.5em",py:0,px:"2em"}}
       onClick={()=>{
         setCartItems([item]);
        }}>خرید </Button></NavLink>

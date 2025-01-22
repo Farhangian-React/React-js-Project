@@ -64,17 +64,21 @@ errmesage.password="لطفا رمز را وارد کنید";
     const handlesubmit=(e)=>{
     
 e.preventDefault();
-let result={id,fname,lname,email,password};
+
   if(isvalidate()){
 //console.log(result);
 fetch("https://serverjson-project.onrender.com/users",{
     method:"POST",
-    headers:{"content-type":"aplication/jopes"},
-    body:JSON.stringify(result)
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body:JSON.stringify({id:id,fname:fname,lname:lname,email:email,password:password})
+
 
 }).then((res)=>{
     toast.success("عضویت با موفقیت صورت گرفت");
-    navigate("/signin");    
+    navigate("/signin");   
+  
 }).catch((err)=>{
     toast.error("");
 })

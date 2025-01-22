@@ -197,8 +197,8 @@ sx={{width:"120px",height:"150px",m:"auto"}}
   <NavLink to={'/cartbuygas'}>  <Button size="large"
       fullWidth
       variant="contained"
-      sx={{ borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"10px",
-      ':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#414141',fontSize:"22px", backgroundImage:"linear-gradient(to left ,#c2e59c, #64b3f4)", my:4,py:0,px:12}}
+      sx={{  borderTopRightRadius:"1em",borderTopLeftRadius: "1.5em",borderBottomRightRadius:"1.5em",borderBottomLeftRadius:"1em",
+      ':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#414141',fontSize:"3em", backgroundImage:"linear-gradient(to left ,#c2e59c, #64b3f4)", my:4,py:0,px:12}}
       onClick={()=>{
         setCartItems([item]);
        }}>خرید </Button></NavLink>

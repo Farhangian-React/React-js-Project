@@ -73,21 +73,21 @@ width: 150px;
 .bagbox{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 0.5em;
     background-color: white;
   
 }.tinybox{
     width:90%;
-    margin-left: 90px;
-    margin-top: 20px;
-    margin-bottom:20px ;
-    margin-right:40px ;
+    margin-left: 0.1em;
+    margin-top: 0.5em;
+    margin-bottom:0.5em ;
+    margin-right:0.1em ;
 }
 .closebotton{
     display: flex;
     border: none;
     color: #E0AA3E;
-    font-size: 16px;
+    font-size: 0.5em;
     background-color: white;
 
 }

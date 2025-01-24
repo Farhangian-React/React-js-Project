@@ -2,7 +2,6 @@ import * as React from 'react';
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { useState } from 'react';
@@ -107,7 +106,7 @@ navigate("/")
        height:{xs:'100vh',lg:"85vh"},
        width:'100%'
        }} >
-      <Box maxWidth="xs"  sx={{display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:20,lg:3},
+      <Box minWidth="xs"  sx={{display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:{xs:"center",lg:"start"},mx:10,mt:{xs:20,lg:3},
       height:{xs:"600px",lg:"450px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
         <Typography  sx={{fontSize:{xs:"36px",lg:"30px"},textAlign:"center",mt:{xs:1,lg:1},color:"#fff"}}>
        ورود به حساب کاربری

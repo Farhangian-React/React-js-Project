@@ -30,8 +30,8 @@ export default  function FilteringProductOff() {
   const [checkedE2, setCheckedE2] = useState(false);
   const [disabledE1,setDisabledE1]=useState(false);
   const [disabledE2,setDisabledE2]=useState(false);
-  const [index, setIndex] = React.useState(0);
-  const [index1, setIndex1] = React.useState(0);
+  const [index, setIndex] = React.useState(null);
+  const [index1, setIndex1] = React.useState(null);
   
   const convertToEnglish=(str)=> {
     let englishNumber =str
@@ -403,10 +403,10 @@ const handleChangeE1=(e)=>{
     } 
    return (
     <>
-     <Box component="div" sx={{width:"300px",display:{xs:"none",lg:'flex'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>
-    <Box sx={{mt:0.3,mr:0.7,display:'flex',justifyContent:'start',borderRadius:{xs:"none",lg:'10px'},direction:'rtl',borderBottom:{xs:"1px solid #414141",lg:"none"},
-     height:'50px',color:"#eeeeee",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",}}>
-<Typography sx={{px:2.2,pt:0.5,fontSize:{xs:"22px"},direction:'rtl'}}>  نوع نمایش 
+     <Box component="div" sx={{width:"30vw",display:{xs:"none",lg:'flex'},flexDirection:'column',justifyContent:"start"}}>
+    <Box sx={{mt:"0.5em",mr:"0.5em",display:'flex',justifyContent:'start',borderRadius:"0.5em",direction:'rtl',
+     height:'auto',color:"#eeeeee",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
+<Typography sx={{px:2.2,py:"0.3em",fontSize:{xs:"2em"},direction:'rtl'}}>  نوع نمایش 
 </Typography>
 </Box>    
 <Accordion
@@ -414,15 +414,15 @@ const handleChangeE1=(e)=>{
         onChange={(event, expanded) => {
           setIndex(expanded ? 0 : null);
         }}
-        sx={{borderBottom:'1px solid black',mr:1}}
+        sx={{borderBottom:'1px solid black',mr:"0.5em",borderRadius:"0.5em"}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}} 
+            <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
          aria-controls="panel1-content"
-         expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}> قیمت </AccordionSummary>
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}> قیمت </AccordionSummary>
         <AccordionDetails >
         <FormGroup>
-<FormControlLabel control={<Checkbox checked={checked1} value={"گرانترین به ارزانترین"}  onChange={sortArrayMaxtoMin} />} label="گرانترین به ارزانترین" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={" ارزانترین به گرانترین"}  onChange={sortArrayMintoMax} />} label=" ارزانترین به گرانترین" />
+<FormControlLabel control={<Checkbox checked={checked1} value={"گرانترین به ارزانترین"}  onChange={sortArrayMaxtoMin} />}  label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>گرانترین به ارزانترین</Typography>} />
+<FormControlLabel  control={<Checkbox checked={checked2} value={" ارزانترین به گرانترین"}  onChange={sortArrayMintoMax} />}  label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>ارزانترین به گرانترین</Typography>} />
 
 </FormGroup>
         </AccordionDetails>
@@ -432,14 +432,16 @@ const handleChangeE1=(e)=>{
         onChange={(event, expanded) => {
           setIndex(expanded ? 1 : null);
         }}
-        sx={{borderBottom:'1px solid black',mr:1}}
+        sx={{borderBottom:'1px solid black',mr:"0.5em",borderRadius:"0.5em"}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>رنگ بدنه</AccordionSummary>
+    <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
+         aria-controls="panel1-content"
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}>رنگ بدنه</AccordionSummary>
         <AccordionDetails>
         <FormGroup>
-<FormControlLabel  control={<Checkbox  checked={checkedC1}   onChange={handleChangeC1} value={"سفید"}  />} label="سفید" />
-<FormControlLabel  control={<Checkbox  checked={checkedC2}   onChange={handleChangeC2} value={"نقره ای"}/>} label="نقره ای" />
-<FormControlLabel   control={<Checkbox  checked={checkedC3}   onChange={handleChangeC3} value={"مشکی"} />} label="مشکی" />
+        <FormControlLabel  control={<Checkbox  checked={checkedC1}   onChange={handleChangeC1} value={"سفید"}  />}  label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>سفید</Typography>} />
+<FormControlLabel  control={<Checkbox  checked={checkedC2}   onChange={handleChangeC2} value={"نقره ای"}/>} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>نقره ای</Typography>} />
+<FormControlLabel   control={<Checkbox  checked={checkedC3}   onChange={handleChangeC3} value={"مشکی"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>مشکی</Typography>}  />
 </FormGroup>
         </AccordionDetails>
       </Accordion>
@@ -448,15 +450,17 @@ const handleChangeE1=(e)=>{
         onChange={(event, expanded) => {
           setIndex(expanded ? 2 : null);
         }}
-        sx={{borderBottom:'1px solid black',mr:1}}
+        sx={{borderBottom:'1px solid black',mr:"0.5em",borderRadius:"0.5em"}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>  برند</AccordionSummary>
+           <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
+         aria-controls="panel1-content"
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}>  برند</AccordionSummary>
         <AccordionDetails>
         <FormGroup>
-<FormControlLabel control={<Checkbox  checked={checkedB1}   onChange={handleChangeB1} value={"Whirlpool"} />} label="Whirlpool" />
-<FormControlLabel  control={<Checkbox checked={checkedB2}   onChange={handleChangeB2} value={"bush"} />} label="bush" />          
-<FormControlLabel control={<Checkbox  checked={checkedB3}   onChange={handleChangeB3} value={"LG"} />} label="LG" />
-<FormControlLabel  control={<Checkbox checked={checkedB4}   onChange={handleChangeB4} value={"samsung"} />} label="samsung" />
+        <FormControlLabel control={<Checkbox  checked={checkedB1}   onChange={handleChangeB1} value={"Whirlpool"} />}label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>Whirlpool</Typography>}  />
+<FormControlLabel  control={<Checkbox checked={checkedB2}   onChange={handleChangeB2} value={"bosch"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>bosch</Typography>} />          
+<FormControlLabel control={<Checkbox  checked={checkedB3}   onChange={handleChangeB3} value={"LG"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>LG</Typography>} />
+<FormControlLabel  control={<Checkbox checked={checkedB4}   onChange={handleChangeB4} value={"samsung"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>samsung</Typography>} />
 </FormGroup>
         </AccordionDetails>
       </Accordion>
@@ -465,39 +469,41 @@ const handleChangeE1=(e)=>{
         onChange={(event, expanded) => {
           setIndex(expanded ? 3 : null);
         }}
-        sx={{borderBottom:'1px solid black',mr:1}}
+        sx={{borderBottom:'1px solid black',mr:"0.5em",borderRadius:"0.5em"}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> رتبه ی انرژی </AccordionSummary>
+            <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
+         aria-controls="panel1-content"
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}> رتبه ی انرژی </AccordionSummary>
         <AccordionDetails>
    <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedE1}   onChange={handleChangeE1} disabled={disabledE1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedE2}   onChange={handleChangeE2} disabled={disabledE2} value={"ندارد"} />} label="ندارد" />
+   <FormControlLabel  control={<Checkbox checked={checkedE1}   onChange={handleChangeE1} disabled={disabledE1} value={"دارد"}  />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>دارد</Typography>}  />
+<FormControlLabel  control={<Checkbox checked={checkedE2}   onChange={handleChangeE2} disabled={disabledE2} value={"ندارد"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>ندارد</Typography>}  />
 </FormGroup>
 
         </AccordionDetails>
       </Accordion>
 </Box>
-<Box component="div" sx={{width:'95%',alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:{xs:'center',lg:'start'}}}>     
+<Box component="div" sx={{width:'95vw',m:"auto",alignSelf:"center",display:{xs:"flex",lg:'none'},flexDirection:'column',justifyContent:"center"}}>     
 <Accordion
         expanded={index1 === 0}
         onChange={(event, expanded) => {
           setIndex1(expanded ? 0 : null);
         }}
-        sx={{borderBottom:'1px solid black',backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",mr:1}}
+        sx={{backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  
-         expandIcon={<ArrowDropDownIcon sx={{':hover':{color:"black"},fontSize:{xs:"18px",md:"22px"}}} />}>
+        <AccordionSummary  sx={{direction:'rtl'}}  
+         expandIcon={<ArrowDropDownIcon sx={{':hover':{color:"black"},fontSize:"2.5em"}} />}>
 
         <Grid container spacing={1} columns={16} sx={{ my:0, display:'flex' ,justifyItems:"center",flexDirection:"row",alignSelf:"center"}} >
         <Grid item xs={8} sx={{ display:"flex",flexDirection:"row",justifyContent:"start"}}>
             <Grid >
         <IconButton sx={{pt:0}}>
   
-      <FilterAltOutlinedIcon sx={{color:"#eeeeee"}}/>
+      <FilterAltOutlinedIcon sx={{fontSize:'2em',color:"#eeeeee"}}/>
     </IconButton>
     </Grid>
         <Grid >
-      <Typography sx={{fontSize:'18px',direction:'rtl',color:"#eeeeee"}}>
+      <Typography sx={{fontSize:'2em',direction:'rtl',color:"#eeeeee"}}>
    فیلتر بر اساس
 </Typography>
 </Grid>
@@ -517,13 +523,13 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}} 
+        <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
          aria-controls="panel1-content"
-         expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}> قیمت </AccordionSummary>
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}> قیمت </AccordionSummary>
         <AccordionDetails >
         <FormGroup>
-<FormControlLabel control={<Checkbox checked={checked1} value={"گرانترین به ارزانترین"}  onChange={sortArrayMaxtoMin} />} label="گرانترین به ارزانترین" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={" ارزانترین به گرانترین"}  onChange={sortArrayMintoMax} />} label=" ارزانترین به گرانترین" />
+<FormControlLabel  control={<Checkbox checked={checked1} value={"گرانترین به ارزانترین"}  onChange={sortArrayMaxtoMin} />}  label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>گرانترین به ارزانترین</Typography>}  />
+<FormControlLabel  control={<Checkbox checked={checked2} value={" ارزانترین به گرانترین"}  onChange={sortArrayMintoMax} />}  label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>ارزانترین به گرانترین</Typography>} />
 
 </FormGroup>
         </AccordionDetails>
@@ -535,12 +541,14 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}>رنگ بدنه</AccordionSummary>
+               <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
+         aria-controls="panel1-content"
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}>رنگ بدنه</AccordionSummary>
         <AccordionDetails>
         <FormGroup>
-<FormControlLabel  control={<Checkbox  checked={checkedC1}   onChange={handleChangeC1} value={"سفید"}  />} label="سفید" />
-<FormControlLabel  control={<Checkbox  checked={checkedC2}   onChange={handleChangeC2} value={"نقره ای"}/>} label="نقره ای" />
-<FormControlLabel   control={<Checkbox  checked={checkedC3}   onChange={handleChangeC3} value={"مشکی"} />} label="مشکی" />
+<FormControlLabel  control={<Checkbox  checked={checkedC1}   onChange={handleChangeC1} value={"سفید"}  />}  label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>سفید</Typography>} />
+<FormControlLabel  control={<Checkbox  checked={checkedC2}   onChange={handleChangeC2} value={"نقره ای"}/>} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>نقره ای</Typography>} />
+<FormControlLabel   control={<Checkbox  checked={checkedC3}   onChange={handleChangeC3} value={"مشکی"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>مشکی</Typography>}  />
 </FormGroup>
         </AccordionDetails>
       </Accordion>
@@ -551,13 +559,15 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon sx={{fontSize:'16px',pl:1.5}} />}>  برند</AccordionSummary>
+        <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
+         aria-controls="panel1-content"
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}>  برند</AccordionSummary>
         <AccordionDetails>
         <FormGroup>
-<FormControlLabel control={<Checkbox  checked={checkedB1}   onChange={handleChangeB1} value={"Whirlpool"} />} label="Whirlpool" />
-<FormControlLabel  control={<Checkbox checked={checkedB2}   onChange={handleChangeB2} value={"bush"} />} label="bush" />          
-<FormControlLabel control={<Checkbox  checked={checkedB3}   onChange={handleChangeB3} value={"LG"} />} label="LG" />
-<FormControlLabel  control={<Checkbox checked={checkedB4}   onChange={handleChangeB4} value={"samsung"} />} label="samsung" />
+<FormControlLabel control={<Checkbox  checked={checkedB1}   onChange={handleChangeB1} value={"Whirlpool"} />}label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>Whirlpool</Typography>}  />
+<FormControlLabel  control={<Checkbox checked={checkedB2}   onChange={handleChangeB2} value={"bosch"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>bosch</Typography>} />          
+<FormControlLabel control={<Checkbox  checked={checkedB3}   onChange={handleChangeB3} value={"LG"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>LG</Typography>} />
+<FormControlLabel  control={<Checkbox checked={checkedB4}   onChange={handleChangeB4} value={"samsung"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>samsung</Typography>} />
 </FormGroup>
         </AccordionDetails>
       </Accordion>
@@ -568,11 +578,13 @@ const handleChangeE1=(e)=>{
         }}
         sx={{borderBottom:'1px solid black',mr:1}}
       >
-        <AccordionSummary sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<AddIcon  sx={{fontSize:'16px',pl:1.5}}/>}> رتبه ی انرژی </AccordionSummary>
+          <AccordionSummary  sx={{fontSize:'1.5em',direction:'rtl'}} 
+         aria-controls="panel1-content"
+         expandIcon={<AddIcon sx={{fontSize:'1em',pl:"0.5em"}} />}> رتبه ی انرژی </AccordionSummary>
         <AccordionDetails>
    <FormGroup>
-<FormControlLabel control={<Checkbox checked={checkedE1}   onChange={handleChangeE1} disabled={disabledE1} value={"دارد"}  />} label="دارد" />
-<FormControlLabel  control={<Checkbox checked={checkedE2}   onChange={handleChangeE2} disabled={disabledE2} value={"ندارد"} />} label="ندارد" />
+<FormControlLabel  control={<Checkbox checked={checkedE1}   onChange={handleChangeE1} disabled={disabledE1} value={"دارد"}  />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>دارد</Typography>}  />
+<FormControlLabel  control={<Checkbox checked={checkedE2}   onChange={handleChangeE2} disabled={disabledE2} value={"ندارد"} />} label={<Typography sx={{fontSize:"1.6em",color:"#515151"}}>ندارد</Typography>}  />
 </FormGroup>
 </AccordionDetails>
 </Accordion>

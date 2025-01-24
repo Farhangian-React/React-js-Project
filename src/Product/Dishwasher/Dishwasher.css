@@ -24,11 +24,11 @@
 }
 .navlinks{
 color:#E0AA3E;
-font-size: 24px;
+font-size: 2em;
 }
 .navlinkin{
 color:#585858;
-font-size: 18px;
+font-size: 1.5em;
 }
 
  /* width */
@@ -77,7 +77,7 @@ font-size: 18px;
   .navlink{
     color:#4c4e58;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.5em;
     transition: all 0.2s;
 }
 

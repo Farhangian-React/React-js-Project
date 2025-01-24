@@ -87,24 +87,24 @@ fetch("https://serverjson-project.onrender.com/users",{
        height:'100vh',
        width:'100%'
        }} >
-       <Box  sx={{width:"100%",mx:1,display:{xs:"none",md:"flex"},justifyContent:"center",mt:3,mr:20}}>
-       <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#282828' , ml:22,mt:30,width:"200px",
+       <Box  sx={{width:"100%",mx:1,display:{xs:"none",md:"flex"},justifyContent:"center",mt:"3em",mr:"5em"}}>
+       <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#282828' , ml:"12em",mt:"6em",width:"200px",
          height:'200px',opacity:{xs:0.9,lg:0.8},position:'relative'}}>
-        <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:3}}>فروش  </Typography>
+        <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:"3em"}}>فروش  </Typography>
       </Box>
-      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:45 ,mr:4,width:"220px",
+      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:"12em" ,mr:"3em",width:"220px",
          height:'220px',opacity:{xs:0.9,lg:0.8},position:'absolute'}}>
-        <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:3}}>جشنواره </Typography>
+        <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:"3em"}}>جشنواره </Typography>
       </Box>
-      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:23 ,mr:15,width:"220px",
+      <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"50%",bgcolor:'#E0AA3E' ,mt:"3em" ,mr:"7em",width:"220px",
          height:'220px',opacity:{xs:0.9,lg:0.8},position:'absolute'}}>
-        <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:3}}>محصولات  </Typography>
+        <Typography  level='h2' sx={{textAlign:'center',color:'white' ,my:"3em"}}>محصولات  </Typography>
       </Box>
       
  
        </Box>
 
-       <Box maxWidth="sm"  sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mr:10,ml:{xs:10,md:35},mt:{xs:20,md:10},
+       <Box  maxWidth="sm" sx={{ display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mr:10,ml:{xs:10,md:35},mt:{xs:20,md:10},
       height:{xs:"300px",md:"600px"},border:"2px solid white",backdropFilter:"blur(25px)",px:4,py:2}} >
         <Typography  variant="h5" sx={{textAlign:"center",my:1,color:"#fff"}}>
         مشتری گرامی ضمن تشکر از خرید شما جهت فعال سازی جشنواره سهیل اطلاعات زیر را با دقت تکمیل نمایید

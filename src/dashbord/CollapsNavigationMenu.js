@@ -118,38 +118,41 @@ export default function CollapsNavigationMenu() {
   return (
     <>
     
-    <Box sx={{bgcolor:"black",m:"auto", display: 'flex',flexDirection:"row",justifyContent:"space-around"}}>
-    <Box> 
+    <Box sx={{bgcolor:"black", display:'flex',flexDirection:"row",justifyContent:"center",ml:"10em",pl:"10em"}}>
+   <Grid  xs={3}  >
  <IconButton
 title="Title" 
       onClick={handleDrawerOpen}
-      sx={{ color:' #FFC412', ml: 0,mr:5, ...(open && { display: '' }) }}
+      sx={{ color:' #FFC412', ml: 0, ...(open && { display: '' }) }}
     >
-      <MenuIcon />
+      <MenuIcon sx={{ fontSize:"1em"}} />
     </IconButton>
-</Box> 
-<Box>
+ </Grid>
+ <Grid  xs={3}  >
 <NavLink className="signup"  to={'/signup'}>
              
              
-       <PermIdentityOutlinedIcon  sx={{mr:1,mt:1,fontSize:'26px',color:'white'}} />
+       <PermIdentityOutlinedIcon  sx={{mr:1,mt:1,ml:1,fontSize:'2em',color:'white'}} />
       
  
    </NavLink>
-   </Box>
-   <Box>
-   <Typography variant='h5' sx={{color:"#f2b705",mt:1}}>/</Typography></Box>
-   <Box>
+   
+   </Grid>
+   <Grid  xs={3}  >
+   <Typography variant='h5' sx={{color:"#f2b705",mt:1}}>/</Typography>
+  </Grid>
+  <Grid  xs={3}  >
+ 
     <IconButton 
     title="Title"
       onClick={handleDrawerOpen1}
       sx={{ color:' #fff', ml: 0,mt:0.5, ...(open1 && { display: 'none' }) }}
     >
-      < SearchOutlinedIcon/>
-    </IconButton></Box>
+      < SearchOutlinedIcon sx={{ fontSize:"1em"}}/>
+    </IconButton>
    
 
-
+</Grid>
 
 
 
@@ -222,10 +225,10 @@ title="Title"
       </Drawer>
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: "30em",
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: drawerWidth,
+            width: "30em",
             boxSizing: 'border-box',
             height:"60vh",
             display:"flex",
@@ -242,7 +245,7 @@ title="Title"
         <DrawerHeader sx={{display:"flex",justifyContent:"space-around",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)"}}>
             <Grid sx={{width:"100%"}}>
            <Typography
-     variant="h5"
+    
      noWrap
      component="a"
      href="/"
@@ -257,7 +260,8 @@ title="Title"
        letterSpacing: '.1rem',
        color: 'white',
        textDecoration: 'none',
-       direction:"rtl"
+       direction:"rtl",
+       fontSize:"2.5em"
      }}
    >
      SOHIL
@@ -268,7 +272,7 @@ title="Title"
             <IconButton 
              title='Title'
             onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'ltr' ? <ChevronLeftIcon sx={{fontSize:"34px"}} /> : <ChevronRightIcon sx={{fontSize:"34px"}}/>}
           </IconButton>
              </Grid>
         </DrawerHeader>
@@ -276,8 +280,8 @@ title="Title"
         <List 
         sx={{fontSize:"18px",color:"#515151",width:"130px"}}
         >
-            <ListItem disablePadding sx={{width:"260px",display:"flex",justifyContent:"space-around",m:2}}>
-             <ListItemButton sx={{fontSize:"22px"}}
+            <ListItem disablePadding sx={{width:"20em",display:"flex",justifyContent:"space-between",m:2}}>
+             <ListItemButton sx={{fontSize:"1.5em"}}
                onClick={handleClick1}
                >
                محصولات
@@ -287,7 +291,7 @@ title="Title"
               <Menu
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
-              { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
+              { backgroundColor: '#fff',width:'22em' } ,direction:'rtl'
             }
           }
         id="demo-customized-menu"
@@ -316,8 +320,8 @@ title="Title"
       
       </Menu>
             </ListItem>
-            <ListItem disablePadding sx={{width:"260px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"22px"}}
+            <ListItem disablePadding sx={{width:"20em",display:"flex",justifyContent:"space-around",m:2}}>
+              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"1.5em"}}
                onClick={handleClick2}
                >
                جشنواره ها
@@ -335,7 +339,7 @@ title="Title"
         onClose={handleClose2}
         sx={
           { mt: "1px", "& .MuiMenu-paper": 
-            { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
+            { backgroundColor: '#fff',width:'22em' } ,direction:'rtl'
           }
         }
       >
@@ -349,8 +353,8 @@ title="Title"
         </NavLink></MenuItem>
       </Menu>
             </ListItem>
-            <ListItem disablePadding sx={{width:"260px",display:"flex",justifyContent:"space-around",m:2}}>
-              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"22px"}}
+            <ListItem disablePadding sx={{width:"20em",display:"flex",justifyContent:"space-around",m:2}}>
+              <Grid sx={{width:"100%"}}><ListItemButton sx={{fontSize:"1.5em"}}
                onClick={handleClick3}
                >
                خدمات
@@ -368,7 +372,7 @@ title="Title"
         onClose={handleClose3}
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
-              { backgroundColor: '#fff',width:'250px' } ,direction:'rtl'
+              { backgroundColor: '#fff',width:'22em' } ,direction:'rtl'
             }
           }
       >
@@ -383,17 +387,17 @@ title="Title"
   </NavLink></MenuItem>
       </Menu>
             </ListItem>
-            <ListItem disablePadding sx={{width:"300px",display:"flex",justifyContent:"space-around",m:2}}>
+            <ListItem disablePadding sx={{width:"20em",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton  >
-              <NavLink className='navlinkcoll' sx={{fontSize:"16px"}} to={"/Stores"}>
+              <NavLink className='navlinkcoll' sx={{fontSize:"3em"}} to={"/Stores"}>
               فروشگاه ها
            </NavLink> </ListItemButton>
            </Grid>
            <Grid sx={{width:"100%"}}>
              </Grid>
            </ListItem>
-           <ListItem disablePadding sx={{width:"300px",display:"flex",justifyContent:"space-around",m:2}}>
+           <ListItem disablePadding sx={{width:"20em",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton >
               <NavLink className='navlinkcoll' to={"/about-snova"}>
@@ -403,7 +407,7 @@ title="Title"
            <Grid sx={{width:"100%"}}>
              </Grid>
            </ListItem>
-           <ListItem disablePadding sx={{width:"300px",display:"flex",justifyContent:"space-around",m:2}}>
+           <ListItem disablePadding sx={{width:"20em",display:"flex",justifyContent:"space-around",m:2}}>
             <Grid sx={{width:"100%"}}>
             <ListItemButton >
               <NavLink className='navlinkcoll' to={"/life-style"}>سبک زندگی
@@ -421,8 +425,8 @@ title="Title"
         </List>
         <NavLink className="signup"  to={"/signin"}>
         <Box sx={{display:"flex",flexDirection:"row",justifyContent:"center",m:1,px:2,backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)",pb:1,borderRadius:1}}>
-           <Typography variant='body2' sx={{mt:2,color:"#eeeeee"}}>ورود یا عضویت </Typography>
-           <PermIdentityOutlinedIcon  sx={{mt:1,mr:2,fontSize:'30px',color:'white'}} />
+           <Typography  sx={{mt:2,color:"#eeeeee",fontSize:"2em"}}>ورود یا عضویت </Typography>
+           <PermIdentityOutlinedIcon  sx={{mt:1,mr:2,fontSize:'3em',color:'white'}} />
        </Box>
        </NavLink>
       </Drawer>

@@ -12,7 +12,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import "../../Dishwasher/Dishwasher.css";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 export default  function RefrideratorSideBySide() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -29,7 +29,7 @@ export default  function RefrideratorSideBySide() {
 <>
 <PageTitle title=' یخچال و فریزر / یخچال‌فریزرهای ساید بای ساید  ' description='   یخجال و فریزر '/>
    <TopNav/> 
-   <Box sx={{display:"flex",justifyContent:"end",mb:{xs:1,md:1} ,mt:{xs:10,lg:0.7} ,mx:0.5 }} >
+   <Box sx={{display:"flex",justifyContent:"end",mb:"0.5em" ,mt:{xs:"4.7em",lg:"0.1em"} ,mx:"0.5em" }} >
       <List
             role="menu"
             aria-label="Products"
@@ -47,18 +47,19 @@ export default  function RefrideratorSideBySide() {
               backgroundColor:'#E0E1E3',
               alignItems:'center',
               
+              
              
             }}
           >
-                <ListItem role="none">
+                <ListItem role="none" sx={{mr:"0.5em"}}>
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"24px",mx:0,px:0}}
+               sx={{color:"#E0AA3E",fontSize:"1.3em"}}
                >
                 یخچال و فریزر 
                
-              <KeyboardArrowDownIcon /></ListItemButton>
+              <ArrowDropDownIcon sx={{fontSize:"1.5em",mt:"0.3em"}} /></ListItemButton>
               <Menu
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
@@ -77,30 +78,38 @@ export default  function RefrideratorSideBySide() {
       >
         <MenuItem onClick={handleClose1} disableRipple>
         
-        <NavLink  onClick={handleClose1}  disableRipple className='navlink' to={'/shop-refrigeratorfrenchdoor' }  >  یخچال های دو در   </NavLink> 
+        <NavLink  onClick={handleClose1}  disableRipple  to={'/shop-refrigeratorfrenchdoor' } 
+        style={{ textDecoration: "none",fontSize:"1.2em",color:"#414141" }} > 
+         یخچال های دو در   </NavLink> 
         </MenuItem>
         <MenuItem onClick={handleClose1} disableRipple>
-          <NavLink className='navlink' to={'/shop-refrigeratorsidbysid'} >  یخچال های ساید بای ساید </NavLink>
+          <NavLink className='navlink' to={'/shop-refrigeratorsidbysid'}
+          style={{ textDecoration: "none",fontSize:"1.2em",color:"#414141" }} > 
+           یخچال های ساید بای ساید </NavLink>
         </MenuItem>
-        <MenuItem onClick={handleClose1} disableRipple><NavLink className='navlink'  to={'/shop-refrideratorbottomfreezer'}>
+        <MenuItem onClick={handleClose1} disableRipple><NavLink   to={'/shop-refrideratorbottomfreezer'} 
+        style={{ textDecoration: "none",fontSize:"1.2em",color:"#414141" }}>
         یخچال و فریزر پایین 
         </NavLink></MenuItem>
-        <MenuItem onClick={handleClose1} disableRipple><NavLink className='navlink' to={'/shop-refrideratortopfreezer'}>
+        <MenuItem onClick={handleClose1} disableRipple><NavLink  to={'/shop-refrideratortopfreezer'}
+        style={{ textDecoration: "none",fontSize:"1.2em",color:"#414141" }}>
         یخچال و فریزر بالا 
         </NavLink></MenuItem>
-        <MenuItem onClick={handleClose1} disableRipple><NavLink className='navlink' to={'/shop-refrideratorspecializedfreezer'}>
+        <MenuItem onClick={handleClose1} disableRipple><NavLink  to={'/shop-refrideratorspecializedfreezer'}
+        style={{ textDecoration: "none",fontSize:"1.2em",color:"#414141"}}>
         یخچال و فریزر تخصصی 
         </NavLink></MenuItem>
       </Menu>
             </ListItem>
-            <ListItem role="none">
-            <NavLink className='navlinkin' to={'/shop-washing-machine'}>ماشین لباسشویی</NavLink>
+            <ListItem role="none" sx={{mr:"0.5em"}}>
+            <NavLink  to={'/shop-washing-machine'} style={{ textDecoration: "none",fontSize:"1.1em",color:"#585858" }}>ماشین لباسشویی</NavLink>
             </ListItem>
-            <ListItem role="none">
-            <NavLink className='navlinkin' to={'/allgas'}>پخت و پز  </NavLink>
+
+            <ListItem role="none" sx={{mr:"0.5em"}}>
+            <NavLink  to={'/allgas'} style={{ textDecoration: "none",fontSize:"1.1em",color:"#585858" }}>پخت و پز  </NavLink>
             </ListItem>
-            <ListItem role="none">
-               <NavLink className='navlinkin '  to={'/shop-dishwasher'} >ماشین ظرفشویی</NavLink>    
+            <ListItem role="none" sx={{mr:"0.5em"}}>
+               <NavLink to={'/shop-dishwasher'} style={{ textDecoration: "none",fontSize:"1.1em",color:"#585858" }} >ماشین ظرفشویی</NavLink>    
             </ListItem>
           </List>
         </Box>

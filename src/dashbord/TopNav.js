@@ -56,11 +56,9 @@ const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
   return (
     <>
      <HideOnScroll {...props}>
-    <AppBar position="fixed" className='nav' sx={{mt:0 ,mb:0,bgcolor:'black',px:1,color:'white'}}>
-      <Container maxWidth='xl'>
-        <Toolbar disableGutters sx={{ my:0, display:"flex",justifyContent:'space-between'}} >
-      <Grid container spacing={4} sx={{display:'flex',justifyContent:'space-between'}}>
-        <Grid  sx={{mt:3, display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
+    <AppBar position="fixed" className='nav' sx={{mt:0 ,mb:0,bgcolor:'black',px:"0.5em",color:'white'}}>
+    <Box sx={{ flexGrow: 1,py:0, display:'flex',justifyContent:{xs:"space-around",lg:'space-between'},marginLeft:{md:0},marginRight:{md:0} }}>
+        <Grid  sx={{mt:"0.2em", display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
         <img className='imgsohil' width={60} alt='' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
                <Typography
      noWrap
@@ -74,52 +72,48 @@ const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
        fontFamily: 'monospace',
        fontWeight: 300,
        fontStyle:'italic',
-       letterSpacing: '.1rem',
+       letterSpacing: '.1em',
        color: '#f2b705',
        textDecoration: 'none',
-       fontSize:{xs:"18px",md:"28px "}
+       fontSize:"3em"
      }}
    >
      S O H I L
    </Typography>
    </Grid>
 
-   <Box sx={{mt:3, ml:2, display: { xs: 'flex', lg: 'none' } ,justifyContent:'center',direction:"ltr"}}> 
+   <Box sx={{mt:"0.2em", mr:"2em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'center',direction:"ltr"}}> 
 <Box sx={{m:"auto", display: 'flex',flexDirection:"row",justifyContent:"space-around"}}>
 
       <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
             <NavLink to={'/buybasket'} >
-              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'gray',fontSize:'22px'}}/>
+              <ShoppingCartIcon  sx={{mr:"0.5em",ml:0,mt:"0.2em",color:'gray',fontSize:'2em'}}/>
             </NavLink>
-              <Typography sx={{mt:1}}>  ( {cartItemsBuy.length} )</Typography>
+              <Typography sx={{fontSize:"1.4em",mt:"0.2em"}}>  ( {cartItemsBuy.length} )</Typography>
           </Buy>
       </Box>       
           </Box>
+        
  <SearchButton/>
-   </Grid>
-      </Toolbar>
-      </Container>
+
+</Box>
     </AppBar>
     </HideOnScroll>
-    <AppBar position='sticky' className='nav' sx={{display:{xs:'none',lg:'flex'},
-      mt:8 ,mb:0,bgcolor:'black',px:1,py:0,color:'white',}}>
-      <Container maxWidth='xl'>
-        <Toolbar disableGutters sx={{my:0 ,display:{xs:'flex',sm:'flex'},justifyContent:{xs:'end',sm:'space-around'}}}>
-          <Box sx={{ flexGrow: 1, display:{ xs:'none',lg: 'flex'}, justifyContent:'space-around',marginLeft:{md:0},marginRight:{md:0} }}>
+    <AppBar position='sticky' className='nav' sx={{display:{xs:'none',lg:'flex'},px:"0.5em",
+      mt:"6em" ,mb:0,bgcolor:'black',py:0,color:'white',}}>
+          <Box sx={{ flexGrow: 1, display:{ xs:'none',lg: 'flex'}, justifyContent:'space-between',marginLeft:{md:0},marginRight:{md:0} }}>
              <NavigationMenu/> 
               <NavLink className="signup"  to={'/signup'}>
-                 <Box sx={{my:2,py:1,px:2,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between',border:'1px solid  #f2b705','&:hover': {
+                 <Box sx={{my:2,py:1,px:2,mx:"0.5em",display: { xs: 'none', lg: 'flex' },justifyContent:'space-between',border:'1px solid  #f2b705','&:hover': {
     backgroundColor:'black',
     border:'1px solid  #fff',
   },borderRadius:1}}>
-                   <Typography variant='body2' sx={{mt:0.5,color:"#eeeeee"}}>ورود یا عضویت </Typography>
-           <PermIdentityOutlinedIcon  sx={{mr:2,fontSize:'26px',color:'white'}} />
+                   <Typography  sx={{mt:0.5,color:"#eeeeee",fontSize:"1.5em"}}>ورود یا عضویت </Typography>
+           <PermIdentityOutlinedIcon  sx={{mr:2,fontSize:'2.5em',color:'white'}} />
           
        </Box> 
        </NavLink>
             </Box>
-        </Toolbar>
-      </Container>
     </AppBar>
 
 

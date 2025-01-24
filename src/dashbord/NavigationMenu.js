@@ -380,7 +380,7 @@ const Products = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) 
             props.onMouseEnter?.(event);
             setAnchorEl(event.currentTarget);
           }}
-          sx={{color:'white',textDecoration:'none'}}
+          sx={{color:'white',textDecoration:'none',fontSize:"1.3em"}}
         >
           محصولات 
         </Link>
@@ -501,7 +501,7 @@ const Shows = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) => 
             props.onMouseEnter?.(event);
             setAnchorEl(event.currentTarget);
           }}
-          sx={{color:'white',textDecoration:'none'}}
+          sx={{color:'white',textDecoration:'none',fontSize:"1.3em"}}
         >
           جشنواره ها 
         </Link>
@@ -599,7 +599,7 @@ const Servis = React.forwardRef(({ focusNext, focusPrevious, ...props }, ref) =>
             props.onMouseEnter?.(event);
             setAnchorEl(event.currentTarget);
           }}
-           sx={{color:'white',textDecoration:'none'}}
+           sx={{color:'white',textDecoration:'none',fontSize:"1.3em"}}
       
         >
           خدمات 
@@ -702,21 +702,21 @@ export default function NavigationMenu() {
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem  className='list'>
-        <NavLink className='hover' to={"/Stores"}   {...getTargetProps(2)} sx={{color:'white',textDecoration:'none'}} >
+        <ListItem  className='list' sx={{fontSize:"1.3em"}} >
+        <NavLink className='hover' to={"/Stores"}   {...getTargetProps(2)} sx={{color:'white',textDecoration:'none',fontSize:"1.3em"}} >
             فروشگاه </NavLink>  
         </ListItem>
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem  className='list' >
-        <NavLink className='hover' to={"/about-snova"}   {...getTargetProps(3)} sx={{color:'white',textDecoration:'none'}} >
+        <ListItem  className='list'  sx={{fontSize:"1.3em"}} >
+        <NavLink className='hover' to={"/about-snova"}   {...getTargetProps(3)} sx={{color:'white',textDecoration:'none',fontSize:"1.3em"}} >
             چرا سهیل </NavLink> 
         </ListItem>
         <ListItem>
           <Typography sx={{color:'white',fontSize:'20px'}}> / </Typography>
         </ListItem>
-        <ListItem  className='list' >
+        <ListItem  className='list' sx={{fontSize:"1.3em"}} >
         <NavLink className='hover' to={"/life-style"}   {...getTargetProps(4)} sx={{color:'white',textDecoration:'none'}} >
              سبک زندگی </NavLink>
         </ListItem>

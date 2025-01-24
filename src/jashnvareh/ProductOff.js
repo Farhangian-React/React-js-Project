@@ -109,12 +109,12 @@ useEffect(()=>{
 
 <PageTitle title='کالاهای تخفیف دار' description='  جشنواره'/>
    <TopNav/> 
-   <Box sx={{bgcolor:"red",width:"95%",display:"flex",alignSelf:"center",justifyContent:"start",py:{xs:"2em",lg:1},mx:"auto",mt:"3em",mb:"1.5em",boxShadow:"10px 10px 10px #585858 "}}>
+   <Box sx={{width:"100%",display:"flex",alignSelf:"center",justifyContent:"start",py:1,mx:"auto",mt:{xs:"5.5em",lg:"1em"},mb:"0.5em",boxShadow:"10px 10px 10px #585858 "}}>
 
-    <Typography variant='h5' sx={{color:"#585858",textAlign:"start",px:5}}>کالاهای تخفیف دار </Typography>
+    <Typography  sx={{fontSize:"2em",fontWeight:600,color:"#585858",textAlign:"start",px:"2em"}}>کالاهای تخفیف دار </Typography>
    </Box>
     <Box  sx={{display:"flex",flexDirection:{xs:"column",lg:"row"},
-    justifyContent:"start",width:"100vw",p:4,bgcolor:"#eeeeee"}} >  
+    justifyContent:"start",width:"100vw",p:"0.2em",bgcolor:"#eeeeee"}} >  
 <Box sx={{display:"flex",alignSelf:{xs:"center",lg:"start"},mx:"auto",width:{xs:"95%",lg:"30%"},
 height:{lg:"60vh"},
 position:{xs:"static",lg:"sticky"},
@@ -122,7 +122,7 @@ mt:3,
 top: "80px"}} >
 <FilteringProductOff/>   
 </Box>
-<Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',alignItems:"start",mx:1.5,pb:3,px:0}}>
+<Box  sx={{bgcolor:"#ececec", display:'flex' ,flexWrap:'wrap' ,justifyContent:'center',alignItems:"start",mx:"0.5em",pb:"2em",px:0}}>
 {
     isLoading ? 
     <Backdrop
@@ -134,10 +134,8 @@ top: "80px"}} >
   :
     datashow.map((item) => (      
       <NavLink to={'/cartbuygas'}  className={"linkss"}>
-<Card className='cards' sx={{width:{xs:"270px",sm:'270px',md:"250px",lg:'250px'},height:{xs:"400px",sm:'400px',md:"450px",lg:'450px'},marginTop:'10px',marginBottom: '10px',mx:{xs:3,lg:1.5},mt:3, px:1.5,pb:1,pt:2 }} key={item.id}>
-<Box sx={{width:"35px",height:"20px",bgcolor:"#f5cd00",color:"#414141",borderRadius:"20%",px:0,py:0,mt:0.2,display:"flex",justifyContent:"center",alignItems:"center"}}>
-    <Typography sx={{fontSize:"12px",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
-    </Box>
+<Card className='cards' sx={{width:"400px",height:"620px",marginTop:'10px',marginBottom: '10px',mx:"0.5em",my:"1em",p:"1.5em" }} key={item.id}>
+
 <CardMedia
     component="img"
     onClick={()=>{
@@ -145,23 +143,23 @@ top: "80px"}} >
      }}
    image={item.img}
     alt=""
-sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
+sx={{width:"250px",m:"auto"}}
   />
-    <CardContent sx={{border:"none",height:'30px',direction:"rtl"}}>
-    <Typography gutterBottom variant="body2" component="div" sx={{textAlign:'center'}}>
+    <CardContent sx={{border:"none",height:'120px',direction:"rtl"}}>
+    <Typography gutterBottom  component="div" sx={{textAlign:'center',fontSize:"1.5em"}}>
       {item.title1}
     </Typography>
   </CardContent>
   <Divider/>
   <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',p:2,borderBottom:'1px solid gray'}}>
   
-      <Box   sx={{width:"30px",height:"30px",bgcolor:"#414141",color:"#E0AA3E",borderRadius:"20%",p:0,m:0,display:"flex",justifyContent:"center",alignItems:"center"}}>
-        <Typography sx={{fontSize:"14px",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
+      <Box   sx={{width:"45px",height:"30px",bgcolor:"#414141",color:"#E0AA3E",borderRadius:"20%",p:0,m:0,display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <Typography sx={{fontSize:"1.2em",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
         
         </Box> 
         <Box sx={{display:"flex",flexDirection:"column"}}>
-        <Typography  variant="h6" color="#ea9e08" sx={{textAlign:'center',textDecorationLine: "line-through",textDecorationColor: "#414141"}}>{item.price}</Typography>
-         <Typography  variant="h6" color="#414141" sx={{textAlign:'center'}}>
+        <Typography   color="#ea9e08" sx={{fontSize:"1.5em",textAlign:'center',textDecorationLine: "line-through",textDecorationColor: "#414141"}}>{item.price}</Typography>
+         <Typography   color="#414141" sx={{fontSize:"1.5em",textAlign:'center'}}>
        
           {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
          </Typography>
@@ -172,7 +170,7 @@ sx={{width:{xs:"150px",sm:"150px",md:"200px",lg:"200px"},m:"auto"}}
       fullWidth
       variant="contained"
       sx={{  borderTopRightRadius:"0.5em",borderTopLeftRadius: "1em",borderBottomRightRadius:"1em",borderBottomLeftRadius:"0.5em",':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},
-       color:'#eeeeee',fontSize:"1.5em",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:"0.5em",py:0,px:"2em"}}
+       color:'#eeeeee',fontSize:"1.5em",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:"0.5em",my:"1.5em",py:0,px:"3em"}}
       onClick={()=>{
         setCartItems([item]);
        }}>خرید </Button></NavLink>

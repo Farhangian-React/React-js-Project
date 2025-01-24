@@ -27,10 +27,10 @@ export default function TabestaneJashnvareh() {
        backgroundSize:'cover',
        backgroundRepeat: 'no-repeat',
        width:'100%',
-       height:{xs:"50vh",lg:"80vh"},
+       height:"40vh",
        
        }} >
-           <Box  sx={{ display:"flex",flexDirection:"row",mx:5,width:"50%",alignSelf:"end",justifyContent:"center",
+           <Box  sx={{ display:"flex",flexDirection:"row",mx:5,width:"70vw",alignSelf:"end",justifyContent:"center",
          height:'250px',bgcolor:'black',backgroundImage:"linear-gradient(to bottom ,#E0AA3E,#282828)",mb:5,px:0,py:0}}>
           
           <Box sx={{
@@ -45,10 +45,11 @@ export default function TabestaneJashnvareh() {
             height:"150px",
             overflow:"hidden",
             borderRadius:"10px",
-            p:3,
-            m:3
+            p:"3.5em",
+            m:"1.5em"
           }}>
-               <Box className="gerdali"><NavLink className="linkj" to={'/ProductOff'} > <Typography variant='body1' sx={{textAlign:"center",color:"#E0AA3E"}}>  کالاهای تخفیف دار </Typography>
+               <Box className="gerdali"><NavLink className="linkj" to={'/ProductOff'} > 
+               <Typography  sx={{fontSize:"1.5em",textAlign:"center",color:"#E0AA3E"}}>  کالاهای تخفیف دار </Typography>
         </NavLink></Box>
           </Box>
           <Box sx={{
@@ -63,10 +64,11 @@ export default function TabestaneJashnvareh() {
             height:"150px",
             overflow:"hidden",
             borderRadius:"10px",
-            p:3,
-            m:3
+            p:"3.5em",
+            m:"1.5em"
           }}>
-            <Box className="gerdali"><NavLink className="linkj" to={'/ProductJashnvareh'} > <Typography variant='body1' sx={{textAlign:"center",color:"#E0AA3E"}}>  محصولات جشنواره</Typography>
+            <Box className="gerdali"><NavLink className="linkj" to={'/ProductJashnvareh'} > 
+            <Typography sx={{textAlign:"center",color:"#E0AA3E",fontSize:"1.5em"}}>  محصولات جشنواره</Typography>
         </NavLink></Box></Box>
 
          </Box>
@@ -74,17 +76,17 @@ export default function TabestaneJashnvareh() {
 
 
 
-         <Box sx={{ backgroundColor:"white",mx:5,my:2,px:5,py:1,bgcolor:"white",borderRadius:'10px',display:"flex",flexDirection:"column"}}> 
+         <Box sx={{ backgroundColor:"white",m:"1.5em",p:"1em",bgcolor:"white",borderRadius:'1em',display:"flex",flexDirection:"column"}}> 
       <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",m:"2em"}}
        >
-        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
+        <Typography  sx={{fontSize:"2em",fontWeight:500,textAlign:"start",color:"black",p:"0.5em"}}>
         جشنواره زمستانه ی سهیل
         </Typography>
         </Box>
-        <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
+        <Typography  paragraph sx={{color:"#585858",px:"2em",textAlign:"justify",fontSize:"1.5em"}}>
         جشنواره فروش زمستانه برند سهیل و دوو (ویژه مصرف کنندگان) از روز یکشنبه 15 مهر ماه 1403 در سراسر کشور اجرا 
         و تا اطلاع ثانوی ادامه خواهد داشت. این جشنواره به مصرف کنندگانی تعلق می‌گیرد که محصولات مشمول جشنواره را از پانزدهم مهر ماه تا پایان زمان جشنواره ، 
         خریداری و نصب نمایند.
@@ -103,80 +105,79 @@ export default function TabestaneJashnvareh() {
             <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",m:"2em"}}
        >
-        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
+        <Typography  sx={{fontSize:"2em",fontWeight:500,textAlign:"start",color:"black",p:"0.5em"}}>
         نحوه شرکت در جشنواره سهیل
         </Typography>
         </Box>
-        <Typography sx={{fontSize:{xs:"14px",lg:"18px"},textAlign:"start",color:"black",py:1,px:5}} >
+        <Typography sx={{fontSize:"1.7em",textAlign:"start",color:"black",py:"0.5em",px:"2em"}} >
         1- نصب محصول:
         </Typography>
-        <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
+        <Typography  paragraph sx={{color:"#585858",px:"2em",fontSize:"1.5em",textAlign:"justify"}}>
         پس از انتخاب و خرید کالای مورد نظر، سفارش خود را تحویل گرفته و جهت نصب محصول و بهره مندی از مزایای گارانتی محصول، با شماره 1699 بدون پیش شماره تماس بگیرید.
         </Typography>
-        <Typography sx={{fontSize:{xs:"14px",lg:"18px"},textAlign:"start",color:"black",py:1,px:5}} >
+        <Typography sx={{fontSize:"1.7em",textAlign:"start",color:"black",py:"0.5em",px:"2em"}} >
         2- دریافت کد تخفیف: 
           </Typography>
-          <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
+          <Typography  paragraph sx={{color:"#585858",px:"2em",fontSize:"1.5em",textAlign:"justify"}}>
           پس از نصب محصول و مشاهده فاکتور توسط نماینده مجاز خدمات پس از فروش، به ازای هر محصول خریداری شده، یک عدد کد تخفیف به شماره پذیرش خریدار اختصاص داده خواهد شد. این کد تخفیف شامل یک کد شش رقمی است که از طریق پیامک برای خریدار ارسال خواهد شد.
             </Typography>
-            <Typography sx={{fontSize:{xs:"14px",lg:"18px"},textAlign:"start",color:"black",py:1,px:5}} >
+            <Typography sx={{fontSize:"1.7em",textAlign:"start",color:"black",py:"0.5em",px:"2em"}} >
             3- فعال سازی کد تخفیف:
           </Typography>
-          <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
+          <Typography  paragraph sx={{color:"#585858",px:"2em",fontSize:"1.5em",textAlign:"justify"}}>
           پس از دریافت کد تخفیف به منظور فعالسازی آن، با مراجعه به صفحه فعالسازی کد تخفیف جشنواره (لینک در همین صفحه)، اطلاعات درخواست شده را ثبت نمایید. این اطلاعات شامل : کد تخفیف، شماره پذیرش، شماره شبا و شماره همراه است. پس از ثبت اطلاعات و دریافت کد تایید، جهت فعالسازی کد تخفیف گزینه ثبت نهایی را انتخاب نمایید.
             </Typography>
-            <Typography sx={{fontSize:{xs:"14px",lg:"18px"},textAlign:"start",color:"black",py:1,px:5}} >
+            <Typography sx={{fontSize:"1.7em",textAlign:"start",color:"black",py:"0.5em",px:"2em"}} >
             4- نحوه دریافت هدیه نقدی جشنواره: 
           </Typography>
-          <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
+          <Typography  paragraph sx={{color:"#585858",px:"2em",fontSize:"1.5em",textAlign:"justify"}}>
           پس از تایید شماره شبا مبلغ هدیه جشنواره ، حداکثر ظرف مدت یک ماه واریز و از طریق پیامک اطلاع رسانی خواهد شد.
             </Typography>
         
             <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",m:"2em"}}
        >
-        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
+        <Typography  sx={{fontSize:"2em",fontWeight:500,textAlign:"start",color:"black",p:"0.5em"}}>
         نکات مهم:
           </Typography>
           </Box>
-          <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
-          1- فعال‌سازی فقط از طریق شماره موبایلی که به مرکز ارتباط با مشتریان سهیل اعلام کرده اید امکان پذیر است .
+          <Typography  paragraph sx={{color:"#585858",px:"2em",textAlign:"justify",fontSize:"1.5em"}}>
+         ۱.فعال‌سازی فقط از طریق شماره موبایلی که به مرکز ارتباط با مشتریان سهیل اعلام کرده اید امکان پذیر است .
             </Typography>
-            <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
-            1- فعال‌سازی فقط از طریق شماره موبایلی که به مرکز ارتباط با مشتریان سهیل اعلام کرده اید امکان پذیر است .
+            <Typography  paragraph sx={{color:"#585858",px:"2em",textAlign:"justify",fontSize:"1.5em"}}>
+           ۲.شماره پذیرش خود را پس از درخواست نصب محصول ، از طریق پیامک دریافت نموده اید .
             </Typography>
-            <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
-            3- شماره پذیرش خود را پس از درخواست نصب محصول ، از طریق پیامک دریافت نموده اید .
+            <Typography  paragraph sx={{color:"#585858",px:"2em",textAlign:"justify",fontSize:"1.5em"}}>
+          ۳.این جشنواره به مصرف کنندگانی تعلق می‌گیرد که محصولات مشمول جشنواره را از پانزدهم مهر ماه تا پایان زمان جشنواره ، خریداری و نصب نمایند.
             </Typography>
-            <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
-            4-این جشنواره به مصرف کنندگانی تعلق می‌گیرد که محصولات مشمول جشنواره را از پانزدهم مهر ماه تا پایان زمان جشنواره ، خریداری و نصب نمایند.
-            </Typography>
+        
             <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",m:"2em"}}
        >
-        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
+        <Typography  sx={{fontSize:"2em",fontWeight:500,textAlign:"start",color:"black",p:"0.5em"}}>
         نصب محصول
           </Typography>
           </Box>
-          <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
+          <Typography  paragraph sx={{color:"#585858",px:"2em",textAlign:"justify",fontSize:"1.5em"}}>
           به منظور بهره مندی از شرایط جشنواره خرید زمستانه سهیل با مرکز تماس مشتریان گروه انتخاب از طریق شماره ۱۶۹۹ (بدون پیش شماره از سراسر کشور) تماس حاصل کنید و درخواست نصب محصول خریداری شده خود را اعلام نمایید. در این مرحله یک کد پذیرش نصب برای شما پیامک می‌شود. شایان ذکرست، فعالسازی این جشنواره تنها برای شماره تلفن همراهی خواهد بود که به این مرکز اعلام می‌کنید.
         </Typography> 
+
         <Box     
        sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"start",width:"auto",alignSelf:"start",m:"2em"}}
        >
-        <Typography  sx={{fontSize:{xs:"30px",lg:"26px"},fontWeight:500,textAlign:"start",color:"black",py:1,px:2}}>
+        <Typography  sx={{fontSize:"2em",fontWeight:500,textAlign:"start",color:"black",p:"0.5em"}}>
         دریافت کد تخفیف جشنواره
           </Typography>
           </Box>
-          <Typography  paragraph sx={{color:"#585858",px:5,textAlign:"justify"}}>
+          <Typography  paragraph sx={{color:"#585858",px:"2em",textAlign:"justify",fontSize:"1.5em"}}>
           نحوه دریافت کد تخفیف جشنواره و مراحل آن
             </Typography>
             <Box sx={{display:"flex",justifyContent:"center",flexDirection:{xs:"column",lg:"row"},mx:10,my:5}}>

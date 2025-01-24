@@ -108,24 +108,25 @@ const handleInputChange = (e) => {
    return (
 <> 
 
-<Box sx={{mt:3, ml:2, display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu />   
+<Box sx={{mt:"0.5em", ml:"2em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu />   
           </Box>
          
-        <Box sx={{mt: 3,py:1,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between'}}>  
+        <Box sx={{mt: 0,py:1,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between'}}>  
               <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
             <NavLink to={'/buybasket'} >
-              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:1,color:'gray',fontSize:'22px'}}/>
+              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:"0.5em",color:'gray',fontSize:'2em'}}/>
             </NavLink>
-              <Typography sx={{mt:1}}>  ( {cartItemsBuy.length} )</Typography>
+              <Typography sx={{mt:"1em"}}>  ( {cartItemsBuy.length} )</Typography>
           </Buy>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+    
               placeholder="Search..."
               inputProps={{ 'aria-label': 'search' }}
-              sx={{pl:2,direction:'ltr'}}
+              sx={{pl:2,direction:'ltr',fontSize:"1.5em"}}
               onChange={() => setOpen(true)}
             />
           </Search>

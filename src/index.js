@@ -22,7 +22,7 @@ import './Fonts/vazirfont/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.woff2';
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
 ReactDOM.createRoot(document.getElementById('root') ).render(
-
+  <React.StrictMode>
  
   <Router>
      <div dir="rtl">
@@ -30,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root') ).render(
    </div>
     </Router> 
   
-
+    
+  </React.StrictMode>
 );
 reportWebVitals();

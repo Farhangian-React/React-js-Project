@@ -63,21 +63,13 @@
     transform: translateY(-5px); 
    
 }
-.navlinkfooter{
-    color:#ecd2a0;
-    text-decoration: none;
-   
-    }
+
     .navlinkfooter:hover{
         color:  #E0AA3E;
        
         
     }
-    .navlinkwhite{
-      
-        color: #8a8a8a;
-        text-decoration: none; 
-    }
+  
     .navlinkwhite:hover{
         color:  #E0AA3E;
     }

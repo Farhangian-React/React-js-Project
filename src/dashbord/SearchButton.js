@@ -108,7 +108,7 @@ const handleInputChange = (e) => {
    return (
 <> 
 
-<Box sx={{mt:"0.5em", ml:"2em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu />   
+<Box sx={{mt:"0.5em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu />   
           </Box>
          
         <Box sx={{mt: 0,py:1,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between'}}>  

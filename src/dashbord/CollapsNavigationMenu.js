@@ -118,37 +118,37 @@ export default function CollapsNavigationMenu() {
   return (
     <>
     
-    <Box sx={{bgcolor:"black", display:'flex',flexDirection:"row",justifyContent:"center",ml:"10em",pl:"10em"}}>
+    <Box sx={{bgcolor:"black", display:'flex',flexDirection:"row",justifyContent:"center",px:"1em"}}>
    <Grid  xs={3}  >
  <IconButton
 title="Title" 
       onClick={handleDrawerOpen}
-      sx={{ color:' #FFC412', ml: 0, ...(open && { display: '' }) }}
+      sx={{ color:' #FFC412',my:"0.5em", ml: 0, ...(open && { display: '' }) }}
     >
-      <MenuIcon sx={{ fontSize:"1em"}} />
+      <MenuIcon sx={{ fontSize:"1.5em"}} />
     </IconButton>
  </Grid>
  <Grid  xs={3}  >
 <NavLink className="signup"  to={'/signup'}>
              
              
-       <PermIdentityOutlinedIcon  sx={{mr:1,mt:1,ml:1,fontSize:'2em',color:'white'}} />
+       <PermIdentityOutlinedIcon  sx={{mr:1,mt:"0.6em",ml:1,fontSize:'2.5em',color:'white'}} />
       
  
    </NavLink>
    
    </Grid>
    <Grid  xs={3}  >
-   <Typography variant='h5' sx={{color:"#f2b705",mt:1}}>/</Typography>
+   <Typography variant='h4' sx={{color:"#f2b705",mt:"0.6em"}}>/</Typography>
   </Grid>
   <Grid  xs={3}  >
  
     <IconButton 
     title="Title"
       onClick={handleDrawerOpen1}
-      sx={{ color:' #fff', ml: 0,mt:0.5, ...(open1 && { display: 'none' }) }}
+      sx={{ color:' #fff', ml: 0,mt:"0.6em", ...(open1 && { display: 'none' }) }}
     >
-      < SearchOutlinedIcon sx={{ fontSize:"1em"}}/>
+      < SearchOutlinedIcon sx={{ fontSize:"1.5em"}}/>
     </IconButton>
    
 
@@ -225,7 +225,6 @@ title="Title"
       </Drawer>
       <Drawer
         sx={{
-          width: "30em",
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: "30em",

@@ -85,46 +85,47 @@ return(persianNumber);
     return(
         <>
 
-<Box sx={{display: { xs: 'none', lg: 'flex' },bgcolor:'#ececec',mx:5,mt:0,mb:5,flexDirection:"column",mt:{xs:3,md:1},borderRadius:'10px',direction:'rtl'}}>
-<Box     
-       sx={{boxShadow:"10px 10px 10px #64b3f4 ",
+<Box sx={{display: { xs: 'none',lg: 'flex' },bgcolor:'white',mx:"1em",mt:0,mb:"1em",flexDirection:"column",
+        mt:{xs:"2em",lg:"0.5em"},borderRadius:'10px',direction:'rtl'}}>
+        <Box     
+       sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"center",width:"250px",alignSelf:"start",m:"2em"}}
        >
-        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},textAlign:"center",color:"black",py:1}}>
-        تخفیفات ویژه
+        <Typography  sx={{fontSize:"2em",textAlign:"center",color:"black",py:"0.5em"}}>
+      تخفیفات ویژه
         </Typography>
         </Box>
-        <Slide slidesToScroll={1} slidesToShow={4} indicators={false}  sx={{ flexDirection:"row", }}  >
+        <Slide slidesToScroll={1} slidesToShow={3} indicators={false}  sx={{ flexDirection:"row", }}  >
         {dataoff.map((item) => (
       
       <NavLink to={'/cartbuygas'}  className={"linkss"}>
-<Card  sx={{width:"280px",height:"360px",mx:"auto",my:3,p:1 }} key={item.id}>
+<Card className='cards' sx={{width:"400px",height:"620px",marginTop:'10px',marginBottom: '10px',mx:"0.5em",my:"1em",p:"1.5em" }} key={item.id}>
+
 <CardMedia
-sx={{width:"90px",height:"120px",m:"auto"}}
     component="img"
     onClick={()=>{
       setCartItems([item]);
      }}
    image={item.img}
     alt=""
+sx={{width:"250px",m:"auto"}}
   />
-      <CardContent sx={{height:'55px',direction:"rtl"}}>
-    <Typography gutterBottom variant="body2" component="div" sx={{textAlign:'center'}}>
+    <CardContent sx={{border:"none",height:'120px',direction:"rtl"}}>
+    <Typography gutterBottom  component="div" sx={{textAlign:'center',fontSize:"1.5em"}}>
       {item.title1}
     </Typography>
-  
   </CardContent>
   <Divider/>
   <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',p:2,borderBottom:'1px solid gray'}}>
   
-      <Box   sx={{width:"30px",height:"30px", backgroundImage:"linear-gradient(to left ,#c2e59c, #64b3f4)",color:"#414141",borderRadius:"20%",p:0,m:0,display:"flex",justifyContent:"center",alignItems:"center"}}>
-        <Typography sx={{fontSize:"14px",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
+      <Box   sx={{width:"45px",height:"30px",bgcolor:"#414141",color:"#E0AA3E",borderRadius:"20%",p:0,m:0,display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <Typography sx={{fontSize:"1.2em",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
         
         </Box> 
         <Box sx={{display:"flex",flexDirection:"column"}}>
-        <Typography  variant="h6" color="#ea9e08" sx={{textAlign:'center',textDecorationLine: "line-through",textDecorationColor: "#414141"}}>{item.price}</Typography>
-         <Typography  variant="h6" color="#414141" sx={{textAlign:'center'}}>
+        <Typography   color="#ea9e08" sx={{fontSize:"1.5em",textAlign:'center',textDecorationLine: "line-through",textDecorationColor: "#414141"}}>{item.price}</Typography>
+         <Typography   color="#414141" sx={{fontSize:"1.5em",textAlign:'center'}}>
        
           {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
          </Typography>
@@ -134,14 +135,13 @@ sx={{width:"90px",height:"120px",m:"auto"}}
   <NavLink to={'/cartbuygas'}>  <Button size="large"
       fullWidth
       variant="contained"
-      sx={{ borderTopRightRadius:"20px",borderTopLeftRadius: "30px",borderBottomRightRadius:"30px",borderBottomLeftRadius:"20px",
-      ':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#414141',fontSize:"18px", backgroundImage:"linear-gradient(to left ,#c2e59c, #64b3f4)", my:1,py:0,px:8}}
+      sx={{  borderTopRightRadius:"0.5em",borderTopLeftRadius: "1em",borderBottomRightRadius:"1em",borderBottomLeftRadius:"0.5em",':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},
+       color:'#eeeeee',fontSize:"1.5em",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:"0.5em",my:"1.5em",py:0,px:"3em"}}
       onClick={()=>{
         setCartItems([item]);
        }}>خرید </Button></NavLink>
-    
   </CardActions>
- 
+  
 </Card>
 </NavLink>
       
@@ -149,63 +149,63 @@ sx={{width:"90px",height:"120px",m:"auto"}}
    
         </Slide>
         </Box>
-        <Box sx={{display: { xs: 'flex',lg: 'none' },bgcolor:'white',mx:4,mt:0,mb:5,flexDirection:"column",mt:{xs:3,md:1},borderRadius:'10px',direction:'rtl'}}>
+        <Box sx={{display: { xs: 'flex',lg: 'none' },bgcolor:'white',mx:"1em",mt:0,mb:"1em",flexDirection:"column",
+        mt:{xs:"2em",lg:"0.5em"},borderRadius:'10px',direction:'rtl'}}>
         <Box     
-       sx={{boxShadow:"10px 10px 10px #64b3f4 ",
+       sx={{boxShadow:"10px 10px 10px #E0AA3E ",
       
-        display:'flex',flexDirection:'column',justifyContent:"center",width:"220px",alignSelf:"start",my:5,mx:5}}
+        display:'flex',flexDirection:'column',justifyContent:"center",width:"250px",alignSelf:"start",m:"2em"}}
        >
-        <Typography  sx={{fontSize:{xs:"22px",lg:"24px"},textAlign:"center",color:"black",py:1}}>
+        <Typography  sx={{fontSize:"2em",textAlign:"center",color:"black",py:"0.5em"}}>
       تخفیفات ویژه
         </Typography>
         </Box>
         <Slide slidesToScroll={1} slidesToShow={2} indicators={false}  sx={{ flexDirection:"row", }}  >
         {dataoff.map((item) => (
       
-      <NavLink to={'/cartbuygas'}  className={"linkss"}>
-<Card  sx={{width:"400px",height:"500px",mx:"auto",my:3,p:1 }} key={item.id}>
-<CardMedia
-sx={{width:"120px",height:"150px",m:"auto"}}
-    component="img"
-    onClick={()=>{
-      setCartItems([item]);
-     }}
-   image={item.img}
-    alt=""
-  />
-      <CardContent sx={{height:'60px',direction:"rtl"}}>
-    <Typography gutterBottom component="div" sx={{fontSize:{xs:"18px",lg:"14px"},textAlign:'center',my:2}}>
-      {item.title1}
-    </Typography>
-  
-  </CardContent>
-  <Divider/>
-  <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',p:2,borderBottom:'1px solid gray'}}>
-  
-      <Box   sx={{width:"30px",height:"30px", backgroundImage:"linear-gradient(to left ,#c2e59c, #64b3f4)",color:"#414141",borderRadius:"20%",p:0.5,m:0,display:"flex",justifyContent:"center",alignItems:"center"}}>
-        <Typography sx={{fontSize:"16px",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
+      <NavLink to={'/cartbuygas'}  className={"linkss"}><Card className='cards' sx={{width:"400px",height:"620px",marginTop:'10px',marginBottom: '10px',mx:"0.5em",my:"1em",p:"1.5em" }} key={item.id}>
+
+      <CardMedia
+          component="img"
+          onClick={()=>{
+            setCartItems([item]);
+           }}
+         image={item.img}
+          alt=""
+      sx={{width:"250px",m:"auto"}}
+        />
+          <CardContent sx={{border:"none",height:'120px',direction:"rtl"}}>
+          <Typography gutterBottom  component="div" sx={{textAlign:'center',fontSize:"1.5em"}}>
+            {item.title1}
+          </Typography>
+        </CardContent>
+        <Divider/>
+        <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'baseline',direction:'rtl',p:2,borderBottom:'1px solid gray'}}>
         
-        </Box> 
-        <Box sx={{display:"flex",flexDirection:"column"}}>
-        <Typography  variant="h5" color="#ea9e08" sx={{textAlign:'center',textDecorationLine: "line-through",textDecorationColor: "#414141",my:1.5}}>{item.price}</Typography>
-         <Typography  variant="h5" color="#414141" sx={{textAlign:'center',mb:1.5}}>
+            <Box   sx={{width:"45px",height:"30px",bgcolor:"#414141",color:"#E0AA3E",borderRadius:"20%",p:0,m:0,display:"flex",justifyContent:"center",alignItems:"center"}}>
+              <Typography sx={{fontSize:"1.2em",textAlign:"center"}}>  {convertToPersian(item.off)}%</Typography>
+              
+              </Box> 
+              <Box sx={{display:"flex",flexDirection:"column"}}>
+              <Typography   color="#ea9e08" sx={{fontSize:"1.5em",textAlign:'center',textDecorationLine: "line-through",textDecorationColor: "#414141"}}>{item.price}</Typography>
+               <Typography   color="#414141" sx={{fontSize:"1.5em",textAlign:'center'}}>
+             
+                {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
+               </Typography>
+       </Box> </Box>
        
-          {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
-         </Typography>
- </Box> </Box>
-  <CardActions sx={{display:'flex',justifyContent:'center'}}>
-  <NavLink to={'/cartbuygas'}>  <Button size="large"
-      fullWidth
-      variant="contained"
-      sx={{  borderTopRightRadius:"1em",borderTopLeftRadius: "1.5em",borderBottomRightRadius:"1.5em",borderBottomLeftRadius:"1em",
-      ':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'}, color:'#414141',fontSize:"3em", backgroundImage:"linear-gradient(to left ,#c2e59c, #64b3f4)", my:4,py:0,px:12}}
-      onClick={()=>{
-        setCartItems([item]);
-       }}>خرید </Button></NavLink>
-    
-  </CardActions>
- 
-</Card>
+        <CardActions sx={{display:'flex',justifyContent:'center'}}>
+        <NavLink to={'/cartbuygas'}>  <Button size="large"
+            fullWidth
+            variant="contained"
+            sx={{  borderTopRightRadius:"0.5em",borderTopLeftRadius: "1em",borderBottomRightRadius:"1em",borderBottomLeftRadius:"0.5em",':hover':{backgroundImage:"linear-gradient(to right ,#eeeeee,#282828)",color:'white'},
+             color:'#eeeeee',fontSize:"1.5em",backgroundImage:"linear-gradient(to right ,#E0AA3E,#282828)", my:"0.5em",my:"1.5em",py:0,px:"3em"}}
+            onClick={()=>{
+              setCartItems([item]);
+             }}>خرید </Button></NavLink>
+        </CardActions>
+        
+      </Card>
 </NavLink>
       
     ))}

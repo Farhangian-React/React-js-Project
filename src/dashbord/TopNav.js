@@ -57,7 +57,7 @@ const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
     <>
      <HideOnScroll {...props}>
     <AppBar position="fixed" className='nav' sx={{mt:0 ,mb:0,bgcolor:'black',px:"0.5em",color:'white'}}>
-    <Box sx={{ flexGrow: 1,py:0, display:'flex',justifyContent:{xs:"space-around",lg:'space-between'},marginLeft:{md:0},marginRight:{md:0} }}>
+    <Box sx={{ flexGrow: 1,py:0, display:'flex',justifyContent:'space-between',marginLeft:{md:0},marginRight:{md:0} }}>
         <Grid  sx={{mt:"0.2em", display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
         <img className='imgsohil' width={60} alt='' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
                <Typography
@@ -82,14 +82,14 @@ const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
    </Typography>
    </Grid>
 
-   <Box sx={{mt:"0.2em", mr:"2em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'center',direction:"ltr"}}> 
+   <Box sx={{px:"1em",mt:"0.2em", py:"0.5em",mr:"2em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'center',direction:"ltr"}}> 
 <Box sx={{m:"auto", display: 'flex',flexDirection:"row",justifyContent:"space-around"}}>
 
       <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
             <NavLink to={'/buybasket'} >
-              <ShoppingCartIcon  sx={{mr:"0.5em",ml:0,mt:"0.2em",color:'gray',fontSize:'2em'}}/>
+              <ShoppingCartIcon  sx={{mr:"0.5em",ml:0,mt:"0.4em",color:'gray',fontSize:'2.5em'}}/>
             </NavLink>
-              <Typography sx={{fontSize:"1.4em",mt:"0.2em"}}>  ( {cartItemsBuy.length} )</Typography>
+              <Typography sx={{fontSize:"1.6em",mt:"0.6em"}}>  ( {cartItemsBuy.length} )</Typography>
           </Buy>
       </Box>       
           </Box>

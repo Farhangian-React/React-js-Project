@@ -61,11 +61,11 @@ export default  function Refrigerators() {
               
               <ListItemButton 
                onClick={handleClick1}
-               sx={{color:"#E0AA3E",fontSize:"1.3em"}}
+               sx={{color:"#E0AA3E",fontSize:{xs:"2em",lg:"1.3em"}}}
                >
                 یخچال و فریزر 
                
-              <ArrowDropDownIcon sx={{fontSize:"1.5em",mt:"0.3em"}} /></ListItemButton>
+              <ArrowDropDownIcon sx={{fontSize:{xs:"2em",lg:"1.5em"},mt:"0.3em"}} /></ListItemButton>
               <Menu
           sx={
             { mt: "1px", "& .MuiMenu-paper": 
@@ -108,14 +108,14 @@ export default  function Refrigerators() {
       </Menu>
             </ListItem>
             <ListItem role="none" sx={{mr:"0.5em"}}>
-            <NavLink  to={'/shop-washing-machine'} style={{ textDecoration: "none",fontSize:"1.1em",color:"#585858" }}>ماشین لباسشویی</NavLink>
+            <NavLink  to={'/shop-washing-machine'} style={{ textDecoration: "none",fontSize:"1.5em",color:"#585858" }}>ماشین لباسشویی</NavLink>
             </ListItem>
 
             <ListItem role="none" sx={{mr:"0.5em"}}>
-            <NavLink  to={'/allgas'} style={{ textDecoration: "none",fontSize:"1.1em",color:"#585858" }}>پخت و پز  </NavLink>
+            <NavLink  to={'/allgas'} style={{ textDecoration: "none",fontSize:"1.5em",color:"#585858" }}>پخت و پز  </NavLink>
             </ListItem>
             <ListItem role="none" sx={{mr:"0.5em"}}>
-               <NavLink to={'/shop-dishwasher'} style={{ textDecoration: "none",fontSize:"1.1em",color:"#585858" }} >ماشین ظرفشویی</NavLink>    
+               <NavLink to={'/shop-dishwasher'} style={{ textDecoration: "none",fontSize:"1.5em",color:"#585858" }} >ماشین ظرفشویی</NavLink>    
             </ListItem>
           </List>
         </Box>

@@ -175,6 +175,7 @@ sx={{width:"250px",m:"auto"}}
         setCartItems([item]);
        }}>خرید </Button></NavLink>
   </CardActions>
+  
 </Card>
 </NavLink>
     ))}

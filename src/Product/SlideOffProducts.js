@@ -9,10 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 import './CartBuy.css';
 import { useEffect } from 'react';
 import {CardDataoff} from '../Shared/Cart-Context';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import { Slide } from 'react-slideshow-image';
 
 
@@ -83,14 +79,14 @@ console.log(dataoff);
   }
    return(
         <>
-
-<div dir='rtl' className='hidden lg:flex lg:flex-col bg-white my-2 mx-auto w-[97%] rounded-sm '>
+ 
+ <div dir='rtl' className=' flex flex-col lg:hidden bg-white my-2 mx-auto w-[97%] rounded-sm '>
         <div    className='bordershadow flex flex-col justify-center w-[200px] text-start m-10 '  >
         <p className='text-2xl text-center text-gray-700 py-3' >
       تخفیفات ویژه
         </p>
         </div>
-        <Slide slidesToScroll={1} slidesToShow={4} indicators={false}  sx={{ flexDirection:"row", }}  >
+        <Slide slidesToScroll={1} slidesToShow={2} indicators={false}  sx={{ flexDirection:"row", }}  >
         {dataoff.map((item) => (
       
       <NavLink to={'/cartbuygas'}  className={"linkss"}>
@@ -100,13 +96,13 @@ console.log(dataoff);
      setCartItems([item]);
     }}
     key={item.id} className='flex justify-center items-center mx-auto px-0 backdrop-blur-lg rounded-3xl '>
-      <div  className='bg-white  w-[320px] h-[500px]  rounded-lg shadow-xl
+      <div  className='bg-white  w-[400px] h-[620px]  rounded-lg shadow-xl
   mx-3 my-3
       ' >
 
          
 <Box    
-          sx={{display:"flex", height:"280px",borderRadius:"10px",justifyContent:'center',
+          sx={{display:"flex", height:"420px",borderRadius:"10px",justifyContent:'center',
          backgroundImage: `url(${item.img})`,
          backgroundPosition: 'center',
          backgroundSize:'cover',
@@ -160,14 +156,14 @@ console.log(dataoff);
         </Slide>
         </div>
 
-
-        <div dir='rtl' className=' flex flex-col lg:hidden bg-white my-2 mx-auto w-[97%] rounded-sm '>
+       
+        <div dir='rtl' className='hidden lg:flex lg:flex-col bg-white my-2 mx-auto w-[97%] rounded-sm '>
         <div    className='bordershadow flex flex-col justify-center w-[200px] text-start m-10 '  >
         <p className='text-2xl text-center text-gray-700 py-3' >
       تخفیفات ویژه
         </p>
         </div>
-        <Slide slidesToScroll={1} slidesToShow={3} indicators={false}  sx={{ flexDirection:"row", }}  >
+        <Slide slidesToScroll={1} slidesToShow={4} indicators={false}  sx={{ flexDirection:"row", }}  >
         {dataoff.map((item) => (
       
       <NavLink to={'/cartbuygas'}  className={"linkss"}>

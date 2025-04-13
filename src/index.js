@@ -9,7 +9,7 @@ root.render(
   <React.StrictMode>
  
   <Router>
-     <div dir="lrt">
+     <div dir="rtl">
      <App  />
    </div>
     </Router> 

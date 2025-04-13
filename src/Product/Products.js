@@ -131,7 +131,7 @@ function Products() {
     <PageTitle title=' وب سایت لوازم خانگی سهیل' description=' سهیل '/>
     <TopNav />
 
-    <div className='flex flex-col bg-zinc-200' >
+    <div className='flex flex-col bg-white' >
 
     <div className='w-full h-auto flex justify-center  bg-cover bg-center bg-no-repeat '
     style={{backgroundImage:`url(${returnPhotoURL()})`}}

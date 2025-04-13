@@ -52,46 +52,46 @@ function App() {
      <CartProvider>
           <div className="content">
             <Routes>
-             <Route path="/" exact element={<Products/>} />
-             <Route path="/signin" exact element={<SignIn/>} />
-             <Route path="/signup" exact element={<SignUp/>} />
-             <Route path="/cartbuyrefrigerator" exact element={<CartBuyRefrigerator />} />
-             <Route path="/cartbuygas" exact element={<CartBuyGas />} />
-             <Route path="/CartBuyDishwasher" exact element={<CartBuyDishwasher />} />
-             <Route path="/cartbuywashingmachine" exact element={<CartBuyWashingMachine />} />
-             <Route path="/buybasket" exact element={<Carts/>} />
-             <Route path="/buybasketmodal" exact element={<CartModal/>} />
-             <Route path="/allrefriderators" exact element={<Refrigerators/>} />
-             <Route path="/allgas" exact element={<Gas/>} />
-             <Route path="/shop-cooktop" exact element={<CookTops/>} />
-             <Route path="/shop-microwaves" exact element={<Microwaves/>} />
-             <Route path="/shop-hood" exact element={<Hoods/>} />
-             <Route path="/shop-ranges" exact element={<Ranges/>} />
-             <Route path="/shop-refrigeratorfrenchdoor" exact element={<RefrigeratorsFrenchDoor/>} />
-             <Route path="/shop-refrigeratorsidbysid" exact element={<RefrideratorSideBySide/>} />
-             <Route path="/shop-refrideratorbottomfreezer" exact element={<RefrideratorBottomFreezer/>} />
-             <Route path="/shop-refrideratortopfreezer" exact element={<RefrideratorTopFreezer/>} />
-             <Route path="/shop-refrideratorspecializedfreezer" exact element={<RefrideratorSpecializedFreezer/>} />
-             <Route path='/shop-washing-machine' exact element={<WashingMachine/>} />
-             <Route path='/shop-dishwasher' exact element={ <Dishwasher/>} />
-             <Route path='/about-snova' exact element={<AboutSnova/>} />
-             <Route path='/life-style' exact element={<LifeStyle/>} />
-             <Route path='/karttakhfif' exact element={<CodeTakhfif/>} />
-             <Route path='/jashnehtabestane' exact element={<TabestaneJashnvareh/>} />
-             <Route path='/water-temperature' exact element={<WaterTemperature/>} />
-             <Route path='/cartsearch' exact element={<CartSearch/>} />
-             <Route path='/allproducts' exact element={<AllProducts/>} />
-             <Route path='/samsungbrand' exact element={<SamsungBrands/>} />
-             <Route path='/lgbrand' exact element={<LgBrands/>} />
-             <Route path='/whirlpoolbrand' exact element={<WhirlpoolBrands/>} />
-             <Route path='/bushbrands' exact element={<BushBrands/>} />
-             <Route path='/PopularQuestions' exact element={<PopularQuestions/>} /> 
-             <Route path='/AfterSalesService' exact element={<AfterSalesService/>} />
-             <Route path='/ContactUsForm' exact element={<ContactUsForm/>} />
-             <Route path='/ProductOff' exact element={<ProductOff/>} />
-             <Route path='/ProductJashnvareh' exact element={<ProductJashnvareh/>} />
-             <Route path='/CartBuyJashnvareh' exact element={<CartBuyJashnvareh/>} />
-             <Route path='/Stores' exact element={<Stores/>} />
+             <Route path="/"  element={<Products/>} />
+             <Route path="/signin"  element={<SignIn/>} />
+             <Route path="/signup"  element={<SignUp/>} />
+             <Route path="/cartbuyrefrigerator"  element={<CartBuyRefrigerator />} />
+             <Route path="/cartbuygas"  element={<CartBuyGas />} />
+             <Route path="/CartBuyDishwasher"  element={<CartBuyDishwasher />} />
+             <Route path="/cartbuywashingmachine"  element={<CartBuyWashingMachine />} />
+             <Route path="/buybasket"  element={<Carts/>} />
+             <Route path="/buybasketmodal"  element={<CartModal/>} />
+             <Route path="/allrefriderators"  element={<Refrigerators/>} />
+             <Route path="/allgas"  element={<Gas/>} />
+             <Route path="/shop-cooktop"  element={<CookTops/>} />
+             <Route path="/shop-microwaves"  element={<Microwaves/>} />
+             <Route path="/shop-hood"  element={<Hoods/>} />
+             <Route path="/shop-ranges"  element={<Ranges/>} />
+             <Route path="/shop-refrigeratorfrenchdoor"  element={<RefrigeratorsFrenchDoor/>} />
+             <Route path="/shop-refrigeratorsidbysid"  element={<RefrideratorSideBySide/>} />
+             <Route path="/shop-refrideratorbottomfreezer"  element={<RefrideratorBottomFreezer/>} />
+             <Route path="/shop-refrideratortopfreezer"  element={<RefrideratorTopFreezer/>} />
+             <Route path="/shop-refrideratorspecializedfreezer"  element={<RefrideratorSpecializedFreezer/>} />
+             <Route path='/shop-washing-machine'  element={<WashingMachine/>} />
+             <Route path='/shop-dishwasher'  element={ <Dishwasher/>} />
+             <Route path='/about-snova'  element={<AboutSnova/>} />
+             <Route path='/life-style'  element={<LifeStyle/>} />
+             <Route path='/karttakhfif'  element={<CodeTakhfif/>} />
+             <Route path='/jashnehtabestane'  element={<TabestaneJashnvareh/>} />
+             <Route path='/water-temperature'  element={<WaterTemperature/>} />
+             <Route path='/cartsearch'  element={<CartSearch/>} />
+             <Route path='/allproducts'  element={<AllProducts/>} />
+             <Route path='/samsungbrand'  element={<SamsungBrands/>} />
+             <Route path='/lgbrand'  element={<LgBrands/>} />
+             <Route path='/whirlpoolbrand'  element={<WhirlpoolBrands/>} />
+             <Route path='/bushbrands'  element={<BushBrands/>} />
+             <Route path='/PopularQuestions'  element={<PopularQuestions/>} /> 
+             <Route path='/AfterSalesService'  element={<AfterSalesService/>} />
+             <Route path='/ContactUsForm'  element={<ContactUsForm/>} />
+             <Route path='/ProductOff'  element={<ProductOff/>} />
+             <Route path='/ProductJashnvareh'  element={<ProductJashnvareh/>} />
+             <Route path='/CartBuyJashnvareh'  element={<CartBuyJashnvareh/>} />
+             <Route path='/Stores'  element={<Stores/>} />
              <Route path="*" element={<PageNotFount/>} />
              </Routes>
           </div>

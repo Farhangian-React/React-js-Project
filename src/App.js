@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route} from 'react-router-dom';
 import Products from './Product/Products';
 import PageNotFount from './Product/PageNotFount';
 import Dishwasher from './Product/Dishwasher/Dishwasher';
@@ -10,7 +11,7 @@ import RefrideratorTopFreezer from './Product/Refrigerator/RefrideratorTopFreeze
 import RefrigeratorsFrenchDoor from './Product/Refrigerator/RefrideratorTowDoor/RefrigeratorsFrenchDoor';
 import RefrideratorSideBySide from './Product/Refrigerator/SideBySideRefriderator/RefrideratorSideBySide';
 import RefrideratorSpecializedFreezer from './Product/Refrigerator/RefrideratorSpecializedFreezer/RefrideratorSpecializedFreezer';
-import { Routes, Route} from 'react-router-dom';
+
 import LifeStyle from './LifeStyle/LifeStyle';
 import Gas from './Product/Gas/Gas';
 import {CartProvider} from './Shared/Cart-Context';

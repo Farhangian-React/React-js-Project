@@ -44,7 +44,7 @@ background:linear-gradient(to left ,rgba(255,255,255,0),white) ;
 .logos-slide{
     height: 50px;
     margin:0px;
-    animation: 10s slide infinite linear;
+    animation: 8s slide infinite linear;
 }
 .logos-slide img{
 margin: 0 40px;
@@ -88,4 +88,7 @@ width: 150px;
     font-size: 0.5em;
     background-color: white;
 
+}
+.bordershadow{
+    box-shadow:10px 10px 10px #E0AA3E;
 }

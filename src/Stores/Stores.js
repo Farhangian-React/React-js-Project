@@ -8,6 +8,7 @@ import Selector from "./map/Selector";
 import { PageTitle } from '../Title/PageTitle';
 import "./Stores.css";
 import { Typography } from '@mui/material';
+import "../../node_modules/leaflet/dist/leaflet.css";
 export const Stores = () => {
    
   return (

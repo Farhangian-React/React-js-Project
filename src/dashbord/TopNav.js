@@ -100,7 +100,7 @@ const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
     </AppBar>
     </HideOnScroll>
     <AppBar position='sticky' className='nav' sx={{display:{xs:'none',lg:'flex'},px:"0.5em",
-      mt:"6em" ,mb:0,bgcolor:'black',py:0,color:'white',}}>
+      mt:"5.6em" ,mb:0,bgcolor:'black',py:0,color:'white',}}>
           <Box sx={{ flexGrow: 1, display:{ xs:'none',lg: 'flex'}, justifyContent:'space-between',marginLeft:{md:0},marginRight:{md:0} }}>
              <NavigationMenu/> 
               <NavLink className="signup"  to={'/signup'}>
@@ -108,8 +108,8 @@ const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext);
     backgroundColor:'black',
     border:'1px solid  #fff',
   },borderRadius:1}}>
-                   <Typography  sx={{mt:0.5,color:"#eeeeee",fontSize:"1.5em"}}>ورود یا عضویت </Typography>
-           <PermIdentityOutlinedIcon  sx={{mr:2,fontSize:'2.5em',color:'white'}} />
+                   <Typography  sx={{mt:0.5,color:"#eeeeee",fontSize:"1.2em"}}>ورود یا عضویت </Typography>
+           <PermIdentityOutlinedIcon  sx={{mr:2,fontSize:'2em',color:'white'}} />
           
        </Box> 
        </NavLink>

@@ -402,6 +402,9 @@ direction:"rtl"
          )}
      </Box>
        
+
+
+       
        <Box   sx={{mt:{xs:5,lg:1}, mx:{xs:1,lg:3},display:'flex',flexDirection:{xs:"column",lg:"row"},justifyContent:'start',alignSelf:{xs:"center",lg:"start"},direction:'rtl'}} >
        <Box  sx={{mx:{xs:0,lg:2},mt:{xs:2,lg:4},pt:{lg:1},display:'flex',alignItems:'center',justifyContent:'center'}} >
 

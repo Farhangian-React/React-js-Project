@@ -217,9 +217,6 @@ function ContactUsForm() {
         
 </Box>
 
-
-
-
    </Box> 
  <Box sx={{width:{xs:"100vw",lg:"50vw"},display:"flex",justifyContent:"center",flexDirection:"column-reverse",alignSelf:"start",mx:1}}> 
    <Box sx={{alignSelf:"center",

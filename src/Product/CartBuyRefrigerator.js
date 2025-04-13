@@ -322,7 +322,7 @@ return console.log(cartItems);
          flexShrink: 0,
          '& .MuiDrawer-paper': {
            width: drawerWidth,
-           height:"60vh",
+           height:"95vh",
            boxSizing: 'border-box', 
          },
        }}

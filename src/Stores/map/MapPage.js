@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapContainer, TileLayer} from "react-leaflet";
 import { MarkerLayer } from "../layers/MarkerLayer";
-
+import "../../../node_modules/leaflet/dist/leaflet.css";
 import "../Stores.css";
 export const MapPage = () => {
   const position = [ 35.68815448090159 , 51.37771054133819

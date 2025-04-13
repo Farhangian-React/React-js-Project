@@ -131,7 +131,7 @@ function Products() {
     <PageTitle title=' وب سایت لوازم خانگی سهیل' description=' سهیل '/>
     <TopNav />
 
-    <Box sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
+    <div className='flex flex-col bg-zinc-200' >
 
     <Box 
       sx={{
@@ -453,7 +453,7 @@ className='flex flex-col lg:flex-row bg-white p-5 m-5'
 
 </div>
     
-</Box>
+</div>
     <Box sx={{width:'100%' }}>
       <Footer/>
     </Box>

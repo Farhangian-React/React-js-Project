@@ -44,7 +44,7 @@ import ProductJashnvareh from "./jashnvareh/ProductJashnvareh";
 import CartBuyJashnvareh from "./jashnvareh/CartBuyJashnvareh";
 import Stores from './Stores/Stores';
 import "leaflet/dist/leaflet.css";
-import './index.css';
+import "./App.css";
 
 function App() { 
   return (

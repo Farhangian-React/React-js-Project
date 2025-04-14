@@ -82,7 +82,7 @@ console.log(dataoff);
  
  <div dir='rtl' className=' flex flex-col lg:hidden bg-white my-2 mx-auto w-[97%] rounded-sm '>
         <div    className='bordershadow flex flex-col justify-center w-[200px] text-start m-10 '  >
-        <p className='text-2xl text-center text-gray-700 py-3' >
+        <p className='text-2xl text-center font-bold text-gray-700 py-3' >
       تخفیفات ویژه
         </p>
         </div>
@@ -159,7 +159,7 @@ console.log(dataoff);
        
         <div dir='rtl' className='hidden lg:flex lg:flex-col bg-white my-2 mx-auto w-[97%] rounded-sm '>
         <div    className='bordershadow flex flex-col justify-center w-[200px] text-start m-10 '  >
-        <p className='text-2xl text-center text-gray-700 py-3' >
+        <p className='text-2xl text-center font-bold text-gray-700 py-3' >
       تخفیفات ویژه
         </p>
         </div>

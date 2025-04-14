@@ -60,7 +60,7 @@ const Buy = styled('div')(({ theme }) => ({
     width: '150px',
   },
 }));
-function TopNav() {
+function TopNav(props) {
 
 
 
@@ -139,8 +139,8 @@ setFilteredUsers(filteredItems);
 }
   return (
     <>
-   
-
+     <HideOnScroll {...props}>
+      {/*
     <AppBar position="fixed" className='nav' sx={{mt:0 ,mb:0,bgcolor:'black',px:"0.5em",color:'white'}}>
     <Box sx={{ flexGrow: 1,py:0, display:'flex',justifyContent:'space-between',marginLeft:{md:0},marginRight:{md:0} }}>
         <Grid  sx={{mt:"0.2em", display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
@@ -183,164 +183,49 @@ setFilteredUsers(filteredItems);
 
 </Box>
     </AppBar>
+    */}
     
-    <AppBar position='sticky' className='nav' sx={{display:{xs:'none',lg:'flex'},px:"0.5em",
-      mt:"5.6em" ,mb:0,bgcolor:'black',py:0,color:'white',}}>
-          <Box sx={{ flexGrow: 1, display:{ xs:'none',lg: 'flex'}, justifyContent:'space-between',marginLeft:{md:0},marginRight:{md:0} }}>
-             <NavigationMenu/> 
-              <NavLink className="signup"  to={'/signup'}>
-                 <Box sx={{my:2,py:1,px:2,mx:"0.5em",display: { xs: 'none', lg: 'flex' },justifyContent:'space-between',border:'1px solid  #f2b705','&:hover': {
-    backgroundColor:'black',
-    border:'1px solid  #fff',
-  },borderRadius:1}}>
-                   <Typography  sx={{mt:0.5,color:"#eeeeee",fontSize:"1.2em"}}>ورود یا عضویت </Typography>
-           <PermIdentityOutlinedIcon  sx={{mr:2,fontSize:'2em',color:'white'}} />
-          
-       </Box> 
-       </NavLink>
-            </Box>
-    </AppBar>
+<nav dir='rtl' className=' md:sticky top-0 flex justify-between w-[100%] bg-black h-[63px]  drop-shadow-lg pt-1  pl-1  mx-auto '>
+<div dir='ltr' className="w-2/3 flex flex-row justify-end mt-0 ">
 
+      
 
-
-    
-    </>
-  );
-}
-export default TopNav;       
-
-
-{/*
-
-
-  import React,{useContext,useState,useEffect} from 'react';
-import "react-toastify/dist/ReactToastify.css";
-import NavbarMenuItem from './NavbarMenuItem';
-import { RiAdminLine } from "react-icons/ri";
-import { LuShoppingCart } from "react-icons/lu";
-import { NavLink } from "react-router-dom";
-import Collaps from './Collaps';
-import Badge from '@mui/material/Badge';
-import {CartBuyContext} from '../Shared/Cart-Context';
-import {CartContext} from '../Shared/Cart-Context';
-import {CardData} from '../Shared/Cart-Context';
-
-import InputBase from '@mui/material/InputBase';
-import { Grid } from '@mui/material';
-import Modal from '@mui/joy/Modal';
-import ModalClose from '@mui/joy/ModalClose';
-import { ModalDialog } from '@mui/joy';
-import IconButton from '@mui/material/IconButton';
-function TopNavbar() {
-
-
-  const convertToEnglish=(str)=> {
-    let englishNumber =str
-    .replace(/۰/g, '0')
-    .replace(/۱/g, '1')
-    .replace(/۲/g, '2')
-    .replace(/۳/g, '3')
-    .replace(/۴/g, '4')
-    .replace(/۵/g, '5')
-    .replace(/۶/g, '6')
-    .replace(/۷/g, '7')
-    .replace(/۸/g, '8')
-    .replace(/۹/g, '9');
- return(englishNumber);
-  }
-  const convertToPersian=(str)=> {
-    let persianNumber =str
-    .replace(/0/g, '۰')
-    .replace(/1/g, '۱')
-    .replace(/2/g, '۲')
-    .replace(/3/g, '۳')
-    .replace(/4/g, '۴')
-    .replace(/5/g, '۵')
-    .replace(/6/g, '۶')
-    .replace(/7/g, '۷')
-    .replace(/8/g, '۸')
-    .replace(/9/g, '۹');
-return(persianNumber);
-  }
-  const addCommas=(nStr)=>{
-    if(nStr.length === 6){
-      return   nStr.substring(0, 3) + "," + nStr.substring(3, 6);
-    }
-    if(nStr.length === 7){
-      return  nStr.substring(0,1) + "," + nStr.substring(1, 4) + "," + nStr.substring(4, 7);
-    }
-    if(nStr.length === 8){
-      return  nStr.substring(0, 2) + "," + nStr.substring(2, 5) + "," + nStr.substring(5, 8);
-    }
-    if(nStr.length === 9){
-      return  nStr.substring(0, 3) + "," + nStr.substring(3, 6) + "," + nStr.substring(6, 9);
-  }
-  }
-
-  const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext); 
-  const [cartItems,setCartItems]=useContext(CartContext);
-const [open, setOpen] = React.useState(false);
-const [data,setData]=useContext(CardData);
-const [searchItem, setSearchItem] = useState('');
-const [filteredUsers, setFilteredUsers] = useState([]);
-const getData=()=>{
-fetch('https://servers-nahall.onrender.com/Allproductsnahall')
-.then(res => res.json())
-.then((result)=> {
-  setData(result);
-  console.log(cartItems);
-  console.log(setCartItemsBuy(cartItemsBuy));
-},
-(error) => {
-  alert('error');
-}
-)
-}
-useEffect( ()=>{
-  getData();
-},[])
-const handleInputChange = (e) => { 
-  const searchTerm = e.target.value;
-  setSearchItem(searchTerm)
-  const filteredItems = data.filter((user) =>
-  user.title1.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  setFilteredUsers(filteredItems);
-}
- return (
-  <>
-  
-
-<nav dir='rtl' className=' md:sticky top-0 flex justify-between w-[98%] bg-transparent h-[60px]  drop-shadow-lg pt-3  px-1  mx-auto '>
-<div dir='ltr' className="w-2/3">
-        <div className="flex justify-center w-[130px]">
-        <img className='imgsohil' width={60} alt='' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
-             <NavLink to={"/"} style={{textDecoration: "none"}}>  <p className="flex italic font-mono text-yellow-600 text-2xl space-x-2 mt-2"
+         
+	<form className="hidden md:flex items-center mx-0.5 md:mx-4">   
+        <label for="simple-search" className="sr-only">Search</label>
+        <div dir='rtl' className="relative w-full  ">
+            <div className="flex absolute inset-y-0 left-0 items-center pl-0.5 md:pl-3 pointer-events-none">
+                <svg className="w-10 h-4 text-yellow-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+            </div>
+            <input  onChange={() => setOpen(true)} type="text" id="simple-search" className=" bg-black border border-yellow-600
+             text-gray-700 text-sm rounded-lg
+             hover:border-2 hover:border-yellow-600 block w-full pl-2 px-1 py-2" placeholder="جستجو ..." required />
+        </div>
+      
+    </form>
+    <div dir='rtl' className="hidden md:flex justify-center w-[220px]">
+        <img className='imgsohil' width={50} height={30} alt=''
+         src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
+             <NavLink to={"/"} style={{textDecoration: "none"}}>  <p className="flex italic font-mono text-yellow-600 text-xl space-x-2 mt-4"
    >
      S O H I L
    </p>
    </NavLink>
-   </div>
-	<form className="flex items-center">   
-        <label for="simple-search" className="sr-only">Search</label>
-        <div dir='rtl' className="relative w-full ">
-            <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg className="w-10 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-            </div>
-            <input  onChange={() => setOpen(true)} type="text" id="simple-search" className=" bg-neutral-200 border border-gray-100
-             text-gray-900 text-sm rounded-lg
-             hover:border-2 hover:border-orange-500 block w-full pl-10 p-2.5" placeholder="جستجو ..." required />
-        </div>
-        <button  onChange={() => setOpen(true)}  type="submit" class=" flex p-2.5 ml-2 text-sm font-medium text-gray-600 bg-neutral-200 rounded-lg  hover:bg-orange-500
-        ">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-        </svg></button>
-    </form>  
-
-
-
+   </div> 
+   <div dir='rtl' className="flex md:hidden justify-between w-[150px]">
+   
+             <NavLink to={"/"} style={{textDecoration: "none"}}>      
+             <img className='imgsohil mt-2.5' width={50} height={30} alt=''
+         src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
+   </NavLink>
+    <div className='mt-1 mr-3'   >
+    <input  onChange={() => setOpen(true)} type="text" id="simple-search" className=" bg-black border-b border-yellow-600
+             text-gray-700 text-sm
+             hover:border-2 hover:border-yellow-600 block w-full pl-2 px-1 py-2" placeholder="جستجو ..." required />
+      
+      </div>
+   </div> 
     <Modal
        
        aria-labelledby="modal-title"
@@ -444,28 +329,24 @@ dir='rtl' className='flex flex-row justify-around self-center md:hidden w-full h
 
 
 </div>
-<div className="flex  justify-between pr-4 py-0 h-8 ">
-<NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
->
-<RiAdminLine className='font-black w-7 h-6 text-zinc-700  hover:text-orange-500 mx-4 ' />
-</NavLink>
-<Badge color='warning' badgeContent={cartItemsBuy.length} sx={{color:"white"}}>
-<NavLink to={"/endbuy"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
->
-<LuShoppingCart className='font-black w-7 h-6 text-zinc-700 hover:text-orange-500' />
-</NavLink>
-</Badge>
-</div>
-</nav>
-<nav dir='ltr' className='sticky top-0 hidden md:flex   z-20 mt-0 w-screen bg-white h-[70px] mx-auto   '>
-<NavbarMenuItem/>
-</nav>
-<nav dir="rtl" className= " flex  border-b-red-600 md:hidden w-screen bg-white h-[60px] px-10  justify-between items-center ">
-<Collaps/>
-</nav>
-</>
-)
-}
+<SearchButton/>
 
-export default TopNavbar
-*/}
+</nav>
+    </HideOnScroll>
+    <AppBar position='sticky' className='nav' sx={{display:{xs:'none',md:'flex'},px:"0.5em",
+      mt:0 ,mb:0,bgcolor:'black',py:0,color:'white',}}>
+          <div className='hidden md:flex justify-start'>
+             <NavigationMenu/> 
+           
+            </div>
+    </AppBar>
+
+
+
+    
+    </>
+  );
+}
+export default TopNav;       
+
+

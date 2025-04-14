@@ -78,9 +78,9 @@ function BannerP() {
          <div className=' bg-black bg-opacity-70 lg:bg-opacity-90 w-[80vw] lg:w-[50vw] h-[250px] mt-52 lg:mt-24 mb-20 mx-5 '>
           <p className='flex flex-col justify-between border-r-4 border-white mt-5 mr-8 pr-2 py-6 text-white text-right' >
              <p className='text-2xl text-white my-1.5 px-2'> {returnType1()}</p>
-            <p className='text-yellow-100 mt-1 text-lg px-2'  > {returnType2()}</p>
+            <p className='text-yellow-200 mt-1 text-lg px-2'  > {returnType2()}</p>
              <NavLink className='navbanner'  to={returnType4()}>
-               <p className='text-sm text-yellow-500 mt-1.5 px-2'   >
+               <p className='text-sm text-yellow-600 mt-1.5 px-2'   >
            {returnType3()}
           </p></NavLink>
           </p>

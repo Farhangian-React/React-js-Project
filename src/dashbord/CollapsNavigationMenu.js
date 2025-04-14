@@ -17,6 +17,8 @@ import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { RiRoadMapLine } from "react-icons/ri";
+import { RiShoppingCartLine } from "react-icons/ri";
 import InputBase from '@mui/material/InputBase';
 import { NavLink } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
@@ -118,111 +120,43 @@ export default function CollapsNavigationMenu() {
   return (
     <>
     
-    <Box sx={{bgcolor:"black", display:'flex',flexDirection:"row",justifyContent:"center",px:"1em"}}>
-   <Grid  xs={3}  >
+    <div className='flex flex-row justify-start w-[150px]'
+>
+   <div className='mr-2 ' >
  <IconButton
 title="Title" 
       onClick={handleDrawerOpen}
-      sx={{ color:' #FFC412',my:"0.5em", ml: 0, ...(open && { display: '' }) }}
+      sx={{ color:' #fef08a',mt:"3", ml: 0, ...(open && { display: '' }) }}
     >
-      <MenuIcon sx={{ fontSize:"1.5em"}} />
+      <MenuIcon sx={{ fontSize:"32px", mt:0.7}} />
     </IconButton>
- </Grid>
- <Grid  xs={3}  >
+ </div>
+ <div className='mt-4'   >
 <NavLink className="signup"  to={'/signup'}>
              
              
-       <PermIdentityOutlinedIcon  sx={{mr:1,mt:"0.6em",ml:1,fontSize:'2.5em',color:'white'}} />
+       <RiRoadMapLine className='w-6 h-6 text-yellow-600'   />
       
  
    </NavLink>
    
-   </Grid>
-   <Grid  xs={3}  >
-   <Typography variant='h4' sx={{color:"#f2b705",mt:"0.6em"}}>/</Typography>
-  </Grid>
-  <Grid  xs={3}  >
+   </div>
+   <div    className='mt-3 ' >
+   <p className='text-yellow-200 px-2 text-2xl '>/</p>
+  </div>
+  <div  className='mt-4' >
+<NavLink className="signup"  to={'/signup'}>
+             
+             
+       <RiShoppingCartLine className='w-6 h-6 text-yellow-600'   />
+      
  
-    <IconButton 
-    title="Title"
-      onClick={handleDrawerOpen1}
-      sx={{ color:' #fff', ml: 0,mt:"0.6em", ...(open1 && { display: 'none' }) }}
-    >
-      < SearchOutlinedIcon sx={{ fontSize:"1.5em"}}/>
-    </IconButton>
+   </NavLink>
    
-
-</Grid>
-
-
+   </div>
+ 
 
 
-
-    <Drawer
-        sx={{  
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: '100%',
-            boxSizing: 'border-box',
-            height:'auto',
-            direction:"rtl",
-            alignSelf:"center",
-            m:"auto"
-          },
-        }}
-        variant="persistent"
-        anchor="right"
-        open={open1}
-      >
-        <DrawerHeader sx={{display:"flex",justifyContent:"space-around"}}>
-          <Grid sx={{width:"100%"}}>
-        <InputBase
-        sx={{direction:"rtl", ml: 1, flex: 1 ,fontSize:"18px"}}
-        type="text"
-        placeholder="  به دنبال چه چیزی می گردید؟"
-        inputProps={{ 'aria-label': 'جستجوی محصولات سهیل' }}
-        value={searchItem}
-        onChange={
-          handleInputChange
-        }
-      /></Grid>
-           <Grid sx={{width:"100%",direction:"ltr"}}>
-
-            <IconButton 
-          title='Title'
-            onClick={handleDrawerClose1}>
-            {theme.direction === 'ltr' ? <CloseIcon /> : <CloseIcon />}
-          </IconButton>
-             </Grid>
-        </DrawerHeader>
-        <Divider />
-        <Typography variant='body2'  sx={{mt:2,mr:2,color:"#bbb"}}>نمایش نتایج از</Typography>
-        <Typography variant='h6' sx={{mr:2,color:"#393939"}}> بخش محصولات </Typography>
-        <Box sx={{bgcolor:"#f1f1f1",display:"flex",flexDirection:"column",justifyContent:"center",flexWrap:'wrap' ,overflow:"auto",mb:30}}>  
-{filteredUsers.map((item) => (
-    <NavLink to={'/cartsearch'}  className={"linksearch"}>  
-   <Grid xs={12} onClick={()=>{
-      setCartItems([item]);
-      handleDrawerClose1();
-
-     }} sx={{bgcolor:"white",display:"flex",flexDirection:"row",justifyContent:"center",m:1,p:1}} >
-    <Grid xs={4} sx={{alignSelf:"center"}} >
-    <img src={item.img} width={160} alt=''/>
-    </Grid>
-        <Grid xs={4} sx={{alignSelf:"center"}}>
-            <Typography  sx={{fontSize:"24px"}}>
-            {item.title1}
-            </Typography>
-        </Grid>
-        <Grid xs={4} sx={{direction:"rtl",display:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
-
-            <Typography  sx={{mt:1,fontSize:"24px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
-        </Grid>
-    </Grid>
-    </NavLink>
-))}
-  </Box>
-      </Drawer>
       <Drawer
         sx={{
           flexShrink: 0,
@@ -429,7 +363,7 @@ title="Title"
        </Box>
        </NavLink>
       </Drawer>
-   </Box>
+   </div>
     </>
   );
 }

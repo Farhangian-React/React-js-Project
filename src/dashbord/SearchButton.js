@@ -15,6 +15,8 @@ import Modal from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
 import { ModalDialog } from '@mui/joy';
 import IconButton from '@mui/material/IconButton';
+import { RiRoadMapLine } from "react-icons/ri";
+import { RiShoppingCartLine } from "react-icons/ri";
 import "./E.css";
 
 const Search = styled('div')(({ theme }) => ({
@@ -108,86 +110,35 @@ const handleInputChange = (e) => {
    return (
 <> 
 
-<Box sx={{mt:"0.5em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'start',direction:"ltr"}}>  <CollapsNavigationMenu />   
-          </Box>
+<div dir='ltr' className='mt-1 flex md:hidden justify-start'>  <CollapsNavigationMenu />   
+          </div>
          
-        <Box sx={{mt: 0,py:1,display: { xs: 'none', lg: 'flex' },justifyContent:'space-between'}}>  
-              <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
-            <NavLink to={'/buybasket'} >
-              <ShoppingCartIcon  sx={{mr:2,ml:0,mt:"0.5em",color:'gray',fontSize:'2em'}}/>
-            </NavLink>
-              <Typography sx={{mt:"1em"}}>  ( {cartItemsBuy.length} )</Typography>
-          </Buy>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-    
-              placeholder="Search..."
-              inputProps={{ 'aria-label': 'search' }}
-              sx={{pl:2,direction:'ltr',fontSize:"1.5em"}}
-              onChange={() => setOpen(true)}
-            />
-          </Search>
-          <Modal
-       
-           aria-labelledby="modal-title"
-           aria-describedby="modal-desc"
-           open={open}
-           onClose={() => setOpen(false)}
-           sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-          >
-  <ModalDialog sx={{bgcolor:"#ececec"}}
-    layout="fullscreen"
-    size="lg"
-  >
-    <ModalClose />
-    <Box sx={{my:7,px:1,width:"80%",display:'flex',justifyContent:"space-between",alignSelf:"center",bgcolor:"white"}}>
-   <IconButton type="button" sx={{ p: '10px' }}  >
-        <SearchIcon />
-      </IconButton> 
-      <InputBase
-        sx={{direction:"rtl", ml: 1, flex: 1 }}
-        type="text"
-        placeholder="جستجوی محصولات سهیل"
-        inputProps={{ 'aria-label': 'جستجوی محصولات سهیل' }}
-        value={searchItem}
-        onChange={
-          handleInputChange
-        }
-      />
-   </Box>
-   <Box  sx={{bgcolor:"#f1f1f1",display:'flex' ,flexWrap:'wrap' ,overflowY:"scroll",overflowX:"hidden",justifyContent:'center',flexDirection:"row",mx:3,pb:3}}>
-  
-   
-   {filteredUsers.map((item) => (
-    <NavLink to={'/cartsearch'}  className={"linksearch"}>  
-   <Box  onClick={()=>{
-      setCartItems([item]);
-      setOpen(false);
-
-     }}  sx={{width:"95%",direction:"rtl",bgcolor:"white",display:"flex",flexDirection:"row",justifyContent:"space-around",m:1,p:1}} >
-    <Grid xs={4} sx={{width:"200px",alignSelf:"center"}} >
-    <img src={item.img} width={120} alt=''/>
-    </Grid>
-        <Grid xs={4} sx={{width:"100px",alignSelf:"center"}}>
-            <Typography  sx={{fontSize:"14px"}}>
-            {item.title1}
-            </Typography>
-        </Grid>
-        <Grid xs={4} sx={{width:"100%",direction:"rtl",display:"flex",flexDirection:"column",alignSelf:"center",mr:1}}>
-
-            <Typography  sx={{mt:1,fontSize:"12px",textAlign:"center",alignSelf:"center",color:"#E0AA3E"}}>{item.pricenum} تومان</Typography>
-        </Grid>
-    </Box>
-    </NavLink>
-))}
-  
-  </Box>
-  </ModalDialog>
-  </Modal>
-  </Box>
+        <div className='hidden md:flex justify-between mx-5 py-1 mt-0'>  
+           <div className='mt-4'   >
+          <NavLink className="signup"  to={'/signup'}>
+                       
+                       
+                 <RiRoadMapLine className='w-6 h-6 text-yellow-600'   />
+                
+           
+             </NavLink>
+             
+             </div>
+             <div    className='mt-3 ' >
+             <p className='text-yellow-200 px-2 text-2xl '>/</p>
+            </div>
+            <div  className='mt-4' >
+          <NavLink className="signup"  to={'/signup'}>
+                       
+                       
+                 <RiShoppingCartLine className='w-6 h-6 text-yellow-600'   />
+                
+           
+             </NavLink>
+             
+             </div>
+         
+  </div>
   
   </>
     );

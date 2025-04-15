@@ -1,10 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Reactjs sohil",
+  "name": "sohil in Reactjs with Tailwind css",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "128x128 64x64 32x32 24x24 ",
+      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {

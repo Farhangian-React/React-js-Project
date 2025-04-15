@@ -75,7 +75,7 @@ function BannerP() {
     <div className='w-full h-auto flex justify-center  bg-cover bg-center bg-no-repeat '
     style={{backgroundImage:`url(${returnPhotoURL()})`}}
      >
-         <div className=' bg-black bg-opacity-70 lg:bg-opacity-90 w-[80vw] lg:w-[50vw] h-[250px] mt-52 lg:mt-24 mb-20 mx-5 '>
+         <div className=' bg-black bg-opacity-70 md:bg-opacity-90 w-[80vw] md:w-[50vw] h-[250px] mt-52 md:mt-24 mb-20 mx-5 '>
           <p className='flex flex-col justify-between border-r-4 border-white mt-5 mr-8 pr-2 py-6 text-white text-right' >
              <p className='text-2xl text-white my-1.5 px-2'> {returnType1()}</p>
             <p className='text-yellow-200 mt-1 text-lg px-2'  > {returnType2()}</p>

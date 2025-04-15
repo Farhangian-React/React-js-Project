@@ -65,9 +65,9 @@ function ProductP() {
 
     <div className='flex flex-col bg-white' >   
     <div ref={bagbox1}
-className='flex flex-col lg:flex-row w-[100vw] p-5 my-5 mx-auto '
+className='flex flex-col md:flex-row w-[100vw] p-5 my-5 mx-auto '
    > 
-       <div ref={tinybox1} className='flex justify-center flex-col my-5 w-[100vw] lg:w-[50vw] mx-auto px-6'>
+       <div ref={tinybox1} className='flex justify-center flex-col my-5 w-[100vw] md:w-[50vw] mx-auto px-6'>
        <div ref={refbox1} className='h-[290px] mx-auto px-5 overflow-hidden' >
           <p className='text-black py-3 text-start font-bold text-3xl md:text-2xl' >
           یخچال و فریزر، ضروری در هر آشپزخانه
@@ -152,9 +152,9 @@ className='flex flex-col lg:flex-row w-[100vw] p-5 my-5 mx-auto '
 
 
         <div ref={bagbox2}
-className='flex flex-col lg:flex-row w-[100vw] p-5 my-5 mx-auto '
+className='flex flex-col md:flex-row w-[100vw] p-5 my-5 mx-auto '
    > 
-       <div ref={tinybox2} className='flex justify-center flex-col my-5 w-[100vw] lg:w-[50vw] mx-auto px-6'>
+       <div ref={tinybox2} className='flex justify-center flex-col my-5 w-[100vw] md:w-[50vw] mx-auto px-6'>
        <div ref={refbox2} className='h-[290px] mx-auto px-5 overflow-hidden' >
           <p className='text-black py-3 text-start font-bold text-3xl md:text-2xl'>
        ماشین لباسشویی
@@ -203,7 +203,7 @@ className='flex flex-col lg:flex-row w-[100vw] p-5 my-5 mx-auto '
         <div ref={bagbox3}
 className='flex flex-col lg:flex-row w-[100vw] p-5 my-5 mx-auto '
    > 
-       <div ref={tinybox3} className='flex justify-center flex-col my-5 w-[100vw] lg:w-[50vw] mx-auto px-6'>
+       <div ref={tinybox3} className='flex justify-center flex-col my-5 w-[100vw] md:w-[50vw] mx-auto px-6'>
        <div ref={refbox3} className='h-[290px] mx-auto px-5 overflow-hidden' >
           <p className='text-black py-3 text-start font-bold text-3xl md:text-2xl' >
          اجاق گاز
@@ -255,9 +255,9 @@ className='flex flex-col lg:flex-row w-[100vw] p-5 my-5 mx-auto '
        
         </div>  
         <div ref={bagbox4}
-className='flex flex-col lg:flex-row w-[100vw] p-5 my-5 mx-auto '
+className='flex flex-col md:flex-row w-[100vw] p-5 my-5 mx-auto '
    > 
-       <div ref={tinybox4}className='flex justify-center flex-col my-5 w-[100vw] lg:w-[50vw] mx-auto px-6'>
+       <div ref={tinybox4}className='flex justify-center flex-col my-5 w-[100vw] md:w-[50vw] mx-auto px-6'>
        <div ref={refbox4} className='h-[290px] mx-auto px-5 overflow-hidden' >
           <p className='text-black py-3 text-start font-bold text-3xl md:text-2xl' >
        ماشین ظرفشویی برای آسایش بیشتر

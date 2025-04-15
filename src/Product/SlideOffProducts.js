@@ -80,7 +80,7 @@ console.log(dataoff);
    return(
         <>
  
- <div dir='rtl' className=' flex flex-col lg:hidden bg-white my-2 mx-auto w-[97%] rounded-sm '>
+ <div dir='rtl' className=' flex flex-col md:hidden bg-white my-2 mx-auto w-[97%] rounded-sm '>
         <div    className='bordershadow flex flex-col justify-center w-[200px] text-start m-10 '  >
         <p className='text-2xl text-center font-bold text-gray-700 py-3' >
       تخفیفات ویژه
@@ -157,7 +157,7 @@ console.log(dataoff);
         </div>
 
        
-        <div dir='rtl' className='hidden lg:flex lg:flex-col bg-white my-2 mx-auto w-[97%] rounded-sm '>
+        <div dir='rtl' className='hidden md:flex md:flex-col bg-white my-2 mx-auto w-[97%] rounded-sm '>
         <div    className='bordershadow flex flex-col justify-center w-[200px] text-start m-10 '  >
         <p className='text-2xl text-center font-bold text-gray-700 py-3' >
       تخفیفات ویژه

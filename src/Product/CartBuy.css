@@ -1,17 +1,4 @@
 
-@media only screen and (max-width: 768px){
-    .imgs{
-    display: none;
- }
-
-}
-
-@media only screen and (min-width: 768px){
-    .imgs{
-    display: flex;
- }
-
-}
 .boximage{
     width: 500px;
     height: 80vh;
@@ -31,12 +18,7 @@
     align-items:center;
    
 }
-@media only screen and (min-width: 768px){
-    .slid{
-    display: none;
- }
 
-}
 .linetinck{
     height: 2px;
     width: 100%;

@@ -2,7 +2,7 @@ import React,{useContext,useState,useEffect} from 'react';
 import "react-toastify/dist/ReactToastify.css";
 import { RiRoadMapLine } from "react-icons/ri";
 import { RiShoppingCartLine } from "react-icons/ri";
-
+import NavbarMenuItem from './NavbarMenuItem';
 import { NavLink } from "react-router-dom";
 import Badge from '@mui/material/Badge';
 import {CartBuyContext} from '../Shared/Cart-Context';
@@ -140,57 +140,8 @@ setFilteredUsers(filteredItems);
   return (
     <>
      <HideOnScroll {...props}>
-      {/*
-    <AppBar position="fixed" className='nav' sx={{mt:0 ,mb:0,bgcolor:'black',px:"0.5em",color:'white'}}>
-    <Box sx={{ flexGrow: 1,py:0, display:'flex',justifyContent:'space-between',marginLeft:{md:0},marginRight:{md:0} }}>
-        <Grid  sx={{mt:"0.2em", display:'flex', boxShadow:'10px 10px 50px #674e06' }}>
-        <img className='imgsohil' width={60} alt='' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8sUcl-xSeJ2aDKi3dB9ylFBIxBLCo-JXLg&s'/>
-               <Typography
-     noWrap
-     component="a"
-     href="/"
-     sx={{
-       mr:{sx:0,md:2} ,
-       mt:{xs:2,md:1},
-       display: 'flex',
-       flexGrow: 0,
-       fontFamily: 'monospace',
-       fontWeight: 300,
-       fontStyle:'italic',
-       letterSpacing: '.1em',
-       color: '#f2b705',
-       textDecoration: 'none',
-       fontSize:"3em"
-     }}
-   >
-     S O H I L
-   </Typography>
-   </Grid>
-
-   <Box sx={{px:"1em",mt:"0.2em", py:"0.5em",mr:"2em", display: { xs: 'flex', lg: 'none' } ,justifyContent:'center',direction:"ltr"}}> 
-<Box sx={{m:"auto", display: 'flex',flexDirection:"row",justifyContent:"space-around"}}>
-
-      <Buy sx={{display:'flex',justifyContent:'center',direction:'ltr'}}>
-            <NavLink to={'/buybasket'} >
-              <ShoppingCartIcon  sx={{mr:"0.5em",ml:0,mt:"0.4em",color:'gray',fontSize:'2.5em'}}/>
-            </NavLink>
-              <Typography sx={{fontSize:"1.6em",mt:"0.6em"}}>  ( {cartItemsBuy.length} )</Typography>
-          </Buy>
-      </Box>       
-          </Box>
-        
- <SearchButton/>
-
-</Box>
-    </AppBar>
-    */}
-    
 <nav dir='rtl' className=' md:sticky top-0 flex justify-between w-[100%] bg-black h-[63px]  drop-shadow-lg pt-1  pl-1  mx-auto '>
-<div dir='ltr' className="w-2/3 flex flex-row justify-end mt-0 ">
-
-      
-
-         
+<div dir='ltr' className="w-2/3 flex flex-row justify-end mt-0 ">        
 	<form className="hidden md:flex items-center mx-0.5 md:mx-4">   
         <label for="simple-search" className="sr-only">Search</label>
         <div dir='rtl' className="relative w-full  ">
@@ -333,13 +284,11 @@ dir='rtl' className='flex flex-row justify-around self-center md:hidden w-full h
 
 </nav>
     </HideOnScroll>
-    <AppBar position='sticky' className='nav' sx={{display:{xs:'none',md:'flex'},px:"0.5em",
-      mt:0 ,mb:0,bgcolor:'black',py:0,color:'white',}}>
-          <div className='hidden md:flex justify-start'>
-             <NavigationMenu/> 
-           
-            </div>
-    </AppBar>
+          <nav className='hidden md:flex  justify-start sticky px-1 mt-0 bg-black py-0 text-white'>
+             <NavbarMenuItem/> 
+   
+            </nav>
+ 
 
 
 
